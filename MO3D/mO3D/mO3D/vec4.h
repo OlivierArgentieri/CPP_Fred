@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 
 namespace mo3d
 {
@@ -14,5 +15,8 @@ namespace mo3d
 		
 		vec4(float _x = 0, float _y = 0, float _z = 0, float _w = 0);
 		vec4(const vec4& _vec4);
+
+		float Dot(vec4 _vec);
+		static float Dot(vec4 _vec1, vec4 _vec2);
 	};
 }

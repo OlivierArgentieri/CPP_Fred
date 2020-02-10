@@ -30,10 +30,10 @@ namespace mo3d
 		vec3(float _x = 0, float _y = 0, float _z = 0);
 		vec3(const vec3& _vec2);
 
-		float Magnitude();
+		float Magnitude() const;
 		vec3 Normalize();
-		float Dot(vec3 _vec);
-		vec3 Cross(vec3 _vec);
+		float Dot(vec3 _vec) const;
+		vec3 Cross(vec3 _vec) const;
 		
 
 		vec3 operator/(float _value) const;

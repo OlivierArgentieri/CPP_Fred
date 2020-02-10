@@ -23,7 +23,7 @@ vec3::vec3(const vec3& _vec3) : vec3(_vec3.x, _vec3.y, _vec3.z)
 {
 }
 
-float vec3::Dot(vec3 _vec)
+float vec3::Dot(vec3 _vec) const
 {
 	return x * _vec.x + y * _vec.y + z * _vec.z;
 }
@@ -43,7 +43,7 @@ vec3 vec3::Cross(vec3 _vec1, vec3 _vec2)
 	return vec3(_x, _y, _z);
 }
 
-vec3 vec3::Cross(vec3 _vec)
+vec3 vec3::Cross(vec3 _vec) const
 {
 	float _x = y * _vec.z - _vec.y * z;
 	float _y = z * _vec.x - _vec.z * x;
@@ -57,7 +57,7 @@ float vec3::Magnitude(vec3 _vec)
 	return sqrt(_vec.x * _vec.x + _vec.y * _vec.y + _vec.z * _vec.z);
 }
 
-float vec3::Magnitude()
+float vec3::Magnitude() const
 {
 	return sqrt(x * x + y * y + z * z);
 }
@@ -81,26 +81,26 @@ vec3 vec3::Normalize()
 	return *this;
 }
 
-vec3 vec3::operator/(float _value)
+vec3 vec3::operator/(float _value) const
 {
 	if(_value > 0)
 		return vec3(x / _value, y / _value, z / _value);
 	return vec3::zero;
 }
 
-vec3 vec3::operator/(vec3 _value)
+vec3 vec3::operator/(vec3 _value) const
 {
 	if (_value != vec3::zero)
 		return vec3(x / _value.x, y / _value.y, z / _value.z);
 	return vec3::zero;
 }
 
-bool vec3::operator==(vec3 _vec)
+bool vec3::operator==(vec3 _vec) const
 {
 	return x == _vec.x && y == _vec.y && z == _vec.z;
 }
 
-bool vec3::operator!=(vec3 _vec)
+bool vec3::operator!=(vec3 _vec) const
 {
 	return !(*this == _vec);
 }

@@ -21,7 +21,7 @@ vec2::vec2(const vec2& _vec2) : vec2(_vec2.x, _vec2.y)
 {
 }
 
-float vec2::Dot(vec2 _vec)
+float vec2::Dot(vec2 _vec) const
 {
 	return x * _vec.x + y * _vec.y;
 }
@@ -36,7 +36,7 @@ float vec2::Magnitude(vec2 _vec)
 	return sqrt(_vec.x * _vec.x + _vec.y * _vec.y);
 }
 
-float vec2::Magnitude()
+float vec2::Magnitude() const
 {
 	return sqrt(x*x + y * y);
 }
@@ -61,14 +61,14 @@ vec2 vec2::Normalize(vec2 _vec)
 }
 
 
-vec2 vec2::operator/(float _value)
+vec2 vec2::operator/(float _value) const
 {
 	if (_value > 0)
 		return vec2(x / _value, y / _value);
 	return vec2::zero;
 }
 
-vec2 vec2::operator/(vec2 _vec)
+vec2 vec2::operator/(vec2 _vec) const
 {
 	float _magnitude = Magnitude(_vec);
 	if (_vec != vec2::zero)
@@ -76,12 +76,12 @@ vec2 vec2::operator/(vec2 _vec)
 	return vec2::zero;
 }
 
-bool vec2::operator==(vec2 _vec)
+bool vec2::operator==(vec2 _vec) const
 {
 	return this->x == _vec.x && this->y == _vec.y;
 }
 
-bool vec2::operator!=(vec2 _vec)
+bool vec2::operator!=(vec2 _vec) const
 {
 	return !(*this == _vec);
 }

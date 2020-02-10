@@ -36,10 +36,10 @@ namespace mo3d
 		vec3 Cross(vec3 _vec);
 		
 
-		vec3 operator/(float _value);
-		vec3 operator/(vec3 _value);
-		bool operator==(vec3 _vec);
-		bool operator!=(vec3 _vec);
+		vec3 operator/(float _value) const;
+		vec3 operator/(vec3 _value) const;
+		bool operator==(vec3 _vec) const;
+		bool operator!=(vec3 _vec) const;
 		vec3* operator=(vec3* _value);
 	};
 

@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="mat4.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="UnitTest.h" />
     <ClInclude Include="vec2.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="vec4.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="mat4.cpp" />
     <ClCompile Include="mO3D.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -25,22 +25,37 @@
     <Filter Include="Fichiers d%27en-tête\UnitTest">
       <UniqueIdentifier>{e7168bdc-f5e4-4d5b-97f6-6fe58eb57a01}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\mO3D\Vec">
+      <UniqueIdentifier>{9e2cb903-b5b5-474b-a92d-5a91842ae892}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\mO3D\Mat">
+      <UniqueIdentifier>{10ca716e-060d-4fcc-bfa1-b155f2331b5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\mO3D\Vec">
+      <UniqueIdentifier>{10466ae3-c09d-43f4-b861-d39131ca54d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\mO3D\Mat">
+      <UniqueIdentifier>{3918e98d-f636-412b-8d0a-36708d86fac2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="vec2.h">
-      <Filter>Fichiers d%27en-tête\mO3D</Filter>
-    </ClInclude>
-    <ClInclude Include="vec3.h">
-      <Filter>Fichiers d%27en-tête\mO3D</Filter>
-    </ClInclude>
     <ClInclude Include="UnitTest.h">
       <Filter>Fichiers d%27en-tête\UnitTest</Filter>
     </ClInclude>
+    <ClInclude Include="vec2.h">
+      <Filter>Fichiers d%27en-tête\mO3D\Vec</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3.h">
+      <Filter>Fichiers d%27en-tête\mO3D\Vec</Filter>
+    </ClInclude>
     <ClInclude Include="vec4.h">
-      <Filter>Fichiers d%27en-tête\mO3D</Filter>
+      <Filter>Fichiers d%27en-tête\mO3D\Vec</Filter>
+    </ClInclude>
+    <ClInclude Include="mat4.h">
+      <Filter>Fichiers d%27en-tête\mO3D\Mat</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -50,17 +65,20 @@
     <ClCompile Include="mO3D.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="vec2.cpp">
-      <Filter>Fichiers sources\mO3D</Filter>
-    </ClCompile>
-    <ClCompile Include="vec3.cpp">
-      <Filter>Fichiers sources\mO3D</Filter>
-    </ClCompile>
-    <ClCompile Include="vec4.cpp">
-      <Filter>Fichiers sources\mO3D</Filter>
-    </ClCompile>
     <ClCompile Include="TestUnit.cpp">
       <Filter>Fichiers sources\UnitTest</Filter>
+    </ClCompile>
+    <ClCompile Include="vec2.cpp">
+      <Filter>Fichiers sources\mO3D\Vec</Filter>
+    </ClCompile>
+    <ClCompile Include="vec3.cpp">
+      <Filter>Fichiers sources\mO3D\Vec</Filter>
+    </ClCompile>
+    <ClCompile Include="vec4.cpp">
+      <Filter>Fichiers sources\mO3D\Vec</Filter>
+    </ClCompile>
+    <ClCompile Include="mat4.cpp">
+      <Filter>Fichiers sources\mO3D\Mat</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

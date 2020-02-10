@@ -14,9 +14,11 @@ namespace mo3d
 
 		static const vec3 zero;
 		static const vec3 one;
-		static const vec3 up;
-		static const vec3 right;
 		static const vec3 forward;
+		static const vec3 up;
+		static const vec3 down;
+		static const vec3 right;
+		static const vec3 left;
 		
 		static float Dot(vec3 _vec1, vec3 _vec2);
 		static vec3 Cross(vec3 _vec1, vec3 _vec2);
@@ -33,13 +35,12 @@ namespace mo3d
 		float Dot(vec3 _vec);
 		vec3 Cross(vec3 _vec);
 		
-	
 
 		vec3 operator/(float _value);
 		vec3 operator/(vec3 _value);
 		bool operator==(vec3 _vec);
 		bool operator!=(vec3 _vec);
-		vec3*operator=(vec3* _value);
+		vec3* operator=(vec3* _value);
 	};
 
 }

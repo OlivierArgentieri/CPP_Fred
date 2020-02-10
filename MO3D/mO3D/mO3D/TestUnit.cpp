@@ -4,11 +4,10 @@
 #include "vec2.h"
 #include "vec3.h"
 
-
+using namespace mo3d;
 
 #define EPSILON 0.00001f
 #define ASSERT_EPSILON(givenVal, approxVal) assert((givenVal - approxVal) < EPSILON && (givenVal - approxVal) > -EPSILON)
-using namespace mo3d;
 
 
 
@@ -38,7 +37,7 @@ void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
 	assert(_vec.y == _y);
 	assert(_vec.z == _z);
 
-	// test Magnitude
+	// test Magnitude : normalize
 	vec3 _v1 = vec3(0, 0, 0);
 	vec3 _v2 = vec3(-1, 0, 0);
 
@@ -48,6 +47,7 @@ void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
 	assert(_v1.Magnitude() == vec3::Magnitude(_v1));
 	assert(_v2.Magnitude() == vec3::Magnitude(_v2));
 	assert(_v2.Normalize() == vec3(-1,0,0));
+	assert(_v2.Normalize() != _v1);
 }
 
 void UnitTest::TestVec4(float _x = 0, float _y = 0, float _z = 0, float _w = 0)

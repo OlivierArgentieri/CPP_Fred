@@ -6,10 +6,11 @@ using namespace mo3d;
 
 const vec3 vec3::zero(0, 0, 0);
 const vec3 vec3::one(1, 1, 1);
-const vec3 vec3::up(0, 1, 0);
-const vec3 vec3::right(1, 0,0);
 const vec3 vec3::forward(0, 0, 1);
-
+const vec3 vec3::up(0, 1, 0);
+const vec3 vec3::down(0, -1, 0);
+const vec3 vec3::right(1, 0,0);
+const vec3 vec3::left(-1, 0,0);
 
 mo3d::vec3::vec3(float _x, float _y, float _z)
 {
@@ -84,14 +85,14 @@ vec3 vec3::operator/(float _value)
 {
 	if(_value > 0)
 		return vec3(x / _value, y / _value, z / _value);
-	return vec3();
+	return vec3::zero;
 }
 
 vec3 vec3::operator/(vec3 _value)
 {
-	if (_value != vec3(0,0,0))
+	if (_value != vec3::zero)
 		return vec3(x / _value.x, y / _value.y, z / _value.z);
-	return vec3();
+	return vec3::zero;
 }
 
 bool vec3::operator==(vec3 _vec)
@@ -103,6 +104,7 @@ bool vec3::operator!=(vec3 _vec)
 {
 	return !(*this == _vec);
 }
+
 vec3* vec3::operator=(vec3* _value)
 {
 	this->x = _value->x;

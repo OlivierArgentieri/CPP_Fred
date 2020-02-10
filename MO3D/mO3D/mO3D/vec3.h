@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <cmath>
 
 
 namespace mo3d
@@ -22,7 +23,8 @@ namespace mo3d
 		
 		static float Dot(vec3 _vec1, vec3 _vec2);
 		static vec3 Cross(vec3 _vec1, vec3 _vec2);
-
+		static float Distance(vec3 _vec1, vec3 _vec2);
+		
 		static float Magnitude(vec3 _vec);
 		static vec3 Normalize(vec3 _vec);
 
@@ -34,13 +36,15 @@ namespace mo3d
 		vec3 Normalize();
 		float Dot(vec3 _vec) const;
 		vec3 Cross(vec3 _vec) const;
-		
+		float Distance(vec3 _vec)const;
 
 		vec3 operator/(float _value) const;
-		vec3 operator/(vec3 _value) const;
+		vec3 operator/(vec3 _vec) const;
 		bool operator==(vec3 _vec) const;
 		bool operator!=(vec3 _vec) const;
-		vec3* operator=(vec3* _value);
+		vec3* operator=(vec3* _vec);
+		vec3 operator-(vec3 _vec) const;
+		vec3 operator+(vec3 _vec) const;
 	};
 
 }

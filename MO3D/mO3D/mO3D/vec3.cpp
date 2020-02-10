@@ -1,6 +1,5 @@
 ﻿#include "pch.h"
 #include "vec3.h"
-#include "cmath"
 
 using namespace mo3d;
 
@@ -43,6 +42,11 @@ vec3 vec3::Cross(vec3 _vec1, vec3 _vec2)
 	return vec3(_x, _y, _z);
 }
 
+float vec3::Distance(vec3 _vec1, vec3 _vec2)
+{
+	return (_vec1 - _vec2).Magnitude();
+}
+
 vec3 vec3::Cross(vec3 _vec) const
 {
 	float _x = y * _vec.z - _vec.y * z;
@@ -50,6 +54,11 @@ vec3 vec3::Cross(vec3 _vec) const
 	float _z = x * _vec.y + _vec.x * y;
 
 	return vec3(_x, _y, _z);
+}
+
+float vec3::Distance(vec3 _vec) const
+{
+	return (*this - _vec).Magnitude();
 }
 
 float vec3::Magnitude(vec3 _vec)
@@ -88,10 +97,10 @@ vec3 vec3::operator/(float _value) const
 	return vec3::zero;
 }
 
-vec3 vec3::operator/(vec3 _value) const
+vec3 vec3::operator/(vec3 _vec) const
 {
-	if (_value != vec3::zero)
-		return vec3(x / _value.x, y / _value.y, z / _value.z);
+	if (_vec != vec3::zero)
+		return vec3(x / _vec.x, y / _vec.y, z / _vec.z);
 	return vec3::zero;
 }
 
@@ -105,10 +114,20 @@ bool vec3::operator!=(vec3 _vec) const
 	return !(*this == _vec);
 }
 
-vec3* vec3::operator=(vec3* _value)
+vec3* vec3::operator=(vec3* _vec)
 {
-	this->x = _value->x;
-	this->y = _value->y;
-	this->z = _value->z;
+	this->x = _vec->x;
+	this->y = _vec->y;
+	this->z = _vec->z;
 	return this;
+}
+
+vec3 vec3::operator+(vec3 _vec) const
+{
+	return vec3(x + _vec.x, y + _vec.y, z + _vec.z);
+}
+
+vec3 vec3::operator-(vec3 _vec) const
+{
+	return vec3(x - _vec.x, y - _vec.y, z - _vec.z);
 }

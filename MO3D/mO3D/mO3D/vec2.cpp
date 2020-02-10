@@ -1,6 +1,5 @@
 #include "pch.h"
 #include "vec2.h"
-#include "cmath"
 
 using namespace  mo3d;
 
@@ -52,12 +51,22 @@ vec2 vec2::Normalize()
 	return *this;
 }
 
+float vec2::Distance(vec2 _vec) const
+{
+	return (*this - _vec).Magnitude();
+}
+
 vec2 vec2::Normalize(vec2 _vec)
 {
 	float _magnitude = Magnitude(_vec);
 	if (_magnitude > 0)
 		return _vec / _magnitude;
 	return vec2();
+}
+
+float vec2::Distance(vec2 _vec1, vec2 _vec2)
+{
+	return (_vec1 - _vec2).Magnitude();
 }
 
 
@@ -86,9 +95,19 @@ bool vec2::operator!=(vec2 _vec) const
 	return !(*this == _vec);
 }
 
-vec2* vec2::operator=(vec2* _value)
+vec2* vec2::operator=(vec2* _vec)
 {
-	this->x = _value->x;
-	this->y = _value->y;
+	this->x = _vec->x;
+	this->y = _vec->y;
 	return this;
+}
+
+vec2 vec2::operator+(vec2 _vec) const
+{
+	return vec2(x+_vec.x, y + _vec.y);
+}
+
+vec2 vec2::operator-(vec2 _vec) const
+{
+	return vec2(x - _vec.x, y - _vec.y);
 }

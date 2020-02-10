@@ -1,7 +1,15 @@
 ﻿#include "pch.h"
 #include "vec3.h"
+#include "cmath"
 
 using namespace mo3d;
+
+const vec3 vec3::zero(0, 0, 0);
+const vec3 vec3::one(1, 1, 1);
+const vec3 vec3::up(0, 1, 0);
+const vec3 vec3::right(1, 0,0);
+const vec3 vec3::forward(0, 0, 1);
+
 
 mo3d::vec3::vec3(float _x, float _y, float _z)
 {
@@ -40,7 +48,65 @@ vec3 vec3::Cross(vec3 _vec)
 	float _y = z * _vec.x - _vec.z * x;
 	float _z = x * _vec.y + _vec.x * y;
 
-
 	return vec3(_x, _y, _z);
+}
 
+float vec3::Magnitude(vec3 _vec)
+{
+	return sqrt(_vec.x * _vec.x + _vec.y * _vec.y + _vec.z * _vec.z);
+}
+
+float vec3::Magnitude()
+{
+	return sqrt(x * x + y * y + z * z);
+}
+
+vec3 vec3::Normalize(vec3 _vec)
+{
+	float _magnitude = Magnitude(_vec);
+	if(_magnitude >0)
+		return _vec / _magnitude;
+	return  vec3();
+}
+
+vec3 vec3::Normalize()
+{
+	float _magnitude = Magnitude();
+
+	if (_magnitude > 0)
+		*this = *this / _magnitude;
+	else
+	*this = new vec3();
+	return *this;
+}
+
+vec3 vec3::operator/(float _value)
+{
+	if(_value > 0)
+		return vec3(x / _value, y / _value, z / _value);
+	return vec3();
+}
+
+vec3 vec3::operator/(vec3 _value)
+{
+	if (_value != vec3(0,0,0))
+		return vec3(x / _value.x, y / _value.y, z / _value.z);
+	return vec3();
+}
+
+bool vec3::operator==(vec3 _vec)
+{
+	return x == _vec.x && y == _vec.y && z == _vec.z;
+}
+
+bool vec3::operator!=(vec3 _vec)
+{
+	return !(*this == _vec);
+}
+vec3* vec3::operator=(vec3* _value)
+{
+	this->x = _value->x;
+	this->y = _value->y;
+	this->z = _value->z;
+	return this;
 }

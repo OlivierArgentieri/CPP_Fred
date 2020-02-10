@@ -23,6 +23,19 @@ void UnitTest::TestVec2(float _x = 0, float _y = 0)
 
 	_vec2 = vec2(0.1234567f, 0.1234567f);
 	ASSERT_EPSILON(_vec2.y, .1234567f);
+
+
+	// test Magnitude : normalize
+	vec2 _v1 = vec2(0, 0);
+	vec2 _v2 = vec2(-1, 0);
+
+	assert(_v1.Magnitude() == 0);
+	assert(_v1.Magnitude() == 0);
+	assert(_v2.Magnitude() == 1);
+	assert(_v1.Magnitude() == vec2::Magnitude(_v1));
+	assert(_v2.Magnitude() == vec2::Magnitude(_v2));
+	assert(_v2.Normalize() == vec2(-1, 0));
+	assert(_v2.Normalize() != _v1);
 }
 
 void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
@@ -36,6 +49,12 @@ void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
 	assert(_vec.x == _x);
 	assert(_vec.y == _y);
 	assert(_vec.z == _z);
+
+
+	// test epsilon
+	_vec = vec3(0.1234567f, 0.1234567f);
+	ASSERT_EPSILON(_vec.y, .1234567f);
+
 
 	// test Magnitude : normalize
 	vec3 _v1 = vec3(0, 0, 0);

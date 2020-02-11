@@ -3,9 +3,8 @@
 
 namespace mo3d
 {
-	class vec4
+	struct vec4
 	{
-	public:
 		union
 		{
 			struct { float x; float y; float z; float w; };

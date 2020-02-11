@@ -4,6 +4,7 @@
 #include "vec2.h"
 #include "vec3.h"
 #include "vec4.h"
+#include "mat4.h"
 
 using namespace mo3d;
 
@@ -11,20 +12,18 @@ using namespace mo3d;
 #define ASSERT_EPSILON(givenVal, approxVal) assert((givenVal - approxVal) < EPSILON && (givenVal - approxVal) > -EPSILON)
 
 
-
-void UnitTest::TestVec2(float _x = 0, float _y = 0)
+void UnitTest::TestVec2(float _x = 0, float _y = 1)
 {
 	vec2 _vec2;
 	assert(_vec2.x == 0);
 	assert(_vec2.y == 0);
 
-	_vec2 = vec2(_x, _y);
-	assert(_vec2.x == _x);
-	assert(_vec2.y == _y);
+	vec2 _vec3 = vec2(_x, _y);
+	assert(_vec3.x == _x);
+	assert(_vec3.y == _y);
 
 	_vec2 = vec2(0.1234567f, 0.1234567f);
 	ASSERT_EPSILON(_vec2.y, .1234567f);
-
 
 	// test Magnitude : normalize
 	vec2 _v1 = vec2(0, 0);
@@ -46,10 +45,10 @@ void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
 	assert(_vec.y == 0);
 	assert(_vec.z == 0);
 
-	_vec = vec3(_x, _y, _z);
-	assert(_vec.x == _x);
-	assert(_vec.y == _y);
-	assert(_vec.z == _z);
+	 vec3 _vec1 = vec3(_x, _y, _z);
+	assert(_vec1.x == _x);
+	assert(_vec1.y == _y);
+	assert(_vec1.z == _z);
 
 
 	// test epsilon
@@ -78,11 +77,11 @@ void UnitTest::TestVec4(float _x = 0, float _y = 0, float _z = 0, float _w = 0)
 	assert(_vec.z == 0);
 	assert(_vec.w == 0);
 
-	_vec = vec4(_x, _y, _z, _w);
-	assert(_vec.x == _x);
-	assert(_vec.y == _y);
-	assert(_vec.z == _z);
-	assert(_vec.w == _w);
+	vec4 _vec1 = vec4(_x, _y, _z, _w);
+	assert(_vec1.x == _x);
+	assert(_vec1.y == _y);
+	assert(_vec1.z == _z);
+	assert(_vec1.w == _w);
 
 
 	// test epsilon
@@ -103,8 +102,27 @@ void UnitTest::TestVec4(float _x = 0, float _y = 0, float _z = 0, float _w = 0)
 	assert(_v2.Normalize() != _v1);
 }
 
+
+void UnitTest::TestMat4()
+{
+	mat4 _mat = mat4::Identity();
+
+	float _test[4][4] =
+	{
+		{ 10, 1, 2, 3 },
+		{ 4, 5, 6, 7 },
+		{ 8, 9, 10, 11 },
+		{ 12, 13, 14, 20 }
+	};
+
+	_mat = mat4(_test);
+	//_mat.Transpose();
+	float _a = _mat.Determinant();
+}
+
 UnitTest::UnitTest()
 {
+	
 }
 
 void UnitTest::Run()
@@ -112,4 +130,5 @@ void UnitTest::Run()
 	TestVec2();
 	TestVec3();
 	TestVec4();
+	TestMat4();
 }

@@ -202,6 +202,11 @@ mat4 mat4::Identity()
 	return {identity};
 }
 
+mat4 mat4::Zero()
+{
+	return  { zero };
+}
+
 mat4 mat4::Transpose(mat4 _mat)
 {
 	mat4 _temp = mat4(_mat);

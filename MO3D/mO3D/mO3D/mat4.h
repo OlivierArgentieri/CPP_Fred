@@ -13,7 +13,8 @@ namespace mo3d
 	public:
 		static mat4 Transpose(mat4 _mat);
 		static mat4 Identity();
-
+		static mat4 Zero();
+		
 		float mat[4][4];
 
 		

@@ -11,6 +11,8 @@ const float mat4::identity[4][4]
 			{0,0,0,1}
 };
 
+const float mat4::zero[4][4] = { {0} };
+
 mat4::mat4(float _mat[4][4])
 {
 	for (int _i = 0; _i < 4; _i++)
@@ -36,7 +38,13 @@ mat4::mat4(const float _mat[4][4])
 
 mat4::mat4(const mat4& _mat)
 {
-	
+	for (int _i = 0; _i < 4; _i++)
+	{
+		for (int _j = 0; _j < 4; _j++)
+		{
+			this->mat[_i][_j] = _mat.mat[_i][_j];
+		}
+	}
 }
 
 void mat4::Transpose()
@@ -107,7 +115,6 @@ float mat4::Determinant()
 
 	
 	/*
-	
 	for (int _i = 0; _i < 3; _i++)
 	{
 		_det += a[_i][0] * a[(_i + 1) % 3][1] * a[(_i + 2) % 3][2];
@@ -146,9 +153,50 @@ mat4 mat4::operator*(mat4 _mat)
 		}
 	}
 
+}
+
+mat4 mat4::operator-(mat4 _mat)
+{
+
+	float _res[4][4];
+	for (int _i = 0; _i < 4; _i++)
+	{
+		for (int _j = 0; _j < 4; _j++)
+		{
+			_res[_i][_j] = mat[_i][_j] - _mat.mat[_i][_j];
+		}
+	}
+
 	return mat4(_res);
 }
 
+mat4 mat4::operator/(mat4 _mat)
+{
+	float _res[4][4];
+	for (int _i = 0; _i < 4; _i++)
+	{
+		for (int _j = 0; _j < 4; _j++)
+		{
+			if (_mat.mat[0][_j] == 0 || _mat.mat[1][_j] == 0 || _mat.mat[2][_j] == 0 || _mat.mat[3][_j] == 0) return mat4(mat4::zero);
+			_res[_i][_j] = mat[_i][0] / _mat.mat[0][_j] + mat[_i][1] / _mat.mat[1][_j] + mat[_i][2] / _mat.mat[2][_j] + mat[_i][3] / _mat.mat[3][_j];
+		}
+	}
+	return mat4(_res);
+}
+
+mat4 mat4::operator+(mat4 _mat)
+{
+	float _res[4][4];
+	for (int _i = 0; _i < 4; _i++)
+	{
+		for (int _j = 0; _j < 4; _j++)
+		{
+			_res[_i][_j] = mat[_i][_j] + _mat.mat[_i][_j];
+		}
+	}
+
+	return mat4(_res);
+}
 mat4 mat4::Identity()
 {
 	return {identity};

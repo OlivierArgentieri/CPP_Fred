@@ -7,6 +7,7 @@ namespace mo3d
 	{
 	private :
 		static const float identity[4][4];
+		static const float zero[4][4];
 		mat4(const float _mat[4][4]);
 
 	public:
@@ -23,5 +24,8 @@ namespace mo3d
 
 		float Determinant();
 		mat4 operator*(mat4 _mat);
+		mat4 operator+(mat4 _mat);
+		mat4 operator-(mat4 _mat);
+		mat4 operator/(mat4 _mat);
 	};
 }

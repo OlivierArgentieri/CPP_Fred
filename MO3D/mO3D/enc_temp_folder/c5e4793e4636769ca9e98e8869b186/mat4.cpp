@@ -142,6 +142,7 @@ mat4 mat4::operator*(mat4 _mat)
 	{
 		for (int _j = 0; _j < 4 ;_j++)
 		{
+			_res[_i][_j] = 0;
 			_res[_i][_j] = mat[_i][0] * _mat.mat[0][_j] + mat[_i][1] * _mat.mat[1][_j] + mat[_i][2] * _mat.mat[2][_j] + mat[_i][3] * _mat.mat[3][_j];
 		}
 	}

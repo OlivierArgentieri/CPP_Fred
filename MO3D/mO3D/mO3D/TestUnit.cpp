@@ -118,6 +118,7 @@ void UnitTest::TestMat4()
 	_mat = mat4(_test);
 	//_mat.Transpose();
 	float _a = _mat.Determinant();
+	mat4 _matMul = _mat * mat4::Identity();
 }
 
 UnitTest::UnitTest()

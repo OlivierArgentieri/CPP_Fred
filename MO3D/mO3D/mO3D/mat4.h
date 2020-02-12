@@ -22,6 +22,6 @@ namespace mo3d
 		void Transpose();
 
 		float Determinant();
-		
+		mat4 operator*(mat4 _mat);
 	};
 }

@@ -109,10 +109,10 @@ void UnitTest::TestMat4()
 
 	float _test[4][4] =
 	{
-		{ 10, 1, 2, 3 },
-		{ 4, 5, 6, 7 },
-		{ 8, 9, 10, 11 },
-		{ 12, 13, 14, 20 }
+		{ 10, -2, 3, 4 },
+		{ 5, 6, -7, 8 },
+		{ 9, -10, 11, 12 },
+		{ 13, 14, 15, -20 }
 	};
 
 	_mat = mat4(_test);
@@ -121,10 +121,7 @@ void UnitTest::TestMat4()
 	mat4 _matMul = _mat * mat4::Identity();
 }
 
-UnitTest::UnitTest()
-{
-	
-}
+UnitTest::UnitTest() = default;
 
 void UnitTest::Run()
 {

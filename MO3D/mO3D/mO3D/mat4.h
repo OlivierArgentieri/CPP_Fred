@@ -8,6 +8,7 @@ namespace mo3d
 	private :
 		static const float identity[4][4];
 		static const float zero[4][4];
+		
 		mat4(const float _mat[4][4]);
 
 	public:
@@ -22,11 +23,11 @@ namespace mo3d
 		mat4(const mat4& _mat);
 
 		void Transpose();
-
 		float Determinant();
-		mat4 operator*(mat4 _mat);
-		mat4 operator+(mat4 _mat);
-		mat4 operator-(mat4 _mat);
-		mat4 operator/(mat4 _mat);
+		
+		mat4 operator*(mat4 _mat) const;
+		mat4 operator+(mat4 _mat) const;
+		mat4 operator-(mat4 _mat) const;
+		mat4 operator/(mat4 _mat) const;
 	};
 }

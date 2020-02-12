@@ -66,7 +66,7 @@ void mat4::Transpose()
 
 float mat4::Determinant()
 {
-	float _det = 0;
+	double _det = 0;
 
 	float a[3][3] // 0,0
 	{
@@ -116,7 +116,7 @@ float mat4::Determinant()
 	}*/
 
 	
-	float _osef = 0;
+	double _osef = 0;
 	for (int _i = 0; _i < 3; _i++)
 		_osef += a[0][_i % 3] * a[1][(_i + 1) % 3] * a[2][(_i + 2) % 3];
 	

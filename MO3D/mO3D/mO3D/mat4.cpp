@@ -64,7 +64,7 @@ void mat4::Transpose()
 	}
 }
 
-float mat4::Determinant()
+double mat4::Determinant()
 {
 	double _det = 0;
 
@@ -179,6 +179,20 @@ mat4 mat4::operator+(mat4 _mat) const
 
 	return mat4(_res);
 }
+
+bool mat4::operator==(mat4 _mat) const
+{
+	for (int _i = 0; _i < 4; _i++)
+	{
+		for (int _j = 0; _j < 4; _j++)
+		{
+			if (mat[_i][_j] != _mat.mat[_i][_j])
+				return false;
+		}
+	}
+	return true;
+}
+
 mat4 mat4::Identity()
 {
 	return {identity};

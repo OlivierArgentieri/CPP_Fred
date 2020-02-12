@@ -23,10 +23,11 @@ namespace mo3d
 		mat4(const mat4& _mat);
 
 		void Transpose();
-		float Determinant();
+		double Determinant();
 		
 		mat4 operator*(mat4 _mat) const;
 		mat4 operator+(mat4 _mat) const;
+		bool operator==(mat4 _mat) const;
 		mat4 operator-(mat4 _mat) const;
 		mat4 operator/(mat4 _mat) const;
 	};

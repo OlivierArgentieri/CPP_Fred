@@ -52,8 +52,10 @@ void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
 
 
 	// test epsilon
-	_vec = vec3(0.1234567f, 0.1234567f);
+	_vec = vec3(0.1234567f, 0.1234567f, 0.1234567f);
+	ASSERT_EPSILON(_vec.x, .1234567f);
 	ASSERT_EPSILON(_vec.y, .1234567f);
+	ASSERT_EPSILON(_vec.z, .1234567f);
 
 
 	// test Magnitude : normalize
@@ -85,8 +87,11 @@ void UnitTest::TestVec4(float _x = 0, float _y = 0, float _z = 0, float _w = 0)
 
 
 	// test epsilon
-	_vec = vec4(0.1234567f, 0.1234567f);
+	_vec = vec4(0.1234567f, 0.1234567f, 0.1234567f, 0.1234567f);
+	ASSERT_EPSILON(_vec.x, .1234567f);
 	ASSERT_EPSILON(_vec.y, .1234567f);
+	ASSERT_EPSILON(_vec.z, .1234567f);
+	ASSERT_EPSILON(_vec.w, .1234567f);
 
 
 	// test Magnitude : normalize
@@ -105,8 +110,30 @@ void UnitTest::TestVec4(float _x = 0, float _y = 0, float _z = 0, float _w = 0)
 
 void UnitTest::TestMat4()
 {
-	mat4 _mat = mat4::Identity();
-
+	
+	// test transpose
+	float _testTranspose[4][4] =
+	{
+		{ 1, 0, 1, 0 },
+		{ 1, 0, 1, 0 },
+		{ 1, 0, 1, 0 },
+		{ 1, 0, 1, 0 }
+	};
+	float _testTransposeRes[4][4] =
+	{
+		{ 1, 1, 1, 1 },
+		{ 0, 0, 0, 0 },
+		{ 1, 1, 1, 1 },
+		{ 0, 0, 0, 0 }
+	};
+	mat4 _matTransposeRes = mat4(_testTransposeRes);
+	mat4 _matTranspose = mat4(_testTranspose);
+	
+	_matTranspose.Transpose();
+	assert(_matTranspose == _matTransposeRes);
+	
+	
+	// test Determinant
 	float _test[4][4] =
 	{
 		{ -120, -2.754, 3, 80.01 },
@@ -115,10 +142,30 @@ void UnitTest::TestMat4()
 		{ 17.258, 3.14159, 315.8, -20 }
 	};
 
-	_mat = mat4(_test);
-	//_mat.Transpose();
-	float _a = _mat.Determinant();
-	mat4 _matMul = _mat * mat4::Identity();
+	mat4 _mat = mat4(_test);
+	double _a = _mat.Determinant();
+	ASSERT_EPSILON(_a, 324831237.06621);
+
+
+	// test identity
+	float _testIDentity[4][4] =
+	{
+		{ 1, 0, 0, 0 },
+		{ 0, 1, 0, 0 },
+		{ 0, 0, 1, 0 },
+		{ 0, 0, 0, 1 }
+	};
+	
+	mat4 _matID = mat4::Identity();
+	mat4 _matIDTest =  mat4(_testIDentity);
+	assert(_matID == _matIDTest);
+
+	// test *
+	mat4 _testMultiply = mat4::Identity() * _mat;
+	assert(_testMultiply == _mat);
+
+
+	
 }
 
 UnitTest::UnitTest() = default;

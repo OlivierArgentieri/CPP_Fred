@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{81CD85C4-8295-35A7-8A0E-B66F1700CF02}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>main</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">main.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">main.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">main</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include;H:\Fred\OpenGl_Sample\external\glm-0.9.7.1;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\include;H:\Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include;H:\Fred\OpenGl_Sample\external\glm-0.9.7.1;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\include;H:\Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include;H:\Fred\OpenGl_Sample\external\glm-0.9.7.1;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\include;H:\Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+E:\Programme\CMAKE\bin\cmake.exe -E copy D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/$(Configuration)/main.exe H:/Fred/OpenGl_Sample/main/
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;external\glfw-3.1.2\src\Debug\glfw3.lib;external\Debug\GLEW_1130.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/Debug/main.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/Debug/main.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include;H:\Fred\OpenGl_Sample\external\glm-0.9.7.1;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\include;H:\Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include;H:\Fred\OpenGl_Sample\external\glm-0.9.7.1;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\include;H:\Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include;H:\Fred\OpenGl_Sample\external\glm-0.9.7.1;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\include;H:\Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+E:\Programme\CMAKE\bin\cmake.exe -E copy D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/$(Configuration)/main.exe H:/Fred/OpenGl_Sample/main/
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;external\glfw-3.1.2\src\Release\glfw3.lib;external\Release\GLEW_1130.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/Release/main.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/Release/main.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include;H:\Fred\OpenGl_Sample\external\glm-0.9.7.1;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\include;H:\Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include;H:\Fred\OpenGl_Sample\external\glm-0.9.7.1;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\include;H:\Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include;H:\Fred\OpenGl_Sample\external\glm-0.9.7.1;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\include;H:\Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+E:\Programme\CMAKE\bin\cmake.exe -E copy D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/$(Configuration)/main.exe H:/Fred/OpenGl_Sample/main/
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;external\glfw-3.1.2\src\MinSizeRel\glfw3.lib;external\MinSizeRel\GLEW_1130.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/MinSizeRel/main.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/MinSizeRel/main.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include;H:\Fred\OpenGl_Sample\external\glm-0.9.7.1;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\include;H:\Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include;H:\Fred\OpenGl_Sample\external\glm-0.9.7.1;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\include;H:\Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include;H:\Fred\OpenGl_Sample\external\glm-0.9.7.1;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\include;H:\Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+E:\Programme\CMAKE\bin\cmake.exe -E copy D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/$(Configuration)/main.exe H:/Fred/OpenGl_Sample/main/
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;external\glfw-3.1.2\src\RelWithDebInfo\glfw3.lib;external\RelWithDebInfo\GLEW_1130.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/RelWithDebInfo/main.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/RelWithDebInfo/main.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="H:\Fred\OpenGl_Sample\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule H:/Fred/OpenGl_Sample/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+E:\Programme\CMAKE\bin\cmake.exe -SH:/Fred/OpenGl_Sample -BD:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit --check-stamp-file D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeCCompiler.cmake;D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeCXXCompiler.cmake;D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeRCCompiler.cmake;D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeSystem.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeCInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeRCInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindOpenGL.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageMessage.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule H:/Fred/OpenGl_Sample/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+E:\Programme\CMAKE\bin\cmake.exe -SH:/Fred/OpenGl_Sample -BD:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit --check-stamp-file D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeCCompiler.cmake;D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeCXXCompiler.cmake;D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeRCCompiler.cmake;D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeSystem.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeCInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeRCInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindOpenGL.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageMessage.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule H:/Fred/OpenGl_Sample/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+E:\Programme\CMAKE\bin\cmake.exe -SH:/Fred/OpenGl_Sample -BD:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit --check-stamp-file D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeCCompiler.cmake;D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeCXXCompiler.cmake;D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeRCCompiler.cmake;D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeSystem.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeCInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeRCInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindOpenGL.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageMessage.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule H:/Fred/OpenGl_Sample/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+E:\Programme\CMAKE\bin\cmake.exe -SH:/Fred/OpenGl_Sample -BD:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit --check-stamp-file D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeCCompiler.cmake;D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeCXXCompiler.cmake;D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeRCCompiler.cmake;D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\3.17.0-rc1\CMakeSystem.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeCInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeRCInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindOpenGL.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageMessage.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\Windows.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;H:\Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="H:\Fred\OpenGl_Sample\main\main.cpp" />
+    <ClCompile Include="H:\Fred\OpenGl_Sample\common\shader.cpp" />
+    <ClInclude Include="H:\Fred\OpenGl_Sample\common\shader.hpp" />
+    <ClCompile Include="H:\Fred\OpenGl_Sample\common\controls.cpp" />
+    <ClInclude Include="H:\Fred\OpenGl_Sample\common\controls.hpp" />
+    <ClCompile Include="H:\Fred\OpenGl_Sample\common\texture.cpp" />
+    <ClInclude Include="H:\Fred\OpenGl_Sample\common\texture.hpp" />
+    <ClCompile Include="H:\Fred\OpenGl_Sample\common\objloader.cpp" />
+    <ClInclude Include="H:\Fred\OpenGl_Sample\common\objloader.hpp" />
+    <None Include="H:\Fred\OpenGl_Sample\main\TransformVertexShader.vertexshader" />
+    <None Include="H:\Fred\OpenGl_Sample\main\TextureFragmentShader.fragmentshader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\ZERO_CHECK.vcxproj">
+      <Project>{CBC11283-D754-3715-8BD6-B8C3B75A2205}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\GLEW_1130.vcxproj">
+      <Project>{D59A1962-182F-3DDD-902D-6662D602FB05}</Project>
+      <Name>GLEW_1130</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\src\glfw.vcxproj">
+      <Project>{A4A5E6ED-F5A2-3C89-B6D9-5363C9B69E7E}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

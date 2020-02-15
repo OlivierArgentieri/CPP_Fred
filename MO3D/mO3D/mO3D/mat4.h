@@ -30,5 +30,12 @@ namespace mo3d
 		bool operator==(mat4 _mat) const;
 		mat4 operator-(mat4 _mat) const;
 		mat4 operator/(mat4 _mat) const;
+
+
+		mat4& operator=(const mat4& _mat);
+		mat4& operator+=(const mat4& _mat);
+		mat4& operator-=(const mat4& _mat);
+		mat4& operator*=(const mat4& _mat);
+		mat4& operator/=(const mat4& _mat);
 	};
 }

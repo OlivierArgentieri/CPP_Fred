@@ -65,7 +65,7 @@ vec4 vec4::Normalize()
 	if (_magnitude > 0)
 		*this = *this / _magnitude;
 	else
-		*this = new vec4();
+		*this = vec4();
 	return *this;
 }
 
@@ -94,14 +94,6 @@ bool vec4::operator!=(vec4 _vec) const
 	return !(*this == _vec);
 }
 
-vec4* vec4::operator=(vec4* _vec)
-{
-	this->x = _vec->x;
-	this->y = _vec->y;
-	this->z = _vec->z;
-	this->w = _vec->w;
-	return this;
-}
 
 vec4 vec4::operator+(vec4 _vec) const
 {
@@ -111,4 +103,49 @@ vec4 vec4::operator+(vec4 _vec) const
 vec4 vec4::operator-(vec4 _vec) const
 {
 	return vec4(x - _vec.x, y - _vec.y, z - _vec.z, w - _vec.w);
+}
+
+vec4& vec4::operator=(const vec4& _vec)
+{
+	x = _vec.x;
+	y = _vec.y;
+	z = _vec.z;
+	w = _vec.w;
+	return *this;
+}
+
+vec4& vec4::operator+=(const vec4& _vec)
+{
+	x += _vec.x;
+	y += _vec.y;
+	z += _vec.z;
+	w += _vec.w;
+	return *this;
+}
+
+vec4& vec4::operator-=(const vec4& _vec)
+{
+	x -= _vec.x;
+	y -= _vec.y;
+	z -= _vec.z;
+	w -= _vec.w;
+	return *this;
+}
+
+vec4& vec4::operator*=(const vec4& _vec)
+{
+	x *= _vec.x;
+	y *= _vec.y;
+	z *= _vec.z;
+	w *= _vec.w;
+	return *this;
+}
+
+vec4& vec4::operator/=(const vec4& _vec)
+{
+	x /= _vec.x;
+	y /= _vec.y;
+	z /= _vec.z;
+	w /= _vec.w;
+	return *this;
 }

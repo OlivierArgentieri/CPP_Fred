@@ -47,7 +47,7 @@ vec2 vec2::Normalize()
 	if (_magnitude > 0)
 		*this = *this / _magnitude;
 	else
-		*this = new vec2();
+		*this = vec2();
 	return *this;
 }
 
@@ -95,13 +95,6 @@ bool vec2::operator!=(vec2 _vec) const
 	return !(*this == _vec);
 }
 
-vec2* vec2::operator=(vec2* _vec)
-{
-	this->x = _vec->x;
-	this->y = _vec->y;
-	return this;
-}
-
 vec2 vec2::operator+(vec2 _vec) const
 {
 	return vec2(x+_vec.x, y + _vec.y);
@@ -110,4 +103,39 @@ vec2 vec2::operator+(vec2 _vec) const
 vec2 vec2::operator-(vec2 _vec) const
 {
 	return vec2(x - _vec.x, y - _vec.y);
+}
+
+vec2& vec2::operator=(const vec2& _vec)
+{
+	x = _vec.x;
+	y = _vec.y;
+	return *this;
+}
+
+vec2& vec2::operator+=(const vec2& _vec)
+{
+	x += _vec.x;
+	y += _vec.y;
+	return *this;
+}
+
+vec2& vec2::operator-=(const vec2& _vec)
+{
+	x -= _vec.x;
+	y -= _vec.y;
+	return *this;
+}
+
+vec2& vec2::operator*=(const vec2& _vec)
+{
+	x *= _vec.x;
+	y *= _vec.y;
+	return *this;
+}
+
+vec2& vec2::operator/=(const vec2& _vec)
+{
+	x /= _vec.x;
+	y /= _vec.y;
+	return *this;
 }

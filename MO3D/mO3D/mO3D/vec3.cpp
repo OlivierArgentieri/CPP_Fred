@@ -86,7 +86,7 @@ vec3 vec3::Normalize()
 	if (_magnitude > 0)
 		*this = *this / _magnitude;
 	else
-	*this = new vec3();
+	*this = vec3();
 	return *this;
 }
 
@@ -114,17 +114,52 @@ bool vec3::operator!=(vec3 _vec) const
 	return !(*this == _vec);
 }
 
-vec3* vec3::operator=(vec3* _vec)
-{
-	this->x = _vec->x;
-	this->y = _vec->y;
-	this->z = _vec->z;
-	return this;
-}
-
 vec3 vec3::operator+(vec3 _vec) const
 {
 	return vec3(x + _vec.x, y + _vec.y, z + _vec.z);
+}
+
+vec3& vec3::operator=(const vec3& _vec)
+{
+	x = _vec.x;
+	y = _vec.y;
+	z = _vec.z;
+	return *this;
+}
+
+vec3& vec3::operator+=(const vec3& _vec)
+{
+
+	x += _vec.x;
+	y += _vec.y;
+	z += _vec.z;
+	return *this;
+}
+
+vec3& vec3::operator-=(const vec3& _vec)
+{
+
+	x -= _vec.x;
+	y -= _vec.y;
+	z -= _vec.z;
+	return *this;
+}
+
+vec3& vec3::operator*=(const vec3& _vec)
+{
+
+	x *= _vec.x;
+	y *= _vec.y;
+	z *= _vec.z;
+	return *this;
+}
+
+vec3& vec3::operator/=(const vec3& _vec)
+{
+	x /= _vec.x;
+	y /= _vec.y;
+	z /= _vec.z;
+	return *this;
 }
 
 vec3 vec3::operator-(vec3 _vec) const

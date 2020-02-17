@@ -24,7 +24,8 @@ namespace mo3d
 
 		void Transpose();
 		double Determinant();
-		
+		float ReviewDet();
+
 		mat4 operator*(mat4 _mat) const;
 		mat4 operator+(mat4 _mat) const;
 		mat4 operator-(mat4 _mat) const;

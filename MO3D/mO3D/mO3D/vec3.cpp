@@ -134,7 +134,6 @@ vec3& vec3::operator=(const vec3& _vec)
 
 vec3& vec3::operator+=(const vec3& _vec)
 {
-
 	x += _vec.x;
 	y += _vec.y;
 	z += _vec.z;
@@ -143,7 +142,6 @@ vec3& vec3::operator+=(const vec3& _vec)
 
 vec3& vec3::operator-=(const vec3& _vec)
 {
-
 	x -= _vec.x;
 	y -= _vec.y;
 	z -= _vec.z;

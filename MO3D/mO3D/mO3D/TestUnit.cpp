@@ -160,8 +160,19 @@ void UnitTest::TestMat4()
 		{ 17.258, 3.14159, 315.8, -20 }
 	};
 
+	float _test2[4][4] =
+	{
+		{ 4, 5, 3, 2},
+		{ 8,9, 2, 1},
+		{ 6, 2, 4, 9},
+		{ 6, 8, 7, 1}
+	};
+
 	mat4 _mat = mat4(_test);
-	double _a = _mat.Determinant();
+	mat4 _mat2 = mat4(_test2);
+	double _a = _mat.ReviewDet();
+	double _b = _mat2.Determinant();
+	double _c = 10;
 	ASSERT_EPSILON(_a, 324831237.06621);
 
 

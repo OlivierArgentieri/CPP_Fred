@@ -29,7 +29,7 @@ namespace mo3d
 
 
 		vec3(float _x = 0, float _y = 0, float _z = 0);
-		vec3(const vec3& _vec2);
+		vec3(const vec3& _vec3);
 
 		float Magnitude() const;
 		vec3 Normalize();

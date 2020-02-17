@@ -96,7 +96,7 @@ double mat4::Determinant()
 
 
 	float t[3][3] = { {0} };
-	
+	/*
 	// mat4 -> mat3
 	for(int _i =0; _i < 4; _i ++ ) // cols
 	{
@@ -108,7 +108,7 @@ double mat4::Determinant()
 				//mat[]
 			}
 		}
-	}
+	}*/
 
 	double _a = 0;
 	double _b = 0;
@@ -123,7 +123,8 @@ double mat4::Determinant()
 		_c += c[0][_i % 3] * c[1][(_i + 1) % 3] * c[2][(_i + 2) % 3];
 		_d += d[0][_i % 3] * d[1][(_i + 1) % 3] * d[2][(_i + 2) % 3];
 	}
-
+	
+	
 	for (int _i = 2; _i < 5; _i++)
 	{
 		_a -= a[0][_i % 3] * a[1][(_i - 1) % 3] * a[2][(_i - 2) % 3];
@@ -132,9 +133,53 @@ double mat4::Determinant()
 		_d -= d[0][_i % 3] * d[1][(_i - 1) % 3] * d[2][(_i - 2) % 3];
 	}
 
+
 	_det += ((_a * mat[0][0]) - (_b * mat[0][1]) + (_c * mat[0][2]) - (_d * mat[0][3]));
 
 	return _det;
+}
+
+
+float mat4::ReviewDet()
+{
+	
+	float test[4][4]
+	{
+		{ -10, 1, 2, 3},
+		{ 4, 5, 6, 7 },
+		{ 8,9, 10, 11 },
+		{ 12, 13, 14, 20}
+	};
+
+	float oui[3][3] = { { 0} };
+	float det = 0;
+	float _a = 0;
+	for (int _cols = 0; _cols < 4; _cols++)
+	{
+		 test[0][_cols];
+	
+		_a = 0;
+		for (int _j = 0; _j < 4; _j++)
+		{
+			if (_j == _cols) continue;
+
+			oui[0][_j-1] = test[1][_j];
+			oui[1][_j-1] = test[2][_j];
+			oui[2][_j-1] = test[3][_j];
+		}
+
+		_a = oui[0][0] * (oui[1][1] * oui[2][2]) - oui[0][0] * (oui[1][2] * oui[2][1]) +
+			oui[0][1] * (oui[1][0] * oui[2][2]) - oui[0][1] * (oui[1][2] * oui[2][0]) +
+			oui[0][2] * (oui[1][0] * oui[2][1]) - oui[0][2] * (oui[1][1] * oui[2][0]);
+
+		if (_cols % 1 == 0)
+			det += test[0][_cols] * _a;
+		else
+			det += test[0][_cols] * _a;
+		
+	}
+	return det;
+
 }
 
 mat4 mat4::operator*(mat4 _mat) const

@@ -14,35 +14,218 @@ using namespace mo3d;
 
 void UnitTest::TestVec2(float _x = 0, float _y = 1)
 {
-	vec2 _vec2;
-	assert(_vec2.x == 0);
-	assert(_vec2.y == 0);
+	
+	TestVec2Constructor(_x, _y);
+	TestVec2Epsilon();
+	TestVec2Normalize();
+	TestVec2Distance();
 
-	vec2 _vec3 = vec2(_x, _y);
-	assert(_vec3.x == _x);
-	assert(_vec3.y == _y);
+	TestVec2Dot();
+	
+	TestVec2Mul();
+	TestVec2Div();
+	TestVec2Addition();
+	TestVec2Subtraction();
+	
+	TestVec2Equals();
+	TestVec2NotEquals();
+	TestVec2Superior();
+	TestVec2SuperiorEquals();
+	TestVec2Inferior();
+	TestVec2InferiorEquals();
 
-	_vec2 = vec2(0.1234567f, 0.1234567f);
-	ASSERT_EPSILON(_vec2.y, .1234567f);
+}
 
-	// test Magnitude : normalize
+void UnitTest::TestVec2Constructor(float _x = 0, float _y = 1)
+{
+	vec2 _vec1;
+	assert(_vec1.x == 0);
+	assert(_vec1.y == 0);
+
+	vec2 _vec2 = vec2(_x, _y);
+	assert(_vec2.x == _x);
+	assert(_vec2.y == _y);
+}
+
+void UnitTest::TestVec2Epsilon()
+{
+	vec2 _vec1 = vec2(0.1234567f, 0.1234567f);
+	ASSERT_EPSILON(_vec1.y, .1234567f);
+	ASSERT_EPSILON(_vec1.x, .1234567f);
+}
+
+void UnitTest::TestVec2Magnitude()
+{
 	vec2 _v1 = vec2(0, 0);
 	vec2 _v2 = vec2(-1, 0);
 
 	assert(_v1.Magnitude() == 0);
-	assert(_v1.Magnitude() == 0);
 	assert(_v2.Magnitude() == 1);
 	assert(_v1.Magnitude() == vec2::Magnitude(_v1));
 	assert(_v2.Magnitude() == vec2::Magnitude(_v2));
-	assert(_v2.Normalize() == vec2(-1, 0));
-	assert(_v2.Normalize() != _v1);
+}
 
-	// + / +=
+void UnitTest::TestVec2Normalize()
+{
+	vec2 _v1 = vec2(0, 0);
+	vec2 _v2 = vec2(-1, 0);
+	vec2 _v3 = vec2(2, 0);
+
+	assert(_v1.Normalize() == vec2(0, 0));
+	assert(_v2.Normalize() == vec2(-1, 0));
+	assert(_v3.Normalize() == vec2(1, 0));
+}
+
+void UnitTest::TestVec2Distance()
+{
+	vec2 _v1 = vec2(0, 0);
+	vec2 _v2 = vec2(-1, 0);
+	vec2 _v3 = vec2(2, 0);
+
+	assert(_v1.Distance(_v2) == 1);
+	assert(_v1.Distance(_v3) == 2);
+	assert(_v1.Distance(_v1) == 0);
+}
+
+void UnitTest::TestVec2Dot()
+{
+	vec2 _v1 = vec2(1, 0);
+	vec2 _v2 = vec2(0, 1);
+	
+	vec2 _v3 = vec2(1, 1);
+	vec2 _v4 = vec2(5, 5);
+
+	assert(_v1.Dot(_v2) == 0);
+	assert(_v3.Dot(_v4) == 10);
+}
+
+void UnitTest::TestVec2Mul()
+{
+	vec2 _v1 = vec2(2, 3);
+	vec2 _v2 = vec2(5, 5);
+	_v1 * _v2;
+	
+	assert(_v1 == vec2(2, 3));
+	assert(_v2 == vec2(5, 5));
+	assert(_v1 * _v2 == vec2(10, 15));
+
+	_v1 *= _v2;
+	assert(_v1 == vec2(10, 15));
+
+}
+
+void UnitTest::TestVec2Div()
+{
+	vec2 _v1 = vec2(2, 3);
+	vec2 _v2 = vec2(5, 5);
+	_v1 / _v2;
+
+	assert(_v1 == vec2(2, 3));
+	assert(_v2 == vec2(5, 5));
+	assert((_v1 / _v2) == vec2(0.4f, 0.6f));
+
+	_v1 /= _v2;
+	assert(_v1 == vec2(0.4f, 0.6f));
+
+}
+
+void UnitTest::TestVec2Addition()
+{
+	vec2 _v1 = vec2(2, 3);
+	vec2 _v2 = vec2(5, 5);
 	_v1 + _v2;
-	assert(_v1 == vec2(0,0));
+
+	assert(_v1 == vec2(2, 3));
+	assert(_v2 == vec2(5, 5));
+	assert((_v1 + _v2) == vec2(7, 8));
+
 	_v1 += _v2;
+	assert(_v1 == vec2(7, 8));
+}
+
+void UnitTest::TestVec2Subtraction()
+{
+	vec2 _v1 = vec2(2, 3);
+	vec2 _v2 = vec2(5, 5);
+	_v1 - _v2;
+
+	assert(_v1 == vec2(2, 3));
+	assert(_v2 == vec2(5, 5));
+	assert((_v1 - _v2) == vec2(-3, -2));
+
+	_v1 -= _v2;
+	assert(_v1 == vec2(-3, -2));
+
+}
+
+void UnitTest::TestVec2Equals()
+{
+	vec2 _v1 = vec2(2, 3);
+	vec2 _v2 = vec2(2, 3);
+	_v1 == _v2;
+
+	assert(_v1 == vec2(2, 3));
+	assert(_v2 == vec2(2, 3));
 	assert(_v1 == _v2);
 }
+
+void UnitTest::TestVec2NotEquals()
+{
+	vec2 _v1 = vec2(2, 3);
+	vec2 _v2 = vec2(2, 4);
+	_v1 != _v2;
+
+	assert(_v1 == vec2(2, 3));
+	assert(_v2 == vec2(2, 4));
+	assert(_v1 != _v2);
+}
+
+void UnitTest::TestVec2Superior()
+{
+	vec2 _v1 = vec2(2, 7);
+	vec2 _v2 = vec2(2, 4);
+	_v1 > _v2;
+
+	assert(_v1 == vec2(2, 7));
+	assert(_v2 == vec2(2, 4));
+	assert(_v1 > _v2);
+}
+
+void UnitTest::TestVec2SuperiorEquals()
+{
+	vec2 _v1 = vec2(2, 7);
+	vec2 _v2 = vec2(2, 4);
+	vec2 _v3 = vec2(2, 4);
+	_v1 > _v2;
+
+	assert(_v1 == vec2(2, 7));
+	assert(_v2 == vec2(2, 4));
+	assert(_v1 >= _v2);
+	assert(_v1 >= _v3);
+}
+
+void UnitTest::TestVec2Inferior()
+{
+	vec2 _v1 = vec2(2, 4);
+	vec2 _v2 = vec2(2, 7);
+	_v1 < _v2;
+
+	assert(_v1 == vec2(2, 4));
+	assert(_v2 == vec2(2, 7));
+	assert(_v1 < _v2);
+}
+
+void UnitTest::TestVec2InferiorEquals()
+{
+	vec2 _v1 = vec2(2, 4);
+	vec2 _v2 = vec2(2, 4);
+	_v1 <= _v2;
+
+	assert(_v1 == vec2(2, 4));
+	assert(_v2 == vec2(2, 4));
+	assert(_v1 <= _v2);
+}
+
 
 void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
 {
@@ -170,7 +353,7 @@ void UnitTest::TestMat4()
 
 	mat4 _mat = mat4(_test);
 	mat4 _mat2 = mat4(_test2);
-	double _a = _mat.ReviewDet();
+	double _a = _mat.Determinant();
 	double _b = _mat2.Determinant();
 	double _c = 10;
 	ASSERT_EPSILON(_a, 324831237.06621);

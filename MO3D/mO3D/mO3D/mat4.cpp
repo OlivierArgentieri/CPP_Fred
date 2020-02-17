@@ -42,7 +42,7 @@ mat4::mat4(const mat4& _mat)
 	{
 		for (int _j = 0; _j < 4; _j++)
 		{
-			this->mat[_i][_j] = _mat.mat[_i][_j];
+			mat[_i][_j] = _mat.mat[_i][_j];
 		}
 	}
 }
@@ -133,7 +133,6 @@ double mat4::Determinant()
 		_d -= d[0][_i % 3] * d[1][(_i - 1) % 3] * d[2][(_i - 2) % 3];
 	}
 
-
 	_det += ((_a * mat[0][0]) - (_b * mat[0][1]) + (_c * mat[0][2]) - (_d * mat[0][3]));
 
 	return _det;
@@ -142,7 +141,6 @@ double mat4::Determinant()
 
 float mat4::ReviewDet()
 {
-	
 	float test[4][4]
 	{
 		{ -10, 1, 2, 3},

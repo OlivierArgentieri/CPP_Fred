@@ -34,13 +34,17 @@ namespace mo3d
 		float Distance(vec2 _vec) const;
 		
 		vec2 operator/(float _value) const;
-		vec2 operator/(vec2 _vec) const;
-		vec2 operator*(vec2 _vec) const;
-		vec2 operator+(vec2 _vec) const;
-		vec2 operator-(vec2 _vec) const;
+		vec2 operator/(const vec2& _vec) const;
+		vec2 operator*(const vec2& _vec) const;
+		vec2 operator+(const vec2& _vec) const;
+		vec2 operator-(const vec2& _vec) const;
 
-		bool operator==(vec2 _vec) const;
-		bool operator!=(vec2 _vec) const;
+		bool operator==(const vec2&  _vec) const;
+		bool operator<(const vec2&  _vec) const;
+		bool operator<=(const vec2&  _vec) const;
+		bool operator>(const vec2& _vec) const;
+		bool operator>=(const vec2& _vec) const;
+		bool operator!=(const vec2&  _vec) const;
 		
 		vec2& operator=(const vec2& _vec);
 		vec2& operator+=(const vec2& _vec);

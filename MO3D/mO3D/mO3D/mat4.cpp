@@ -47,12 +47,9 @@ mat4::mat4(const mat4& _mat)
 	}
 }
 
-void mat4::Transpose()
+mat4& mat4::Transpose()
 {
-	if (this == nullptr) return;
-
 	mat4 _temp = mat4(this->mat);
-
 	for (int _i = 0; _i < 4; _i++)
 	{
 		for (int _j = 0; _j < 4; _j++)
@@ -60,6 +57,7 @@ void mat4::Transpose()
 			this->mat[_j][_i] = _temp.mat[_i][_j];
 		}
 	}
+	return *this;
 }
 
 double mat4::Determinant()
@@ -180,7 +178,7 @@ float mat4::ReviewDet()
 
 }
 
-mat4 mat4::operator*(mat4 _mat) const
+mat4 mat4::operator*(const mat4& _mat) const
 {
 	float _res[4][4];
 	for (int _i = 0; _i < 4; _i++)
@@ -194,7 +192,7 @@ mat4 mat4::operator*(mat4 _mat) const
 	return mat4(_res);
 }
 
-mat4 mat4::operator-(mat4 _mat) const
+mat4 mat4::operator-(const mat4& _mat) const
 {
 	float _res[4][4];
 	for (int _i = 0; _i < 4; _i++)
@@ -208,7 +206,7 @@ mat4 mat4::operator-(mat4 _mat) const
 	return mat4(_res);
 }
 
-mat4 mat4::operator/(mat4 _mat) const
+mat4 mat4::operator/(const mat4& _mat) const
 {
 	float _res[4][4];
 	for (int _i = 0; _i < 4; _i++)
@@ -223,6 +221,7 @@ mat4 mat4::operator/(mat4 _mat) const
 	}
 	return mat4(_res);
 }
+
 
 mat4& mat4::operator=(const mat4& _mat)
 {
@@ -266,7 +265,8 @@ mat4& mat4::operator*=(const mat4& _mat)
 	{
 		for (int _j = 0; _j < 4; _j++)
 		{
-			mat[_i][_j] *= _mat.mat[_i][_j];
+			mat[_i][_j] = mat[_i][0] * _mat.mat[0][_j] + mat[_i][1] * _mat.mat[1][_j] + mat[_i][2] * _mat.mat[2][_j] +
+				mat[_i][3] * _mat.mat[3][_j];
 		}
 	}
 	return  *this;
@@ -285,7 +285,7 @@ mat4& mat4::operator/=(const mat4& _mat)
 	return  *this;
 }
 
-mat4 mat4::operator+(mat4 _mat) const
+mat4 mat4::operator+(const mat4& _mat) const
 {
 	float _res[4][4];
 	for (int _i = 0; _i < 4; _i++)

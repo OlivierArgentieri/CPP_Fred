@@ -49,7 +49,6 @@ private:
 	static void TestVec4Magnitude();
 	static void TestVec4Normalize();
 	static void TestVec4Distance();
-	static void TestVec4Cross();
 	static void TestVec4Dot();
 	static void TestVec4Mul();
 	static void TestVec4Div();
@@ -63,6 +62,12 @@ private:
 	static void TestVec4InferiorEquals();
 	
 	static void TestMat4();
+	static void TestMat4Transpose();
+	static void TestMat4Determinant();
+	static void TestMat4Identity();
+	static void TestMat4Mul();
+
+	
 	UnitTest();
 
 public:

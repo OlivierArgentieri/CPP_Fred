@@ -675,7 +675,15 @@ void UnitTest::TestVec4InferiorEquals()
 
 void UnitTest::TestMat4()
 {
-	
+	TestMat4Transpose();
+	TestMat4Determinant();
+	TestMat4Identity();
+	TestMat4Mul();
+// / - + != == 
+}
+
+void UnitTest::TestMat4Transpose()
+{
 	// test transpose
 	float _testTranspose[4][4] =
 	{
@@ -693,12 +701,13 @@ void UnitTest::TestMat4()
 	};
 	mat4 _matTransposeRes = mat4(_testTransposeRes);
 	mat4 _matTranspose = mat4(_testTranspose);
-	
+
 	_matTranspose.Transpose();
 	assert(_matTranspose == _matTransposeRes);
-	
-	
-	// test Determinant
+}
+
+void UnitTest::TestMat4Determinant()
+{
 	float _test[4][4] =
 	{
 		{ -120, -2.754, 3, 80.01 },
@@ -707,22 +716,13 @@ void UnitTest::TestMat4()
 		{ 17.258, 3.14159, 315.8, -20 }
 	};
 
-	float _test2[4][4] =
-	{
-		{ 4, 5, 3, 2},
-		{ 8,9, 2, 1},
-		{ 6, 2, 4, 9},
-		{ 6, 8, 7, 1}
-	};
-
 	mat4 _mat = mat4(_test);
-	mat4 _mat2 = mat4(_test2);
 	double _a = _mat.Determinant();
-	double _b = _mat2.Determinant();
-	double _c = 10;
 	ASSERT_EPSILON(_a, 324831237.06621);
+}
 
-
+void UnitTest::TestMat4Identity()
+{
 	// test identity
 	float _testIDentity[4][4] =
 	{
@@ -731,15 +731,32 @@ void UnitTest::TestMat4()
 		{ 0, 0, 1, 0 },
 		{ 0, 0, 0, 1 }
 	};
+
+	mat4 _matID = mat4::Identity();
+	mat4 _matIDTest = mat4(_testIDentity);
+	assert(_matID == _matIDTest);
+}
+
+void UnitTest::TestMat4Mul()
+{
+	float _test[4][4] =
+	{
+		{ -120, -2.754, 3, 80.01 },
+		{ 5, 16.2, -7.2, 747 },
+		{ 28, -10, 11, 12 },
+		{ 17.258, 3.14159, 315.8, -20 }
+	};
 	
 	mat4 _matID = mat4::Identity();
-	mat4 _matIDTest =  mat4(_testIDentity);
-	assert(_matID == _matIDTest);
+	mat4 _matIDTest = mat4(_test);
+	_matID * _matIDTest;
 
-	// test *
-	mat4 _testMultiply = mat4::Identity() * _mat;
-	assert(_testMultiply == _mat);
+	assert(_matID == mat4::Identity());
+	assert(_matIDTest == mat4(_test));
+	assert(_matID * _matIDTest == _matIDTest);
 
+	_matIDTest *= _matID;
+	assert(_matIDTest == mat4(_test));
 }
 
 UnitTest::UnitTest() = default;

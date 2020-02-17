@@ -30,7 +30,7 @@ namespace mo3d
 		
 		float Dot(vec2 _vec) const;
 		float Magnitude() const;
-		vec2 Normalize();
+		vec2& Normalize();
 		float Distance(vec2 _vec) const;
 		
 		vec2 operator/(float _value) const;
@@ -39,13 +39,13 @@ namespace mo3d
 		vec2 operator+(const vec2& _vec) const;
 		vec2 operator-(const vec2& _vec) const;
 
-		bool operator==(const vec2&  _vec) const;
 		bool operator<(const vec2&  _vec) const;
 		bool operator<=(const vec2&  _vec) const;
 		bool operator>(const vec2& _vec) const;
 		bool operator>=(const vec2& _vec) const;
 		bool operator!=(const vec2&  _vec) const;
-		
+		bool operator==(const vec2&  _vec) const;
+
 		vec2& operator=(const vec2& _vec);
 		vec2& operator+=(const vec2& _vec);
 		vec2& operator-=(const vec2& _vec);

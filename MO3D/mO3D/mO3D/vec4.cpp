@@ -32,7 +32,7 @@ float vec4::Distance(vec4 _vec1, vec4 _vec2)
 
 float vec4::Dot(vec4 _vec) const
 {
-	return x * _vec.x + y * _vec.y + z * _vec.z + w + _vec.w;
+	return x * _vec.x + y * _vec.y + z * _vec.z + w * _vec.w;
 }
 
 float vec4::Distance(vec4 _vec) const
@@ -58,7 +58,7 @@ vec4 vec4::Normalize(vec4 _vec)
 	return  vec4();
 }
 
-vec4 vec4::Normalize()
+vec4& vec4::Normalize()
 {
 	float _magnitude = Magnitude();
 
@@ -84,12 +84,12 @@ vec4 vec4::operator/(vec4 _vec) const
 	return vec4::zero;
 }
 
-bool vec4::operator==(vec4 _vec) const
+bool vec4::operator==(const vec4& _vec) const
 {
 	return x == _vec.x && y == _vec.y && z == _vec.z && w == _vec.w;
 }
 
-bool vec4::operator!=(vec4 _vec) const
+bool vec4::operator!=(const vec4& _vec) const
 {
 	return !(*this == _vec);
 }
@@ -108,6 +108,26 @@ vec4 vec4::operator-(vec4 _vec) const
 vec4 vec4::operator*(vec4 _vec) const
 {
 	return vec4(x * _vec.x, y * _vec.y, z * _vec.z, w * _vec.w);
+}
+
+bool vec4::operator<(const vec4& _vec) const
+{
+	return Magnitude() < _vec.Magnitude();
+}
+
+bool vec4::operator<=(const vec4& _vec) const
+{
+	return Magnitude() <= _vec.Magnitude();
+}
+
+bool vec4::operator>(const vec4& _vec) const
+{
+	return Magnitude() > _vec.Magnitude();
+}
+
+bool vec4::operator>=(const vec4& _vec) const
+{
+	return Magnitude() >= _vec.Magnitude();
 }
 
 vec4& vec4::operator=(const vec4& _vec)

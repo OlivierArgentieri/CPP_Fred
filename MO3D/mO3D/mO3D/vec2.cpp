@@ -41,7 +41,7 @@ float vec2::Magnitude() const
 	return sqrt(x*x + y * y);
 }
 
-vec2 vec2::Normalize()
+vec2& vec2::Normalize()
 {
 	float _magnitude = Magnitude();
 

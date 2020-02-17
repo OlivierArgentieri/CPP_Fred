@@ -79,7 +79,7 @@ vec3 vec3::Normalize(vec3 _vec)
 	return  vec3();
 }
 
-vec3 vec3::Normalize()
+vec3& vec3::Normalize()
 {
 	float _magnitude = Magnitude();
 
@@ -97,31 +97,51 @@ vec3 vec3::operator/(float _value) const
 	return vec3::zero;
 }
 
-vec3 vec3::operator/(vec3 _vec) const
+vec3 vec3::operator/(const vec3& _vec) const
 {
 	if (_vec != vec3::zero)
 		return vec3(x / _vec.x, y / _vec.y, z / _vec.z);
 	return vec3::zero;
 }
 
-vec3 vec3::operator*(vec3 _vec) const
+vec3 vec3::operator*(const vec3& _vec) const
 {
 	return vec3(x * _vec.x, y * _vec.y, z * _vec.z);
 }
 
-bool vec3::operator==(vec3 _vec) const
+bool vec3::operator==(const vec3& _vec) const
 {
 	return x == _vec.x && y == _vec.y && z == _vec.z;
 }
 
-bool vec3::operator!=(vec3 _vec) const
+bool vec3::operator!=(const vec3& _vec) const
 {
 	return !(*this == _vec);
 }
 
-vec3 vec3::operator+(vec3 _vec) const
+vec3 vec3::operator+(const vec3& _vec) const
 {
 	return vec3(x + _vec.x, y + _vec.y, z + _vec.z);
+}
+
+bool vec3::operator<(const vec3& _vec) const
+{
+	return Magnitude() < _vec.Magnitude();
+}
+
+bool vec3::operator<=(const vec3& _vec) const
+{
+	return Magnitude() <= _vec.Magnitude();
+}
+
+bool vec3::operator>(const vec3& _vec) const
+{
+	return Magnitude() > _vec.Magnitude();
+}
+
+bool vec3::operator>=(const vec3& _vec) const
+{
+	return Magnitude() >= _vec.Magnitude();
 }
 
 vec3& vec3::operator=(const vec3& _vec)
@@ -165,7 +185,7 @@ vec3& vec3::operator/=(const vec3& _vec)
 	return *this;
 }
 
-vec3 vec3::operator-(vec3 _vec) const
+vec3 vec3::operator-(const vec3& _vec) const
 {
 	return vec3(x - _vec.x, y - _vec.y, z - _vec.z);
 }

@@ -32,19 +32,23 @@ namespace mo3d
 		vec3(const vec3& _vec3);
 
 		float Magnitude() const;
-		vec3 Normalize();
+		vec3& Normalize();
 		float Dot(vec3 _vec) const;
 		vec3 Cross(vec3 _vec) const;
 		float Distance(vec3 _vec)const;
 
 		vec3 operator/(float _value) const;
-		vec3 operator/(vec3 _vec) const;
-		vec3 operator*(vec3 _vec) const;
-		vec3 operator-(vec3 _vec) const;
-		vec3 operator+(vec3 _vec) const;
-
-		bool operator==(vec3 _vec) const;
-		bool operator!=(vec3 _vec) const;
+		vec3 operator/(const vec3& _vec) const;
+		vec3 operator*(const vec3& _vec) const;
+		vec3 operator-(const vec3& _vec) const;
+		vec3 operator+(const vec3& _vec) const;
+		
+		bool operator<(const vec3&  _vec) const;
+		bool operator<=(const vec3&  _vec) const;
+		bool operator>(const vec3& _vec) const;
+		bool operator>=(const vec3& _vec) const;
+		bool operator==(const vec3& _vec) const;
+		bool operator!=(const vec3& _vec) const;
 		
 		vec3& operator=(const vec3& _vec);
 		vec3& operator+=(const vec3& _vec);

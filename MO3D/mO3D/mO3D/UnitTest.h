@@ -44,6 +44,24 @@ private:
 
 
 	static void TestVec4(float _x, float _y, float _z, float _w);
+	static void TestVec4Constructor(float _x, float _y, float _z, float _w);
+	static void TestVec4Epsilon();
+	static void TestVec4Magnitude();
+	static void TestVec4Normalize();
+	static void TestVec4Distance();
+	static void TestVec4Cross();
+	static void TestVec4Dot();
+	static void TestVec4Mul();
+	static void TestVec4Div();
+	static void TestVec4Addition();
+	static void TestVec4Subtraction();
+	static void TestVec4Equals();
+	static void TestVec4NotEquals();
+	static void TestVec4Superior();
+	static void TestVec4SuperiorEquals();
+	static void TestVec4Inferior();
+	static void TestVec4InferiorEquals();
+	
 	static void TestMat4();
 	UnitTest();
 

@@ -25,7 +25,7 @@ namespace mo3d
 		vec4(const vec4& _vec4);
 
 		float Magnitude() const;		
-		vec4 Normalize();
+		vec4& Normalize();
 		float Dot(vec4 _vec) const;
 		float Distance(vec4 _vec) const;
 
@@ -35,8 +35,12 @@ namespace mo3d
 		vec4 operator-(vec4 _vec) const;
 		vec4 operator*(vec4 _vec) const;
 
-		bool operator==(vec4 _vec) const;
-		bool operator!=(vec4 _vec) const;
+		bool operator<(const vec4&  _vec) const;
+		bool operator<=(const vec4&  _vec) const;
+		bool operator>(const vec4& _vec) const;
+		bool operator>=(const vec4& _vec) const;
+		bool operator==(const vec4& _vec) const;
+		bool operator!=(const vec4& _vec) const;
 		
 		vec4& operator=(const vec4& _vec);
 		vec4& operator+=(const vec4& _vec);

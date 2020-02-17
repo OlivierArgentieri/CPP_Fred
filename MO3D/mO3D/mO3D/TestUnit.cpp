@@ -36,6 +36,12 @@ void UnitTest::TestVec2(float _x = 0, float _y = 1)
 	assert(_v2.Magnitude() == vec2::Magnitude(_v2));
 	assert(_v2.Normalize() == vec2(-1, 0));
 	assert(_v2.Normalize() != _v1);
+
+	// + / +=
+	_v1 + _v2;
+	assert(_v1 == vec2(0,0));
+	_v1 += _v2;
+	assert(_v1 == _v2);
 }
 
 void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
@@ -69,6 +75,12 @@ void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
 	assert(_v2.Magnitude() == vec3::Magnitude(_v2));
 	assert(_v2.Normalize() == vec3(-1,0,0));
 	assert(_v2.Normalize() != _v1);
+
+	// + / +=
+	_v1 + _v2;
+	assert(_v1 == vec3(0, 0, 0));
+	_v1 += _v2;
+	assert(_v1 == _v2);
 }
 
 void UnitTest::TestVec4(float _x = 0, float _y = 0, float _z = 0, float _w = 0)
@@ -105,6 +117,12 @@ void UnitTest::TestVec4(float _x = 0, float _y = 0, float _z = 0, float _w = 0)
 	assert(_v2.Magnitude() == vec4::Magnitude(_v2));
 	assert(_v2.Normalize() == vec4(-1, 0, 0));
 	assert(_v2.Normalize() != _v1);
+
+	// + / +=
+	_v1 + _v2;
+	assert(_v1 == vec4(0, 0, 0, 0));
+	_v1 += _v2;
+	assert(_v1 == _v2);
 }
 
 

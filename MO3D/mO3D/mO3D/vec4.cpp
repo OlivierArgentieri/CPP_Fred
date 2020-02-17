@@ -105,6 +105,11 @@ vec4 vec4::operator-(vec4 _vec) const
 	return vec4(x - _vec.x, y - _vec.y, z - _vec.z, w - _vec.w);
 }
 
+vec4 vec4::operator*(vec4 _vec) const
+{
+	return vec4(x * _vec.x, y * _vec.y, z * _vec.z, w * _vec.w);
+}
+
 vec4& vec4::operator=(const vec4& _vec)
 {
 	x = _vec.x;

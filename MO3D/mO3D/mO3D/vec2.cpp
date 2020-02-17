@@ -85,6 +85,11 @@ vec2 vec2::operator/(vec2 _vec) const
 	return vec2::zero;
 }
 
+vec2 vec2::operator*(vec2 _vec) const
+{
+	return vec2(x * _vec.x, y * _vec.y);
+}
+
 bool vec2::operator==(vec2 _vec) const
 {
 	return this->x == _vec.x && this->y == _vec.y;

@@ -95,6 +95,21 @@ double mat4::Determinant()
 	};
 
 
+	float t[3][3] = { {0} };
+	
+	// mat4 -> mat3
+	for(int _i =0; _i < 4; _i ++ ) // cols
+	{
+		
+		for (int _j = 0; _j < 3; _j++) // row
+		{
+			for (int _k = 0; _k < 3; _k++) // cols
+			{
+				//mat[]
+			}
+		}
+	}
+
 	double _a = 0;
 	double _b = 0;
 	double _c = 0;
@@ -253,6 +268,12 @@ bool mat4::operator==(mat4 _mat) const
 	}
 	return true;
 }
+
+bool mat4::operator!=(mat4 _mat) const
+{
+	return !(mat == _mat.mat);
+}
+
 
 mat4 mat4::Identity()
 {

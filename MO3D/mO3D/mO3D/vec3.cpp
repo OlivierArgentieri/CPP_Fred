@@ -104,6 +104,11 @@ vec3 vec3::operator/(vec3 _vec) const
 	return vec3::zero;
 }
 
+vec3 vec3::operator*(vec3 _vec) const
+{
+	return vec3(x * _vec.x, y * _vec.y, z * _vec.z);
+}
+
 bool vec3::operator==(vec3 _vec) const
 {
 	return x == _vec.x && y == _vec.y && z == _vec.z;

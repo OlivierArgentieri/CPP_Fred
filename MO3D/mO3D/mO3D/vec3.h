@@ -27,7 +27,7 @@ namespace mo3d
 		static float Magnitude(vec3 _vec);
 		static vec3 Normalize(vec3 _vec);
 
-
+		
 		vec3(float _x = 0, float _y = 0, float _z = 0);
 		vec3(const vec3& _vec3);
 

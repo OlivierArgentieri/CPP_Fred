@@ -230,13 +230,12 @@ mat4& mat4::operator/=(const mat4& _mat)
 	{
 		for (int _j = 0; _j < 4; _j++)
 		{
-			if (_mat.mat[0][_j] == 0 || _mat.mat[1][_j] == 0 || _mat.mat[2][_j] == 0 || _mat.mat[3][_j] == 0) continue;
+			if (_mat.mat[_i][_j] == 0) continue;
 			mat[_i][_j] /=  _mat.mat[_i][_j];
 		}
 	}
 	return  *this;
 }
-
 
 bool mat4::operator==(const mat4& _mat) const
 {

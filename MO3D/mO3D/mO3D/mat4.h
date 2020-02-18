@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <cstring>
 
 
 namespace mo3d
@@ -31,8 +32,8 @@ namespace mo3d
 		mat4 operator-(const mat4& _mat) const;
 		mat4 operator/(const mat4& _mat) const;
 		
-		bool operator==(mat4 _mat) const;
-		bool operator!=(mat4 _mat) const;
+		bool operator==(const mat4& _mat) const;
+		bool operator!=(const mat4& _mat) const;
 
 		mat4& operator=(const mat4& _mat);
 		mat4& operator+=(const mat4& _mat);

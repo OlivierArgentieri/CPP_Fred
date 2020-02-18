@@ -71,6 +71,7 @@ private:
 	static void TestMat4Mul();
 	static void TestMat4Subtraction();
 	static void TestMat4Addition();
+	static void TestMat4Equals();
 
 
 	UnitTest();

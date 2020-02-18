@@ -1,6 +1,5 @@
 ﻿#include "pch.h"
 #include "mat4.h"
-
 using namespace mo3d;
 
 const float mat4::identity[4][4]
@@ -131,6 +130,20 @@ mat4 mat4::operator*(const mat4& _mat) const
 	return mat4(_res);
 }
 
+mat4 mat4::operator+(const mat4& _mat) const
+{
+	float _res[4][4];
+	for (int _i = 0; _i < 4; _i++)
+	{
+		for (int _j = 0; _j < 4; _j++)
+		{
+			_res[_i][_j] = mat[_i][_j] + _mat.mat[_i][_j];
+		}
+	}
+
+	return mat4(_res);
+}
+
 mat4 mat4::operator-(const mat4& _mat) const
 {
 	float _res[4][4];
@@ -224,22 +237,12 @@ mat4& mat4::operator/=(const mat4& _mat)
 	return  *this;
 }
 
-mat4 mat4::operator+(const mat4& _mat) const
-{
-	float _res[4][4];
-	for (int _i = 0; _i < 4; _i++)
-	{
-		for (int _j = 0; _j < 4; _j++)
-		{
-			_res[_i][_j] = mat[_i][_j] + _mat.mat[_i][_j];
-		}
-	}
 
-	return mat4(_res);
-}
-
-bool mat4::operator==(mat4 _mat) const
+bool mat4::operator==(const mat4& _mat) const
 {
+//	return memcmp(mat, _mat.mat, sizeof(float) * 16);
+	 
+	
 	for (int _i = 0; _i < 4; _i++)
 	{
 		for (int _j = 0; _j < 4; _j++)
@@ -251,7 +254,7 @@ bool mat4::operator==(mat4 _mat) const
 	return true;
 }
 
-bool mat4::operator!=(mat4 _mat) const
+bool mat4::operator!=(const mat4& _mat) const
 {
 	return !(mat == _mat.mat);
 }

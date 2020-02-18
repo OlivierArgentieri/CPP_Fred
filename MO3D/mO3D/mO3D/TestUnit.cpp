@@ -722,6 +722,7 @@ void UnitTest::TestMat4()
 	TestMat4Mul();
 	TestMat4Addition();
 	TestMat4Subtraction();
+	TestMat4Equals();
 
 
 	// / != == 
@@ -859,6 +860,30 @@ void UnitTest::TestMat4Addition()
 
 	assert(_mat1Test == mat4(_test2));
 }
+
+
+void UnitTest::TestMat4Equals()
+{
+	float _test[4][4] =
+	{
+		{ -10, 1, 2, 3},
+		{ 4, 5, 6, 7},
+		{ 8, 9, 10, 11 },
+		{ 12, 13, 14, 20 }
+	};
+
+
+	mat4 _mat1Test = mat4(_test);
+	mat4 _mat2Test = mat4(_test);
+
+	_mat1Test == _mat2Test;
+
+	assert(_mat1Test == mat4(_test));
+	assert(_mat2Test == mat4(_test));
+
+	assert(_mat1Test == _mat2Test);
+}
+
 
 UnitTest::UnitTest() = default;
 

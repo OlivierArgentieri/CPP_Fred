@@ -30,10 +30,10 @@ namespace mo3d
 		float Distance(vec4 _vec) const;
 
 		vec4 operator/(float _value) const;
-		vec4 operator/(vec4 _vec) const;
-		vec4 operator+(vec4 _vec) const;
-		vec4 operator-(vec4 _vec) const;
-		vec4 operator*(vec4 _vec) const;
+		vec4 operator/(const vec4& _vec) const;
+		vec4 operator+(const vec4& _vec) const;
+		vec4 operator-(const vec4& _vec) const;
+		vec4 operator*(const vec4& _vec) const;
 
 		bool operator<(const vec4&  _vec) const;
 		bool operator<=(const vec4&  _vec) const;

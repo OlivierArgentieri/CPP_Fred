@@ -36,6 +36,45 @@ mat4::mat4(const float _mat[4][4])
 	}
 }
 
+double mat4::DeterminantMat4(float _mat[4][4])
+{
+#define osef a
+	
+	/*
+	 * -- schema --
+	 * 
+	 *	| a b c d |		a = _test[0,0]  
+	 *	| e f g h |		b = _test[0,1]   
+	 *	| i j k l |		c = _test[0,2] 
+	 *	| m n o p |		d = _test[0,3]  
+	 *
+	 *   a( fkp − flo − gjp + gln + hjo − hkn )
+	 * - b( ekp − elo − gip + glm + hio − hkm )
+	 * + c( ejp − eln − fip + flm + hin − hjm )
+	 * − d( ejo − ekn − fio + fkm + gin − gjm )
+	 */
+
+	double _a = _mat[0][0];
+	double _b = _mat[0][1];
+	double _c = _mat[0][2];
+	double _d = _mat[0][3];
+	double _result;
+	
+	//					f			k			p					f			l			o					g			j			p				g			l			n			h			j			o					h			k			n
+	_result =  _a * ((_mat[1][1] * _mat[2][2] * _mat[3][3]) - (_mat[1][1] * _mat[2][3] * _mat[3][2]) - (_mat[1][2] * _mat[2][1] * _mat[3][3]) + (_mat[1][2] * _mat[2][3] * _mat[3][1]) + (_mat[1][3] * _mat[2][1] * _mat[3][2]) - (_mat[1][3] * _mat[2][2] * _mat[3][1]));
+
+	//			   		e			k			p					e			l			o					g			i			p				g			l			m			h			i			o					h			k			m
+	_result -= _b * ((_mat[1][0] * _mat[2][2] * _mat[3][3]) - (_mat[1][0] * _mat[2][3] * _mat[3][2]) - (_mat[1][2] * _mat[2][0] * _mat[3][3]) + (_mat[1][2] * _mat[2][3] * _mat[3][0]) + (_mat[1][3] * _mat[2][0] * _mat[3][2]) - (_mat[1][3] * _mat[2][2] * _mat[3][0]));
+
+	//			   		e			j			p					e			l			n					f			i			p				f			l			m			h			i			n					h			j			m
+	_result += _c * ((_mat[1][0] * _mat[2][1] * _mat[3][3]) - (_mat[1][0] * _mat[2][3] * _mat[3][1]) - (_mat[1][1] * _mat[2][0] * _mat[3][3]) + (_mat[1][1] * _mat[2][3] * _mat[3][0]) + (_mat[1][3] * _mat[2][0] * _mat[3][1]) - (_mat[1][3] * _mat[2][1] * _mat[3][0]));
+
+	//			   		e			j			o					e			k			n					f			i			o				f			k			m			g			i			n					g			j			m
+	_result -= _d * ((_mat[1][0] * _mat[2][1] * _mat[3][2]) - (_mat[1][0] * _mat[2][2] * _mat[3][1]) - (_mat[1][1] * _mat[2][0] * _mat[3][2]) + (_mat[1][1] * _mat[2][2] * _mat[3][0]) + (_mat[1][2] * _mat[2][0] * _mat[3][1]) - (_mat[1][2] * _mat[2][1] * _mat[3][0]));
+
+	return _result;
+}
+
 mat4::mat4(const mat4& _mat)
 {
 	for (int _i = 0; _i < 4; _i++)
@@ -62,84 +101,13 @@ mat4& mat4::Transpose()
 
 double mat4::Determinant()
 {
-	double _det = 0;
-
-	float a[3][3] // 0,0
-	{
-		mat[1][1], mat[1][2], mat[1][3],
-		mat[2][1], mat[2][2], mat[2][3],
-		mat[3][1], mat[3][2], mat[3][3]
-	};
-
-	float b[3][3] // 0,1
-	{
-		mat[1][0], mat[1][2], mat[1][3],
-		mat[2][0], mat[2][2], mat[2][3],
-		mat[3][0], mat[3][2], mat[3][3]
-	};
-
-	float c[3][3] // 0,2
-	{
-		mat[1][0], mat[1][1], mat[1][3],
-		mat[2][0], mat[2][1], mat[2][3],
-		mat[3][0], mat[3][1], mat[3][3]
-	};
-
-	float d[3][3] // 0,3
-	{
-		mat[1][0], mat[1][1], mat[1][2],
-		mat[2][0], mat[2][1], mat[2][2],
-		mat[3][0], mat[3][1], mat[3][2]
-	};
-
-
-	float t[3][3] = { {0} };
-	/*
-	// mat4 -> mat3
-	for(int _i =0; _i < 4; _i ++ ) // cols
-	{
-		
-		for (int _j = 0; _j < 3; _j++) // row
-		{
-			for (int _k = 0; _k < 3; _k++) // cols
-			{
-				//mat[]
-			}
-		}
-	}*/
-
-	double _a = 0;
-	double _b = 0;
-	double _c = 0;
-	double _d = 0;
-
-
-	for (int _i = 0; _i < 3; _i++)
-	{
-		_a += a[0][_i % 3] * a[1][(_i + 1) % 3] * a[2][(_i + 2) % 3];
-		_b += b[0][_i % 3] * b[1][(_i + 1) % 3] * b[2][(_i + 2) % 3];
-		_c += c[0][_i % 3] * c[1][(_i + 1) % 3] * c[2][(_i + 2) % 3];
-		_d += d[0][_i % 3] * d[1][(_i + 1) % 3] * d[2][(_i + 2) % 3];
-	}
-	
-	
-	for (int _i = 2; _i < 5; _i++)
-	{
-		_a -= a[0][_i % 3] * a[1][(_i - 1) % 3] * a[2][(_i - 2) % 3];
-		_b -= b[0][_i % 3] * b[1][(_i - 1) % 3] * b[2][(_i - 2) % 3];
-		_c -= c[0][_i % 3] * c[1][(_i - 1) % 3] * c[2][(_i - 2) % 3];
-		_d -= d[0][_i % 3] * d[1][(_i - 1) % 3] * d[2][(_i - 2) % 3];
-	}
-
-	_det += ((_a * mat[0][0]) - (_b * mat[0][1]) + (_c * mat[0][2]) - (_d * mat[0][3]));
-
-	return _det;
+	return mat4::DeterminantMat4(mat);
 }
 
 
 float mat4::ReviewDet()
 {
-	float test[4][4]
+	float _test[4][4]
 	{
 		{ -10, 1, 2, 3},
 		{ 4, 5, 6, 7 },
@@ -147,35 +115,7 @@ float mat4::ReviewDet()
 		{ 12, 13, 14, 20}
 	};
 
-	float oui[3][3] = { { 0} };
-	float det = 0;
-	float _a = 0;
-	for (int _cols = 0; _cols < 4; _cols++)
-	{
-		 test[0][_cols];
-	
-		_a = 0;
-		for (int _j = 0; _j < 4; _j++)
-		{
-			if (_j == _cols) continue;
-
-			oui[0][_j-1] = test[1][_j];
-			oui[1][_j-1] = test[2][_j];
-			oui[2][_j-1] = test[3][_j];
-		}
-
-		_a = oui[0][0] * (oui[1][1] * oui[2][2]) - oui[0][0] * (oui[1][2] * oui[2][1]) +
-			oui[0][1] * (oui[1][0] * oui[2][2]) - oui[0][1] * (oui[1][2] * oui[2][0]) +
-			oui[0][2] * (oui[1][0] * oui[2][1]) - oui[0][2] * (oui[1][1] * oui[2][0]);
-
-		if (_cols % 1 == 0)
-			det += test[0][_cols] * _a;
-		else
-			det += test[0][_cols] * _a;
-		
-	}
-	return det;
-
+	return 0;
 }
 
 mat4 mat4::operator*(const mat4& _mat) const

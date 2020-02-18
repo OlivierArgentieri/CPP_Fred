@@ -77,7 +77,7 @@ vec4 vec4::operator/(float _value) const
 	return vec4::zero;
 }
 
-vec4 vec4::operator/(vec4 _vec) const
+vec4 vec4::operator/(const vec4& _vec) const
 {
 	if (_vec != vec4::zero)
 		return vec4(x / _vec.x, y / _vec.y, z / _vec.z, w / _vec.w);
@@ -95,17 +95,17 @@ bool vec4::operator!=(const vec4& _vec) const
 }
 
 
-vec4 vec4::operator+(vec4 _vec) const
+vec4 vec4::operator+(const vec4& _vec) const
 {
 	return vec4(x + _vec.x, y + _vec.y, z + _vec.z, w + _vec.w);
 }
 
-vec4 vec4::operator-(vec4 _vec) const
+vec4 vec4::operator-(const vec4& _vec) const
 {
 	return vec4(x - _vec.x, y - _vec.y, z - _vec.z, w - _vec.w);
 }
 
-vec4 vec4::operator*(vec4 _vec) const
+vec4 vec4::operator*(const vec4& _vec) const
 {
 	return vec4(x * _vec.x, y * _vec.y, z * _vec.z, w * _vec.w);
 }

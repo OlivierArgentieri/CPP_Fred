@@ -8,14 +8,14 @@ namespace mo3d
 	private :
 		static const float identity[4][4];
 		static const float zero[4][4];
-		
 		mat4(const float _mat[4][4]);
+		static double DeterminantMat4(float _mat[4][4]);
 
 	public:
 		static mat4 Transpose(mat4 _mat);
 		static mat4 Identity();
 		static mat4 Zero();
-		
+
 		float mat[4][4];
 
 		

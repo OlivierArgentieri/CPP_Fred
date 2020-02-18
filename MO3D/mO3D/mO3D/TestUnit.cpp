@@ -15,12 +15,11 @@ using namespace mo3d;
 #pragma region vec2
 void UnitTest::TestVec2(float _x = 0, float _y = 1)
 {
-	
 	TestVec2Constructor(_x, _y);
 	TestVec2Epsilon();
 	TestVec2Normalize();
 	TestVec2Distance();
-
+	TestVec2Magnitude();
 	TestVec2Dot();
 	
 	TestVec2Mul();
@@ -34,7 +33,6 @@ void UnitTest::TestVec2(float _x = 0, float _y = 1)
 	TestVec2SuperiorEquals();
 	TestVec2Inferior();
 	TestVec2InferiorEquals();
-
 }
 
 void UnitTest::TestVec2Constructor(float _x = 0, float _y = 1)
@@ -235,9 +233,11 @@ void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
 	TestVec3Epsilon();
 	TestVec3Normalize();
 	TestVec3Distance();
-		   
+	TestVec3Magnitude();
+	
 	TestVec3Dot();
-		   
+	TestVec3Cross();
+
 	TestVec3Mul();
 	TestVec3Div();
 	TestVec3Addition();
@@ -308,10 +308,10 @@ void UnitTest::TestVec3Distance()
 
 void UnitTest::TestVec3Cross()
 {
-	vec3 _v1 = vec3(1, 1, 1);
-	vec3 _v2 = vec3(1, 1, 1);
-
-	assert(_v1.Cross(_v2) == 0);
+	vec3 _v1 = vec3(0, 0, 1);
+	vec3 _v2 = vec3(0, 1, 0);
+	vec3 _v3 = vec3(1, 0, 0);
+	assert(_v3.Cross(_v2) == _v1);
 }
 
 void UnitTest::TestVec3Dot()
@@ -459,7 +459,8 @@ void UnitTest::TestVec4(float _x = 0, float _y = 0, float _z = 0, float _w = 0)
 	TestVec4Epsilon();
 	TestVec4Normalize();
 	TestVec4Distance();
-
+	TestVec4Magnitude();
+	
 	TestVec4Dot();
 
 	TestVec4Mul();
@@ -710,15 +711,15 @@ void UnitTest::TestMat4Determinant()
 {
 	float _test[4][4] =
 	{
-		{ -120, -2.754, 3, 80.01 },
-		{ 5, 16.2, -7.2, 747 },
+		{ -120, -2.754f, 3, 80.01f },
+		{ 5, 16.2f, -7.2f, 747 },
 		{ 28, -10, 11, 12 },
-		{ 17.258, 3.14159, 315.8, -20 }
+		{ 17.258f, 3.14159f, 315.8f, -20 }
 	};
 
 	mat4 _mat = mat4(_test);
 	double _a = _mat.Determinant();
-	ASSERT_EPSILON(_a, 324831237.06621);
+	ASSERT_EPSILON(_a, 324831249.20944);
 }
 
 void UnitTest::TestMat4Identity()

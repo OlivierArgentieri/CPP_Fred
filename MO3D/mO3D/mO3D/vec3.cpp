@@ -51,7 +51,7 @@ vec3 vec3::Cross(vec3 _vec) const
 {
 	float _x = y * _vec.z - _vec.y * z;
 	float _y = z * _vec.x - _vec.z * x;
-	float _z = x * _vec.y + _vec.x * y;
+	float _z = x * _vec.y - _vec.x * y;
 
 	return vec3(_x, _y, _z);
 }

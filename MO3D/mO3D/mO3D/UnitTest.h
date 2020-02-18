@@ -69,8 +69,10 @@ private:
 	static void TestMat4Determinant();
 	static void TestMat4Identity();
 	static void TestMat4Mul();
+	static void TestMat4Subtraction();
+	static void TestMat4Addition();
 
-	
+
 	UnitTest();
 
 public:

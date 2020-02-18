@@ -21,13 +21,13 @@ void UnitTest::TestVec2(float _x = 0, float _y = 1)
 	TestVec2Distance();
 	TestVec2Magnitude();
 	TestVec2Dot();
-	
+
 	TestVec2Mul();
 	TestVec2SetValue();
 	TestVec2Div();
 	TestVec2Addition();
 	TestVec2Subtraction();
-	
+
 	TestVec2Equals();
 	TestVec2NotEquals();
 	TestVec2Superior();
@@ -91,7 +91,7 @@ void UnitTest::TestVec2Dot()
 {
 	vec2 _v1 = vec2(1, 0);
 	vec2 _v2 = vec2(0, 1);
-	
+
 	vec2 _v3 = vec2(1, 1);
 	vec2 _v4 = vec2(5, 5);
 
@@ -104,7 +104,7 @@ void UnitTest::TestVec2Mul()
 	vec2 _v1 = vec2(2, 3);
 	vec2 _v2 = vec2(5, 5);
 	_v1 * _v2;
-	
+
 	assert(_v1 == vec2(2, 3));
 	assert(_v2 == vec2(5, 5));
 	assert(_v1 * _v2 == vec2(10, 15));
@@ -247,7 +247,7 @@ void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
 	TestVec3Normalize();
 	TestVec3Distance();
 	TestVec3Magnitude();
-	
+
 	TestVec3Dot();
 	TestVec3Cross();
 
@@ -256,7 +256,7 @@ void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
 	TestVec3Div();
 	TestVec3Addition();
 	TestVec3Subtraction();
-		   
+
 	TestVec3Equals();
 	TestVec3NotEquals();
 	TestVec3Superior();
@@ -330,7 +330,7 @@ void UnitTest::TestVec3Cross()
 
 void UnitTest::TestVec3Dot()
 {
-	vec3 _v1 = vec3(1, 0,0);
+	vec3 _v1 = vec3(1, 0, 0);
 	vec3 _v2 = vec3(0, 1, 0);
 
 	vec3 _v3 = vec3(1, 2, 3);
@@ -342,7 +342,7 @@ void UnitTest::TestVec3Dot()
 
 void UnitTest::TestVec3Mul()
 {
-	vec3 _v1 = vec3(2, 3, 4); 
+	vec3 _v1 = vec3(2, 3, 4);
 	vec3 _v2 = vec3(5, 5, 5);
 	_v1 * _v2;
 
@@ -363,7 +363,7 @@ void UnitTest::TestVec3SetValue()
 	assert(_v2 == vec3(5, 5, 5));
 
 	_v1 = _v2;
-	
+
 	assert(_v1 == vec3(5, 5, 5));
 }
 
@@ -487,10 +487,10 @@ void UnitTest::TestVec4(float _x = 0, float _y = 0, float _z = 0, float _w = 0)
 	TestVec4Normalize();
 	TestVec4Distance();
 	TestVec4Magnitude();
-	
+
 	TestVec4Dot();
 	TestVec4SetValue();
-	
+
 	TestVec4Mul();
 	TestVec4Div();
 	TestVec4Addition();
@@ -680,35 +680,35 @@ void UnitTest::TestVec4Superior()
 void UnitTest::TestVec4SuperiorEquals()
 {
 	vec4 _v1 = vec4(2, 7, 8, 0);
-	vec4 _v2 = vec4(2, 4, 4,0);
-	vec4 _v3 = vec4(2, 4, 4,0);
+	vec4 _v2 = vec4(2, 4, 4, 0);
+	vec4 _v3 = vec4(2, 4, 4, 0);
 	_v1 > _v2;
 
-	assert(_v1 == vec4(2, 7, 8,0));
-	assert(_v2 == vec4(2, 4, 4,0));
+	assert(_v1 == vec4(2, 7, 8, 0));
+	assert(_v2 == vec4(2, 4, 4, 0));
 	assert(_v1 >= _v2);
 	assert(_v1 >= _v3);
 }
 
 void UnitTest::TestVec4Inferior()
 {
-	vec4 _v1 = vec4(2, 4, 4,0);
-	vec4 _v2 = vec4(2, 7, 8,0);
+	vec4 _v1 = vec4(2, 4, 4, 0);
+	vec4 _v2 = vec4(2, 7, 8, 0);
 	_v1 < _v2;
 
-	assert(_v1 == vec4(2, 4, 4,0));
-	assert(_v2 == vec4(2, 7, 8,0));
+	assert(_v1 == vec4(2, 4, 4, 0));
+	assert(_v2 == vec4(2, 7, 8, 0));
 	assert(_v1 < _v2);
 }
 
 void UnitTest::TestVec4InferiorEquals()
 {
-	vec4 _v1 = vec4(2, 4, 4,0);
-	vec4 _v2 = vec4(2, 4, 4,0);
+	vec4 _v1 = vec4(2, 4, 4, 0);
+	vec4 _v2 = vec4(2, 4, 4, 0);
 	_v1 <= _v2;
 
-	assert(_v1 == vec4(2, 4, 4,0));
-	assert(_v2 == vec4(2, 4, 4,0));
+	assert(_v1 == vec4(2, 4, 4, 0));
+	assert(_v2 == vec4(2, 4, 4, 0));
 	assert(_v1 <= _v2);
 }
 #pragma endregion 
@@ -720,7 +720,11 @@ void UnitTest::TestMat4()
 	TestMat4Determinant();
 	TestMat4Identity();
 	TestMat4Mul();
-// / - + != == 
+	TestMat4Addition();
+	TestMat4Subtraction();
+
+
+	// / != == 
 }
 
 void UnitTest::TestMat4Transpose()
@@ -787,7 +791,7 @@ void UnitTest::TestMat4Mul()
 		{ 28, -10, 11, 12 },
 		{ 17.258, 3.14159, 315.8, -20 }
 	};
-	
+
 	mat4 _matID = mat4::Identity();
 	mat4 _matIDTest = mat4(_test);
 	_matID * _matIDTest;
@@ -798,6 +802,62 @@ void UnitTest::TestMat4Mul()
 
 	_matIDTest *= _matID;
 	assert(_matIDTest == mat4(_test));
+}
+
+void UnitTest::TestMat4Subtraction()
+{
+	float _test[4][4] =
+	{
+		{ -10, 1, 2, 3},
+		{ 4, 5, 6, 7},
+		{ 8, 9, 10, 11 },
+		{ 12, 13, 14, 20 }
+	};
+
+	float _zero[4][4] = { {0} };
+
+	mat4 _mat1Test = mat4(_test);
+	mat4 _mat2Test = mat4(_test);
+
+	_mat1Test - _mat2Test;
+	
+	assert(_mat1Test == mat4(_test));
+	assert(_mat2Test == mat4(_test));
+
+	_mat1Test -= _mat2Test;
+
+	assert(_mat1Test == mat4(_zero));
+}
+
+void UnitTest::TestMat4Addition()
+{
+	float _test[4][4] =
+	{
+		{ -10, 1, 2, 3},
+		{ 4, 5, 6, 7},
+		{ 8, 9, 10, 11 },
+		{ 12, 13, 14, 20 }
+	};
+
+	float _test2[4][4] = 
+	{
+		{ -20, 2, 4, 6},
+		{ 8, 10, 12, 14},
+		{ 16, 18, 20, 22 },
+		{ 24, 26, 28, 40 }
+	};
+
+	mat4 _mat1Test = mat4(_test);
+	mat4 _mat2Test = mat4(_test);
+
+	_mat1Test + _mat2Test;
+
+	assert(_mat1Test == mat4(_test));
+	assert(_mat2Test == mat4(_test));
+
+	_mat1Test += _mat2Test;
+
+	assert(_mat1Test == mat4(_test2));
 }
 
 UnitTest::UnitTest() = default;

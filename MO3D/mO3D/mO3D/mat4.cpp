@@ -38,7 +38,6 @@ mat4::mat4(const float _mat[4][4])
 
 double mat4::DeterminantMat4(float _mat[4][4])
 {
-#define osef a
 	
 	/*
 	 * -- schema --

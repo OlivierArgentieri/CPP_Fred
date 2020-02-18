@@ -23,6 +23,7 @@ void UnitTest::TestVec2(float _x = 0, float _y = 1)
 	TestVec2Dot();
 	
 	TestVec2Mul();
+	TestVec2SetValue();
 	TestVec2Div();
 	TestVec2Addition();
 	TestVec2Subtraction();
@@ -110,6 +111,18 @@ void UnitTest::TestVec2Mul()
 
 	_v1 *= _v2;
 	assert(_v1 == vec2(10, 15));
+
+}
+
+void UnitTest::TestVec2SetValue()
+{
+	vec2 _v1 = vec2(2, 3);
+	vec2 _v2 = vec2(5, 5);
+
+	assert(_v1 == vec2(2, 3));
+	assert(_v2 == vec2(5, 5));
+	_v1 = _v2;
+	assert(_v1 == vec2(5, 5));
 
 }
 
@@ -239,6 +252,7 @@ void UnitTest::TestVec3(float _x = 0, float _y = 0, float _z = 0)
 	TestVec3Cross();
 
 	TestVec3Mul();
+	TestVec3SetValue();
 	TestVec3Div();
 	TestVec3Addition();
 	TestVec3Subtraction();
@@ -338,6 +352,19 @@ void UnitTest::TestVec3Mul()
 
 	_v1 *= _v2;
 	assert(_v1 == vec3(10, 15, 20));
+}
+
+void UnitTest::TestVec3SetValue()
+{
+	vec3 _v1 = vec3(2, 3, 4);
+	vec3 _v2 = vec3(5, 5, 5);
+
+	assert(_v1 == vec3(2, 3, 4));
+	assert(_v2 == vec3(5, 5, 5));
+
+	_v1 = _v2;
+	
+	assert(_v1 == vec3(5, 5, 5));
 }
 
 void UnitTest::TestVec3Div()
@@ -462,7 +489,8 @@ void UnitTest::TestVec4(float _x = 0, float _y = 0, float _z = 0, float _w = 0)
 	TestVec4Magnitude();
 	
 	TestVec4Dot();
-
+	TestVec4SetValue();
+	
 	TestVec4Mul();
 	TestVec4Div();
 	TestVec4Addition();
@@ -559,6 +587,18 @@ void UnitTest::TestVec4Mul()
 
 	_v1 *= _v2;
 	assert(_v1 == vec4(10, 15, 20, 25));
+}
+
+void UnitTest::TestVec4SetValue()
+{
+	vec4 _v1 = vec4(2, 3, 4, 5);
+	vec4 _v2 = vec4(5, 5, 5, 5);
+
+	assert(_v1 == vec4(2, 3, 4, 5));
+	assert(_v2 == vec4(5, 5, 5, 5));
+
+	_v1 = _v2;
+	assert(_v1 == vec4(5, 5, 5, 5));
 }
 
 void UnitTest::TestVec4Div()

@@ -11,6 +11,7 @@ private:
 	static void TestVec2Distance();
 	static void TestVec2Dot();
 	static void TestVec2Mul();
+	static void TestVec2SetValue();
 	static void TestVec2Div();
 	static void TestVec2Addition();
 	static void TestVec2Subtraction();
@@ -31,6 +32,7 @@ private:
 	static void TestVec3Cross();
 	static void TestVec3Dot();
 	static void TestVec3Mul();
+	static void TestVec3SetValue();
 	static void TestVec3Div();
 	static void TestVec3Addition();
 	static void TestVec3Subtraction();
@@ -51,6 +53,7 @@ private:
 	static void TestVec4Distance();
 	static void TestVec4Dot();
 	static void TestVec4Mul();
+	static void TestVec4SetValue();
 	static void TestVec4Div();
 	static void TestVec4Addition();
 	static void TestVec4Subtraction();

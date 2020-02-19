@@ -73,6 +73,7 @@ private:
 	static void TestMat4Addition();
 	static void TestMat4Equals();
 	static void TestMat4NotEquals();
+	static void TestSetValue();
 
 
 	UnitTest();

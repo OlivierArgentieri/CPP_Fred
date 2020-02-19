@@ -239,9 +239,7 @@ mat4& mat4::operator/=(const mat4& _mat)
 
 bool mat4::operator==(const mat4& _mat) const
 {
-//	return memcmp(mat, _mat.mat, sizeof(float) * 16);
-	 
-	
+	//return memcmp(mat, _mat.mat, sizeof(float) * 16);
 	for (int _i = 0; _i < 4; _i++)
 	{
 		for (int _j = 0; _j < 4; _j++)

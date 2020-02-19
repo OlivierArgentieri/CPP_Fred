@@ -725,8 +725,6 @@ void UnitTest::TestMat4()
 	TestMat4Division();
 	TestMat4Equals();
 	TestMat4NotEquals();
-
-	// /
 }
 
 void UnitTest::TestMat4Transpose()
@@ -861,7 +859,6 @@ void UnitTest::TestMat4Division()
 
 	assert(_mat1Test == mat4(_two));
 }
- 
 
 void UnitTest::TestMat4Addition()
 {
@@ -938,7 +935,25 @@ void UnitTest::TestMat4NotEquals()
 	assert(_mat1Test != _mat2Test);
 }
 
+void UnitTest::TestSetValue()
+{
+	float _test[4][4] =
+	{
+		{ -10, 1, 2, 3},
+		{ 4, 5, 6, 7},
+		{ 8, 9, 10, 11 },
+		{ 12, 13, 14, 20 }
+	};
+	
+	float _test2[4][4] = { {} };
 
+	mat4 _mat1Test = mat4(_test);
+	mat4 _mat2Test = mat4(_test);
+
+	_mat1Test = _mat2Test;
+
+	assert(_mat1Test == mat4(_test2));
+}
 UnitTest::UnitTest() = default;
 
 void UnitTest::Run()

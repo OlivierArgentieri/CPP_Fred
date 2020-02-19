@@ -66,6 +66,7 @@ private:
 	static void TestMat4();
 	static void TestMat4Transpose();
 	static void TestMat4Determinant();
+	static void TestMat3Determinant();
 	static void TestMat4Identity();
 	static void TestMat4Mul();
 	static void TestMat4Subtraction();
@@ -74,7 +75,6 @@ private:
 	static void TestMat4Equals();
 	static void TestMat4NotEquals();
 	static void TestSetValue();
-
 
 	UnitTest();
 

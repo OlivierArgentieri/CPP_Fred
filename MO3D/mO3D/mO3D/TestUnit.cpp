@@ -713,11 +713,12 @@ void UnitTest::TestVec4InferiorEquals()
 }
 #pragma endregion 
 
-
+#pragma region mat4
 void UnitTest::TestMat4()
 {
 	TestMat4Transpose();
 	TestMat4Determinant();
+	TestMat3Determinant();
 	TestMat4Identity();
 	TestMat4Mul();
 	TestMat4Addition();
@@ -725,6 +726,8 @@ void UnitTest::TestMat4()
 	TestMat4Division();
 	TestMat4Equals();
 	TestMat4NotEquals();
+
+
 }
 
 void UnitTest::TestMat4Transpose()
@@ -747,7 +750,7 @@ void UnitTest::TestMat4Transpose()
 	mat4 _matTransposeRes = mat4(_testTransposeRes);
 	mat4 _matTranspose = mat4(_testTranspose);
 
-	_matTranspose.Transpose();
+	_matTranspose = _matTranspose.Transpose();
 	assert(_matTranspose == _matTransposeRes);
 }
 
@@ -764,6 +767,20 @@ void UnitTest::TestMat4Determinant()
 	mat4 _mat = mat4(_test);
 	double _a = _mat.Determinant();
 	ASSERT_EPSILON(_a, 324831249.20944);
+}
+
+void UnitTest::TestMat3Determinant()
+{
+	float _test[3][3] =
+	{
+		{ 10, 2, 3},
+		{ 4, 5, 6},
+		{ 7, 8, 9}
+	};
+
+
+	double a = mat4::DeterminantMat3(_test);
+	ASSERT_EPSILON(a, -27);
 }
 
 void UnitTest::TestMat4Identity()
@@ -831,6 +848,22 @@ void UnitTest::TestMat4Subtraction()
 
 void UnitTest::TestMat4Division()
 {
+	float _test[4][4] =
+	{
+		{1,2,3,4},
+		{0,5,7,9},
+		{-2,4,-8,5},
+		{10,6,6,7}
+	};
+
+
+	mat4 _t = mat4(_test);
+
+	mat4 osef = mat4::Inverse(_t);
+
+	osef.Identity();
+	
+	/*
 	float _test[4][4] = 
 	{
 		{4,4,4,4},
@@ -857,7 +890,7 @@ void UnitTest::TestMat4Division()
 
 	_mat1Test /= _mat2Test;
 
-	assert(_mat1Test == mat4(_two));
+	assert(_mat1Test == mat4(_two));*/
 }
 
 void UnitTest::TestMat4Addition()
@@ -954,6 +987,9 @@ void UnitTest::TestSetValue()
 
 	assert(_mat1Test == mat4(_test2));
 }
+#pragma endregion
+
+
 UnitTest::UnitTest() = default;
 
 void UnitTest::Run()

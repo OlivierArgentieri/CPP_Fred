@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="H:\Fred\OpenGl_Sample\external\glfw-3.1.2\tests\joysticks.c">
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\tests\joysticks.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Fred\OpenGl_Sample\external\glfw-3.1.2\tests\CMakeLists.txt" />
+    <CustomBuild Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\tests\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{1044A8FC-437C-30DC-B713-CF67BE9E79FE}</UniqueIdentifier>
+      <UniqueIdentifier>{0984FA32-4CD4-3262-8F0A-29123186FB3E}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

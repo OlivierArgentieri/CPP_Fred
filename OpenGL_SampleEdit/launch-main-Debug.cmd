@@ -1,9 +1,9 @@
-cd H:/Fred/OpenGl_Sample/main/
+cd D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/main/
 set 
 
 if [%1]==[--debugger] (
 	SHIFT
 )
 
-"D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\Debug\main.exe"  
+"D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\Debug\main.exe"  
 pause

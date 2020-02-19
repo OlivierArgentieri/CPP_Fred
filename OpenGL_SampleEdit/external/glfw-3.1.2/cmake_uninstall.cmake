@@ -1,22 +1,22 @@
 
-if (NOT EXISTS "D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/external/glfw-3.1.2/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/external/glfw-3.1.2/install_manifest.txt\"")
+if (NOT EXISTS "D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit/external/glfw-3.1.2/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit/external/glfw-3.1.2/install_manifest.txt\"")
 endif()
 
-file(READ "D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/external/glfw-3.1.2/install_manifest.txt" files)
+file(READ "D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit/external/glfw-3.1.2/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})
   message(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")
   if (EXISTS "$ENV{DESTDIR}${file}")
-    exec_program("E:/Programme/CMAKE/bin/cmake.exe" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
+    exec_program("D:/Application/cmake-3.17.0-rc1-win64-x64/bin/cmake.exe" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
                  OUTPUT_VARIABLE rm_out
                  RETURN_VALUE rm_retval)
     if (NOT "${rm_retval}" STREQUAL 0)
       MESSAGE(FATAL_ERROR "Problem when removing \"$ENV{DESTDIR}${file}\"")
     endif()
   elseif (IS_SYMLINK "$ENV{DESTDIR}${file}")
-    EXEC_PROGRAM("E:/Programme/CMAKE/bin/cmake.exe" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
+    EXEC_PROGRAM("D:/Application/cmake-3.17.0-rc1-win64-x64/bin/cmake.exe" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
                  OUTPUT_VARIABLE rm_out
                  RETURN_VALUE rm_retval)
     if (NOT "${rm_retval}" STREQUAL 0)

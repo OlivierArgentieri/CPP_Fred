@@ -3,30 +3,30 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerEnvironment></LocalDebuggerEnvironment>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommand>D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\Debug\main.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\Debug\main.exe</LocalDebuggerCommand>
     <LocalDebuggerCommandArguments></LocalDebuggerCommandArguments>
-    <LocalDebuggerWorkingDirectory>H:/Fred/OpenGl_Sample/main/</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerWorkingDirectory>D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/main/</LocalDebuggerWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LocalDebuggerEnvironment></LocalDebuggerEnvironment>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommand>D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\Release\main.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\Release\main.exe</LocalDebuggerCommand>
     <LocalDebuggerCommandArguments></LocalDebuggerCommandArguments>
-    <LocalDebuggerWorkingDirectory>H:/Fred/OpenGl_Sample/main/</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerWorkingDirectory>D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/main/</LocalDebuggerWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <LocalDebuggerEnvironment></LocalDebuggerEnvironment>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommand>D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\MinSizeRel\main.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\MinSizeRel\main.exe</LocalDebuggerCommand>
     <LocalDebuggerCommandArguments></LocalDebuggerCommandArguments>
-    <LocalDebuggerWorkingDirectory>H:/Fred/OpenGl_Sample/main/</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerWorkingDirectory>D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/main/</LocalDebuggerWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <LocalDebuggerEnvironment></LocalDebuggerEnvironment>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommand>D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\RelWithDebInfo\main.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\RelWithDebInfo\main.exe</LocalDebuggerCommand>
     <LocalDebuggerCommandArguments></LocalDebuggerCommandArguments>
-    <LocalDebuggerWorkingDirectory>H:/Fred/OpenGl_Sample/main/</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerWorkingDirectory>D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/main/</LocalDebuggerWorkingDirectory>
   </PropertyGroup>
 
 </Project>

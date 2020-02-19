@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8B9D089F-7C22-3695-AC47-D93E2FB907BC}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{9D6FE978-CFDD-3F61-B5C6-0FD07195EF68}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>INSTALL</ProjectName>
@@ -63,7 +63,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include\GLFW;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround;H:\Fred\OpenGl_Sample\external\bullet-2.81-rev2613\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include\GLFW;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\bullet-2.81-rev2613\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -73,7 +73,7 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-E:\Programme\CMAKE\bin\cmake.exe -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -85,7 +85,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include\GLFW;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround;H:\Fred\OpenGl_Sample\external\bullet-2.81-rev2613\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include\GLFW;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\bullet-2.81-rev2613\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -95,7 +95,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-E:\Programme\CMAKE\bin\cmake.exe -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -107,7 +107,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include\GLFW;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround;H:\Fred\OpenGl_Sample\external\bullet-2.81-rev2613\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include\GLFW;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\bullet-2.81-rev2613\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -117,7 +117,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-E:\Programme\CMAKE\bin\cmake.exe -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -129,7 +129,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>H:\Fred\OpenGl_Sample\external\glfw-3.1.2\include\GLFW;H:\Fred\OpenGl_Sample\external\glew-1.13.0\include;H:\Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;H:\Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround;H:\Fred\OpenGl_Sample\external\bullet-2.81-rev2613\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include\GLFW;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\bullet-2.81-rev2613\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -139,7 +139,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-E:\Programme\CMAKE\bin\cmake.exe -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -150,7 +150,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\CMakeFiles\a0b5ed6a11b457312da39ae0b4c7989b\INSTALL_force.rule">
+    <CustomBuild Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\CMakeFiles\e825e9381ac6c20099ae9cde999d2243\INSTALL_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 cd .
@@ -162,7 +162,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\CMakeFiles\INSTALL_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
@@ -175,7 +175,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\CMakeFiles\INSTALL_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
@@ -188,7 +188,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\CMakeFiles\INSTALL_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
@@ -201,19 +201,19 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\CMakeFiles\INSTALL_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\ZERO_CHECK.vcxproj">
-      <Project>{CBC11283-D754-3715-8BD6-B8C3B75A2205}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\ZERO_CHECK.vcxproj">
+      <Project>{093DA0B2-6B2A-3BAD-ACF8-9DC5F5510CFC}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\ALL_BUILD.vcxproj">
-      <Project>{879246BC-8B5B-3C14-BEDC-D4ACFF900F33}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\ALL_BUILD.vcxproj">
+      <Project>{575D8683-934E-383F-BDDB-29784A3DEF4E}</Project>
       <Name>ALL_BUILD</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

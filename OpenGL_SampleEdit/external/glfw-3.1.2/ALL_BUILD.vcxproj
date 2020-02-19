@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{879246BC-8B5B-3C14-BEDC-D4ACFF900F33}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{575D8683-934E-383F-BDDB-29784A3DEF4E}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
@@ -102,10 +102,10 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Fred\OpenGl_Sample\external\glfw-3.1.2\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule H:/Fred/OpenGl_Sample/external/glfw-3.1.2/CMakeLists.txt</Message>
+    <CustomBuild Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/external/glfw-3.1.2/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-E:\Programme\CMAKE\bin\cmake.exe -SH:/Fred/OpenGl_Sample -BD:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit --check-stamp-file D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/external/glfw-3.1.2/CMakeFiles/generate.stamp
+D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -SD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample -BD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit --check-stamp-file D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit/external/glfw-3.1.2/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -113,12 +113,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Programme\CMAKE\share\cmake-3.17\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakePackageConfigHelpers.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CheckCSourceCompiles.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CheckIncludeFile.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CheckLibraryExists.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindDoxygen.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindOpenGL.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageMessage.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindThreads.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\WriteBasicConfigVersionFile.cmake;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\cmake_uninstall.cmake.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\docs\Doxyfile.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3.pc.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3Config.cmake.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakePackageConfigHelpers.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CheckCSourceCompiles.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CheckIncludeFile.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CheckLibraryExists.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindDoxygen.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindOpenGL.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageMessage.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindThreads.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\WriteBasicConfigVersionFile.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\cmake_uninstall.cmake.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\docs\Doxyfile.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3.pc.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3Config.cmake.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule H:/Fred/OpenGl_Sample/external/glfw-3.1.2/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/external/glfw-3.1.2/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-E:\Programme\CMAKE\bin\cmake.exe -SH:/Fred/OpenGl_Sample -BD:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit --check-stamp-file D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/external/glfw-3.1.2/CMakeFiles/generate.stamp
+D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -SD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample -BD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit --check-stamp-file D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit/external/glfw-3.1.2/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -126,12 +126,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Programme\CMAKE\share\cmake-3.17\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakePackageConfigHelpers.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CheckCSourceCompiles.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CheckIncludeFile.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CheckLibraryExists.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindDoxygen.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindOpenGL.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageMessage.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindThreads.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\WriteBasicConfigVersionFile.cmake;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\cmake_uninstall.cmake.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\docs\Doxyfile.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3.pc.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3Config.cmake.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakePackageConfigHelpers.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CheckCSourceCompiles.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CheckIncludeFile.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CheckLibraryExists.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindDoxygen.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindOpenGL.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageMessage.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindThreads.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\WriteBasicConfigVersionFile.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\cmake_uninstall.cmake.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\docs\Doxyfile.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3.pc.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3Config.cmake.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule H:/Fred/OpenGl_Sample/external/glfw-3.1.2/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/external/glfw-3.1.2/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-E:\Programme\CMAKE\bin\cmake.exe -SH:/Fred/OpenGl_Sample -BD:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit --check-stamp-file D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/external/glfw-3.1.2/CMakeFiles/generate.stamp
+D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -SD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample -BD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit --check-stamp-file D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit/external/glfw-3.1.2/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -139,12 +139,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Programme\CMAKE\share\cmake-3.17\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakePackageConfigHelpers.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CheckCSourceCompiles.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CheckIncludeFile.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CheckLibraryExists.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindDoxygen.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindOpenGL.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageMessage.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindThreads.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\WriteBasicConfigVersionFile.cmake;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\cmake_uninstall.cmake.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\docs\Doxyfile.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3.pc.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3Config.cmake.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakePackageConfigHelpers.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CheckCSourceCompiles.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CheckIncludeFile.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CheckLibraryExists.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindDoxygen.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindOpenGL.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageMessage.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindThreads.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\WriteBasicConfigVersionFile.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\cmake_uninstall.cmake.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\docs\Doxyfile.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3.pc.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3Config.cmake.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule H:/Fred/OpenGl_Sample/external/glfw-3.1.2/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/external/glfw-3.1.2/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-E:\Programme\CMAKE\bin\cmake.exe -SH:/Fred/OpenGl_Sample -BD:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit --check-stamp-file D:/Projets/PullGithub/CPP_Fred/OpenGL_SampleEdit/external/glfw-3.1.2/CMakeFiles/generate.stamp
+D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -SD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample -BD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit --check-stamp-file D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit/external/glfw-3.1.2/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -152,114 +152,114 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Programme\CMAKE\share\cmake-3.17\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;E:\Programme\CMAKE\share\cmake-3.17\Modules\CMakePackageConfigHelpers.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CheckCSourceCompiles.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CheckIncludeFile.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\CheckLibraryExists.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindDoxygen.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindOpenGL.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindPackageMessage.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\FindThreads.cmake;E:\Programme\CMAKE\share\cmake-3.17\Modules\WriteBasicConfigVersionFile.cmake;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\cmake_uninstall.cmake.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\docs\Doxyfile.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3.pc.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3Config.cmake.in;H:\Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakePackageConfigHelpers.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CheckCSourceCompiles.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CheckIncludeFile.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CheckLibraryExists.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindDoxygen.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindOpenGL.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageMessage.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindThreads.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\WriteBasicConfigVersionFile.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\cmake_uninstall.cmake.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\docs\Doxyfile.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3.pc.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw3Config.cmake.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\ZERO_CHECK.vcxproj">
-      <Project>{CBC11283-D754-3715-8BD6-B8C3B75A2205}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\ZERO_CHECK.vcxproj">
+      <Project>{093DA0B2-6B2A-3BAD-ACF8-9DC5F5510CFC}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\examples\boing.vcxproj">
-      <Project>{3C02895E-6CDE-301A-942C-15E511264965}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\examples\boing.vcxproj">
+      <Project>{145EB86E-111C-3888-B6A6-8EBB6D087D0B}</Project>
       <Name>boing</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\clipboard.vcxproj">
-      <Project>{B3256F22-9EBC-382C-B834-3E8783F9FF89}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\clipboard.vcxproj">
+      <Project>{A1D35985-B698-323D-820F-8A7AE9E97842}</Project>
       <Name>clipboard</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\cursor.vcxproj">
-      <Project>{5BEA7C4B-ECD0-396F-B443-ACFC54DC0761}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\cursor.vcxproj">
+      <Project>{9E6AE210-C4FF-378C-86C1-5DF3BC0186A9}</Project>
       <Name>cursor</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\empty.vcxproj">
-      <Project>{F0B6C06D-81B1-38A2-AC4F-C50CF3513B5E}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\empty.vcxproj">
+      <Project>{397FC3BF-FF80-3646-8B1F-5B47F68A60C8}</Project>
       <Name>empty</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\events.vcxproj">
-      <Project>{7E44A5D8-EBC9-3520-B20E-08DC3C560832}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\events.vcxproj">
+      <Project>{D28A890C-5C6C-3B13-AED3-116EB9CBE3E8}</Project>
       <Name>events</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\gamma.vcxproj">
-      <Project>{E962DA69-6C97-3C9F-BE3F-8DEA7045DADE}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\gamma.vcxproj">
+      <Project>{3F643F13-0C1A-3DFD-80C2-EC98A36C605E}</Project>
       <Name>gamma</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\examples\gears.vcxproj">
-      <Project>{4D266C37-6310-3AAE-9AF3-593609EC5FED}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\examples\gears.vcxproj">
+      <Project>{A5613BC8-8430-367F-998D-EBC498728356}</Project>
       <Name>gears</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\src\glfw.vcxproj">
-      <Project>{A4A5E6ED-F5A2-3C89-B6D9-5363C9B69E7E}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\src\glfw.vcxproj">
+      <Project>{E01AD297-6265-3390-A7A2-20A2E26253E8}</Project>
       <Name>glfw</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\glfwinfo.vcxproj">
-      <Project>{BD039C51-0A43-36E0-B14C-448C5E7FBADC}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\glfwinfo.vcxproj">
+      <Project>{09C60392-8C90-365A-A4C3-8041E8BDBA50}</Project>
       <Name>glfwinfo</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\examples\heightmap.vcxproj">
-      <Project>{959CA5F1-18B6-3F50-BA78-88E2B5F04ACB}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\examples\heightmap.vcxproj">
+      <Project>{D9E31352-D071-367A-8751-DF38DBBE4872}</Project>
       <Name>heightmap</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\iconify.vcxproj">
-      <Project>{521B3A7E-1E76-3CD5-A9D2-5A94B750A99E}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\iconify.vcxproj">
+      <Project>{75C6A06C-C4BE-336E-BEDA-A2123E05F6AD}</Project>
       <Name>iconify</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\joysticks.vcxproj">
-      <Project>{9DC48A15-FBE9-3E3E-A305-E1E06B64CACB}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\joysticks.vcxproj">
+      <Project>{FCFAAD09-B9F8-3930-A441-1D68744E60EE}</Project>
       <Name>joysticks</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\monitors.vcxproj">
-      <Project>{58D9F948-18E4-3089-831C-1E531D73C9FD}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\monitors.vcxproj">
+      <Project>{C0B9C0BA-C2A7-314E-8735-95CDD9708157}</Project>
       <Name>monitors</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\msaa.vcxproj">
-      <Project>{1DB28E62-731C-3F7E-A298-9262E6D3119A}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\msaa.vcxproj">
+      <Project>{96CC6AEE-6CE4-35C1-8F75-393C42447C39}</Project>
       <Name>msaa</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\examples\particles.vcxproj">
-      <Project>{86E1D7FF-225E-3C38-88F9-29244E49B36C}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\examples\particles.vcxproj">
+      <Project>{44BD7F5B-17B2-388C-B343-8E02407BB72E}</Project>
       <Name>particles</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\reopen.vcxproj">
-      <Project>{43B7F067-CB2B-3A86-8B54-7F71C093FDA1}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\reopen.vcxproj">
+      <Project>{E172496F-1C81-3576-8706-9BED1D7E81AF}</Project>
       <Name>reopen</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\sharing.vcxproj">
-      <Project>{1F01BCD5-8B3E-35B0-9D9E-2AA9F17DDA7A}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\sharing.vcxproj">
+      <Project>{8B38590E-A6AC-3AC9-A96B-B618FE0A535B}</Project>
       <Name>sharing</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\examples\simple.vcxproj">
-      <Project>{EBC28A62-36D3-3CC0-A4B5-44008BF5A975}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\examples\simple.vcxproj">
+      <Project>{64D67122-9CF0-36CB-AE2E-8A0EF1F30AD8}</Project>
       <Name>simple</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\examples\splitview.vcxproj">
-      <Project>{DFE0BEF5-57D5-384C-8A5B-501E1FA0B81B}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\examples\splitview.vcxproj">
+      <Project>{A64CA990-B99B-39C5-9EC7-CCBB6D97E70E}</Project>
       <Name>splitview</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\tearing.vcxproj">
-      <Project>{2A154C4A-2ADC-3E2C-9C59-D921708966C1}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\tearing.vcxproj">
+      <Project>{43EDA6B8-C0FE-343A-99E6-5EF1E9923859}</Project>
       <Name>tearing</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\threads.vcxproj">
-      <Project>{03EC17C3-EC72-381F-9BB1-EBFDE7139084}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\threads.vcxproj">
+      <Project>{5869DDAD-DF8E-3969-942E-CE2CAE60C892}</Project>
       <Name>threads</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\title.vcxproj">
-      <Project>{BB401AE0-FF92-32F0-98EE-231A84C016C6}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\title.vcxproj">
+      <Project>{17845226-1E90-343E-B1D4-933E5C3FA0BD}</Project>
       <Name>title</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\examples\wave.vcxproj">
-      <Project>{7749053C-7C66-3103-AE21-323035410F02}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\examples\wave.vcxproj">
+      <Project>{C6DB3317-8354-3626-9691-CAAF5E64B755}</Project>
       <Name>wave</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Projets\PullGithub\CPP_Fred\OpenGL_SampleEdit\external\glfw-3.1.2\tests\windows.vcxproj">
-      <Project>{CFBBE8AA-AB1D-3788-B6FE-A9D6A1E368D6}</Project>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_SampleEdit\external\glfw-3.1.2\tests\windows.vcxproj">
+      <Project>{55926602-7171-34DF-9771-344AD30B6832}</Project>
       <Name>windows</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,56 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="H:\Fred\OpenGl_Sample\main\main.cpp">
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Fred\OpenGl_Sample\common\shader.cpp">
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\shader.cpp">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Fred\OpenGl_Sample\common\controls.cpp">
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\controls.cpp">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Fred\OpenGl_Sample\common\texture.cpp">
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\texture.cpp">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Fred\OpenGl_Sample\common\objloader.cpp">
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\objloader.cpp">
       <Filter>common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="H:\Fred\OpenGl_Sample\common\shader.hpp">
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\shader.hpp">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Fred\OpenGl_Sample\common\controls.hpp">
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\controls.hpp">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Fred\OpenGl_Sample\common\texture.hpp">
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\texture.hpp">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Fred\OpenGl_Sample\common\objloader.hpp">
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\objloader.hpp">
       <Filter>common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Fred\OpenGl_Sample\CMakeLists.txt" />
+    <CustomBuild Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="H:\Fred\OpenGl_Sample\main\TransformVertexShader.vertexshader">
+    <None Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\TransformVertexShader.vertexshader">
       <Filter>shaders</Filter>
     </None>
-    <None Include="H:\Fred\OpenGl_Sample\main\TextureFragmentShader.fragmentshader">
+    <None Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\TextureFragmentShader.fragmentshader">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{1044A8FC-437C-30DC-B713-CF67BE9E79FE}</UniqueIdentifier>
+      <UniqueIdentifier>{0984FA32-4CD4-3262-8F0A-29123186FB3E}</UniqueIdentifier>
     </Filter>
     <Filter Include="common">
-      <UniqueIdentifier>{94B38DA3-8CF9-395A-8043-306163673ECE}</UniqueIdentifier>
+      <UniqueIdentifier>{F61340D8-70DC-3ED2-8C94-1AFE25D9592A}</UniqueIdentifier>
     </Filter>
     <Filter Include="shaders">
-      <UniqueIdentifier>{3BCCEBB8-E621-3BF0-A456-E8527EDD2B50}</UniqueIdentifier>
+      <UniqueIdentifier>{E924B61F-FFF4-38B4-9F66-E92F2F9A19CF}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

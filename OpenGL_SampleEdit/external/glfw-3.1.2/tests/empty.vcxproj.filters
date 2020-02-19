@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="H:\Fred\OpenGl_Sample\external\glfw-3.1.2\tests\empty.c">
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\tests\empty.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Fred\OpenGl_Sample\external\glfw-3.1.2\deps\tinycthread.c">
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\deps\tinycthread.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="H:\Fred\OpenGl_Sample\external\glfw-3.1.2\deps\tinycthread.h">
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\deps\tinycthread.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Fred\OpenGl_Sample\external\glfw-3.1.2\tests\CMakeLists.txt" />
+    <CustomBuild Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\tests\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{E2E72145-EEC1-364B-ADC4-AB58F7F450F9}</UniqueIdentifier>
+      <UniqueIdentifier>{22738FE1-628D-35F2-9FD7-501532DCE1F3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{1044A8FC-437C-30DC-B713-CF67BE9E79FE}</UniqueIdentifier>
+      <UniqueIdentifier>{0984FA32-4CD4-3262-8F0A-29123186FB3E}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

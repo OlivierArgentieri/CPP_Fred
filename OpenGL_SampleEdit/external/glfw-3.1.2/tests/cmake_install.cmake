@@ -1,4 +1,4 @@
-# Install script for directory: H:/Fred/OpenGl_Sample/external/glfw-3.1.2/tests
+# Install script for directory: D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/external/glfw-3.1.2/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

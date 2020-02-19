@@ -102,20 +102,6 @@ double mat4::Determinant()
 	return mat4::DeterminantMat4(mat);
 }
 
-
-float mat4::ReviewDet()
-{
-	float _test[4][4]
-	{
-		{ -10, 1, 2, 3},
-		{ 4, 5, 6, 7 },
-		{ 8,9, 10, 11 },
-		{ 12, 13, 14, 20}
-	};
-
-	return 0;
-}
-
 mat4 mat4::operator*(const mat4& _mat) const
 {
 	float _res[4][4];

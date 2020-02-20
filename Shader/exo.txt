@@ -1,0 +1,62 @@
+L'unité sera le cm
+
+
+Afficher un plan (mesh généré), d'une couleur donnée. 
+Hauteur du plan : 0 cm
+
+Afficher des bordures (4) qui permettent de choisir la taille 
+de la zone de jeu en mètres (rappel, 1 m = 100cm), par define.
+
+Vue top du genre, en imaginant que les lignes se touchent :)
+Hauteur des bordures paramétrables (1m par défaut)
+
+-----
+|	|
+|	|
+|	|
+-----
+
+mesh généré de forme type boite (avec une épaisseur) pour qu'on puisse 
+le voir avec une caméra Top.
+
+Placer une caméra en vue Top de sorte que l'on puisse voir le plateau 
+complet.
+
+meme rayon pour chaque bille
+
+Avoir un objet Bille, de type sphère, avec un rayon paramétrable 
+(vous pouvez charger un mesh sphérique de taille 1 et le scaler). 
+Le mesh doit pouvoir recevoir une couleur.
+
+Le plateau de jeu doit pouvoir recevoir n billes (10 par exemple)
+Placement des billes aléatoires, sauf celle du centre, qui est au centre :)
+Les billes ne doivent pas se pénétrer quand elles sont posées.
+
+Chaque bille est posée sur le plan du plateau, 
+chaque bille doit posséder sa propre position et vecteur vitesse. 
+La vitesse des billes est nulle au départ.
+
+Faite l'affichage et le déplacement de la bille du centre 
+avec le clavier par exemple.
+Le déplacement consiste à donner une vitesse à la bille 
+pour la faire bouger, selon l'axe choisi par les touches.
+
+
+Des forces de frottement (par define aussi) ralentissent 
+la bille à chaque trame, de façon uniforme 
+(donc toujours la même force à chaque trame, sans variation). 
+La bille déplacée va donc s'arrêter naturellement au bout d'un moment.
+
+La classe qui va gérer les billes doit pouvoir gérer tous les types, 
+celle jouée comme les autres. 
+il y a autant d'instances de cette classe que de billes en jeu.
+
+Pour assurer un certain déplacement, 
+commencez à voir comment faire pour gérer la collision 
+entre les billes et la collision billes / bords
+
+
+
+
+
+

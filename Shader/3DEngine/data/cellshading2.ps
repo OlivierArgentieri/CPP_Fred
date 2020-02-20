@@ -1,0 +1,89 @@
+////////////////////////////////////////////////////////////////////////////////
+// Filename: color.ps
+////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////
+// GLOBALS //
+/////////////
+Texture2D shaderTexture;
+SamplerState SampleType;
+
+
+//////////////
+// TYPEDEFS //
+//////////////
+struct PixelInputType
+{
+    float4 position : SV_POSITION;
+    float2 tex : TEXCOORD0;
+    float4 normal : NORMAL;
+    float4 color : COLOR;
+};
+
+//--------------------------- DIFFUSE LIGHT PROPERTIES ------------------------------
+// The direction of the diffuse light
+//float3 DiffuseLightDirection = float3(0, 1, 0);
+ 
+// The color of the diffuse light
+float4 DiffuseColor = float4(1, 1, 1, 1);
+ 
+// The intensity of the diffuse light
+// float DiffuseIntensityGlobal = 2.0;
+ 
+
+ //--------------------------- TEXTURE PROPERTIES ------------------------------
+// The texture being used for the object
+//texture Texture;
+ 
+
+float toon(float c,int steps)
+{
+	float i;
+	for(i=0.; i<=1.; i+=1./float(steps))
+		if(c<i)
+			return i-1./float(steps);
+
+	return 1.;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Pixel Shader
+////////////////////////////////////////////////////////////////////////////////
+float4 CellShadingPixelShader(PixelInputType input) : SV_TARGET
+{
+// Vertex Color    return input.color;
+
+
+//Texturing
+	float4 textureColor;
+
+    // Sample the pixel color from the texture using the sampler at this texture coordinate location.
+    textureColor = shaderTexture.Sample(SampleType, input.tex);
+
+    return textureColor;
+
+
+
+/*
+// cell shading
+
+    // Calculate diffuse light amount
+	float3 DiffuseLightDirection = float3(0, 1, 0);
+    float intensity = dot(normalize(DiffuseLightDirection), input.normal);
+    if(intensity < 0)
+        intensity = 0;
+ 
+    // Calculate what would normally be the final color, including texturing and diffuse lighting
+	float diffuseIntensity = 1.5;
+    float4 color = shaderTexture.Sample(SampleType, input.tex) * diffuseIntensity;
+    color.a = 1;
+
+	color[0]=toon(color[0],6);
+    color[1]=toon(color[1],6);
+    color[2]=toon(color[2],6);
+
+    return color;
+*/
+}
+

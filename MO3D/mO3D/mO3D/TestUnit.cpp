@@ -726,8 +726,6 @@ void UnitTest::TestMat4()
 	TestMat4Division();
 	TestMat4Equals();
 	TestMat4NotEquals();
-
-
 }
 
 void UnitTest::TestMat4Transpose()
@@ -782,7 +780,6 @@ void UnitTest::TestMat3Determinant()
 	double a = mat4::DeterminantMat3(_test);
 	ASSERT_EPSILON(a, -27);
 }
-
 void UnitTest::TestMat4Identity()
 {
 	// test identity

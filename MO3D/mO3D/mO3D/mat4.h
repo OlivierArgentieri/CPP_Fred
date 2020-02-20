@@ -30,7 +30,8 @@ namespace mo3d
 		mat4 Transpose() const;
 		double Determinant() const;
 		mat4 Adjacent() const;
-
+		mat4 ClampEpsilon() const;
+		
 		mat4 operator*(const mat4& _mat) const;
 		mat4 operator*(const double& _value) const;
 		mat4 operator+(const mat4& _mat) const;

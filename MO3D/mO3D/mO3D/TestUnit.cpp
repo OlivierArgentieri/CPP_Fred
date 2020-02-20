@@ -856,41 +856,35 @@ void UnitTest::TestMat4Division()
 		{10,6,6,7}
 	};
 
-
-	mat4 _t = mat4(_test);
-
-	mat4 osef = mat4::Inverse(_t);
-
-	osef.Identity();
-	
-	/*
-	float _test[4][4] = 
+	float _test2[4][4] =
 	{
-		{4,4,4,4},
-		{4,4,4,4},
-		{4,4,4,4},
-		{4,4,4,4}
-	};
-	
-	float _two[4][4] =
-	{
-		{2,2,2,2},
-		{2,2,2,2},
-		{2,2,2,2},
-		{2,2,2,2}
+		{2,8,3,5},
+		{2,1,9,7},
+		{5,7,9,8},
+		{12,11,4,2}
 	};
 
-	mat4 _mat1Test = mat4(_test);
-	mat4 _mat2Test = mat4(_two);
+	mat4 _testMat = mat4(_test);
+	mat4 _test2Mat = mat4(_test2);
+	mat4  _resMatMat2 = _testMat / _test2Mat;
 
-	_mat1Test / _mat2Test;
 
-	assert(_mat1Test == mat4(_test));
-	assert(_mat2Test == mat4(_two));
+	float _testRes[4][4] =
+	{
+		{7.2f, 10.8f, -14.2f, 3},
+		{6.6f, 9.2f, -11.6f, 2.2f},
+		{57.3f, 84.1f, -114.8f, 24.1f},
+		{27.7f,42.9f, -57.2f, 12.9f}
+	};
 
-	_mat1Test /= _mat2Test;
 
-	assert(_mat1Test == mat4(_two));*/
+	mat4 _testResMat = mat4(_testRes);
+
+	assert(_testResMat == _resMatMat2);
+
+
+	_testMat /= _test2Mat;
+	assert(_testMat == _resMatMat2);
 }
 
 void UnitTest::TestMat4Addition()

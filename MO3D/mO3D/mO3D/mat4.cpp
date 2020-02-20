@@ -1,5 +1,7 @@
 ﻿#include "pch.h"
 #include "mat4.h"
+#define EPSILON 0.00001f
+
 using namespace mo3d;
 
 const float mat4::identity[4][4]
@@ -249,6 +251,21 @@ mat4 mat4::Adjacent() const
 	return _t;
 }
 
+mat4 mat4::ClampEpsilon() const
+{
+	float _res[4][4];
+	for (int _i = 0; _i < 4; _i++)
+	{
+		for (int _j = 0; _j < 4; _j++)
+		{
+			_res[_i][_j] = mat[_i][_j];
+			if (_res[_i][_j] < EPSILON && _res[_i][_j] > -EPSILON)
+				_res[_i][_j] = 0;
+		}
+	}
+	return mat4(_res);
+}
+
 mat4 mat4::operator*(const mat4& _mat) const
 {
 	float _res[4][4];
@@ -316,7 +333,9 @@ mat4 mat4::Inverse(const mat4& _mat)
 mat4 mat4::operator/(const mat4& _mat) const
 {
 
-	
+	mat4 _toReturn = *this * Inverse(_mat);
+	_toReturn = mat4(_toReturn);
+	return _toReturn.ClampEpsilon();
 	
 	/*
 	float _res[4][4];
@@ -331,8 +350,6 @@ mat4 mat4::operator/(const mat4& _mat) const
 		}
 	}
 	return mat4(_res);*/
-
-	return mat;
 }
 
 
@@ -378,7 +395,7 @@ bool mat4::operator==(const mat4& _mat) const
 	{
 		for (int _j = 0; _j < 4; _j++)
 		{
-			if (mat[_i][_j] != _mat.mat[_i][_j])
+			if (!((_mat.mat[_i][_j] - mat[_i][_j]) < EPSILON && (_mat.mat[_i][_j] - mat[_i][_j]) > -EPSILON))
 				return false;
 		}
 	}

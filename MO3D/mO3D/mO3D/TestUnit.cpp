@@ -863,12 +863,6 @@ void UnitTest::TestMat4Division()
 		{5,7,9,8},
 		{12,11,4,2}
 	};
-
-	mat4 _testMat = mat4(_test);
-	mat4 _test2Mat = mat4(_test2);
-	mat4  _resMatMat2 = _testMat / _test2Mat;
-
-
 	float _testRes[4][4] =
 	{
 		{7.2f, 10.8f, -14.2f, 3},
@@ -876,15 +870,23 @@ void UnitTest::TestMat4Division()
 		{57.3f, 84.1f, -114.8f, 24.1f},
 		{27.7f,42.9f, -57.2f, 12.9f}
 	};
-
-
+	
+	mat4 _testMat = mat4(_test);
+	mat4 _test2Mat = mat4(_test2);
 	mat4 _testResMat = mat4(_testRes);
+
+	
+	mat4  _resMatMat2 = _testMat / _test2Mat;
+
 
 	assert(_testResMat == _resMatMat2);
 
+	_resMatMat2 = _testMat / _testMat;
+	assert(_resMatMat2 == mat4::Identity());
 
+	
 	_testMat /= _test2Mat;
-	assert(_testMat == _resMatMat2);
+	assert(_testMat == _testResMat);
 }
 
 void UnitTest::TestMat4Addition()

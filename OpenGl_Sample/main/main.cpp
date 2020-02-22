@@ -95,9 +95,15 @@ int main( void )
 	std::vector<glm::vec3> vertices;
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals; // Won't be used at the moment.
-	bool res = loadOBJ("cube.obj", vertices, uvs, normals);
+//	bool res = loadOBJ("cube.obj", vertices, uvs, normals);
 
-	// Load it into a VBO
+	vertices.push_back(glm::vec3(0, 0, 0));
+	vertices.push_back(glm::vec3(1, 0, 0));
+	vertices.push_back(glm::vec3(1, 0.5, 1));
+
+	uvs.push_back(glm::vec2(0, 0));
+	uvs.push_back(glm::vec2(0, 0.5));
+	uvs.push_back(glm::vec2(1, 0.5));
 
 	GLuint vertexbuffer;
 	glGenBuffers(1, &vertexbuffer);

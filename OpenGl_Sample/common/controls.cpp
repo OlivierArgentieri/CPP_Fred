@@ -23,9 +23,11 @@ glm::mat4 getProjectionMatrix(){
 // Initial position : on +Z
 glm::vec3 position = glm::vec3( 0, 0, 5 ); 
 // Initial horizontal angle : toward -Z
-float horizontalAngle = 3.14f;
+//float horizontalAngle = 3.14f;
+float horizontalAngle = 3.14;
 // Initial vertical angle : none
-float verticalAngle = 0.0f;
+//float verticalAngle = 0.0f;
+float verticalAngle = 90;
 // Initial Field of View
 float initialFoV = 45.0f;
 
@@ -51,6 +53,7 @@ void computeMatricesFromInputs(){
 	glfwSetCursorPos(window, 1024/2, 768/2);
 
 	// Compute new orientation
+
 	horizontalAngle += mouseSpeed * float(1024/2 - xpos );
 	verticalAngle   += mouseSpeed * float( 768/2 - ypos );
 
@@ -96,7 +99,7 @@ void computeMatricesFromInputs(){
 	ViewMatrix       = glm::lookAt(
 								position,           // Camera is here
 								position+direction, // and looks here : at the same position, plus "direction"
-								up                  // Head is up (set to 0,-1,0 to look upside-down)
+							-	up                  // Head is up (set to 0,-1,0 to look upside-down)
 						   );
 
 	// For the next frame, the "last time" will be "now"

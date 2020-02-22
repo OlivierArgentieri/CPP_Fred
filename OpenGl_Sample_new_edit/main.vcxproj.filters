@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\shader.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\controls.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\texture.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\objloader.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\shader.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\controls.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\texture.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\objloader.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\TransformVertexShader.vertexshader">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\TextureFragmentShader.fragmentshader">
+      <Filter>shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E22E7EF0-664F-30FE-98FD-34DCBE5359D9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{4B4FA750-1D50-38F3-BA88-5CD5BC46F01B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{8083EB53-6B16-3518-817C-CBA8BA1E107D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

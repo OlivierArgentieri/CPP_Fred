@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample_desktop\CMakeFiles\87f94fce605750e68290a16de65e688a\uninstall.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample_desktop\external\glfw-3.1.2\CMakeFiles\uninstall" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2F037805-14F5-384F-A447-01D5F0D77958}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

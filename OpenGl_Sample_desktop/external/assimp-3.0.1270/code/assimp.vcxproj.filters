@@ -1,0 +1,1209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Assimp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\AssimpPCH.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BaseImporter.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BaseProcess.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\PostStepRegistry.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ImporterRegistry.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\DefaultIOStream.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\DefaultIOSystem.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Importer.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SGSpatialSort.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\VertexTriangleAdjacency.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SpatialSort.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SceneCombiner.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ScenePreprocessor.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SkeletonMeshBuilder.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SplitByBoneCountProcess.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\StandardShapes.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\TargetAnimation.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\RemoveComments.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Subdivision.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\DefaultLogger.cpp">
+      <Filter>Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Exporter.cpp">
+      <Filter>Exporter</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\AssimpCExport.cpp">
+      <Filter>Exporter</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\CalcTangentsProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ComputeUVMappingProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ConvertToLHProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\FindDegenerates.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\FindInstancesProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\FindInvalidDataProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\FixNormalsStep.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\GenFaceNormalsProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\GenVertexNormalsProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\PretransformVertices.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ImproveCacheLocality.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\JoinVerticesProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LimitBoneWeightsProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\RemoveRedundantMaterials.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\RemoveVCProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SortByPTypeProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SplitLargeMeshes.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\TerragenLoader.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\TextureTransform.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\TriangulateProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ValidateDataStructure.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\OptimizeGraph.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\OptimizeMeshes.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\DeboneProcess.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ProcessHelper.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MakeVerboseFormat.cpp">
+      <Filter>PostProcessing</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\3DSConverter.cpp">
+      <Filter>3DS</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\3DSLoader.cpp">
+      <Filter>3DS</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ACLoader.cpp">
+      <Filter>AC</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ASELoader.cpp">
+      <Filter>ASE</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ASEParser.cpp">
+      <Filter>ASE</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\B3DImporter.cpp">
+      <Filter>B3D</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BVHLoader.cpp">
+      <Filter>BVH</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ColladaLoader.cpp">
+      <Filter>Collada</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ColladaParser.cpp">
+      <Filter>Collada</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ColladaExporter.cpp">
+      <Filter>Collada</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\DXFLoader.cpp">
+      <Filter>DXF</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\CSMLoader.cpp">
+      <Filter>CSM</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\HMPLoader.cpp">
+      <Filter>HMP</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IRRLoader.cpp">
+      <Filter>Irr</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IRRMeshLoader.cpp">
+      <Filter>Irr</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IRRShared.cpp">
+      <Filter>Irr</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LWOAnimation.cpp">
+      <Filter>LWO</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LWOBLoader.cpp">
+      <Filter>LWO</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LWOLoader.cpp">
+      <Filter>LWO</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LWOMaterial.cpp">
+      <Filter>LWO</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LWSLoader.cpp">
+      <Filter>LWS</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\M3Importer.cpp">
+      <Filter>M3</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MD2Loader.cpp">
+      <Filter>MD2</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MD3Loader.cpp">
+      <Filter>MD3</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MD5Loader.cpp">
+      <Filter>MD5</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MD5Parser.cpp">
+      <Filter>MD5</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MDCLoader.cpp">
+      <Filter>MDC</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MDLLoader.cpp">
+      <Filter>MDL</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MDLMaterialLoader.cpp">
+      <Filter>MDL</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MaterialSystem.cpp">
+      <Filter>MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\NFFLoader.cpp">
+      <Filter>NFF</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\OFFLoader.cpp">
+      <Filter>OFFFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ObjFileImporter.cpp">
+      <Filter>Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ObjFileMtlImporter.cpp">
+      <Filter>Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ObjFileParser.cpp">
+      <Filter>Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ObjExporter.cpp">
+      <Filter>Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\OgreImporter.cpp">
+      <Filter>Ogre</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\OgreMaterial.cpp">
+      <Filter>Ogre</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\OgreMesh.cpp">
+      <Filter>Ogre</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\OgreSkeleton.cpp">
+      <Filter>Ogre</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\PlyLoader.cpp">
+      <Filter>Ply</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\PlyParser.cpp">
+      <Filter>Ply</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\PlyExporter.cpp">
+      <Filter>Ply</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Q3DLoader.cpp">
+      <Filter>Q3D</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Q3BSPFileParser.cpp">
+      <Filter>Q3BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Q3BSPFileImporter.cpp">
+      <Filter>Q3BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Q3BSPZipArchive.cpp">
+      <Filter>Q3BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\RawLoader.cpp">
+      <Filter>Raw</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SMDLoader.cpp">
+      <Filter>SMD</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\STLLoader.cpp">
+      <Filter>STL</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\STLExporter.cpp">
+      <Filter>STL</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\UnrealLoader.cpp">
+      <Filter>Unreal</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\XFileImporter.cpp">
+      <Filter>XFile</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\XFileParser.cpp">
+      <Filter>XFile</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MS3DLoader.cpp">
+      <Filter>MS3D</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\COBLoader.cpp">
+      <Filter>COB</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BlenderLoader.cpp">
+      <Filter>BLENDER</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BlenderDNA.cpp">
+      <Filter>BLENDER</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BlenderScene.cpp">
+      <Filter>BLENDER</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BlenderModifier.cpp">
+      <Filter>BLENDER</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\NDOLoader.cpp">
+      <Filter>NDO</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IFCLoader.cpp">
+      <Filter>IFC</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IFCReaderGen.cpp">
+      <Filter>IFC</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IFCUtil.cpp">
+      <Filter>IFC</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IFCGeometry.cpp">
+      <Filter>IFC</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IFCMaterial.cpp">
+      <Filter>IFC</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IFCProfile.cpp">
+      <Filter>IFC</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IFCCurve.cpp">
+      <Filter>IFC</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\STEPFileReader.cpp">
+      <Filter>IFC</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\XGLLoader.cpp">
+      <Filter>XGL</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\irrXML\irrXML.cpp">
+      <Filter>IrrXML</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\ConvertUTF\ConvertUTF.c">
+      <Filter>ConvertUTF</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\unzip\ioapi.c">
+      <Filter>unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\unzip\unzip.c">
+      <Filter>unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\common\shapes.cc">
+      <Filter>Poly2Tri</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\advancing_front.cc">
+      <Filter>Poly2Tri</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\cdt.cc">
+      <Filter>Poly2Tri</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep.cc">
+      <Filter>Poly2Tri</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep_context.cc">
+      <Filter>Poly2Tri</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\clipper\clipper.cpp">
+      <Filter>Clipper</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\AssimpPCH.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\fast_atof.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\qnan.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BaseImporter.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BaseProcess.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Importer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ScenePrivate.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ByteSwap.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\DefaultProgressHandler.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\DefaultIOStream.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\DefaultIOSystem.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\CInterfaceIOWrapper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Hash.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IFF.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ParsingUtils.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\StdOStreamLogStream.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\StreamReader.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\StringComparison.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SGSpatialSort.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\VertexTriangleAdjacency.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\GenericProperty.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SpatialSort.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SceneCombiner.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ScenePreprocessor.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SkeletonMeshBuilder.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SplitByBoneCountProcess.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SmoothingGroups.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\StandardShapes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\TargetAnimation.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\RemoveComments.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Subdivision.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Vertex.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LineSplitter.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\TinyFormatter.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Profiler.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LogAux.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\DefaultLogger.hpp">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\IOStream.hpp">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\LogStream.hpp">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\Logger.hpp">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\NullLogger.hpp">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Win32DebugLogStream.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\FileLogStream.h">
+      <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BlobIOSystem.h">
+      <Filter>Exporter</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\CalcTangentsProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ComputeUVMappingProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ConvertToLHProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\FindDegenerates.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\FindInstancesProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\FindInvalidDataProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\FixNormalsStep.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\GenFaceNormalsProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\GenVertexNormalsProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\PretransformVertices.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ImproveCacheLocality.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\JoinVerticesProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LimitBoneWeightsProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\RemoveRedundantMaterials.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\RemoveVCProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SortByPTypeProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SplitLargeMeshes.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\TerragenLoader.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\TextureTransform.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\TriangulateProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ValidateDataStructure.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\OptimizeGraph.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\OptimizeMeshes.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\DeboneProcess.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ProcessHelper.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\PolyTools.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MakeVerboseFormat.h">
+      <Filter>PostProcessing</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\3DSHelper.h">
+      <Filter>3DS</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\3DSLoader.h">
+      <Filter>3DS</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ACLoader.h">
+      <Filter>AC</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ASELoader.h">
+      <Filter>ASE</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ASEParser.h">
+      <Filter>ASE</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\B3DImporter.h">
+      <Filter>B3D</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BVHLoader.h">
+      <Filter>BVH</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ColladaHelper.h">
+      <Filter>Collada</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ColladaLoader.h">
+      <Filter>Collada</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ColladaParser.h">
+      <Filter>Collada</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ColladaExporter.h">
+      <Filter>Collada</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\DXFLoader.h">
+      <Filter>DXF</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\DXFHelper.h">
+      <Filter>DXF</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\CSMLoader.h">
+      <Filter>CSM</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\HMPFileData.h">
+      <Filter>HMP</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\HMPLoader.h">
+      <Filter>HMP</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\HalfLifeFileData.h">
+      <Filter>HMP</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IRRLoader.h">
+      <Filter>Irr</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IRRMeshLoader.h">
+      <Filter>Irr</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IRRShared.h">
+      <Filter>Irr</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LWOAnimation.h">
+      <Filter>LWO</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LWOFileData.h">
+      <Filter>LWO</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LWOLoader.h">
+      <Filter>LWO</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\LWSLoader.h">
+      <Filter>LWS</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\M3Importer.h">
+      <Filter>M3</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MD2FileData.h">
+      <Filter>MD2</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MD2Loader.h">
+      <Filter>MD2</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MD2NormalTable.h">
+      <Filter>MD2</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MD3FileData.h">
+      <Filter>MD3</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MD3Loader.h">
+      <Filter>MD3</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MD5Loader.h">
+      <Filter>MD5</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MD5Parser.h">
+      <Filter>MD5</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MDCFileData.h">
+      <Filter>MDC</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MDCLoader.h">
+      <Filter>MDC</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MDCNormalTable.h">
+      <Filter>MDC</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MDLDefaultColorMap.h">
+      <Filter>MDL</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MDLFileData.h">
+      <Filter>MDL</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MDLLoader.h">
+      <Filter>MDL</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MaterialSystem.h">
+      <Filter>MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\NFFLoader.h">
+      <Filter>NFF</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\OFFLoader.h">
+      <Filter>OFFFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ObjFileData.h">
+      <Filter>Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ObjFileImporter.h">
+      <Filter>Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ObjFileMtlImporter.h">
+      <Filter>Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ObjFileParser.h">
+      <Filter>Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ObjTools.h">
+      <Filter>Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\ObjExporter.h">
+      <Filter>Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\OgreImporter.hpp">
+      <Filter>Ogre</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\OgreXmlHelper.hpp">
+      <Filter>Ogre</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\PlyLoader.h">
+      <Filter>Ply</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\PlyParser.h">
+      <Filter>Ply</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\PlyExporter.h">
+      <Filter>Ply</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Q3DLoader.h">
+      <Filter>Q3D</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Q3BSPFileData.h">
+      <Filter>Q3BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Q3BSPFileParser.h">
+      <Filter>Q3BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Q3BSPFileImporter.h">
+      <Filter>Q3BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\Q3BSPZipArchive.h">
+      <Filter>Q3BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\RawLoader.h">
+      <Filter>Raw</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\SMDLoader.h">
+      <Filter>SMD</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\STLLoader.h">
+      <Filter>STL</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\STLExporter.h">
+      <Filter>STL</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\UnrealLoader.h">
+      <Filter>Unreal</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\XFileHelper.h">
+      <Filter>XFile</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\XFileImporter.h">
+      <Filter>XFile</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\XFileParser.h">
+      <Filter>XFile</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MD4FileData.h">
+      <Filter>Extra</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\MS3DLoader.h">
+      <Filter>MS3D</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\COBLoader.h">
+      <Filter>COB</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\COBScene.h">
+      <Filter>COB</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BlenderLoader.h">
+      <Filter>BLENDER</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BlenderDNA.h">
+      <Filter>BLENDER</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BlenderDNA.inl">
+      <Filter>BLENDER</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BlenderScene.h">
+      <Filter>BLENDER</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BlenderSceneGen.h">
+      <Filter>BLENDER</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BlenderIntermediate.h">
+      <Filter>BLENDER</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BlenderModifier.h">
+      <Filter>BLENDER</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\NDOLoader.h">
+      <Filter>NDO</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IFCLoader.h">
+      <Filter>IFC</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IFCReaderGen.h">
+      <Filter>IFC</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\IFCUtil.h">
+      <Filter>IFC</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\STEPFile.h">
+      <Filter>IFC</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\STEPFileReader.h">
+      <Filter>IFC</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\XGLLoader.h">
+      <Filter>XGL</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\irrXMLWrapper.h">
+      <Filter>IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\irrXML\CXMLReaderImpl.h">
+      <Filter>IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\irrXML\heapsort.h">
+      <Filter>IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\irrXML\irrArray.h">
+      <Filter>IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\irrXML\irrString.h">
+      <Filter>IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\irrXML\irrTypes.h">
+      <Filter>IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\irrXML\irrXML.h">
+      <Filter>IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\ConvertUTF\ConvertUTF.h">
+      <Filter>ConvertUTF</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\unzip\crypt.h">
+      <Filter>unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\unzip\ioapi.h">
+      <Filter>unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\unzip\unzip.h">
+      <Filter>unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\common\shapes.h">
+      <Filter>Poly2Tri</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\common\utils.h">
+      <Filter>Poly2Tri</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\advancing_front.h">
+      <Filter>Poly2Tri</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\cdt.h">
+      <Filter>Poly2Tri</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep.h">
+      <Filter>Poly2Tri</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\poly2tri\poly2tri\sweep\sweep_context.h">
+      <Filter>Poly2Tri</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\contrib\clipper\clipper.hpp">
+      <Filter>Clipper</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround\boost\math\common_factor_rt.hpp">
+      <Filter>Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround\boost\foreach.hpp">
+      <Filter>Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround\boost\format.hpp">
+      <Filter>Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround\boost\scoped_array.hpp">
+      <Filter>Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround\boost\scoped_ptr.hpp">
+      <Filter>Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround\boost\shared_array.hpp">
+      <Filter>Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround\boost\shared_ptr.hpp">
+      <Filter>Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround\boost\make_shared.hpp">
+      <Filter>Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround\boost\static_assert.hpp">
+      <Filter>Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\BoostWorkaround\boost\tuple\tuple.hpp">
+      <Filter>Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\anim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\ai_assert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\color4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\color4.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\cfileio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\material.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\matrix3x3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\matrix3x3.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\matrix4x4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\matrix4x4.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\postprocess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\quaternion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\quaternion.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\vector2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\vector2.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\vector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\vector3.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\cimport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\importerdesc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\Importer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\ProgressHandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\IOSystem.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\cexport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\Exporter.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\Compiler\pushpack1.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include\assimp\Compiler\poppack1.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\pstdint.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\code\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="3DS">
+      <UniqueIdentifier>{A12B9CA0-BCA7-395B-9A8E-F3D6AB22D24F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AC">
+      <UniqueIdentifier>{FED12F81-623D-3246-AF3D-1154AA5738FE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ASE">
+      <UniqueIdentifier>{2B8318CA-83B1-354D-A0BB-32F376EA064E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B3D">
+      <UniqueIdentifier>{FA5CED30-E33B-3C4B-9D22-0E6A2F829CE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BLENDER">
+      <UniqueIdentifier>{39382F32-8D4D-31EE-8247-53BC56895A57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BVH">
+      <UniqueIdentifier>{62669341-A499-3C20-A77B-FEC41CE68D30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Boost">
+      <UniqueIdentifier>{B8416FD4-6BD2-3B8A-9865-7EEC4BF43540}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="COB">
+      <UniqueIdentifier>{720F7BC4-6779-3C94-8FD6-52EFC260BE59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CSM">
+      <UniqueIdentifier>{BD5C79D7-D813-3D68-B417-D1B5250326B6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clipper">
+      <UniqueIdentifier>{9FA025EC-AE01-393A-B0F5-9F0E36A0907B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collada">
+      <UniqueIdentifier>{BA42703E-3F68-3FB7-8EFE-1BAEB4774CC5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{46D90FEB-AAD0-3992-914B-B97E07A81E24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compiler">
+      <UniqueIdentifier>{B091A366-5DA8-3017-B0E6-C723C01CCDC6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ConvertUTF">
+      <UniqueIdentifier>{1A4B0D5D-1476-36D5-A916-EB794CC1C2A3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXF">
+      <UniqueIdentifier>{CC5CC271-CF4A-31BA-953A-C9125B5DC9E4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exporter">
+      <UniqueIdentifier>{419CDA76-5CDB-39BA-A99F-B7F5746AF638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extra">
+      <UniqueIdentifier>{2CA0402F-8901-3A9A-87E5-9AD0BC2D7BBB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HMP">
+      <UniqueIdentifier>{6225BA4D-7FA6-38CD-B0C4-BA71BED99270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9F65ED84-17D3-3914-A9ED-5C66B450D3D9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IFC">
+      <UniqueIdentifier>{09C1DBBE-7972-3AFA-A90F-03937E19A4F7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Irr">
+      <UniqueIdentifier>{0DF774B7-5473-3520-A403-EBBCCB1C03E5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IrrXML">
+      <UniqueIdentifier>{571EF658-1A8C-32F7-83CA-4AEF9D39179C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LWO">
+      <UniqueIdentifier>{FBC7AAF0-2AC9-35FB-BBC4-EB8375EEF136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LWS">
+      <UniqueIdentifier>{25E3FEFB-36A2-3B9B-B2D5-026CE358CEC9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logging">
+      <UniqueIdentifier>{76EF092A-7235-3FEB-9A80-E1624A17A34D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="M3">
+      <UniqueIdentifier>{4077297A-BAC1-34FB-9EAD-D3B954BD6715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MD2">
+      <UniqueIdentifier>{AC2C2CF6-0849-32F3-98F1-14416DA019DD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MD3">
+      <UniqueIdentifier>{36919589-3C87-38FA-BBC5-381A55934922}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MD5">
+      <UniqueIdentifier>{00C9D9F5-C372-31AE-BFB1-3DDC5E417B1E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDC">
+      <UniqueIdentifier>{1CBB5D34-0AB8-3ECA-80F1-69141ED3C93D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDL">
+      <UniqueIdentifier>{EC20B729-D2A6-3013-B625-084052F5D654}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MS3D">
+      <UniqueIdentifier>{6026C030-3E93-3F62-8514-839DCB1963E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MaterialSystem">
+      <UniqueIdentifier>{F81A6D90-C06C-3D00-96B3-2D902F70C485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NDO">
+      <UniqueIdentifier>{4CC3571F-4847-3434-8931-D06348C90920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NFF">
+      <UniqueIdentifier>{17AE5474-D571-3EC6-82A2-01957811C3C5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OFFFormat">
+      <UniqueIdentifier>{B61ED860-AE85-38EA-A497-CD827E4A890A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Obj">
+      <UniqueIdentifier>{1887FA06-CB0F-3430-989E-7DFAA4FADC89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ogre">
+      <UniqueIdentifier>{75F16605-1FB1-39F8-AA8A-1A3ABD98E194}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ply">
+      <UniqueIdentifier>{7A59A751-6B53-3277-81F1-245812DE2696}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Poly2Tri">
+      <UniqueIdentifier>{CDA66662-7E32-3E6F-9DEB-E6A33087E761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostProcessing">
+      <UniqueIdentifier>{F330BC97-5FCB-3031-9710-37D259345566}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Q3BSP">
+      <UniqueIdentifier>{12B6423E-1054-38FF-946C-D432A9E5BCBA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Q3D">
+      <UniqueIdentifier>{9895F740-EDE1-3200-8670-FBA46C4F307A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Raw">
+      <UniqueIdentifier>{144217A3-08FB-306D-9730-EA68ADD2D708}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SMD">
+      <UniqueIdentifier>{7A7CEBA3-3D0B-3FC7-8E35-0E5FE7DF0A2B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="STL">
+      <UniqueIdentifier>{BC1EF0FE-BDEA-3BD5-9CE1-FD9CD70EC62A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{38240E8D-FD40-3294-B9B7-737ED8FE2207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Unreal">
+      <UniqueIdentifier>{30686EBA-2A69-366F-B3CF-32E4A1AE140B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XFile">
+      <UniqueIdentifier>{7613734D-6E20-3C4E-B1E9-D103F40C75FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XGL">
+      <UniqueIdentifier>{B9D59718-DF09-3EEA-B164-6E0BC324C452}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unzip">
+      <UniqueIdentifier>{B8B4F707-2A40-3132-8DF7-0BAEC3562302}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

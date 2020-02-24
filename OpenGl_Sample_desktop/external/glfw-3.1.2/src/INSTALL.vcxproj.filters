@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample_desktop\CMakeFiles\b6c2a418538d0f8225e927c678a0aa41\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2F037805-14F5-384F-A447-01D5F0D77958}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

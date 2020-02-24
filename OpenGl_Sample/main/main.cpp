@@ -10,7 +10,8 @@
 // Include GLFW
 #include <GLFW/glfw3.h>
 #include "gameReseau/window/gr_window.hpp"
-GLFWwindow* window;
+#include "gameReseau/renderer/gr_renderer.hpp"
+//GLFWwindow* window;
 
 // Include GLM
 #include <glm/glm.hpp>
@@ -24,8 +25,13 @@ using namespace glm;
 
 int main( void )
 {
+
 	gr_window grWindow = gr_window(1024, 768,"Tutorial 07 - Model Loading");
+
 	grWindow.InitWindow();
+	gr_renderer grRenderer = gr_renderer("TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader");
+
+	
 	/*
 	// Initialise GLFW
 	if( !glfwInit() )
@@ -50,7 +56,7 @@ int main( void )
 		return -1;
 	}
 	glfwMakeContextCurrent(window);
-	*/
+	
 	// Initialize GLEW
 	glewExperimental = true; // Needed for core profile
 	if (glewInit() != GLEW_OK) {
@@ -59,7 +65,7 @@ int main( void )
 		glfwTerminate();
 		return -1;
 	}
-	/*
+
 	// Ensure we can capture the escape key being pressed below
 	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
     // Hide the mouse and enable unlimited mouvement
@@ -81,7 +87,7 @@ int main( void )
 	glEnable(GL_CULL_FACE);
 	*/
 
-	
+	/*
 	GLuint VertexArrayID;
 	glGenVertexArrays(1, &VertexArrayID);
 	glBindVertexArray(VertexArrayID);
@@ -98,22 +104,13 @@ int main( void )
 	// Get a handle for our "myTextureSampler" uniform
 	GLuint TextureID  = glGetUniformLocation(programID, "myTextureSampler");
 
-	// Read our .obj file
+	// Read our .obj file*/
 	std::vector<glm::vec3> vertices;
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals; // Won't be used at the moment.
+	bool res = loadOBJ("cube.obj", vertices, uvs, normals);
 	//bool res = loadOBJ("Sphere.obj", vertices, uvs, normals);
-
-	/**
-	vertices.push_back(glm::vec3(0, 0, 0));
-	vertices.push_back(glm::vec3(100, 0, 0));
-	vertices.push_back(glm::vec3(100, 0.2f, 100));
 	
-	vertices.push_back(glm::vec3(100, 0.2f, 100));
-	vertices.push_back(glm::vec3(0, 0.2f, 100));
-	vertices.push_back(glm::vec3(0, 0, 0));
-	*/
-
 
 	
 
@@ -219,6 +216,8 @@ int main( void )
 	vertices.push_back(glm::vec3(0, 100, 0));
 	*/
 
+
+	/**/
 	uvs.push_back(glm::vec2(0, 0));
 	uvs.push_back(glm::vec2(0, 1));
 	uvs.push_back(glm::vec2(1, 1));
@@ -228,21 +227,24 @@ int main( void )
 	uvs.push_back(glm::vec2(0, 0));
 
 	
-	
-
+	grRenderer.AddVertices(vertices);
+	grRenderer.AddUV(uvs);
+	/*/
 	// Load it into a VBO
 	GLuint vertexbuffer;
 	glGenBuffers(1, &vertexbuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
 	glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(glm::vec3), &vertices[0], GL_STATIC_DRAW);
-
+*/
 	GLuint uvbuffer;
 	glGenBuffers(1, &uvbuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, uvbuffer);
 	glBufferData(GL_ARRAY_BUFFER, uvs.size() * sizeof(glm::vec2), &uvs[0], GL_STATIC_DRAW);
-
+	
+	
 	do{
 
+		/*
 		// Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -277,7 +279,8 @@ int main( void )
 			0,                  // stride
 			(void*)0            // array buffer offset
 		);
-
+		*/
+		
 		// 2nd attribute buffer : UVs
 		glEnableVertexAttribArray(1);
 		glBindBuffer(GL_ARRAY_BUFFER, uvbuffer);
@@ -289,7 +292,7 @@ int main( void )
 			0,                                // stride
 			(void*)0                          // array buffer offset
 		);
-
+		/*
 		// Draw the triangle !
 		glDrawArrays(GL_TRIANGLES, 0, vertices.size() );
 
@@ -300,12 +303,17 @@ int main( void )
 		//glfwSwapBuffers(window);
 		grWindow.SwapBuffer();
 		glfwPollEvents();
+		*/
+		grRenderer.RenderLoop(grWindow);
+
 
 	} // Check if the ESC key was pressed or the window was closed
-	while( /*glfwGetKey(window, GLFW_KEY_ESCAPE )*/
-			grWindow.GetKey(GLFW_KEY_ESCAPE) != GLFW_PRESS/* &&
-		   glfwWindowShouldClose(window) == 0*/ );
+	while( glfwGetKey(grWindow.GetWindow(), GLFW_KEY_ESCAPE ) ||
+			grWindow.GetKey(GLFW_KEY_ESCAPE) != GLFW_PRESS &&
+		   glfwWindowShouldClose(grWindow.GetWindow()) == 0);
 
+	grRenderer.Clean();
+	/*
 	// Cleanup VBO and shader
 	glDeleteBuffers(1, &vertexbuffer);
 	glDeleteBuffers(1, &uvbuffer);
@@ -315,7 +323,7 @@ int main( void )
 
 	// Close OpenGL window and terminate GLFW
 	glfwTerminate();
-
+	*/
 	return 0;
 }
 

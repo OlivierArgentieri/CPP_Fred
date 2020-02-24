@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\shader.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\controls.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\texture.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\objloader.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameBoard\gr_gameBoard.cpp">
+      <Filter>gameReseau\gameBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\window\gr_window.cpp">
+      <Filter>gameReseau\window</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\renderer\gr_renderer.cpp">
+      <Filter>gameReseau\renderer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\shader.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\controls.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\texture.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\objloader.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameBoard\gr_gameBoard.hpp">
+      <Filter>gameReseau\gameBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\window\gr_window.hpp">
+      <Filter>gameReseau\window</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\renderer\gr_renderer.hpp">
+      <Filter>gameReseau\renderer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\TransformVertexShader.vertexshader">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\TextureFragmentShader.fragmentshader">
+      <Filter>shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{38240E8D-FD40-3294-B9B7-737ED8FE2207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{420299F1-34A8-3906-9613-1608709C7DE4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau">
+      <UniqueIdentifier>{CA2D068F-86D5-3308-BEAC-8071241BD5CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameBoard">
+      <UniqueIdentifier>{30FD0A82-316C-3B1B-9E2A-7B3503AEABDB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\renderer">
+      <UniqueIdentifier>{9BD0A5C7-824E-3F4A-83B9-16EA3E67741B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\window">
+      <UniqueIdentifier>{F814ED11-474B-3568-9AD0-D005F784CFC6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{3C9BE172-280E-357D-B2DD-0FA394F33D39}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

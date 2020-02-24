@@ -9,6 +9,7 @@
 
 // Include GLFW
 #include <GLFW/glfw3.h>
+#include "gameReseau/window/gr_window.hpp"
 GLFWwindow* window;
 
 // Include GLM
@@ -23,6 +24,9 @@ using namespace glm;
 
 int main( void )
 {
+	gr_window grWindow = gr_window(1024, 768,"Tutorial 07 - Model Loading");
+	grWindow.InitWindow();
+	/*
 	// Initialise GLFW
 	if( !glfwInit() )
 	{
@@ -46,7 +50,7 @@ int main( void )
 		return -1;
 	}
 	glfwMakeContextCurrent(window);
-
+	*/
 	// Initialize GLEW
 	glewExperimental = true; // Needed for core profile
 	if (glewInit() != GLEW_OK) {
@@ -55,7 +59,7 @@ int main( void )
 		glfwTerminate();
 		return -1;
 	}
-
+	/*
 	// Ensure we can capture the escape key being pressed below
 	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
     // Hide the mouse and enable unlimited mouvement
@@ -75,7 +79,9 @@ int main( void )
 
 	// Cull triangles which normal is not towards the camera
 	glEnable(GL_CULL_FACE);
+	*/
 
+	
 	GLuint VertexArrayID;
 	glGenVertexArrays(1, &VertexArrayID);
 	glBindVertexArray(VertexArrayID);
@@ -244,7 +250,7 @@ int main( void )
 		glUseProgram(programID);
 
 		// Compute the MVP matrix from keyboard and mouse input
-		computeMatricesFromInputs();
+		computeMatricesFromInputs(grWindow.GetWindow());
 		glm::mat4 ProjectionMatrix = getProjectionMatrix();
 		glm::mat4 ViewMatrix = getViewMatrix();
 		glm::mat4 ModelMatrix = glm::mat4(1.0);
@@ -291,12 +297,14 @@ int main( void )
 		glDisableVertexAttribArray(1);
 
 		// Swap buffers
-		glfwSwapBuffers(window);
+		//glfwSwapBuffers(window);
+		grWindow.SwapBuffer();
 		glfwPollEvents();
 
 	} // Check if the ESC key was pressed or the window was closed
-	while( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
-		   glfwWindowShouldClose(window) == 0 );
+	while( /*glfwGetKey(window, GLFW_KEY_ESCAPE )*/
+			grWindow.GetKey(GLFW_KEY_ESCAPE) != GLFW_PRESS/* &&
+		   glfwWindowShouldClose(window) == 0*/ );
 
 	// Cleanup VBO and shader
 	glDeleteBuffers(1, &vertexbuffer);

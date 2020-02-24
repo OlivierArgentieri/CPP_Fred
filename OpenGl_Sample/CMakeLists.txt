@@ -67,14 +67,15 @@ add_executable(main
 	common/texture.hpp
 	common/objloader.cpp
 	common/objloader.hpp
+	
 	main/gameReseau/gameBoard/gr_gameBoard.hpp
 	main/gameReseau/gameBoard/gr_gameBoard.cpp
-	
 	
 	main/gameReseau/window/gr_window.hpp
 	main/gameReseau/window/gr_window.cpp
 	
-	
+	main/gameReseau/renderer/gr_renderer.hpp
+	main/gameReseau/renderer/gr_renderer.cpp
 	
 	main/TransformVertexShader.vertexshader
 	main/TextureFragmentShader.fragmentshader
@@ -92,6 +93,7 @@ SOURCE_GROUP(shaders REGULAR_EXPRESSION ".*/.*shader$" )
 
 SOURCE_GROUP(gameReseau\\gameBoard  REGULAR_EXPRESSION "./main/gameReseau/gameBoard/")
 SOURCE_GROUP(gameReseau\\window    REGULAR_EXPRESSION "./main/gameReseau/window/")
+SOURCE_GROUP(gameReseau\\renderer    REGULAR_EXPRESSION "./main/gameReseau/renderer/")
 	
 if (NOT ${CMAKE_GENERATOR} MATCHES "Xcode" )
 add_custom_command(

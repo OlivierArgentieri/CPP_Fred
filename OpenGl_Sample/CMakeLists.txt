@@ -67,7 +67,15 @@ add_executable(main
 	common/texture.hpp
 	common/objloader.cpp
 	common/objloader.hpp
-
+	main/gameReseau/gameBoard/gr_gameBoard.hpp
+	main/gameReseau/gameBoard/gr_gameBoard.cpp
+	
+	
+	main/gameReseau/window/gr_window.hpp
+	main/gameReseau/window/gr_window.cpp
+	
+	
+	
 	main/TransformVertexShader.vertexshader
 	main/TextureFragmentShader.fragmentshader
 )
@@ -79,10 +87,12 @@ set_target_properties(main PROPERTIES XCODE_ATTRIBUTE_CONFIGURATION_BUILD_DIR "$
 create_target_launcher(main WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/main/")
 
 
-SOURCE_GROUP(common REGULAR_EXPRESSION ".*/common/.*" )
+SOURCE_GROUP(common  REGULAR_EXPRESSION ".*/common/.*" )
 SOURCE_GROUP(shaders REGULAR_EXPRESSION ".*/.*shader$" )
 
-
+SOURCE_GROUP(gameReseau\\gameBoard  REGULAR_EXPRESSION "./main/gameReseau/gameBoard/")
+SOURCE_GROUP(gameReseau\\window    REGULAR_EXPRESSION "./main/gameReseau/window/")
+	
 if (NOT ${CMAKE_GENERATOR} MATCHES "Xcode" )
 add_custom_command(
    TARGET main POST_BUILD

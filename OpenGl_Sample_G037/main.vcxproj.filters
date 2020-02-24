@@ -16,8 +16,11 @@
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\objloader.cpp">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="plane.cpp">
-      <Filter>common\plane</Filter>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameBoard\gr_gameBoard.cpp">
+      <Filter>gameReseau\gameBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\window\gr_window.cpp">
+      <Filter>gameReseau\window</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -33,11 +36,11 @@
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\objloader.hpp">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="plane.h">
-      <Filter>common\plane</Filter>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameBoard\gr_gameBoard.hpp">
+      <Filter>gameReseau\gameBoard</Filter>
     </ClInclude>
-    <ClInclude Include="sphere.h">
-      <Filter>common\sphere</Filter>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\window\gr_window.hpp">
+      <Filter>gameReseau\window</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -58,14 +61,17 @@
     <Filter Include="common">
       <UniqueIdentifier>{4FEEE4B9-2E77-3C70-BD2B-7542A90BB6C9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="gameReseau">
+      <UniqueIdentifier>{8E191CB7-859A-3D63-9112-25E8784B54CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameBoard">
+      <UniqueIdentifier>{F4F1BDB4-D52E-3F68-8162-82B20EA3DE37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\window">
+      <UniqueIdentifier>{3B116D43-B373-35E6-B9C0-20AEA329E8D3}</UniqueIdentifier>
+    </Filter>
     <Filter Include="shaders">
       <UniqueIdentifier>{05815B97-CE74-3BCF-869D-7CD3513E4DD1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="common\plane">
-      <UniqueIdentifier>{5c3d33ab-02cf-4c25-9ce0-10783b7c7576}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="common\sphere">
-      <UniqueIdentifier>{212edcea-5aee-42c7-88cf-2e45c60e1da3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

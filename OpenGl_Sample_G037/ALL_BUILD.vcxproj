@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{91F3D04B-594D-30EC-9E91-94F2A58FC6AB}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -SD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample -BD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample_G037 --check-stamp-file D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample_G037/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeCInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeRCInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindOpenGL.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageMessage.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeCCompiler.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeCXXCompiler.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeRCCompiler.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -SD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample -BD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample_G037 --check-stamp-file D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample_G037/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeCInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeRCInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindOpenGL.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageMessage.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeCCompiler.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeCXXCompiler.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeRCCompiler.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -SD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample -BD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample_G037 --check-stamp-file D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample_G037/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeCInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeRCInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindOpenGL.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageMessage.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeCCompiler.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeCXXCompiler.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeRCCompiler.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -SD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample -BD:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample_G037 --check-stamp-file D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample_G037/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeCInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeRCInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindOpenGL.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\FindPackageMessage.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\Windows.cmake;D:\Application\cmake-3.17.0-rc1-win64-x64\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeCCompiler.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeCXXCompiler.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeRCCompiler.cmake;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\3.17.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\ZERO_CHECK.vcxproj">
+      <Project>{266D9465-887B-37FD-BB3A-EAF1D040E9CF}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\ANTTWEAKBAR_116_OGLCORE_GLFW.vcxproj">
+      <Project>{02DF4536-E723-3C89-99CF-C138FD3976C9}</Project>
+      <Name>ANTTWEAKBAR_116_OGLCORE_GLFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\bullet-2.81-rev2613\src\BulletCollision\BulletCollision.vcxproj">
+      <Project>{CA0C35A5-33A9-38FD-9D36-3A1F75D19390}</Project>
+      <Name>BulletCollision</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\bullet-2.81-rev2613\src\BulletDynamics\BulletDynamics.vcxproj">
+      <Project>{C0B55435-2A62-3D0F-AFA3-774354C52DC0}</Project>
+      <Name>BulletDynamics</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\bullet-2.81-rev2613\src\BulletSoftBody\BulletSoftBody.vcxproj">
+      <Project>{5CA4C5A4-9CCA-3298-B01F-D99449E5D044}</Project>
+      <Name>BulletSoftBody</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\GLEW_1130.vcxproj">
+      <Project>{ECC086D7-FC37-38F6-849C-AAE48BA3783E}</Project>
+      <Name>GLEW_1130</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\bullet-2.81-rev2613\src\LinearMath\LinearMath.vcxproj">
+      <Project>{C4D7C703-3B99-30E8-AEAA-EC752FA57B06}</Project>
+      <Name>LinearMath</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\assimp-3.0.1270\code\assimp.vcxproj">
+      <Project>{6FA9B6BD-11C5-37AE-8EDD-AE7FCF576C1C}</Project>
+      <Name>assimp</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\examples\boing.vcxproj">
+      <Project>{718F689C-2159-379E-899F-9F20F5001C5A}</Project>
+      <Name>boing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\clipboard.vcxproj">
+      <Project>{E4F062E7-E2F0-3B10-95E6-69A921179E82}</Project>
+      <Name>clipboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\cursor.vcxproj">
+      <Project>{6DE84E09-49F3-3374-8230-32E9AEB87975}</Project>
+      <Name>cursor</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\empty.vcxproj">
+      <Project>{5AC7353A-197A-3C8F-BA24-06CE7197AB1E}</Project>
+      <Name>empty</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\events.vcxproj">
+      <Project>{C1939964-A5DD-3E5C-99FC-E5C593BED9CE}</Project>
+      <Name>events</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\gamma.vcxproj">
+      <Project>{FFF855DF-4A0A-376A-BA41-004166F691C8}</Project>
+      <Name>gamma</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\examples\gears.vcxproj">
+      <Project>{59936647-9B2A-32A0-ABA7-B68713E132B3}</Project>
+      <Name>gears</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\src\glfw.vcxproj">
+      <Project>{9EBE804A-2193-3204-B7E3-4122662ACEF0}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\glfwinfo.vcxproj">
+      <Project>{D4F6400F-621C-3EAD-812E-30D7E9820845}</Project>
+      <Name>glfwinfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\examples\heightmap.vcxproj">
+      <Project>{3D1AF54D-0676-3319-93BD-0755CA8F9DB3}</Project>
+      <Name>heightmap</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\iconify.vcxproj">
+      <Project>{CEECCB43-975F-3C57-959D-C61B888B5B79}</Project>
+      <Name>iconify</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\joysticks.vcxproj">
+      <Project>{768DBD72-A0A6-3190-823C-3E2542A2DA02}</Project>
+      <Name>joysticks</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\main.vcxproj">
+      <Project>{2E132E7C-5242-30DB-91FD-EEE74C2C9E2A}</Project>
+      <Name>main</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\monitors.vcxproj">
+      <Project>{7D283FBF-63F1-3AD1-8883-20F67D010CEB}</Project>
+      <Name>monitors</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\msaa.vcxproj">
+      <Project>{01DD0AF1-6A45-3A1C-A3C9-DFEC685D3235}</Project>
+      <Name>msaa</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\examples\particles.vcxproj">
+      <Project>{9E810371-4C78-3568-9193-603679A49FCA}</Project>
+      <Name>particles</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\reopen.vcxproj">
+      <Project>{D2454EB6-4813-3456-866D-B74AEB1B0988}</Project>
+      <Name>reopen</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\sharing.vcxproj">
+      <Project>{92BF6D6F-37FF-39D4-A0CA-5B1F4E30432A}</Project>
+      <Name>sharing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\examples\simple.vcxproj">
+      <Project>{31107773-11C5-351E-80D0-A6D12AE615E4}</Project>
+      <Name>simple</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\examples\splitview.vcxproj">
+      <Project>{376D13E3-2479-3770-BFEA-D10ADD59C700}</Project>
+      <Name>splitview</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\tearing.vcxproj">
+      <Project>{B51FC5A7-3BD9-340B-8E42-D5A1973D867A}</Project>
+      <Name>tearing</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\threads.vcxproj">
+      <Project>{63472C46-CB91-3788-A312-509338411546}</Project>
+      <Name>threads</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\title.vcxproj">
+      <Project>{C7B70BA1-C6EC-3FF0-A5C4-6247C78F3871}</Project>
+      <Name>title</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\examples\wave.vcxproj">
+      <Project>{C8BB83F9-8228-3A81-86C2-623CB5547871}</Project>
+      <Name>wave</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\glfw-3.1.2\tests\windows.vcxproj">
+      <Project>{E31E7523-440C-3E21-A166-DCCA67B03F22}</Project>
+      <Name>windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037\external\assimp-3.0.1270\contrib\zlib\zlib.vcxproj">
+      <Project>{D690E716-5A7B-3EED-B47F-5B6A8D76AAE4}</Project>
+      <Name>zlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

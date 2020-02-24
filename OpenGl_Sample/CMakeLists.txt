@@ -67,8 +67,6 @@ add_executable(main
 	common/texture.hpp
 	common/objloader.cpp
 	common/objloader.hpp
-	common/objloaderCopy.cpp
-	common/objloaderCopy.hpp
 
 	main/TransformVertexShader.vertexshader
 	main/TextureFragmentShader.fragmentshader

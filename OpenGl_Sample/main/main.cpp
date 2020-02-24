@@ -95,16 +95,66 @@ int main( void )
 	std::vector<glm::vec3> vertices;
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals; // Won't be used at the moment.
-//	bool res = loadOBJ("cube.obj", vertices, uvs, normals);
+	bool res = loadOBJ("Sphere.obj", vertices, uvs, normals);
 
+	/**
 	vertices.push_back(glm::vec3(0, 0, 0));
-	vertices.push_back(glm::vec3(1, 0, 0));
-	vertices.push_back(glm::vec3(1, 0.5, 1));
+	vertices.push_back(glm::vec3(100, 0, 0));
+	vertices.push_back(glm::vec3(100, 0.2f, 100));
+	
+	vertices.push_back(glm::vec3(100, 0.2f, 100));
+	vertices.push_back(glm::vec3(0, 0.2f, 100));
+	vertices.push_back(glm::vec3(0, 0, 0));
+
+	*/
+
+	for (auto i = vertices.begin(); i < vertices.end(); ++i)
+		*i = vec3(i->x * 5, i->y * 5, i->z * 5);
+	
+
+
+
+	vertices.push_back(glm::vec3(-50, 0, -50));
+	vertices.push_back(glm::vec3(-50, 0, 50));
+	vertices.push_back(glm::vec3(50, 0, 50));
+
+	vertices.push_back(glm::vec3(50, 0, 50));
+	vertices.push_back(glm::vec3(50, 0, -50));
+	vertices.push_back(glm::vec3(-50, 0, -50));
+
+	
+	/*
+	vertices.push_back(glm::vec3(0, 0, 0));
+	vertices.push_back(glm::vec3(0, 0, 100));
+	vertices.push_back(glm::vec3(100, 0, 100));
+	
+	vertices.push_back(glm::vec3(100, 0, 100));
+	vertices.push_back(glm::vec3(100, 0, 0));
+	vertices.push_back(glm::vec3(0, 0, 0));
+	*/
+	
+	/*
+	vertices.push_back(glm::vec3(0, 0, 0));
+	vertices.push_back(glm::vec3(100, 0, 0));
+	vertices.push_back(glm::vec3(0, 100, 0));
+
+	vertices.push_back(glm::vec3(100, 0, 0));
+	vertices.push_back(glm::vec3(100, 100, 0));
+	vertices.push_back(glm::vec3(0, 100, 0));
+	*/
 
 	uvs.push_back(glm::vec2(0, 0));
-	uvs.push_back(glm::vec2(0, 0.5));
-	uvs.push_back(glm::vec2(1, 0.5));
+	uvs.push_back(glm::vec2(0, 1));
+	uvs.push_back(glm::vec2(1, 1));
+	
+	uvs.push_back(glm::vec2(1, 1));
+	uvs.push_back(glm::vec2(1, 0));
+	uvs.push_back(glm::vec2(0, 0));
 
+	
+	
+
+	// Load it into a VBO
 	GLuint vertexbuffer;
 	glGenBuffers(1, &vertexbuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);

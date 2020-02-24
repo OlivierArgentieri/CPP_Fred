@@ -95,7 +95,7 @@ int main( void )
 	std::vector<glm::vec3> vertices;
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals; // Won't be used at the moment.
-	bool res = loadOBJ("Sphere.obj", vertices, uvs, normals);
+	//bool res = loadOBJ("Sphere.obj", vertices, uvs, normals);
 
 	/**
 	vertices.push_back(glm::vec3(0, 0, 0));
@@ -108,12 +108,13 @@ int main( void )
 
 	*/
 
+	/*
 	for (auto i = vertices.begin(); i < vertices.end(); ++i)
 		*i = vec3(i->x * 5, i->y * 5, i->z * 5);
-	
+	*/
 
 
-
+	// plane
 	vertices.push_back(glm::vec3(-50, 0, -50));
 	vertices.push_back(glm::vec3(-50, 0, 50));
 	vertices.push_back(glm::vec3(50, 0, 50));
@@ -121,6 +122,52 @@ int main( void )
 	vertices.push_back(glm::vec3(50, 0, 50));
 	vertices.push_back(glm::vec3(50, 0, -50));
 	vertices.push_back(glm::vec3(-50, 0, -50));
+	// end plane
+
+
+	// CG 
+	vertices.push_back(glm::vec3(-50, 10, 50));
+	vertices.push_back(glm::vec3(-50, 0, 50));
+	vertices.push_back(glm::vec3(-50, 0, -50));
+	
+	vertices.push_back(glm::vec3(-50, 0, -50));
+	vertices.push_back(glm::vec3(-50, 10, -50));
+	vertices.push_back(glm::vec3(-50, 10, 50));
+	//
+
+	
+	// CB 
+	vertices.push_back(glm::vec3(50, 10, 50));
+	vertices.push_back(glm::vec3(50, 0, 50));
+	vertices.push_back(glm::vec3(-50, 0, 50));
+	
+	vertices.push_back(glm::vec3(-50, 0, 50));
+	vertices.push_back(glm::vec3(-50, 10, 50));
+	vertices.push_back(glm::vec3(50, 10, 50));
+	//
+
+
+	
+	// CD
+	vertices.push_back(glm::vec3(50, 10, -50));
+	vertices.push_back(glm::vec3(50, 0, -50));
+	vertices.push_back(glm::vec3(50, 0, 50));
+	
+	vertices.push_back(glm::vec3(50, 0, 50));
+	vertices.push_back(glm::vec3(50, 10, 50));
+	vertices.push_back(glm::vec3(50, 10, -50));
+	//
+	
+	
+	// CH
+	vertices.push_back(glm::vec3(50, 10, -50));
+	vertices.push_back(glm::vec3(50, 0, -50));
+	vertices.push_back(glm::vec3(50, 0, 50));
+
+	vertices.push_back(glm::vec3(50, 0, 50));
+	vertices.push_back(glm::vec3(50, 10, 50));
+	vertices.push_back(glm::vec3(50, 10, -50));
+	//
 
 	
 	/*

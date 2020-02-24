@@ -83,7 +83,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample_G037;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>

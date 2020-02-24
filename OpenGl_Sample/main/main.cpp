@@ -105,8 +105,10 @@ int main( void )
 	vertices.push_back(glm::vec3(100, 0.2f, 100));
 	vertices.push_back(glm::vec3(0, 0.2f, 100));
 	vertices.push_back(glm::vec3(0, 0, 0));
-
 	*/
+
+
+	
 
 	/*
 	for (auto i = vertices.begin(); i < vertices.end(); ++i)
@@ -167,6 +169,26 @@ int main( void )
 	vertices.push_back(glm::vec3(50, 0, 50));
 	vertices.push_back(glm::vec3(50, 10, 50));
 	vertices.push_back(glm::vec3(50, 10, -50));
+	//
+
+
+	// CT 
+	vertices.push_back(glm::vec3(-50, 0, -50));
+	vertices.push_back(glm::vec3(50, 0, -50));
+	vertices.push_back(glm::vec3(50, 10, -50));
+	vertices.push_back(glm::vec3(50, 10, -50));
+	vertices.push_back(glm::vec3(-50, 10, -50));
+	vertices.push_back(glm::vec3(-50, 0, -50));
+	//
+	
+	// CT - reverse
+	vertices.push_back(glm::vec3(50, 10, -50));
+	vertices.push_back(glm::vec3(50, 0, -50));
+	vertices.push_back(glm::vec3(-50, 0, -50));
+
+	vertices.push_back(glm::vec3(50, 10, -50));
+	vertices.push_back(glm::vec3(-50, 0, -50));
+	vertices.push_back(glm::vec3(-50, 10, -50));
 	//
 
 	

@@ -113,7 +113,8 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>
+      </Message>
       <Command>setlocal
 D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -E copy D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit/$(Configuration)/main.exe D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/main/
 if %errorlevel% neq 0 goto :cmEnd
@@ -170,7 +171,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>
+      </Message>
       <Command>setlocal
 D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -E copy D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit/$(Configuration)/main.exe D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/main/
 if %errorlevel% neq 0 goto :cmEnd
@@ -227,7 +229,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>
+      </Message>
       <Command>setlocal
 D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -E copy D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit/$(Configuration)/main.exe D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/main/
 if %errorlevel% neq 0 goto :cmEnd
@@ -283,7 +286,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message></Message>
+      <Message>
+      </Message>
       <Command>setlocal
 D:\Application\cmake-3.17.0-rc1-win64-x64\bin\cmake.exe -E copy D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_SampleEdit/$(Configuration)/main.exe D:/ArgentieriOlivier/PullGithub/CPP_Fred/OpenGl_Sample/main/
 if %errorlevel% neq 0 goto :cmEnd
@@ -367,6 +371,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\main.cpp" />
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\shader.cpp" />
+    <ClCompile Include="plane.cpp" />
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\shader.hpp" />
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\controls.cpp" />
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\controls.hpp" />
@@ -374,6 +379,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\texture.hpp" />
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\objloader.cpp" />
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\objloader.hpp" />
+    <ClInclude Include="plane.h" />
     <None Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\TransformVertexShader.vertexshader" />
     <None Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\TextureFragmentShader.fragmentshader" />
   </ItemGroup>

@@ -16,6 +16,9 @@
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\objloader.cpp">
       <Filter>common</Filter>
     </ClCompile>
+    <ClCompile Include="plane.cpp">
+      <Filter>edit\plane</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\shader.hpp">
@@ -29,6 +32,9 @@
     </ClInclude>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\objloader.hpp">
       <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="plane.h">
+      <Filter>edit\plane</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +57,12 @@
     </Filter>
     <Filter Include="shaders">
       <UniqueIdentifier>{E924B61F-FFF4-38B4-9F66-E92F2F9A19CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="edit">
+      <UniqueIdentifier>{31bbe277-cd9b-46d9-8289-cb211f56672d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="edit\plane">
+      <UniqueIdentifier>{e9874758-b5c1-4bc4-8635-e094686fd566}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -28,6 +28,9 @@
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.cpp">
       <Filter>gameReseau\color</Filter>
     </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.cpp">
+      <Filter>gameReseau\transform</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\shader.hpp">
@@ -53,6 +56,9 @@
     </ClInclude>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.hpp">
       <Filter>gameReseau\color</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.hpp">
+      <Filter>gameReseau\transform</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +90,9 @@
     </Filter>
     <Filter Include="gameReseau\renderer">
       <UniqueIdentifier>{A647B329-4163-34A9-BCDE-8541AED5A40E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\transform">
+      <UniqueIdentifier>{07021E30-637E-30B8-8A8A-2D2E95F4B8C4}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\window">
       <UniqueIdentifier>{3B116D43-B373-35E6-B9C0-20AEA329E8D3}</UniqueIdentifier>

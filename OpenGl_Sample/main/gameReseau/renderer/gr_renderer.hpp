@@ -47,4 +47,6 @@ public:
 
 	void RenderLoop(gr_window _gr_window);
 	void Clean() const;
+	void ClearVerticesAndUV();
+
 };

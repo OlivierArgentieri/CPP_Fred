@@ -1,5 +1,6 @@
 #include "gr_gameObject.hpp"
 #include "main/gameReseau/renderer/gr_renderer.hpp"
+#include "common/objloader.hpp"
 
 
 void gr_gameObject::LoadTexture()
@@ -9,6 +10,7 @@ void gr_gameObject::LoadTexture()
 	Texture = loadDDS("UVChecker.dds"); // todo 
 
 }
+
 
 std::vector<glm::vec3> gr_gameObject::getVertices() const
 {

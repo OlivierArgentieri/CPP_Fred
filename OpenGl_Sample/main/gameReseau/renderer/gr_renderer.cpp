@@ -3,6 +3,8 @@
 #include "common/controls.hpp"
 #include "main/gameReseau/window/gr_window.hpp"
 #include "common/objloader.hpp"
+#include <glm/detail/type_mat.hpp>
+#include <vector>
 
 
 void gr_renderer::InitGLEW()
@@ -46,9 +48,8 @@ gr_renderer::gr_renderer(const char* _vertexShaderPath, const char* _fragmentSha
 	MatrixID = glGetUniformLocation(programID, "MVP");
 		
 	// Load the texture
-	//Texture = loadDDS("uvmap.DDS"); // todo 
-	//Texture = loadDDS("uvmap.DDS"); // todo 
-	Texture = loadDDS("UVChecker.dds"); // todo 
+	Texture = loadDDS("uvmap.DDS"); // todo 
+	//Texture = loadDDS("UVChecker.dds"); // todo 
 
 	// Get a handle for our "myTextureSampler" uniform
 	TextureID = glGetUniformLocation(programID, "myTextureSampler"); // todo
@@ -58,27 +59,33 @@ gr_renderer::gr_renderer(const char* _vertexShaderPath, const char* _fragmentSha
 void gr_renderer::AddVertices(std::vector<glm::vec3> _vertices)
 {
 	//vertices.clear();
-	for (glm::vec3 value : _vertices)
+	for (glm::vec3 vertex : _vertices)
 	{
-		vertices.push_back(value);
+		vertices.push_back(vertex);
 	}
-	LoadVBO();
+	
+	//LoadVBO();
 }
 
 void gr_renderer::AddUV(std::vector<glm::vec2> _uvs)
 {
-	//uvs.clear();
 	for (glm::vec2 value : _uvs)
 	{
 		uvs.push_back(value);
 	}
-	LoadUVBuffer();
+	//LoadUVBuffer();
 }
 
 void gr_renderer::ClearScreen()
 {
 	// Clear the screen
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
+
+void gr_renderer::ClearVerticesAndUV()
+{
+	vertices.clear();
+	uvs.clear();
 }
 
 void gr_renderer::UseShader() const
@@ -164,11 +171,20 @@ void gr_renderer::PollEvent()
 void gr_renderer::RenderLoop(gr_window _gr_window)
 {
 	ClearScreen();
+	
 	UseShader();
+	
 	ComputeMVPMatrix(_gr_window.GetWindow());
+	
 	BindTexture();
+	
+	LoadVBO();
 	VerticesBuffer();
+
+	LoadUVBuffer();
 	UvBuffer();
+
+	
 	Draw();
 	_gr_window.SwapBuffer();
 	PollEvent();

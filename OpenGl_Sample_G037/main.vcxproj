@@ -382,6 +382,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gr_gameObject.cpp" />
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.hpp" />
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.cpp" />
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.hpp" />
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.cpp" />
     <None Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\TransformVertexShader.vertexshader" />
     <None Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\TextureFragmentShader.fragmentshader" />
   </ItemGroup>

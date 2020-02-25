@@ -80,6 +80,10 @@ add_executable(main
 	main/gameReseau/color/gr_color.hpp
 	main/gameReseau/color/gr_color.cpp
 	
+	
+	main/gameReseau/transform/gr_transform.hpp
+	main/gameReseau/transform/gr_transform.cpp
+	
 	main/TransformVertexShader.vertexshader
 	main/TextureFragmentShader.fragmentshader
 )
@@ -100,6 +104,7 @@ SOURCE_GROUP(gameReseau\\renderer    REGULAR_EXPRESSION "./main/gameReseau/rende
 
 SOURCE_GROUP(gameReseau\\gameObject    REGULAR_EXPRESSION "./main/gameReseau/gameObject/")
 SOURCE_GROUP(gameReseau\\color    REGULAR_EXPRESSION "./main/gameReseau/color/")
+SOURCE_GROUP(gameReseau\\transform    REGULAR_EXPRESSION "./main/gameReseau/transform/")
 	
 if (NOT ${CMAKE_GENERATOR} MATCHES "Xcode" )
 add_custom_command(

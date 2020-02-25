@@ -31,9 +31,11 @@ int main( void )
 
 	// Read our .obj file*/
 	std::vector<glm::vec3> vertices;
+	std::vector<glm::vec3> verticesCubes;
 	std::vector<glm::vec2> uvs;
+	std::vector<glm::vec2> uvsCubes;
 	std::vector<glm::vec3> normals; // Won't be used at the moment.
-	bool res = loadOBJ("cube.obj", vertices, uvs, normals);
+	bool res = loadOBJ("cube.obj", verticesCubes, uvsCubes, normals);
 	//bool res = loadOBJ("Sphere.obj", vertices, uvs, normals);
 	
 
@@ -151,13 +153,35 @@ int main( void )
 	uvs.push_back(glm::vec2(1, 0));
 	uvs.push_back(glm::vec2(0, 0));
 
+	grRenderer.AddVertices(verticesCubes);
+	grRenderer.AddUV(uvsCubes);
 	
-	grRenderer.AddVertices(vertices);
-	grRenderer.AddUV(uvs);
+		grRenderer.AddVertices(vertices);
+		grRenderer.AddUV(uvs);
+
+
 	
+
 	do
 	{
+		/***/
+		for (glm::vec3 &vertex : verticesCubes)
+		{
+			vertex.x += 0.01f;
+		}
+
+		grRenderer.ClearVerticesAndUV();
+
+		grRenderer.AddVertices(verticesCubes);
+		grRenderer.AddUV(uvsCubes);
+		
+		grRenderer.AddVertices(vertices);
+		grRenderer.AddUV(uvs);
+
+		
 		grRenderer.RenderLoop(grWindow);
+
+
 	}
 	while (glfwGetKey(grWindow.GetWindow(), GLFW_KEY_ESCAPE) != GLFW_PRESS &&
 		glfwWindowShouldClose(grWindow.GetWindow()) == 0);

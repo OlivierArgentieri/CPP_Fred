@@ -39,6 +39,7 @@ include_directories(
 	external/glew-1.13.0/include/
 	external/assimp-3.0.1270/include/
 	.
+	/main
 )
 
 set(ALL_LIBS
@@ -88,6 +89,10 @@ add_executable(main
 	main/gameReseau/gameObject/objgameObject/gr_objGameObject.cpp
 	
 	
+	main/gameReseau/gameObject/gameBoard/gr_gameBoard.hpp
+	main/gameReseau/gameObject/gameBoard/gr_gameBoard.cpp
+	
+	
 	main/TransformVertexShader.vertexshader
 	main/TextureFragmentShader.fragmentshader
 )
@@ -104,13 +109,14 @@ SOURCE_GROUP(shaders REGULAR_EXPRESSION ".*/.*shader$" )
 
 SOURCE_GROUP(gameReseau\\gameBoard  REGULAR_EXPRESSION "./main/gameReseau/gameBoard/")
 SOURCE_GROUP(gameReseau\\window    REGULAR_EXPRESSION "./main/gameReseau/window/")
-SOURCE_GROUP(gameReseau\\renderer    REGULAR_EXPRESSION "./main/gameReseau/renderer/")
-SOURCE_GROUP(gameReseau\\color    REGULAR_EXPRESSION "./main/gameReseau/color/")
-SOURCE_GROUP(gameReseau\\transform    REGULAR_EXPRESSION "./main/gameReseau/transform/")
 
 SOURCE_GROUP(gameReseau\\gameObject    REGULAR_EXPRESSION "./main/gameReseau/gameObject/")
 SOURCE_GROUP(gameReseau\\gameObject\\objGameObject    REGULAR_EXPRESSION "./main/gameReseau/gameObject/objGameObject")
+SOURCE_GROUP(gameReseau\\gameObject\\gameBoard    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard")
 	
+SOURCE_GROUP(gameReseau\\renderer    REGULAR_EXPRESSION "./main/gameReseau/renderer/")
+SOURCE_GROUP(gameReseau\\color    REGULAR_EXPRESSION "./main/gameReseau/color/")
+SOURCE_GROUP(gameReseau\\transform    REGULAR_EXPRESSION "./main/gameReseau/transform/")
 if (NOT ${CMAKE_GENERATOR} MATCHES "Xcode" )
 add_custom_command(
    TARGET main POST_BUILD

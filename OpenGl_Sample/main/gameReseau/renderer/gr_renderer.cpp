@@ -18,23 +18,6 @@ void gr_renderer::InitGLEW()
 	}
 }
 
-void gr_renderer::LoadVBO()
-{
-	// Load it into a VBO
-	glGenBuffers(1, &vertexBuffer);
-	glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
-	glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(glm::vec3), &vertices[0], GL_STATIC_DRAW);
-}
-
-void gr_renderer::LoadUVBuffer()
-{
-	// Load UV
-	glGenBuffers(1, &uvBuffer);
-	glBindBuffer(GL_ARRAY_BUFFER, uvBuffer);
-	glBufferData(GL_ARRAY_BUFFER, uvs.size() * sizeof(glm::vec2), &uvs[0], GL_STATIC_DRAW);
-}
-
-
 gr_renderer::gr_renderer(const char* _vertexShaderPath, const char* _fragmentShaderPath)
 {
 	InitGLEW();
@@ -54,6 +37,11 @@ gr_renderer::gr_renderer(const char* _vertexShaderPath, const char* _fragmentSha
 	// Get a handle for our "myTextureSampler" uniform
 	TextureID = glGetUniformLocation(programID, "myTextureSampler"); // todo
 
+}
+
+void gr_renderer::AddGameObject(gr_gameObject *_go)
+{
+	gameObjects.push_back(_go);
 }
 
 void gr_renderer::AddVertices(std::vector<glm::vec3> _vertices)
@@ -120,42 +108,10 @@ void gr_renderer::BindTexture() // todo
 	glBindTexture(GL_TEXTURE_2D, Texture);
 	// Set our "myTextureSampler" sampler to use Texture Unit 0
 	glUniform1i(TextureID, 0);
-	
-}
-
-void gr_renderer::VerticesBuffer()
-{
-	// 1rst attribute buffer : vertices
-	glEnableVertexAttribArray(0);
-	glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
-	glVertexAttribPointer(
-		0,                  // attribute
-		3,                  // size
-		GL_FLOAT,           // type
-		GL_FALSE,           // normalized?
-		0,                  // stride
-		(void*)0            // array buffer offset
-	);
-}
-
-void gr_renderer::UvBuffer()
-{
-	// 2nd attribute buffer : UVs
-	glEnableVertexAttribArray(1);
-	glBindBuffer(GL_ARRAY_BUFFER, uvBuffer);
-	glVertexAttribPointer(
-		1,                                // attribute
-		2,                                // size
-		GL_FLOAT,                         // type
-		GL_FALSE,                         // normalized?
-		0,                                // stride
-		(void*)0                          // array buffer offset
-	);
 }
 
 void gr_renderer::Draw() const
 {
-
 	// Draw the triangle !
 	glDrawArrays(GL_TRIANGLES, 0, vertices.size());
 
@@ -177,15 +133,19 @@ void gr_renderer::RenderLoop(gr_window _gr_window)
 	ComputeMVPMatrix(_gr_window.GetWindow());
 	
 	BindTexture();
-	
+
+	for (gr_gameObject* _game_object : gameObjects)
+	{
+		_game_object->Draw();
+	}
+	/*
 	LoadVBO();
 	VerticesBuffer();
-
 	LoadUVBuffer();
 	UvBuffer();
+	Draw();*/
 
 	
-	Draw();
 	_gr_window.SwapBuffer();
 	PollEvent();
 }

@@ -158,20 +158,20 @@ int main( void )
 	grRenderer.AddUV(uvs);
 
 
+	grRenderer.AddGameObject(&_cube);
 	
-
 	do
 	{
 		_cube.MoveRight(0.1, 1);
 
-		grRenderer.ClearVerticesAndUV();
+	//	grRenderer.ClearVerticesAndUV();
 
-		grRenderer.AddVertices(_cube.getVertices());
-		grRenderer.AddUV(_cube.getUvs());
+//		grRenderer.AddVertices(_cube.getVertices());
+	//	grRenderer.AddUV(_cube.getUvs());
 		
-		grRenderer.AddVertices(vertices);
+//		grRenderer.AddVertices(vertices);
 		
-		grRenderer.AddUV(uvs);
+	//	grRenderer.AddUV(uvs);
 
 		
 		grRenderer.RenderLoop(grWindow);

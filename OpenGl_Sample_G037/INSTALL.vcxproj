@@ -63,7 +63,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -85,7 +85,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -107,7 +107,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -129,7 +129,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>

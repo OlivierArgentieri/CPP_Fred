@@ -8,10 +8,13 @@
 #include "common/texture.hpp"
 #include "common/shader.hpp"
 #include "main/gameReseau/window/gr_window.hpp"
+#include "main/gameReseau/gameObject/gr_gameObject.hpp"
 
 class gr_renderer
 {
 private :
+	std::vector<gr_gameObject*> gameObjects;
+	
 	std::vector<glm::vec3> vertices;
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals; // not use todo
@@ -48,5 +51,6 @@ public:
 	void RenderLoop(gr_window _gr_window);
 	void Clean() const;
 	void ClearVerticesAndUV();
+	void AddGameObject(gr_gameObject *_go);
 
 };

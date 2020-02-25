@@ -34,6 +34,9 @@
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.cpp">
       <Filter>gameReseau\gameObject\objGameObject</Filter>
     </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\gr_gameBoard.cpp">
+      <Filter>gameReseau\gameObject\gameBoard</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\shader.hpp">
@@ -66,6 +69,9 @@
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.hpp">
       <Filter>gameReseau\gameObject\objGameObject</Filter>
     </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\gr_gameBoard.hpp">
+      <Filter>gameReseau\gameObject\gameBoard</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\CMakeLists.txt" />
@@ -93,6 +99,9 @@
     </Filter>
     <Filter Include="gameReseau\gameObject">
       <UniqueIdentifier>{FD2E020D-2589-3320-8407-2A5D5260F16A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\gameBoard">
+      <UniqueIdentifier>{6F5FEDFD-3DBB-30B5-99B4-F7A205112443}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\gameObject\objGameObject">
       <UniqueIdentifier>{1C6B09A0-0AC5-32BF-9C20-8F7D1BF27E59}</UniqueIdentifier>

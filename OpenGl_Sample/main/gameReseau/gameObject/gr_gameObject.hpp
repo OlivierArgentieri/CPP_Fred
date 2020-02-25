@@ -1,6 +1,6 @@
 #pragma once
-#include <vector>
 #include <gl/glew.h>
+#include <vector>
 #include <glm/glm.hpp>
 #include "main/gameReseau/transform/gr_transform.hpp"
 
@@ -17,11 +17,17 @@ protected:
 	gr_transform transform;
 	
 	void LoadTexture();
+	
 public:
 
-	gr_gameObject(const char* _pathObj);
-
-	std::vector<glm::vec3> getVertices() const;
+	gr_gameObject();
+	gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale);
+	gr_gameObject(const gr_gameObject& _gameObject);
+	
+	std::vector<glm::vec3> getVertices() const ;
 	std::vector<glm::vec2> getUvs() const;
 	std::vector<glm::vec3> getNormals() const;
+
+
+	void MoveRight(float _speed, float _deltaTime);
 };

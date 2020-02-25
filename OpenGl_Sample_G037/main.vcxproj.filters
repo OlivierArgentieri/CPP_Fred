@@ -31,6 +31,9 @@
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.cpp">
       <Filter>gameReseau\transform</Filter>
     </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.cpp">
+      <Filter>gameReseau\gameObject\objGameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\shader.hpp">
@@ -60,6 +63,9 @@
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.hpp">
       <Filter>gameReseau\transform</Filter>
     </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.hpp">
+      <Filter>gameReseau\gameObject\objGameObject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\CMakeLists.txt" />
@@ -87,6 +93,9 @@
     </Filter>
     <Filter Include="gameReseau\gameObject">
       <UniqueIdentifier>{FD2E020D-2589-3320-8407-2A5D5260F16A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\objGameObject">
+      <UniqueIdentifier>{1C6B09A0-0AC5-32BF-9C20-8F7D1BF27E59}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\renderer">
       <UniqueIdentifier>{A647B329-4163-34A9-BCDE-8541AED5A40E}</UniqueIdentifier>

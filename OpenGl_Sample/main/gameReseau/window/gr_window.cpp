@@ -1,4 +1,5 @@
 #include "gr_window.hpp"
+#include <main/gameReseau/color/gr_color.hpp>
 
 void gr_window::InitGLFW()
 {
@@ -36,11 +37,12 @@ void gr_window::CreateWindow(const char* _titleWindow)
 	}
 }
 
-gr_window::gr_window(float _width, float _height, const char* _title)
+gr_window::gr_window(float _width, float _height, const char* _title, const gr_color _color)
 {
 	width = _width;
 	height = _height;
 	CreateWindow(_title);
+	backgroundColor = gr_color(_color);
 }
 
 void gr_window::InitWindow()
@@ -61,7 +63,7 @@ void gr_window::InitWindow()
 	glfwSetCursorPos(window, width / 2, height / 2);
 
 	// Dark blue background
-	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
+	glClearColor(backgroundColor.r, backgroundColor.g, backgroundColor.b, backgroundColor.a);
 	// Enable depth test
 	glEnable(GL_DEPTH_TEST);
 	// Accept fragment if it closer to the camera than the former one

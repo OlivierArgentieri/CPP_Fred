@@ -16,14 +16,17 @@
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\objloader.cpp">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameBoard\gr_gameBoard.cpp">
-      <Filter>gameReseau\gameBoard</Filter>
-    </ClCompile>
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\window\gr_window.cpp">
       <Filter>gameReseau\window</Filter>
     </ClCompile>
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\renderer\gr_renderer.cpp">
       <Filter>gameReseau\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gr_gameObject.cpp">
+      <Filter>gameReseau\gameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.cpp">
+      <Filter>gameReseau\color</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -39,14 +42,17 @@
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\objloader.hpp">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameBoard\gr_gameBoard.hpp">
-      <Filter>gameReseau\gameBoard</Filter>
-    </ClInclude>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\window\gr_window.hpp">
       <Filter>gameReseau\window</Filter>
     </ClInclude>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\renderer\gr_renderer.hpp">
       <Filter>gameReseau\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gr_gameObject.hpp">
+      <Filter>gameReseau\gameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.hpp">
+      <Filter>gameReseau\color</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -70,8 +76,11 @@
     <Filter Include="gameReseau">
       <UniqueIdentifier>{8E191CB7-859A-3D63-9112-25E8784B54CC}</UniqueIdentifier>
     </Filter>
-    <Filter Include="gameReseau\gameBoard">
-      <UniqueIdentifier>{F4F1BDB4-D52E-3F68-8162-82B20EA3DE37}</UniqueIdentifier>
+    <Filter Include="gameReseau\color">
+      <UniqueIdentifier>{E58FF5FC-2488-3957-9254-3BFDE619520C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject">
+      <UniqueIdentifier>{FD2E020D-2589-3320-8407-2A5D5260F16A}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\renderer">
       <UniqueIdentifier>{A647B329-4163-34A9-BCDE-8541AED5A40E}</UniqueIdentifier>

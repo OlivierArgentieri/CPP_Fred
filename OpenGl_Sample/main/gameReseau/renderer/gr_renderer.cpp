@@ -101,7 +101,7 @@ void gr_renderer::ComputeMVPMatrix(GLFWwindow* _window) const
 	glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
 }
 
-void gr_renderer::BindTexture()
+void gr_renderer::BindTexture() // todo
 {
 	// Bind our texture in Texture Unit 0
 	glActiveTexture(GL_TEXTURE0);
@@ -162,7 +162,7 @@ void gr_renderer::RenderLoop(gr_window _gr_window)
 	ComputeMVPMatrix(_gr_window.GetWindow());
 	BindTexture();
 	VerticesBuffer();
-	//UvBuffer();
+	UvBuffer();
 	Draw();
 	_gr_window.SwapBuffer();
 	PollEvent();

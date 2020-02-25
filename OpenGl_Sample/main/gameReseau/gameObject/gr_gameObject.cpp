@@ -60,6 +60,7 @@ void gr_gameObject::LoadVBO()
 
 void gr_gameObject::LoadUVBuffer()
 {
+
 	// Load UV
 	glGenBuffers(1, &uvBuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, uvBuffer);

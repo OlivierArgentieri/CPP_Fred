@@ -92,6 +92,20 @@ add_executable(main
 	main/gameReseau/gameObject/gameBoard/gr_gameBoard.hpp
 	main/gameReseau/gameObject/gameBoard/gr_gameBoard.cpp
 	
+	main/gameReseau/gameObject/gameBoard/bottomBorder/gr_bottomBorderGameBoard.hpp
+	main/gameReseau/gameObject/gameBoard/bottomBorder/gr_bottomBorderGameBoard.cpp
+	
+	main/gameReseau/gameObject/gameBoard/leftBorder/gr_leftBorderGameBoard.hpp
+	main/gameReseau/gameObject/gameBoard/leftBorder/gr_leftBorderGameBoard.cpp
+	
+	main/gameReseau/gameObject/gameBoard/plane/gr_planeGameBoard.hpp
+	main/gameReseau/gameObject/gameBoard/plane/gr_planeGameBoard.cpp
+	
+	main/gameReseau/gameObject/gameBoard/rightBorder/gr_rightBorderGameBoard.hpp
+	main/gameReseau/gameObject/gameBoard/rightBorder/gr_rightBorderGameBoard.cpp
+	
+	main/gameReseau/gameObject/gameBoard/topBorder/gr_topBorderGameBoard.hpp
+	main/gameReseau/gameObject/gameBoard/topBorder/gr_topBorderGameBoard.cpp
 	
 	main/TransformVertexShader.vertexshader
 	main/TextureFragmentShader.fragmentshader
@@ -107,12 +121,16 @@ create_target_launcher(main WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/main/
 SOURCE_GROUP(common  REGULAR_EXPRESSION ".*/common/.*" )
 SOURCE_GROUP(shaders REGULAR_EXPRESSION ".*/.*shader$" )
 
-SOURCE_GROUP(gameReseau\\gameBoard  REGULAR_EXPRESSION "./main/gameReseau/gameBoard/")
 SOURCE_GROUP(gameReseau\\window    REGULAR_EXPRESSION "./main/gameReseau/window/")
 
 SOURCE_GROUP(gameReseau\\gameObject    REGULAR_EXPRESSION "./main/gameReseau/gameObject/")
 SOURCE_GROUP(gameReseau\\gameObject\\objGameObject    REGULAR_EXPRESSION "./main/gameReseau/gameObject/objGameObject")
 SOURCE_GROUP(gameReseau\\gameObject\\gameBoard    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard")
+SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\plane    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/plane")
+SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\bottomBorder    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/bottomBorder")
+SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\leftBorder    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/leftBorder")
+SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\rightBorder    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/rightBorder")
+SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\topBorder   REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/topBorder")
 	
 SOURCE_GROUP(gameReseau\\renderer    REGULAR_EXPRESSION "./main/gameReseau/renderer/")
 SOURCE_GROUP(gameReseau\\color    REGULAR_EXPRESSION "./main/gameReseau/color/")

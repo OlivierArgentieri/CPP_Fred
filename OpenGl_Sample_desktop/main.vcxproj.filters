@@ -16,14 +16,41 @@
     <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\objloader.cpp">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameBoard\gr_gameBoard.cpp">
-      <Filter>gameReseau\gameBoard</Filter>
-    </ClCompile>
     <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\window\gr_window.cpp">
       <Filter>gameReseau\window</Filter>
     </ClCompile>
     <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\renderer\gr_renderer.cpp">
       <Filter>gameReseau\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gr_gameObject.cpp">
+      <Filter>gameReseau\gameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.cpp">
+      <Filter>gameReseau\color</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.cpp">
+      <Filter>gameReseau\transform</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.cpp">
+      <Filter>gameReseau\gameObject\objGameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\gr_gameBoard.cpp">
+      <Filter>gameReseau\gameObject\gameBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\bottomBorder\gr_bottomBorderGameBoard.cpp">
+      <Filter>gameReseau\gameObject\gameBoard\bottomBorder</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\leftBorder\gr_leftBorderGameBoard.cpp">
+      <Filter>gameReseau\gameObject\gameBoard\leftBorder</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\plane\gr_planeGameBoard.cpp">
+      <Filter>gameReseau\gameObject\gameBoard\plane</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\rightBorder\gr_rightBorderGameBoard.cpp">
+      <Filter>gameReseau\gameObject\gameBoard\rightBorder</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\topBorder\gr_topBorderGameBoard.cpp">
+      <Filter>gameReseau\gameObject\gameBoard\topBorder</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -39,14 +66,41 @@
     <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\objloader.hpp">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameBoard\gr_gameBoard.hpp">
-      <Filter>gameReseau\gameBoard</Filter>
-    </ClInclude>
     <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\window\gr_window.hpp">
       <Filter>gameReseau\window</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\renderer\gr_renderer.hpp">
       <Filter>gameReseau\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gr_gameObject.hpp">
+      <Filter>gameReseau\gameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.hpp">
+      <Filter>gameReseau\color</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.hpp">
+      <Filter>gameReseau\transform</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.hpp">
+      <Filter>gameReseau\gameObject\objGameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\gr_gameBoard.hpp">
+      <Filter>gameReseau\gameObject\gameBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\bottomBorder\gr_bottomBorderGameBoard.hpp">
+      <Filter>gameReseau\gameObject\gameBoard\bottomBorder</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\leftBorder\gr_leftBorderGameBoard.hpp">
+      <Filter>gameReseau\gameObject\gameBoard\leftBorder</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\plane\gr_planeGameBoard.hpp">
+      <Filter>gameReseau\gameObject\gameBoard\plane</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\rightBorder\gr_rightBorderGameBoard.hpp">
+      <Filter>gameReseau\gameObject\gameBoard\rightBorder</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\topBorder\gr_topBorderGameBoard.hpp">
+      <Filter>gameReseau\gameObject\gameBoard\topBorder</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -70,11 +124,38 @@
     <Filter Include="gameReseau">
       <UniqueIdentifier>{CA2D068F-86D5-3308-BEAC-8071241BD5CC}</UniqueIdentifier>
     </Filter>
-    <Filter Include="gameReseau\gameBoard">
-      <UniqueIdentifier>{30FD0A82-316C-3B1B-9E2A-7B3503AEABDB}</UniqueIdentifier>
+    <Filter Include="gameReseau\color">
+      <UniqueIdentifier>{690111D0-1ABE-3EE9-B0F3-415CB82E69A6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject">
+      <UniqueIdentifier>{6163A636-B978-3F32-949D-DF9D33EA842B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\gameBoard">
+      <UniqueIdentifier>{8EE745C6-831C-3559-80B0-12AE441DEED5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\gameBoard\bottomBorder">
+      <UniqueIdentifier>{15DA2EB4-5158-39C4-9F2F-2C61EF431154}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\gameBoard\leftBorder">
+      <UniqueIdentifier>{00F51A9A-0F02-378B-B06C-D5E67D94E24B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\gameBoard\plane">
+      <UniqueIdentifier>{8E9AE601-53C3-354F-A739-747EB2921D6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\gameBoard\rightBorder">
+      <UniqueIdentifier>{9413500A-0AB7-3B89-BF2F-648872308E69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\gameBoard\topBorder">
+      <UniqueIdentifier>{C7FAD7A9-1015-3B00-850D-9993A2F05A4A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\objGameObject">
+      <UniqueIdentifier>{A149B019-EE07-361A-93E0-9566F448F718}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\renderer">
       <UniqueIdentifier>{9BD0A5C7-824E-3F4A-83B9-16EA3E67741B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\transform">
+      <UniqueIdentifier>{7ED80417-0882-309C-8C15-F73DC555941E}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\window">
       <UniqueIdentifier>{F814ED11-474B-3568-9AD0-D005F784CFC6}</UniqueIdentifier>

@@ -138,12 +138,6 @@ void gr_renderer::RenderLoop(gr_window _gr_window)
 	{
 		_game_object->Draw();
 	}
-	/*
-	LoadVBO();
-	VerticesBuffer();
-	LoadUVBuffer();
-	UvBuffer();
-	Draw();*/
 
 	
 	_gr_window.SwapBuffer();

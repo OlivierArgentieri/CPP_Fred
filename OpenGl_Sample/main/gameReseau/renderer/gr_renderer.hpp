@@ -30,14 +30,10 @@ private :
 	GLuint TextureID;
 
 	static void InitGLEW();
-	void LoadVBO();
-	void LoadUVBuffer();
 	void ClearScreen();
 	void UseShader() const;
 	void ComputeMVPMatrix(GLFWwindow* _window) const;
 	void BindTexture();
-	void VerticesBuffer();
-	void UvBuffer();
 	void Draw() const;
 	static void PollEvent();
 	static void Close();

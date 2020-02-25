@@ -17,6 +17,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include "gameReseau/gameObject/objGameObject/gr_objGameObject.hpp"
+#include "gameReseau/gameObject/gameBoard/gr_gameBoard.hpp"
 class gr_gameObject;
 using namespace glm;
 
@@ -32,13 +33,14 @@ int main( void )
 	gr_renderer grRenderer = gr_renderer("TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader");
 
 	
+	gr_objGameObject _cube = gr_objGameObject("cube.obj");
+	gr_gameBoard _board = gr_gameBoard();
 	
 	// Read our .obj file*/
 	std::vector<glm::vec3> vertices;
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals; // Won't be used at the moment.
 	
-	gr_objGameObject _cube =  gr_objGameObject("cube.obj");
 	
 
 	/*
@@ -159,6 +161,7 @@ int main( void )
 
 
 	grRenderer.AddGameObject(&_cube);
+	grRenderer.AddGameObject(&_board);
 	
 	do
 	{

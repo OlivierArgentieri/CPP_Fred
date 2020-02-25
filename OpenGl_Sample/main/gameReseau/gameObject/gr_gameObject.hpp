@@ -38,7 +38,7 @@ public:
 
 
 	void MoveRight(float _speed, float _deltaTime);
-	void Draw();
+	virtual void Draw();
 	void CleanBuffer() const;
 
 

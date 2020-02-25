@@ -2,6 +2,7 @@
 #include "gr_renderer.hpp"
 #include "common/controls.hpp"
 #include "main/gameReseau/window/gr_window.hpp"
+#include "common/objloader.hpp"
 
 
 void gr_renderer::InitGLEW()
@@ -43,9 +44,11 @@ gr_renderer::gr_renderer(const char* _vertexShaderPath, const char* _fragmentSha
 
 	// Get a handle for our "MVP" uniform
 	MatrixID = glGetUniformLocation(programID, "MVP");
-
+		
 	// Load the texture
-	Texture = loadDDS("uvmap.DDS"); // todo 
+	//Texture = loadDDS("uvmap.DDS"); // todo 
+	//Texture = loadDDS("uvmap.DDS"); // todo 
+	Texture = loadDDS("UVChecker.dds"); // todo 
 
 	// Get a handle for our "myTextureSampler" uniform
 	TextureID = glGetUniformLocation(programID, "myTextureSampler"); // todo
@@ -54,7 +57,7 @@ gr_renderer::gr_renderer(const char* _vertexShaderPath, const char* _fragmentSha
 
 void gr_renderer::AddVertices(std::vector<glm::vec3> _vertices)
 {
-	vertices.clear();
+	//vertices.clear();
 	for (glm::vec3 value : _vertices)
 	{
 		vertices.push_back(value);
@@ -64,7 +67,7 @@ void gr_renderer::AddVertices(std::vector<glm::vec3> _vertices)
 
 void gr_renderer::AddUV(std::vector<glm::vec2> _uvs)
 {
-	uvs.clear();
+	//uvs.clear();
 	for (glm::vec2 value : _uvs)
 	{
 		uvs.push_back(value);
@@ -102,12 +105,15 @@ void gr_renderer::ComputeMVPMatrix(GLFWwindow* _window) const
 }
 
 void gr_renderer::BindTexture() // todo
-{
+{/**/
+	
+	
 	// Bind our texture in Texture Unit 0
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, Texture);
 	// Set our "myTextureSampler" sampler to use Texture Unit 0
 	glUniform1i(TextureID, 0);
+	
 }
 
 void gr_renderer::VerticesBuffer()

@@ -68,7 +68,28 @@ int main( void )
 	vertices.push_back(glm::vec3(-50, 0, -50));
 	vertices.push_back(glm::vec3(-50, 10, -50));
 	vertices.push_back(glm::vec3(-50, 10, 50));
+
+
+
+
+	vertices.push_back(glm::vec3(-50, 0, -50));
+	vertices.push_back(glm::vec3(-50, 10, -50));
+	vertices.push_back(glm::vec3(-50, 10, 50));
+	vertices.push_back(glm::vec3(-50, 10, 50));
+	vertices.push_back(glm::vec3(-50, 0, 50));
+	vertices.push_back(glm::vec3(-50, 0, -50));
+
+	
 	//
+
+
+
+
+
+
+
+
+	
 
 	
 	// CB 

@@ -388,6 +388,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.cpp" />
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\gr_gameBoard.hpp" />
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\gr_gameBoard.cpp" />
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\bottomBorder\gr_bottomBorderGameBoard.hpp" />
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\bottomBorder\gr_bottomBorderGameBoard.cpp" />
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\leftBorder\gr_leftBorderGameBoard.hpp" />
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\leftBorder\gr_leftBorderGameBoard.cpp" />
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\plane\gr_planeGameBoard.hpp" />
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\plane\gr_planeGameBoard.cpp" />
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\rightBorder\gr_rightBorderGameBoard.hpp" />
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\rightBorder\gr_rightBorderGameBoard.cpp" />
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\topBorder\gr_topBorderGameBoard.hpp" />
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\topBorder\gr_topBorderGameBoard.cpp" />
     <None Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\TransformVertexShader.vertexshader" />
     <None Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\TextureFragmentShader.fragmentshader" />
   </ItemGroup>

@@ -37,6 +37,21 @@
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\gr_gameBoard.cpp">
       <Filter>gameReseau\gameObject\gameBoard</Filter>
     </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\bottomBorder\gr_bottomBorderGameBoard.cpp">
+      <Filter>gameReseau\gameObject\gameBoard\bottomBorder</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\leftBorder\gr_leftBorderGameBoard.cpp">
+      <Filter>gameReseau\gameObject\gameBoard\leftBorder</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\plane\gr_planeGameBoard.cpp">
+      <Filter>gameReseau\gameObject\gameBoard\plane</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\rightBorder\gr_rightBorderGameBoard.cpp">
+      <Filter>gameReseau\gameObject\gameBoard\rightBorder</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\topBorder\gr_topBorderGameBoard.cpp">
+      <Filter>gameReseau\gameObject\gameBoard\topBorder</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\shader.hpp">
@@ -72,6 +87,21 @@
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\gr_gameBoard.hpp">
       <Filter>gameReseau\gameObject\gameBoard</Filter>
     </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\bottomBorder\gr_bottomBorderGameBoard.hpp">
+      <Filter>gameReseau\gameObject\gameBoard\bottomBorder</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\leftBorder\gr_leftBorderGameBoard.hpp">
+      <Filter>gameReseau\gameObject\gameBoard\leftBorder</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\plane\gr_planeGameBoard.hpp">
+      <Filter>gameReseau\gameObject\gameBoard\plane</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\rightBorder\gr_rightBorderGameBoard.hpp">
+      <Filter>gameReseau\gameObject\gameBoard\rightBorder</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\topBorder\gr_topBorderGameBoard.hpp">
+      <Filter>gameReseau\gameObject\gameBoard\topBorder</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\CMakeLists.txt" />
@@ -102,6 +132,21 @@
     </Filter>
     <Filter Include="gameReseau\gameObject\gameBoard">
       <UniqueIdentifier>{6F5FEDFD-3DBB-30B5-99B4-F7A205112443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\gameBoard\bottomBorder">
+      <UniqueIdentifier>{3D8C9D4E-B6C0-3D16-95E5-4B29D5EC4E8D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\gameBoard\leftBorder">
+      <UniqueIdentifier>{02E1DC3B-84C9-3A72-8019-10620F5D519F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\gameBoard\plane">
+      <UniqueIdentifier>{CC01EF81-4359-3549-A339-779B21F8DB92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\gameBoard\rightBorder">
+      <UniqueIdentifier>{C00A015E-384B-30C2-9D87-19856314ED11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\gameObject\gameBoard\topBorder">
+      <UniqueIdentifier>{FEC18527-B723-393B-9C22-B878AD46030E}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\gameObject\objGameObject">
       <UniqueIdentifier>{1C6B09A0-0AC5-32BF-9C20-8F7D1BF27E59}</UniqueIdentifier>

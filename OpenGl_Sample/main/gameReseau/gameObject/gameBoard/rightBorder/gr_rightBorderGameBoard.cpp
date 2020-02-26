@@ -77,7 +77,7 @@ gr_rightBorderGameBoard::gr_rightBorderGameBoard(glm::vec3 _position, glm::vec3 
 	LoadUVs();
 }
 
-gr_rightBorderGameBoard::gr_rightBorderGameBoard(const gr_rightBorderGameBoard& _leftBorder) : gr_gameObject(_leftBorder.transform.position, _leftBorder.transform.rotation, _leftBorder.transform.scale)
+gr_rightBorderGameBoard::gr_rightBorderGameBoard(const gr_rightBorderGameBoard& _rightBorder) : gr_gameObject(_rightBorder.transform.position, _rightBorder.transform.rotation, _rightBorder.transform.scale)
 {
 	LoadVertices();
 	LoadUVs();

@@ -9,5 +9,6 @@ private:
 public:
 	gr_planeGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale);
 	gr_planeGameBoard();
+	gr_planeGameBoard(const gr_planeGameBoard& _plane);
 	
 };

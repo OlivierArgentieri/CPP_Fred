@@ -16,7 +16,7 @@ void gr_topBorderGameBoard::LoadVertices()
 	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX - SHIFT, POSY, POSZ));
 	vertices.push_back(glm::vec3(WIDTH / 2 + POSX, POSY, POSZ));
 
-	vertices.push_back(glm::vec3(WIDTH / 2 + POSX, 0, POSZ));
+	vertices.push_back(glm::vec3(WIDTH / 2 + POSX, POSY, POSZ));
 	vertices.push_back(glm::vec3(WIDTH / 2 + POSX, HEIGHT + POSY, POSZ));
 	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX - SHIFT, HEIGHT + POSY, POSZ));
 	// end interior
@@ -42,7 +42,6 @@ void gr_topBorderGameBoard::LoadVertices()
 	vertices.push_back(glm::vec3(WIDTH / 2 + POSX, HEIGHT + POSY, POSZ));
 	vertices.push_back(glm::vec3(WIDTH / 2 + POSX, HEIGHT + POSY, POSZ - DEPTH));
 	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX - SHIFT, HEIGHT + POSY, POSZ - DEPTH));
-
 	// end top
 
 }
@@ -74,6 +73,7 @@ void gr_topBorderGameBoard::LoadUVs()
 	uvs.push_back(glm::vec2(1, 1));
 	uvs.push_back(glm::vec2(1, 0));
 	uvs.push_back(glm::vec2(0, 0));
+
 }
 
 gr_topBorderGameBoard::gr_topBorderGameBoard() : gr_gameObject()

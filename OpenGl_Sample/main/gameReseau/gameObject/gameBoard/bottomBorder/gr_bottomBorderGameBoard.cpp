@@ -1,41 +1,48 @@
 #include "gr_bottomBorderGameBoard.hpp"
 
-#define RIGHT_SHIFT transform.scale.z
 
 
 void gr_bottomBorderGameBoard::LoadVertices()
 {
-	// interior
-	vertices.push_back(glm::vec3(transform.scale.x/2 + transform.position.x +transform.scale.z, transform.scale.y + transform.position.y, transform.position.z));
-	vertices.push_back(glm::vec3(transform.scale.x / 2 + transform.position.x + transform.scale.z,  transform.position.y, transform.position.z));
-	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.position.y, transform.position.z));
+#define DEPTH transform.scale.z
+#define WIDTH transform.scale.x
+#define HEIGHT transform.scale.y
+#define SHIFT transform.scale.z
 
-	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.position.y, transform.position.z));
-	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.scale.y + transform.position.y, transform.position.z));
-	vertices.push_back(glm::vec3(transform.scale.x / 2 + transform.position.x + transform.scale.z, transform.scale.y + transform.position.y, transform.position.z));
+#define POSX transform.position.x
+#define POSY transform.position.y
+#define POSZ transform.position.z
+	// interior
+	vertices.push_back(glm::vec3(WIDTH /2 + POSX + SHIFT, HEIGHT + POSY, POSZ));
+	vertices.push_back(glm::vec3(WIDTH / 2 + POSX + SHIFT, POSY, POSZ));
+	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX, POSY, POSZ));
+
+	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX, POSY, POSZ));
+	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX, HEIGHT + POSY, POSZ));
+	vertices.push_back(glm::vec3(WIDTH / 2 + POSX + SHIFT, HEIGHT + POSY, POSZ));
 	// end interior
 
 
 	// back
-	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.scale.y + transform.position.y, transform.position.z + transform.scale.z));
-	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.position.y, transform.position.z + transform.scale.z));
-	vertices.push_back(glm::vec3(transform.scale.x / 2 + transform.position.x + RIGHT_SHIFT, transform.position.y, transform.position.z + transform.scale.z));
+	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX, HEIGHT + POSY, POSZ + DEPTH));
+	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX, POSY, POSZ + DEPTH));
+	vertices.push_back(glm::vec3(WIDTH / 2 + POSX + SHIFT, POSY, POSZ + DEPTH));
 
-	vertices.push_back(glm::vec3(transform.scale.x / 2 + transform.position.x + RIGHT_SHIFT, transform.position.y, transform.position.z + transform.scale.z));
-	vertices.push_back(glm::vec3(transform.scale.x / 2 + transform.position.x + RIGHT_SHIFT,  transform.scale.y+ transform.position.y, transform.position.z + transform.scale.z));
-	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.scale.y + transform.position.y, transform.position.z + transform.scale.z));
+	vertices.push_back(glm::vec3(WIDTH / 2 + POSX + SHIFT, POSY, POSZ + DEPTH));
+	vertices.push_back(glm::vec3(WIDTH / 2 + POSX + SHIFT, HEIGHT + POSY, POSZ + DEPTH));
+	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX, HEIGHT + POSY, POSZ + DEPTH));
 	// end back
 
 
 	
 	// top
-	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.scale.y + transform.position.y, transform.position.z));
-	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.scale.y + transform.position.y, transform.position.z + transform.scale.z));
-	vertices.push_back(glm::vec3(transform.scale.x / 2 + transform.position.x + RIGHT_SHIFT, transform.scale.y + transform.position.y, transform.position.z + transform.scale.z));
+	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX, HEIGHT + POSY, POSZ));
+	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX, HEIGHT + POSY, POSZ + DEPTH));
+	vertices.push_back(glm::vec3(WIDTH / 2 + POSX + SHIFT, HEIGHT + POSY, POSZ + DEPTH));
 
-	vertices.push_back(glm::vec3(transform.scale.x / 2 + transform.position.x + RIGHT_SHIFT, transform.scale.y + transform.position.y, transform.position.z + transform.scale.z));
-	vertices.push_back(glm::vec3(transform.scale.x / 2 + transform.position.x + RIGHT_SHIFT, transform.scale.y + transform.position.y, transform.position.z));
-	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.scale.y + transform.position.y, transform.position.z));
+	vertices.push_back(glm::vec3(WIDTH / 2 + POSX + SHIFT, HEIGHT + POSY, POSZ + DEPTH));
+	vertices.push_back(glm::vec3(WIDTH / 2 + POSX + SHIFT, HEIGHT + POSY, POSZ));
+	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX, HEIGHT + POSY, POSZ));
 	//end top
 
 }

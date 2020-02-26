@@ -10,7 +10,7 @@ void gr_gameBoard::CreatePlane()
 void gr_gameBoard::CreateBorders()
 {
 	leftBorder = gr_leftBorderGameBoard(glm::vec3(-50,0,0), glm::vec3(), glm::vec3(10, 10, 100));
-	rightBorder = gr_rightBorderGameBoard(glm::vec3(50,0,0), glm::vec3(), glm::vec3(10, 10, 100));
+	rightBorder = gr_rightBorderGameBoard(glm::vec3(50,10,0), glm::vec3(), glm::vec3(10, 10, 100));
 	bottomBorder = gr_bottomBorderGameBoard(glm::vec3(0,0,50), glm::vec3(), glm::vec3(100, 10, 10));
 	topBorder = gr_topBorderGameBoard(glm::vec3(0,0,-50), glm::vec3(), glm::vec3(100, 10, 10));
 }

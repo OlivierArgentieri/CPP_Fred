@@ -127,18 +127,15 @@ void gr_renderer::PollEvent()
 void gr_renderer::RenderLoop(gr_window _gr_window)
 {
 	ClearScreen();
-	
 	UseShader();
 	
 	ComputeMVPMatrix(_gr_window.GetWindow());
-	
 	BindTexture();
-
+	
 	for (gr_gameObject* _game_object : gameObjects)
 	{
 		_game_object->Draw();
 	}
-
 	
 	_gr_window.SwapBuffer();
 	PollEvent();

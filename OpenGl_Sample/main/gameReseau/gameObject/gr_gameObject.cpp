@@ -7,8 +7,8 @@ void gr_gameObject::LoadTexture()
 {
 	// Load the texture
 	//Texture = loadDDS("uvmap.DDS"); // todo 
-	Texture = loadDDS("UVChecker.dds"); // todo 
-		
+	Texture = loadDDS("UVChecker.dds"); // todo
+	
 }
 
 gr_gameObject::gr_gameObject() : gr_gameObject(glm::vec3(), glm::vec3(), glm::vec3())
@@ -112,6 +112,7 @@ void gr_gameObject::Draw()
 
 	glDisableVertexAttribArray(0);
 	glDisableVertexAttribArray(1);
+	CleanBuffer();
 }
 
 void gr_gameObject::InitBuffer()

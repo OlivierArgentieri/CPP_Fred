@@ -9,6 +9,7 @@ void gr_gameBoard::CreatePlane()
 void gr_gameBoard::CreateLeftBorder()
 {
 	leftBorder = gr_leftBorderGameBoard(glm::vec3(-50,0,0), glm::vec3(), glm::vec3(10, 10, 100));
+	rightBorder = gr_rightBorderGameBoard(glm::vec3(50,0,0), glm::vec3(), glm::vec3(10, 10, 100));
 }
 
 
@@ -22,4 +23,5 @@ void gr_gameBoard::Draw()
 {
 	plane.Draw();
 	leftBorder.Draw();
+	rightBorder.Draw();
 }

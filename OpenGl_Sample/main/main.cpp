@@ -186,7 +186,7 @@ int main( void )
 	
 	do
 	{
-		_cube.MoveRight(0.1, 1);
+		//_cube.MoveRight(0.1, 1);
 
 	//	grRenderer.ClearVerticesAndUV();
 

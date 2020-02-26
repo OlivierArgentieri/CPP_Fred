@@ -4,6 +4,7 @@
 #include "leftBorder/gr_leftBorderGameBoard.hpp"
 #include "rightBorder/gr_rightBorderGameBoard.hpp"
 #include "bottomBorder/gr_bottomBorderGameBoard.hpp"
+#include "topBorder/gr_topBorderGameBoard.hpp"
 
 class gr_gameBoard : public gr_gameObject
 {
@@ -12,6 +13,7 @@ private:
 	gr_leftBorderGameBoard leftBorder;
 	gr_rightBorderGameBoard rightBorder;
 	gr_bottomBorderGameBoard bottomBorder;
+	gr_topBorderGameBoard topBorder;
 	
 	void CreatePlane();
 	void CreateBorders();

@@ -26,6 +26,18 @@ void gr_bottomBorderGameBoard::LoadVertices()
 	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.scale.y + transform.position.y, transform.position.z + transform.scale.z));
 	// end back
 
+
+	
+	// top
+	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.scale.y + transform.position.y, transform.position.z));
+	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.scale.y + transform.position.y, transform.position.z + transform.scale.z));
+	vertices.push_back(glm::vec3(transform.scale.x / 2 + transform.position.x + RIGHT_SHIFT, transform.scale.y + transform.position.y, transform.position.z + transform.scale.z));
+
+	vertices.push_back(glm::vec3(transform.scale.x / 2 + transform.position.x + RIGHT_SHIFT, transform.scale.y + transform.position.y, transform.position.z + transform.scale.z));
+	vertices.push_back(glm::vec3(transform.scale.x / 2 + transform.position.x + RIGHT_SHIFT, transform.scale.y + transform.position.y, transform.position.z));
+	vertices.push_back(glm::vec3(-transform.scale.x / 2 + transform.position.x, transform.scale.y + transform.position.y, transform.position.z));
+	//end top
+
 }
 
 void gr_bottomBorderGameBoard::LoadUVs()
@@ -33,10 +45,21 @@ void gr_bottomBorderGameBoard::LoadUVs()
 	uvs.push_back(glm::vec2(0, 0));
 	uvs.push_back(glm::vec2(0, 1));
 	uvs.push_back(glm::vec2(1, 1));
+	
+	uvs.push_back(glm::vec2(1, 1));
+	uvs.push_back(glm::vec2(1, 0));
+	uvs.push_back(glm::vec2(0, 0));
+
+	
+	uvs.push_back(glm::vec2(0, 0));
+	uvs.push_back(glm::vec2(0, 1));
+	uvs.push_back(glm::vec2(1, 1));
 
 	uvs.push_back(glm::vec2(1, 1));
 	uvs.push_back(glm::vec2(1, 0));
 	uvs.push_back(glm::vec2(0, 0));
+
+
 
 	uvs.push_back(glm::vec2(0, 0));
 	uvs.push_back(glm::vec2(0, 1));

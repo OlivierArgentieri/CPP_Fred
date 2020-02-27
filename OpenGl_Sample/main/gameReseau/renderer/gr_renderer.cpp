@@ -27,6 +27,7 @@ gr_renderer::gr_renderer(const char* _vertexShaderPath, const char* _fragmentSha
 	// Create and compile our GLSL program from the shaders
 	programID = LoadShaders(_vertexShaderPath, _fragmentShaderPath);
 
+	
 	// Get a handle for our "MVP" unifor
 }
 
@@ -67,6 +68,11 @@ void gr_renderer::UseShader()
 	// Use our shader
 	glUseProgram(programID); // todo in game object
 	MatrixID = glGetUniformLocation(programID, "MVP");
+
+
+	GLint color = glGetUniformLocation(programID, "color");
+	float editedColor[3] = { 0,0,1 };
+	glUniform3fv(color, 1, editedColor);;
 }
 
 

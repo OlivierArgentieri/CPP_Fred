@@ -2,6 +2,7 @@
 
 void gr_planeGameBoard::CreateVertices()
 {
+	
 	// plane
 	vertices.push_back(glm::vec3(-(transform.scale.x / 2) + transform.position.x,
 	                             (transform.scale.y / 2) + transform.position.y,
@@ -23,6 +24,7 @@ void gr_planeGameBoard::CreateVertices()
 	                             (transform.scale.y / 2) + transform.position.y,
 	                             -(transform.scale.z / 2) + transform.position.z));
 	//  end plane
+	glEnd();
 }
 
 void gr_planeGameBoard::CreateUVS()

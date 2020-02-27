@@ -14,10 +14,10 @@ private:
 	gr_rightBorderGameBoard rightBorder;
 	gr_bottomBorderGameBoard bottomBorder;
 	gr_topBorderGameBoard topBorder;
-	
+
 	void CreatePlane();
 	void CreateBorders();
-
+	
 public:
 	gr_gameBoard();
 	gr_gameBoard(const gr_gameBoard& _gameBoard);

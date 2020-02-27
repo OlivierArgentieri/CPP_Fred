@@ -122,8 +122,10 @@ void gr_gameObject::Draw()
 	InitBuffer();
 	BindTexture();
 	// Draw the triangle !
+
 	glDrawArrays(GL_TRIANGLES, 0, vertices.size());
 
+	
 	//glDisableVertexAttribArray(0);
 	//glDisableVertexAttribArray(1);
 	CleanBuffer();
@@ -131,10 +133,12 @@ void gr_gameObject::Draw()
 
 void gr_gameObject::BindTexture() // todo
 {
+	
 	// Bind our texture in Texture Unit 0
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, Texture);
 
+	
 	// Set our "myTextureSampler" sampler to use Texture Unit 0
 	glUniform1i(TextureID, 0);
 }
@@ -146,6 +150,7 @@ void gr_gameObject::InitBuffer()
 
 	VerticesBuffer();
 	UvBuffer();
+
 }
 
 void gr_gameObject::Clean() const

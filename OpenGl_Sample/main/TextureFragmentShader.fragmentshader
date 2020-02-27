@@ -4,7 +4,8 @@
 in vec2 UV;
 
 // Ouput data
-out vec3 color;
+uniform  vec3 color;
+uniform  float alpha;
 
 // Values that stay constant for the whole mesh.
 uniform sampler2D myTextureSampler;
@@ -12,5 +13,7 @@ uniform sampler2D myTextureSampler;
 void main(){
 
 	// Output color = color of the texture at the specified UV
-	color = texture( myTextureSampler, UV ).rgb;
+	//color  = vec3(1,0,0);
+	gl_FragColor.rgb = color;
+	gl_FragColor.a = alpha;
 }

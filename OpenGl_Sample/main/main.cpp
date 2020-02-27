@@ -26,26 +26,26 @@ using namespace glm;
 
 int main( void )
 {
-
 	gr_window grWindow = gr_window(1024, 768,"Tutorial 07 - Model Loading", gr_color(0.0f, 0.0f, .1f, 0));
 
 	grWindow.InitWindow();
 	gr_renderer grRenderer = gr_renderer("TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader");
 
 	
-	gr_objGameObject _cube = gr_objGameObject("Sphere.obj", "uvmap.DDS");
+	gr_objGameObject _cube = gr_objGameObject("Sphere.obj", "aa.DDS");
 	gr_gameBoard _board = gr_gameBoard();
 
 	grRenderer.AddGameObject(&_cube);
 	grRenderer.AddGameObject(&_board);
+
+
 	
 	do
 	{
+
 		_cube.MoveRight(0.1, 1);
 
 		grRenderer.RenderLoop(grWindow);
-
-
 	}
 	while (glfwGetKey(grWindow.GetWindow(), GLFW_KEY_ESCAPE) != GLFW_PRESS &&
 		glfwWindowShouldClose(grWindow.GetWindow()) == 0);

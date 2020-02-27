@@ -18,6 +18,8 @@ class gr_window
 	void InitWindowSettings();
 	void InitMacSettings();
 	void CreateWindow(const char* _titleWindow);
+
+	
 	
 public:
 	gr_window(float _width, float _height, const char* _title, const gr_color _color);

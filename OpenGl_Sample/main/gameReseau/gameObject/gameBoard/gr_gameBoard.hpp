@@ -20,5 +20,6 @@ private:
 
 public:
 	gr_gameBoard();
+	gr_gameBoard(const gr_gameBoard& _gameBoard);
 	void Draw() override;
 };

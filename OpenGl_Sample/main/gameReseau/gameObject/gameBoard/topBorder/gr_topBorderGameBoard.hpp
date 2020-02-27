@@ -9,7 +9,7 @@ private:
 	void LoadUVs();
 public:
 	gr_topBorderGameBoard();
-	gr_topBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale);
+	gr_topBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath = "");
 	gr_topBorderGameBoard(const gr_topBorderGameBoard& _leftBorder);
 
 };

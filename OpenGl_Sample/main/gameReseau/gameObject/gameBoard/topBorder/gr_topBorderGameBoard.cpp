@@ -82,13 +82,13 @@ gr_topBorderGameBoard::gr_topBorderGameBoard() : gr_gameObject()
 	LoadUVs();
 }
 
-gr_topBorderGameBoard::gr_topBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale) : gr_gameObject(_position, _rotation, _scale)
+gr_topBorderGameBoard::gr_topBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath) : gr_gameObject(_position, _rotation, _scale, _texturePath)
 {
 	LoadVertices();
 	LoadUVs();
 }
 
-gr_topBorderGameBoard::gr_topBorderGameBoard(const gr_topBorderGameBoard& _leftBorder) : gr_gameObject(_leftBorder.transform.position, _leftBorder.transform.rotation, _leftBorder.transform.scale)
+gr_topBorderGameBoard::gr_topBorderGameBoard(const gr_topBorderGameBoard& _leftBorder) : gr_gameObject(_leftBorder)
 {
 	LoadVertices();
 	LoadUVs();

@@ -6,23 +6,28 @@
 void gr_gameObject::LoadTexture()
 {
 	// Load the texture
-	//Texture = loadDDS("uvmap.DDS"); // todo 
-	Texture = loadDDS("UVChecker.dds"); // todo
-	
+	//Texture = loadDDS("uvmap.DDS"); // todo test
+	Texture = loadDDS(texturePath); // .dds!!!
 }
 
-gr_gameObject::gr_gameObject() : gr_gameObject(glm::vec3(), glm::vec3(), glm::vec3())
+gr_gameObject::gr_gameObject()
 {
 }
 
-gr_gameObject::gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale)
+gr_gameObject::gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath)
 {
 	transform = gr_transform(_position, _rotation, _scale);
+	texturePath = _texturePath;
+	LoadTexture();
+
 }
 
 gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
 {
 	transform = gr_transform(_gameObject.transform);
+	texturePath = _gameObject.texturePath;
+	LoadTexture();
+
 }
 
 
@@ -103,22 +108,47 @@ void gr_gameObject::CleanBuffer() const
 	//glDeleteTextures(1, &Texture);
 }
 
+GLuint gr_gameObject::GetTexture() const
+{
+	return Texture;
+}
+
+GLuint gr_gameObject::GetTextureID() const
+{
+	return TextureID;
+}
 void gr_gameObject::Draw()
 {
 	InitBuffer();
+	BindTexture();
 	// Draw the triangle !
 	glDrawArrays(GL_TRIANGLES, 0, vertices.size());
 
-	glDisableVertexAttribArray(0);
-	glDisableVertexAttribArray(1);
+	//glDisableVertexAttribArray(0);
+	//glDisableVertexAttribArray(1);
 	CleanBuffer();
+}
+
+void gr_gameObject::BindTexture() // todo
+{
+	// Bind our texture in Texture Unit 0
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, Texture);
+
+	// Set our "myTextureSampler" sampler to use Texture Unit 0
+	glUniform1i(TextureID, 0);
 }
 
 void gr_gameObject::InitBuffer()
 {
 	LoadVBO();
-	VerticesBuffer();
-
 	LoadUVBuffer();
+
+	VerticesBuffer();
 	UvBuffer();
+}
+
+void gr_gameObject::Clean() const
+{
+	glDeleteTextures(1, &Texture);
 }

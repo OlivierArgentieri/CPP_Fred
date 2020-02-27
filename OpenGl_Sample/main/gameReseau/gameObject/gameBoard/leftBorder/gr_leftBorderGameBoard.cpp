@@ -2,14 +2,14 @@
 
 void gr_leftBorderGameBoard::LoadVertices()
 {
-#define DEPTH transform.scale.z
-#define WIDTH transform.scale.x
-#define HEIGHT transform.scale.y
-#define SHIFT transform.scale.x
-
-#define POSX transform.position.x
-#define POSY transform.position.y
-#define POSZ transform.position.z
+	#define DEPTH transform.scale.z
+	#define WIDTH transform.scale.x
+	#define HEIGHT transform.scale.y
+	#define SHIFT transform.scale.x
+	
+	#define POSX transform.position.x
+	#define POSY transform.position.y
+	#define POSZ transform.position.z
 	
 	// interior
 	vertices.push_back(glm::vec3(POSX, HEIGHT + POSY, DEPTH / 2 + POSZ + SHIFT)); // -SHIFT = shift for hole angle
@@ -82,13 +82,13 @@ gr_leftBorderGameBoard::gr_leftBorderGameBoard() : gr_gameObject()
 	LoadUVs();
 }
 
-gr_leftBorderGameBoard::gr_leftBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale) : gr_gameObject(_position, _rotation, _scale)
+gr_leftBorderGameBoard::gr_leftBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath) : gr_gameObject(_position, _rotation, _scale, _texturePath)
 {
 	LoadVertices();
 	LoadUVs();
 }
 
-gr_leftBorderGameBoard::gr_leftBorderGameBoard(const gr_leftBorderGameBoard& _leftBorder) : gr_gameObject(_leftBorder.transform.position, _leftBorder.transform.rotation, _leftBorder.transform.scale)
+gr_leftBorderGameBoard::gr_leftBorderGameBoard(const gr_leftBorderGameBoard& _leftBorder) : gr_gameObject(_leftBorder)
 {
 	LoadVertices();
 	LoadUVs();

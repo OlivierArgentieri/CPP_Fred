@@ -20,8 +20,8 @@ private :
 	std::vector<glm::vec3> normals; // not use todo
 
 	// buffers
-	GLuint vertexBuffer;
-	GLuint uvBuffer;
+	//GLuint vertexBuffer;
+	//GLuint uvBuffer;
 	
 	GLuint VertexArrayID;
 	GLuint programID;
@@ -31,9 +31,9 @@ private :
 
 	static void InitGLEW();
 	void ClearScreen();
-	void UseShader() const;
+	void UseShader();
 	void ComputeMVPMatrix(GLFWwindow* _window) const;
-	void BindTexture();
+	void BindTexture(gr_gameObject* _go);
 	void Draw() const;
 	static void PollEvent();
 	static void Close();
@@ -46,7 +46,7 @@ public:
 
 	void RenderLoop(gr_window _gr_window);
 	void Clean() const;
+	void CleanGameObject() const;
 	void ClearVerticesAndUV();
 	void AddGameObject(gr_gameObject *_go);
-
 };

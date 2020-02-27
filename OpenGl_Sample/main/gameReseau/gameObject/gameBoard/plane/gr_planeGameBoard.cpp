@@ -37,21 +37,24 @@ void gr_planeGameBoard::CreateUVS()
 }
 
 
-gr_planeGameBoard::gr_planeGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale) : gr_gameObject(
-	_position, _rotation, _scale)
+gr_planeGameBoard::gr_planeGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath) : gr_gameObject(
+	_position, _rotation, _scale, _texturePath)
 {
 	CreateVertices();
 	CreateUVS();
+
 }
 
 gr_planeGameBoard::gr_planeGameBoard() : gr_gameObject()
 {
 	CreateVertices();
 	CreateUVS();
+
 }
 
-gr_planeGameBoard::gr_planeGameBoard(const gr_planeGameBoard& _plane) : gr_gameObject()
+gr_planeGameBoard::gr_planeGameBoard(const gr_planeGameBoard& _plane) : gr_gameObject(_plane)
 {
 	CreateVertices();
 	CreateUVS();
+
 }

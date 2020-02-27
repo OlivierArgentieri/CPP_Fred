@@ -33,9 +33,8 @@ int main( void )
 	gr_renderer grRenderer = gr_renderer("TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader");
 
 	
-	gr_objGameObject _cube = gr_objGameObject("cube.obj");
+	gr_objGameObject _cube = gr_objGameObject("Sphere.obj", "uvmap.DDS");
 	gr_gameBoard _board = gr_gameBoard();
-
 
 	grRenderer.AddGameObject(&_cube);
 	grRenderer.AddGameObject(&_board);
@@ -44,16 +43,6 @@ int main( void )
 	{
 		_cube.MoveRight(0.1, 1);
 
-	//	grRenderer.ClearVerticesAndUV();
-
-//		grRenderer.AddVertices(_cube.getVertices());
-	//	grRenderer.AddUV(_cube.getUvs());
-		
-//		grRenderer.AddVertices(vertices);
-		
-	//	grRenderer.AddUV(uvs);
-
-		
 		grRenderer.RenderLoop(grWindow);
 
 

@@ -80,13 +80,13 @@ gr_rightBorderGameBoard::gr_rightBorderGameBoard() : gr_gameObject()
 	LoadUVs();
 }
 
-gr_rightBorderGameBoard::gr_rightBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale) : gr_gameObject(_position, _rotation, _scale)
+gr_rightBorderGameBoard::gr_rightBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath) : gr_gameObject(_position, _rotation, _scale, _texturePath)
 {
 	LoadVertices();
 	LoadUVs();
 }
 
-gr_rightBorderGameBoard::gr_rightBorderGameBoard(const gr_rightBorderGameBoard& _rightBorder) : gr_gameObject(_rightBorder.transform.position, _rightBorder.transform.rotation, _rightBorder.transform.scale)
+gr_rightBorderGameBoard::gr_rightBorderGameBoard(const gr_rightBorderGameBoard& _rightBorder) : gr_gameObject(_rightBorder)
 {
 	LoadVertices();
 	LoadUVs();

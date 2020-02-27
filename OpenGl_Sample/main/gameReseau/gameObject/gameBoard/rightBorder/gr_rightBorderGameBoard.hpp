@@ -11,6 +11,6 @@ private:
 
 public:
 	gr_rightBorderGameBoard();
-	gr_rightBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale);
+	gr_rightBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath = "");
 	gr_rightBorderGameBoard(const gr_rightBorderGameBoard& _rightBorder);
 };

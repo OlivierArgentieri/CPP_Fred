@@ -83,13 +83,13 @@ gr_bottomBorderGameBoard::gr_bottomBorderGameBoard()
 	LoadUVs();
 }
 
-gr_bottomBorderGameBoard::gr_bottomBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale) : gr_gameObject(_position, _rotation, _scale)
+gr_bottomBorderGameBoard::gr_bottomBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath) : gr_gameObject(_position, _rotation, _scale, _texturePath)
 {
 	LoadVertices();
 	LoadUVs();
 }
 
-gr_bottomBorderGameBoard::gr_bottomBorderGameBoard(const gr_bottomBorderGameBoard& _bottomBorder) : gr_gameObject(_bottomBorder.transform.position, _bottomBorder.transform.rotation, _bottomBorder.transform.scale)
+gr_bottomBorderGameBoard::gr_bottomBorderGameBoard(const gr_bottomBorderGameBoard& _bottomBorder) : gr_gameObject(_bottomBorder)
 {
 	LoadVertices();
 	LoadUVs();

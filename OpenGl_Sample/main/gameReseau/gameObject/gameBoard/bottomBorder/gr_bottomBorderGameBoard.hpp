@@ -11,7 +11,7 @@ private:
 
 public:
 	gr_bottomBorderGameBoard();
-	gr_bottomBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale);
+	gr_bottomBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath = "");
 	gr_bottomBorderGameBoard(const gr_bottomBorderGameBoard& _bottomBorder);
 
 };

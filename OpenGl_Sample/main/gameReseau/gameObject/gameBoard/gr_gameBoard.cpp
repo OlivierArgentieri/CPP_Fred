@@ -2,7 +2,7 @@
 #include "plane/gr_planeGameBoard.hpp"
 #include "topBorder/gr_topBorderGameBoard.hpp"
 
-#define WALL_HEIGHT 50
+#define WALL_HEIGHT 20
 
 void gr_gameBoard::CreatePlane()
 {

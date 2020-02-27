@@ -32,8 +32,8 @@ gr_renderer::gr_renderer(const char* _vertexShaderPath, const char* _fragmentSha
 		
 	// Load the texture
 	//Texture = loadDDS("uvmap.DDS"); // todo 
-	//Texture = loadDDS("UVChecker.dds"); // todo 
-	Texture = loadDDS("aa.dds"); // todo 
+	Texture = loadDDS("UVChecker.dds"); // todo 
+	//Texture = loadDDS("aa.dds"); // todo 
 
 	// Get a handle for our "myTextureSampler" uniform
 	TextureID = glGetUniformLocation(programID, "myTextureSampler"); // todo

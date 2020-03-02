@@ -5,6 +5,7 @@
 
 #include "main/gameReseau/color/gr_color.hpp"
 #include "main/gameReseau/transform/gr_transform.hpp"
+#include "main/gameReseau/window/gr_window.hpp"
 
 class gr_gameObject
 {
@@ -54,7 +55,7 @@ public:
 
 	
 	void MoveRight(float _speed, float _deltaTime);
-	virtual void Draw();
+	virtual void Draw(gr_window* _windows);
 	void BindTexture();
 	void Clean() const;
 	void SetColorShader(const gr_color _color);

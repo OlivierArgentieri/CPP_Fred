@@ -10,10 +10,10 @@ class gr_gameBoard : public gr_gameObject
 {
 private:
 	gr_planeGameBoard plane;
-//	gr_leftBorderGameBoard leftBorder;
-//	gr_rightBorderGameBoard rightBorder;
-//	gr_bottomBorderGameBoard bottomBorder;
-//	gr_topBorderGameBoard topBorder;
+	gr_leftBorderGameBoard leftBorder;
+	gr_rightBorderGameBoard rightBorder;
+	gr_bottomBorderGameBoard bottomBorder;
+	gr_topBorderGameBoard topBorder;
 
 	void CreatePlane();
 	void CreateBorders();
@@ -21,6 +21,6 @@ private:
 public:
 	gr_gameBoard();
 	gr_gameBoard(const gr_gameBoard& _gameBoard);
-	void Draw() override;
+	void Draw(gr_window* _windows) override;
 	void UseShader(GLint _shaderID);
 };

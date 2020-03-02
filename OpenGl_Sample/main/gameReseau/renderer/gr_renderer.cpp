@@ -63,48 +63,12 @@ void gr_renderer::ClearVerticesAndUV()
 	vertices.clear();
 	uvs.clear();
 }
-/*
-void gr_renderer::UseShader(GLint _shaderID)
-{
-	// Use our shader
-	glUseProgram(_shaderID); // todo in game object
-	MatrixID = glGetUniformLocation(_shaderID, "MVP");
-}
 
-
-void gr_renderer::ComputeMVPMatrix(GLFWwindow* _window) const
-{
-	if (!_window) return;
-	
-	// Compute the MVP matrix from keyboard and mouse input
-	computeMatricesFromInputs(_window); // todo 
-	glm::mat4 ProjectionMatrix = getProjectionMatrix();
-	glm::mat4 ViewMatrix = getViewMatrix();
-	glm::mat4 ModelMatrix = glm::mat4(1.0);	
-	glm::mat4 MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
-
-	// Send our transformation to the currently bound shader, 
-	// in the "MVP" uniform
-	glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
-}
-*/
-/*
-void gr_renderer::BindTexture(gr_gameObject* _go) // todo
-{	
-	// Bind our texture in Texture Unit 0
-	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, _go->GetTexture());
-	// Set our "myTextureSampler" sampler to use Texture Unit 0
-	glUniform1i(_go->GetTextureID(), 0);
-}
-*/
 void gr_renderer::DrawEachObject(gr_window _gr_window) const
 {
 	for (gr_gameObject* _game_object : gameObjects)
 	{
-		_game_object->ComputeMatrix(_gr_window.GetWindow());
-		_game_object->Draw();
-		//ComputeMVPMatrix(_gr_window.GetWindow());
+		_game_object->Draw(&_gr_window);
 	}
 }
 

@@ -83,7 +83,8 @@ gr_bottomBorderGameBoard::gr_bottomBorderGameBoard()
 	LoadUVs();
 }
 
-gr_bottomBorderGameBoard::gr_bottomBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath) : gr_gameObject(_position, _rotation, _scale, _texturePath)
+gr_bottomBorderGameBoard::gr_bottomBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath, const char* _vertexShaderPath, const char* _fragmentShaderPath, gr_color _color) : gr_gameObject(
+	_position, _rotation, _scale, _texturePath, _vertexShaderPath, _fragmentShaderPath, _color)
 {
 	LoadVertices();
 	LoadUVs();

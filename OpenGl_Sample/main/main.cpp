@@ -16,6 +16,9 @@
 // Include GLM
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <iostream>
+#include <random>
+
 #include "gameReseau/gameObject/objGameObject/gr_objGameObject.hpp"
 #include "gameReseau/gameObject/gameBoard/gr_gameBoard.hpp"
 class gr_gameObject;
@@ -35,12 +38,19 @@ int main( void )
 	gr_objGameObject _cube = gr_objGameObject("Sphere.obj", "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1,0,0));
 	gr_objGameObject _cube2 = gr_objGameObject("Sphere.obj", "aa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 1));
 	gr_gameBoard _board = gr_gameBoard();
-
+		
 
 	grRenderer.AddGameObject(&_cube);
 	grRenderer.AddGameObject(&_cube2);
 	grRenderer.AddGameObject(&_board);
+
+	/*
+	std::random_device dev;
+	std::mt19937 rng(dev());
 	
+	std::uniform_real_distribution<float> dist(-12, 2);
+
+	std::cout << dist(rng) << std::endl;*/
 	do
 	{
 

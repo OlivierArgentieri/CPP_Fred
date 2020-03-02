@@ -1,4 +1,6 @@
 #include "gr_gameBoard.hpp"
+
+#include "main/gameReseau/window/gr_window.hpp"
 #include "plane/gr_planeGameBoard.hpp"
 #include "topBorder/gr_topBorderGameBoard.hpp"
 
@@ -6,16 +8,16 @@
 
 void gr_gameBoard::CreatePlane()
 {
-	plane = gr_planeGameBoard(glm::vec3(), glm::vec3(), glm::vec3(100, 0, 100), "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0,1,0));
+	plane = gr_planeGameBoard(glm::vec3(), glm::vec3(), glm::vec3(100, 0, 100), "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0,0,1));
 }
 
 void gr_gameBoard::CreateBorders()
 {
-	/*
-	leftBorder = gr_leftBorderGameBoard(glm::vec3(-50,0,0), glm::vec3(), glm::vec3(10, WALL_HEIGHT, 100), "color.dds");
-	rightBorder = gr_rightBorderGameBoard(glm::vec3(50,0,0), glm::vec3(), glm::vec3(10, WALL_HEIGHT, 100),"color.dds" );
-	bottomBorder = gr_bottomBorderGameBoard(glm::vec3(0,0,50), glm::vec3(), glm::vec3(100, WALL_HEIGHT, 10), "color.dds");
-	topBorder = gr_topBorderGameBoard(glm::vec3(0,0,-50), glm::vec3(), glm::vec3(100, WALL_HEIGHT, 10), "color.dds");*/
+	
+	leftBorder = gr_leftBorderGameBoard(glm::vec3(-50,0,0), glm::vec3(), glm::vec3(10, WALL_HEIGHT, 100), "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0, 1, 0));
+	rightBorder = gr_rightBorderGameBoard(glm::vec3(50,0,0), glm::vec3(), glm::vec3(10, WALL_HEIGHT, 100),"color.dds","TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 0));
+	bottomBorder = gr_bottomBorderGameBoard(glm::vec3(0,0,50), glm::vec3(), glm::vec3(100, WALL_HEIGHT, 10), "color.dds","TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0.5f, 0.3f, 0));
+	topBorder = gr_topBorderGameBoard(glm::vec3(0,0,-50), glm::vec3(), glm::vec3(100, WALL_HEIGHT, 10), "color.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 0.5, 0));
 }
 
 
@@ -29,16 +31,16 @@ gr_gameBoard::gr_gameBoard(const gr_gameBoard& _gameBoard) : gr_gameObject(_game
 {
 }
 
-void gr_gameBoard::Draw()
+void gr_gameBoard::Draw(gr_window* _window)
 {
-	plane.Draw();
-	//lane.SetColorShader(gr_color(1, 0, 0));
-	/*
-	leftBorder.Draw();
+	if (!_window) return;
+	plane.Draw(_window);
 	
-	rightBorder.Draw();
-	bottomBorder.Draw();
-	topBorder.Draw();*/
+	leftBorder.Draw(_window);
+	
+	rightBorder.Draw(_window);
+	bottomBorder.Draw(_window);
+	topBorder.Draw(_window);
 }
 
 void gr_gameBoard::UseShader(GLint _shaderID)

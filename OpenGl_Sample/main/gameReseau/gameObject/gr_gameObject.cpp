@@ -1,5 +1,8 @@
 #include "gr_gameObject.hpp"
 
+#include <glm/gtc/matrix_transform.inl>
+
+
 #include "common/controls.hpp"
 #include "main/gameReseau/renderer/gr_renderer.hpp"
 #include "common/objloader.hpp"
@@ -125,22 +128,22 @@ GLuint gr_gameObject::GetTextureID() const
 {
 	return TextureID;
 }
-void gr_gameObject::Draw()
+void gr_gameObject::Draw(gr_window* _window)
 {
-	InitBuffer();
-	SetUseTexture(Texture != 0);
-
-	BindTexture();
-	// Draw the triangle !
-	SetColorShader(Color);
+	if (!_window) return;
 	UseShader(programID);
+	BindTexture();
+	SetUseTexture(Texture != 0);
+	SetColorShader(Color);
+	ComputeMatrix(_window->GetWindow());
+	InitBuffer();
+
+	// Draw the triangle !
 	glDrawArrays(GL_TRIANGLES, 0, vertices.size());
 
 	glDisableVertexAttribArray(0);
 	glDisableVertexAttribArray(1);
 	
-	//glDisableVertexAttribArray(0);
-	//glDisableVertexAttribArray(1);
 	CleanBuffer();
 }
 
@@ -149,8 +152,6 @@ void gr_gameObject::BindTexture() // todo
 	if (texturePath[0] == '\0')
 	{
 		// set active texture to empty slot
-		glActiveTexture(GL_TEXTURE1);
-		//glBindTexture(GL_TEXTURE_2D, Texture);
 		return;
 	}
 
@@ -188,7 +189,7 @@ void gr_gameObject::SetColorShader(const gr_color _color)
 
 void gr_gameObject::SetUseTexture(const bool _res)
 {
-	GLboolean color = glGetUniformLocation(programID, "textureLoad");
+	GLboolean color = glGetUniformLocation(programID, "isTextureLoaded");
 	glUniform1i(color, _res);
 }
 
@@ -202,6 +203,7 @@ void gr_gameObject::ComputeMatrix(GLFWwindow* _window) const
 	glm::mat4 ProjectionMatrix = getProjectionMatrix();
 	glm::mat4 ViewMatrix = getViewMatrix();
 	glm::mat4 ModelMatrix = glm::mat4(1.0);
+
 	glm::mat4 MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
 
 	// Send our transformation to the currently bound shader, 

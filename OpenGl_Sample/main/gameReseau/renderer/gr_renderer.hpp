@@ -45,7 +45,8 @@ public:
 	void AddUV(std::vector<glm::vec2> _uvs);
 
 	void RenderLoop(gr_window _gr_window);
-//	void Clean() const;
+	void Clean() const;
+	//	void Clean() const;
 	void CleanGameObject() const;
 	void ClearVerticesAndUV();
 	void AddGameObject(gr_gameObject *_go);

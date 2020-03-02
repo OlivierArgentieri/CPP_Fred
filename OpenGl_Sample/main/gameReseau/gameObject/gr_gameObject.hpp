@@ -9,6 +9,13 @@
 
 class gr_gameObject
 {
+
+private :
+	glm::mat4 ProjectionMatrix;
+	glm::mat4 ViewMatrix;
+	glm::mat4 ModelMatrix;
+	glm::mat4 MVP;
+	
 protected:
 	const char*  texturePath;
 	
@@ -60,7 +67,8 @@ public:
 	void Clean() const;
 	void SetColorShader(const gr_color _color);
 	void SetUseTexture(bool _res);
-	void ComputeMatrix(GLFWwindow* _window) const;
+	void InitMatrix();
+	void ComputeMatrix(GLFWwindow* _window);
 	void UseShader(GLint _shaderID);
 	GLuint GetTexture() const;
 	GLuint GetShader() const;

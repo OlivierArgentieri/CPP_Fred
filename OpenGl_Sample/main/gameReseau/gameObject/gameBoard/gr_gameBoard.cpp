@@ -15,9 +15,9 @@ void gr_gameBoard::CreateBorders()
 {
 	
 	leftBorder = gr_leftBorderGameBoard(glm::vec3(-50,0,0), glm::vec3(), glm::vec3(10, WALL_HEIGHT, 100), "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0, 1, 0));
-	rightBorder = gr_rightBorderGameBoard(glm::vec3(50,0,0), glm::vec3(), glm::vec3(10, WALL_HEIGHT, 100),"color.dds","TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 0));
-	bottomBorder = gr_bottomBorderGameBoard(glm::vec3(0,0,50), glm::vec3(), glm::vec3(100, WALL_HEIGHT, 10), "color.dds","TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0.5f, 0.3f, 0));
-	topBorder = gr_topBorderGameBoard(glm::vec3(0,0,-50), glm::vec3(), glm::vec3(100, WALL_HEIGHT, 10), "color.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 0.5, 0));
+	rightBorder = gr_rightBorderGameBoard(glm::vec3(50,0,0), glm::vec3(), glm::vec3(10, WALL_HEIGHT, 100),"","TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 0));
+	bottomBorder = gr_bottomBorderGameBoard(glm::vec3(0,0,50), glm::vec3(), glm::vec3(100, WALL_HEIGHT, 10), "","TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0.5f, 0.3f, 0));
+	topBorder = gr_topBorderGameBoard(glm::vec3(0,0,-50), glm::vec3(), glm::vec3(100, WALL_HEIGHT, 10),"" , "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 0.5, 0));
 }
 
 

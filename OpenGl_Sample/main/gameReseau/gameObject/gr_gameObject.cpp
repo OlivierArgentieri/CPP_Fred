@@ -25,6 +25,7 @@ gr_gameObject::gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3
 	LoadTexture();
 	LoadShader(_vertexShaderPath, _fragmentShaderPath);
 	Color = _color;
+	InitMatrix(); // init MVP Matrix
 }
 
 gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
@@ -34,6 +35,7 @@ gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
 	LoadTexture();
 	
 	Color = _gameObject.Color;
+	InitMatrix(); // init MVP Matrix
 }
 
 
@@ -54,10 +56,15 @@ std::vector<glm::vec3> gr_gameObject::getNormals() const
 
 void gr_gameObject::MoveRight(float _speed, float _deltaTime)
 {
+	ModelMatrix = glm::translate(ModelMatrix, glm::vec3(0.1f, 0, 0));
+
+	MVP = getProjectionMatrix() * getViewMatrix()* ModelMatrix;
+
+	/*
 	for (glm::vec3 &vertex : vertices)
 	{
 		vertex.x += _speed * _deltaTime;
-	}
+	}*/
 }
 
 
@@ -131,10 +138,12 @@ GLuint gr_gameObject::GetTextureID() const
 void gr_gameObject::Draw(gr_window* _window)
 {
 	if (!_window) return;
+
 	UseShader(programID);
 	BindTexture();
 	SetUseTexture(Texture != 0);
 	SetColorShader(Color);
+
 	ComputeMatrix(_window->GetWindow());
 	InitBuffer();
 
@@ -143,7 +152,6 @@ void gr_gameObject::Draw(gr_window* _window)
 
 	glDisableVertexAttribArray(0);
 	glDisableVertexAttribArray(1);
-	
 	CleanBuffer();
 }
 
@@ -154,7 +162,10 @@ void gr_gameObject::BindTexture() // todo
 		// set active texture to empty slot
 		return;
 	}
-
+	
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	
 	// Bind our texture in Texture Unit 0
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, Texture);
@@ -193,18 +204,28 @@ void gr_gameObject::SetUseTexture(const bool _res)
 	glUniform1i(color, _res);
 }
 
+void gr_gameObject::InitMatrix()
+{
+	ProjectionMatrix = getProjectionMatrix();
+	ViewMatrix = getViewMatrix();
+	ModelMatrix = glm::mat4(1.0);
+	
+	MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
 
-void gr_gameObject::ComputeMatrix(GLFWwindow* _window) const
+}
+
+void gr_gameObject::ComputeMatrix(GLFWwindow* _window)
 {
 	if (!_window) return;
 
 	// Compute the MVP matrix from keyboard and mouse input
 	computeMatricesFromInputs(_window); // todo 
-	glm::mat4 ProjectionMatrix = getProjectionMatrix();
-	glm::mat4 ViewMatrix = getViewMatrix();
-	glm::mat4 ModelMatrix = glm::mat4(1.0);
 
-	glm::mat4 MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+	
+	ProjectionMatrix = getProjectionMatrix();
+	ViewMatrix = getViewMatrix();
+	
+	MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
 
 	// Send our transformation to the currently bound shader, 
 	// in the "MVP" uniform
@@ -222,4 +243,6 @@ void gr_gameObject::UseShader(GLint _shaderID)
 void gr_gameObject::Clean() const
 {
 	glDeleteTextures(1, &Texture);
+	glDeleteProgram(programID);
+	glDeleteVertexArrays(1, &VertexArrayID);
 }

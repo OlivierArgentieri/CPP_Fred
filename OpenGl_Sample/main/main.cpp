@@ -54,6 +54,7 @@ int main( void )
 	do
 	{
 
+		
 		_cube2.MoveRight(0.1, 1);
 
 		grRenderer.RenderLoop(grWindow);
@@ -61,7 +62,7 @@ int main( void )
 	while (glfwGetKey(grWindow.GetWindow(), GLFW_KEY_ESCAPE) != GLFW_PRESS &&
 		glfwWindowShouldClose(grWindow.GetWindow()) == 0);
 
-	//grRenderer.Clean();
+	grRenderer.Clean();
 	
 	return 0;
 }

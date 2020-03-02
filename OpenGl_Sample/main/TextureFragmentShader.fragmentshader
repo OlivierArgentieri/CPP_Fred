@@ -4,7 +4,7 @@
 in vec2 UV;
 
 // Ouput data
-out vec3 finalColor;
+out vec4 finalColor;
 
 
 // Bindable data in cpp 
@@ -17,9 +17,10 @@ void main(){
 	//color  = vec3(1,0,0);
 
 	if(isTextureLoaded)
-		finalColor = color * texture( myTextureSampler, UV ).rgb;
+		finalColor.rgb = color.rgb * texture( myTextureSampler, UV ).rgb;
 	else
-		finalColor = color;
+		finalColor.rgb = color;
 
+	finalColor.a = 0.5f;
 	//gl_FragColor.a = alpha;
 }

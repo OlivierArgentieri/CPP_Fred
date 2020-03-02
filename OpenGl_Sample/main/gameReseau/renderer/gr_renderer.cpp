@@ -86,14 +86,16 @@ void gr_renderer::RenderLoop(gr_window _gr_window)
 	PollEvent();
 }
 
-/*
+
 void gr_renderer::Clean() const
 {
-	glDeleteProgram(programID);
-	glDeleteVertexArrays(1, &VertexArrayID);
+	for (gr_gameObject* _game_object : gameObjects)
+	{
+		_game_object->Clean();
+	}
 	Close();
 }
-*/
+
 void gr_renderer::CleanGameObject() const
 {
 	for (gr_gameObject* _game_object : gameObjects)

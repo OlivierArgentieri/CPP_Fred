@@ -8,6 +8,10 @@ gr_color::gr_color(float _r, float _g, float _b, float _a)
 	a = _a;
 }
 
+gr_color::gr_color(float _r, float _g, float _b) : gr_color(_r, _g, _b, 1)
+{
+}
+
 gr_color::gr_color() : gr_color(0,0,0,0)
 {
 	

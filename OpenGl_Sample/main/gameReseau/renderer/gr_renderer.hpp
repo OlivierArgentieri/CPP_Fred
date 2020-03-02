@@ -26,26 +26,26 @@ private :
 	GLuint VertexArrayID;
 	GLuint programID;
 	GLuint MatrixID;
-	GLuint Texture;
-	GLuint TextureID;
+	//GLuint Texture;
+	//GLuint TextureID;
 
 	static void InitGLEW();
-	void ClearScreen();
-	void UseShader();
-	void ComputeMVPMatrix(GLFWwindow* _window) const;
-	void BindTexture(gr_gameObject* _go);
-	void Draw() const;
+	static void ClearScreen();
+	//void UseShader(GLint _shaderID);
+	//void ComputeMVPMatrix(GLFWwindow* _window) const;
+	//void BindTexture(gr_gameObject* _go);
+	void DrawEachObject(gr_window _gr_window) const;
 	static void PollEvent();
 	static void Close();
 
 public:
-	gr_renderer(const char* _vertexShaderPath, const char* _fragmentShaderPath);
+	gr_renderer();
 
 	void AddVertices(std::vector<glm::vec3> _vertices);
 	void AddUV(std::vector<glm::vec2> _uvs);
 
 	void RenderLoop(gr_window _gr_window);
-	void Clean() const;
+//	void Clean() const;
 	void CleanGameObject() const;
 	void ClearVerticesAndUV();
 	void AddGameObject(gr_gameObject *_go);

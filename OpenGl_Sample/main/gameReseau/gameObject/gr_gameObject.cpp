@@ -1,12 +1,13 @@
 #include "gr_gameObject.hpp"
+
+#include "common/controls.hpp"
 #include "main/gameReseau/renderer/gr_renderer.hpp"
 #include "common/objloader.hpp"
 
 
 void gr_gameObject::LoadTexture()
 {
-	// Load the texture
-	//Texture = loadDDS("uvmap.DDS"); // todo test
+	if (texturePath[0] == '\0') return;
 	Texture = loadDDS(texturePath); // .dds!!!
 }
 
@@ -14,12 +15,13 @@ gr_gameObject::gr_gameObject()
 {
 }
 
-gr_gameObject::gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath)
+gr_gameObject::gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath, const char* _vertexShaderPath, const char* _fragmentShaderPath, gr_color _color)
 {
 	transform = gr_transform(_position, _rotation, _scale);
 	texturePath = _texturePath;
 	LoadTexture();
-
+	LoadShader(_vertexShaderPath, _fragmentShaderPath);
+	Color = _color;
 }
 
 gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
@@ -27,7 +29,8 @@ gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
 	transform = gr_transform(_gameObject.transform);
 	texturePath = _gameObject.texturePath;
 	LoadTexture();
-
+	
+	Color = _gameObject.Color;
 }
 
 
@@ -113,6 +116,11 @@ GLuint gr_gameObject::GetTexture() const
 	return Texture;
 }
 
+GLuint gr_gameObject::GetShader() const
+{
+	return programID;
+}
+
 GLuint gr_gameObject::GetTextureID() const
 {
 	return TextureID;
@@ -120,11 +128,16 @@ GLuint gr_gameObject::GetTextureID() const
 void gr_gameObject::Draw()
 {
 	InitBuffer();
+	SetUseTexture(Texture != 0);
+
 	BindTexture();
 	// Draw the triangle !
-
+	SetColorShader(Color);
+	UseShader(programID);
 	glDrawArrays(GL_TRIANGLES, 0, vertices.size());
 
+	glDisableVertexAttribArray(0);
+	glDisableVertexAttribArray(1);
 	
 	//glDisableVertexAttribArray(0);
 	//glDisableVertexAttribArray(1);
@@ -133,7 +146,14 @@ void gr_gameObject::Draw()
 
 void gr_gameObject::BindTexture() // todo
 {
-	
+	if (texturePath[0] == '\0')
+	{
+		// set active texture to empty slot
+		glActiveTexture(GL_TEXTURE1);
+		//glBindTexture(GL_TEXTURE_2D, Texture);
+		return;
+	}
+
 	// Bind our texture in Texture Unit 0
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, Texture);
@@ -152,6 +172,50 @@ void gr_gameObject::InitBuffer()
 	UvBuffer();
 
 }
+
+void gr_gameObject::LoadShader(const char* _vertexShaderPath, const char* _fragmentShaderPath)
+{
+	if (_vertexShaderPath[0] == '\0' || _fragmentShaderPath[0] == '\0') return;
+	programID = LoadShaders(_vertexShaderPath, _fragmentShaderPath);
+}
+
+void gr_gameObject::SetColorShader(const gr_color _color)
+{
+	GLint color = glGetUniformLocation(programID, "color");
+	float editedColor[3] = {_color.r, _color.g, _color.b};
+	glUniform3fv(color, 1, editedColor);;
+}
+
+void gr_gameObject::SetUseTexture(const bool _res)
+{
+	GLboolean color = glGetUniformLocation(programID, "textureLoad");
+	glUniform1i(color, _res);
+}
+
+
+void gr_gameObject::ComputeMatrix(GLFWwindow* _window) const
+{
+	if (!_window) return;
+
+	// Compute the MVP matrix from keyboard and mouse input
+	computeMatricesFromInputs(_window); // todo 
+	glm::mat4 ProjectionMatrix = getProjectionMatrix();
+	glm::mat4 ViewMatrix = getViewMatrix();
+	glm::mat4 ModelMatrix = glm::mat4(1.0);
+	glm::mat4 MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+
+	// Send our transformation to the currently bound shader, 
+	// in the "MVP" uniform
+	glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
+}
+
+void gr_gameObject::UseShader(GLint _shaderID)
+{
+	// Use our shader
+	glUseProgram(_shaderID); // todo in game object
+	MatrixID = glGetUniformLocation(_shaderID, "MVP");
+}
+
 
 void gr_gameObject::Clean() const
 {

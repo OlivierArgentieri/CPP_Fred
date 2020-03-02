@@ -4,6 +4,7 @@
 #include "main/gameReseau/window/gr_window.hpp"
 #include "common/objloader.hpp"
 #include <glm/detail/type_mat.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 #include <vector>
 
 
@@ -18,17 +19,17 @@ void gr_renderer::InitGLEW()
 	}
 }
 
-gr_renderer::gr_renderer(const char* _vertexShaderPath, const char* _fragmentShaderPath)
+gr_renderer::gr_renderer()
 {
 	InitGLEW();
 	glGenVertexArrays(1, &VertexArrayID);
 	glBindVertexArray(VertexArrayID);
 
 	// Create and compile our GLSL program from the shaders
-	programID = LoadShaders(_vertexShaderPath, _fragmentShaderPath);
+	//programID = LoadShaders(_vertexShaderPath, _fragmentShaderPath);
 
 	
-	// Get a handle for our "MVP" unifor
+	// Get a handle for our "MVP" uniform
 }
 
 void gr_renderer::AddGameObject(gr_gameObject *_go)
@@ -62,17 +63,12 @@ void gr_renderer::ClearVerticesAndUV()
 	vertices.clear();
 	uvs.clear();
 }
-
-void gr_renderer::UseShader()
+/*
+void gr_renderer::UseShader(GLint _shaderID)
 {
 	// Use our shader
-	glUseProgram(programID); // todo in game object
-	MatrixID = glGetUniformLocation(programID, "MVP");
-
-
-	GLint color = glGetUniformLocation(programID, "color");
-	float editedColor[3] = { 0,0,1 };
-	glUniform3fv(color, 1, editedColor);;
+	glUseProgram(_shaderID); // todo in game object
+	MatrixID = glGetUniformLocation(_shaderID, "MVP");
 }
 
 
@@ -84,14 +80,15 @@ void gr_renderer::ComputeMVPMatrix(GLFWwindow* _window) const
 	computeMatricesFromInputs(_window); // todo 
 	glm::mat4 ProjectionMatrix = getProjectionMatrix();
 	glm::mat4 ViewMatrix = getViewMatrix();
-	glm::mat4 ModelMatrix = glm::mat4(1.0);
+	glm::mat4 ModelMatrix = glm::mat4(1.0);	
 	glm::mat4 MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
 
 	// Send our transformation to the currently bound shader, 
 	// in the "MVP" uniform
 	glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
 }
-
+*/
+/*
 void gr_renderer::BindTexture(gr_gameObject* _go) // todo
 {	
 	// Bind our texture in Texture Unit 0
@@ -100,14 +97,15 @@ void gr_renderer::BindTexture(gr_gameObject* _go) // todo
 	// Set our "myTextureSampler" sampler to use Texture Unit 0
 	glUniform1i(_go->GetTextureID(), 0);
 }
-
-void gr_renderer::Draw() const
+*/
+void gr_renderer::DrawEachObject(gr_window _gr_window) const
 {
-	// Draw the triangle !
-	//glDrawArrays(GL_TRIANGLES, 0, vertices.size());
-
-	//glDisableVertexAttribArray(0);
-	//glDisableVertexAttribArray(1);
+	for (gr_gameObject* _game_object : gameObjects)
+	{
+		_game_object->ComputeMatrix(_gr_window.GetWindow());
+		_game_object->Draw();
+		//ComputeMVPMatrix(_gr_window.GetWindow());
+	}
 }
 
 void gr_renderer::PollEvent()
@@ -118,27 +116,20 @@ void gr_renderer::PollEvent()
 void gr_renderer::RenderLoop(gr_window _gr_window)
 {
 	ClearScreen();
-	UseShader();
-
-	for (gr_gameObject* _game_object : gameObjects)
-	{
-		_game_object->Draw();
-		
-		ComputeMVPMatrix(_gr_window.GetWindow());
-	}
+	DrawEachObject(_gr_window);
 	
 	_gr_window.SwapBuffer();
 	PollEvent();
 }
 
+/*
 void gr_renderer::Clean() const
 {
-	
 	glDeleteProgram(programID);
 	glDeleteVertexArrays(1, &VertexArrayID);
 	Close();
 }
-
+*/
 void gr_renderer::CleanGameObject() const
 {
 	for (gr_gameObject* _game_object : gameObjects)

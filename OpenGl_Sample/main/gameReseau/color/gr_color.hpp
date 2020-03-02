@@ -10,6 +10,7 @@ public:
 	GLclampf a;
 
 	gr_color(float _r, float _g, float _b, float _a);
+	gr_color(float _r, float _g, float _b);
 	gr_color();
 	gr_color(const gr_color& _color);
 };

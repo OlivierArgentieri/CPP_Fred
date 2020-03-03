@@ -38,7 +38,7 @@ int main( void )
 
 	
 	gr_objGameObject _cube = gr_objGameObject("Sphere.obj", "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1,0,0));
-	gr_ball _cube2 = gr_ball(glm::vec3(20, 0, 0), glm::vec3(0, 0, 0), glm::vec3(0, 0, 0), "aaa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 1), 10);
+	gr_ball _cube2 = gr_ball(glm::vec3(20, 0, 0), glm::vec3(0, 0, 0), glm::vec3(0, 0, 0), "aa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 1), 10);
 	gr_gameBoard _board = gr_gameBoard();
 		
 

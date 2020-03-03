@@ -24,12 +24,6 @@ gr_renderer::gr_renderer()
 	InitGLEW();
 	glGenVertexArrays(1, &VertexArrayID);
 	glBindVertexArray(VertexArrayID);
-
-	// Create and compile our GLSL program from the shaders
-	//programID = LoadShaders(_vertexShaderPath, _fragmentShaderPath);
-
-	
-	// Get a handle for our "MVP" uniform
 }
 
 void gr_renderer::AddGameObject(gr_gameObject *_go)

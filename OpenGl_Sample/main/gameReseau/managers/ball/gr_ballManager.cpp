@@ -1,4 +1,6 @@
 #include "gr_ballManager.hpp"
+
+#include "main/gameReseau/gameObject/ball/gr_ball.hpp"
 gr_ballManager* gr_ballManager::instance = nullptr;
 
 
@@ -7,10 +9,30 @@ gr_ballManager::~gr_ballManager()
 	delete instance;
 }
 
-gr_ballManager* gr_ballManager::getInstance();
+gr_ballManager* gr_ballManager::getInstance()
 {
 	if (instance == nullptr)
 		instance = new gr_ballManager();
 
 	return instance;
+}
+
+void gr_ballManager::addBalls(gr_ball _ball)
+{
+	gr_ball* _temp = new gr_ball(_ball);
+	balls.push_back(_temp);
+}
+
+void gr_ballManager::clear()
+{
+	balls.clear();
+}
+
+
+void gr_ballManager::deleteAll()
+{
+	for (int i = 0; i < balls.size() ; ++i)
+	{
+		delete &balls[i];
+	}
 }

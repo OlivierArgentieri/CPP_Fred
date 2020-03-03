@@ -5,7 +5,6 @@
 
 #include "common/controls.hpp"
 #include "main/gameReseau/renderer/gr_renderer.hpp"
-#include "common/objloader.hpp"
 
 
 void gr_gameObject::LoadTexture()
@@ -56,10 +55,11 @@ std::vector<glm::vec3> gr_gameObject::getNormals() const
 
 void gr_gameObject::MoveRight(float _speed, float _deltaTime)
 {
-	ModelMatrix = glm::translate(ModelMatrix, glm::vec3(0.1f, 0, 0));
-
+	/*
+	ModelMatrix = glm::translate(ModelMatrix, glm::vec3(10, 0, 0));
+	
 	MVP = getProjectionMatrix() * getViewMatrix()* ModelMatrix;
-
+	*/
 	/*
 	for (glm::vec3 &vertex : vertices)
 	{
@@ -135,6 +135,17 @@ GLuint gr_gameObject::GetTextureID() const
 {
 	return TextureID;
 }
+
+gr_transform gr_gameObject::getTransform() const
+{
+	return transform;
+}
+
+void gr_gameObject::setPosition(glm::vec3 _pos)
+{
+	transform.setPosition(_pos);
+}
+
 void gr_gameObject::Draw(gr_window* _window)
 {
 	if (!_window) return;
@@ -155,7 +166,8 @@ void gr_gameObject::Draw(gr_window* _window)
 	CleanBuffer();
 }
 
-void gr_gameObject::BindTexture() // todo
+void gr_gameObject::BindTexture() const
+// todo
 {
 	if (texturePath[0] == '\0')
 	{
@@ -191,14 +203,14 @@ void gr_gameObject::LoadShader(const char* _vertexShaderPath, const char* _fragm
 	programID = LoadShaders(_vertexShaderPath, _fragmentShaderPath);
 }
 
-void gr_gameObject::SetColorShader(const gr_color _color)
+void gr_gameObject::SetColorShader(const gr_color _color) const
 {
 	GLint color = glGetUniformLocation(programID, "color");
 	float editedColor[3] = {_color.r, _color.g, _color.b};
 	glUniform3fv(color, 1, editedColor);;
 }
 
-void gr_gameObject::SetUseTexture(const bool _res)
+void gr_gameObject::SetUseTexture(const bool _res) const
 {
 	GLboolean color = glGetUniformLocation(programID, "isTextureLoaded");
 	glUniform1i(color, _res);
@@ -206,12 +218,13 @@ void gr_gameObject::SetUseTexture(const bool _res)
 
 void gr_gameObject::InitMatrix()
 {
+	/*
 	ProjectionMatrix = getProjectionMatrix();
 	ViewMatrix = getViewMatrix();
 	ModelMatrix = glm::mat4(1.0);
 	
 	MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
-
+	*/
 }
 
 void gr_gameObject::ComputeMatrix(GLFWwindow* _window)
@@ -222,10 +235,7 @@ void gr_gameObject::ComputeMatrix(GLFWwindow* _window)
 	computeMatricesFromInputs(_window); // todo 
 
 	
-	ProjectionMatrix = getProjectionMatrix();
-	ViewMatrix = getViewMatrix();
-	
-	MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+	MVP = transform.getMVP();
 
 	// Send our transformation to the currently bound shader, 
 	// in the "MVP" uniform

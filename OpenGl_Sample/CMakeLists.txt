@@ -39,7 +39,6 @@ include_directories(
 	external/glew-1.13.0/include/
 	external/assimp-3.0.1270/include/
 	.
-	/main
 )
 
 set(ALL_LIBS

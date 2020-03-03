@@ -38,7 +38,7 @@ int main( void )
 
 	
 	gr_objGameObject _cube = gr_objGameObject("Sphere.obj", "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1,0,0));
-	gr_ball _cube2 = gr_ball("aa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 1));
+	gr_ball _cube2 = gr_ball(glm::vec3(20, 0, 0), glm::vec3(0, 0, 0), glm::vec3(0, 0, 0), "aaa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 1), 10);
 	gr_gameBoard _board = gr_gameBoard();
 		
 
@@ -53,11 +53,11 @@ int main( void )
 	std::uniform_real_distribution<float> dist(-12, 2);
 
 	std::cout << dist(rng) << std::endl;*/
+	//_cube2.getTransform().setPosition(glm::vec3(0, 1, 1));
+
 	do
 	{
-
-		
-		_cube2.MoveRight(0.1, 1);
+		_cube2.setPosition(glm::vec3(0.1f, 0, 0));
 
 		grRenderer.RenderLoop(grWindow);
 	}

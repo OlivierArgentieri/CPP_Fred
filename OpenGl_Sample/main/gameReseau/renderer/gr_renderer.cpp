@@ -77,7 +77,7 @@ void gr_renderer::PollEvent()
 	glfwPollEvents();
 }
 
-void gr_renderer::RenderLoop(gr_window _gr_window)
+void gr_renderer::RenderLoop(gr_window _gr_window) const
 {
 	ClearScreen();
 	DrawEachObject(_gr_window);

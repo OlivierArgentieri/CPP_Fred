@@ -10,4 +10,5 @@ gr_objGameObject::gr_objGameObject(const char* _pathToObj, glm::vec3 _position, 
 	_position, _rotation, _scale, _texturePath, _vertexShaderPath, _fragmentShaderPath, _color)
 {
 	bool _test = loadOBJ(_pathToObj, gr_gameObject::vertices, gr_gameObject::uvs, gr_gameObject::normals);
+	
 }

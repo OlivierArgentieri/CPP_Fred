@@ -83,7 +83,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -102,10 +102,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -140,7 +140,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -159,10 +159,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -197,7 +197,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -216,10 +216,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -254,7 +254,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -272,10 +272,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\AntTweakBar-1.16\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glfw-3.1.2\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glm-0.9.7.1;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\glew-1.13.0\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\external\assimp-3.0.1270\include;D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -398,6 +398,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\rightBorder\gr_rightBorderGameBoard.cpp" />
     <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\topBorder\gr_topBorderGameBoard.hpp" />
     <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\topBorder\gr_topBorderGameBoard.cpp" />
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.hpp" />
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.cpp" />
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.hpp" />
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.cpp" />
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\util\gr_util.hpp" />
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\util\gr_util.cpp" />
     <None Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\TransformVertexShader.vertexshader" />
     <None Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\TextureFragmentShader.fragmentshader" />
   </ItemGroup>

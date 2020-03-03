@@ -5,10 +5,11 @@
 #include "topBorder/gr_topBorderGameBoard.hpp"
 
 #define WALL_HEIGHT 10
-
+#define WIDTH 100
+#define HEIGHT 100
 void gr_gameBoard::CreatePlane()
 {
-	plane = gr_planeGameBoard(glm::vec3(), glm::vec3(), glm::vec3(100, 0, 100), "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0,0,1));
+	plane = gr_planeGameBoard(glm::vec3(), glm::vec3(), glm::vec3(WIDTH, 0, HEIGHT), "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0,0,1));
 }
 
 void gr_gameBoard::CreateBorders()

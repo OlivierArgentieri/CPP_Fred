@@ -52,6 +52,15 @@
     <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\topBorder\gr_topBorderGameBoard.cpp">
       <Filter>gameReseau\gameObject\gameBoard\topBorder</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.cpp">
+      <Filter>gameReseau\gameObject\ball</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.cpp">
+      <Filter>gameReseau\managers\ball</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\util\gr_util.cpp">
+      <Filter>gameReseau\util</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\common\shader.hpp">
@@ -102,6 +111,15 @@
     <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\topBorder\gr_topBorderGameBoard.hpp">
       <Filter>gameReseau\gameObject\gameBoard\topBorder</Filter>
     </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.hpp">
+      <Filter>gameReseau\gameObject\ball</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.hpp">
+      <Filter>gameReseau\managers\ball</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\util\gr_util.hpp">
+      <Filter>gameReseau\util</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\CMakeLists.txt" />
@@ -130,6 +148,9 @@
     <Filter Include="gameReseau\gameObject">
       <UniqueIdentifier>{6163A636-B978-3F32-949D-DF9D33EA842B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="gameReseau\gameObject\ball">
+      <UniqueIdentifier>{F63E2F63-FB5B-3DB9-A91E-F6D832C8DB60}</UniqueIdentifier>
+    </Filter>
     <Filter Include="gameReseau\gameObject\gameBoard">
       <UniqueIdentifier>{8EE745C6-831C-3559-80B0-12AE441DEED5}</UniqueIdentifier>
     </Filter>
@@ -151,11 +172,20 @@
     <Filter Include="gameReseau\gameObject\objGameObject">
       <UniqueIdentifier>{A149B019-EE07-361A-93E0-9566F448F718}</UniqueIdentifier>
     </Filter>
+    <Filter Include="gameReseau\managers">
+      <UniqueIdentifier>{4B569F3D-3D2D-3FA6-A2C2-0EACC9FF49F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\managers\ball">
+      <UniqueIdentifier>{DA26EBB9-31A2-3FF4-8E47-DADDDB7C5030}</UniqueIdentifier>
+    </Filter>
     <Filter Include="gameReseau\renderer">
       <UniqueIdentifier>{9BD0A5C7-824E-3F4A-83B9-16EA3E67741B}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\transform">
       <UniqueIdentifier>{7ED80417-0882-309C-8C15-F73DC555941E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\util">
+      <UniqueIdentifier>{61E781CF-D407-3B67-9BCD-CC05B208624F}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\window">
       <UniqueIdentifier>{F814ED11-474B-3568-9AD0-D005F784CFC6}</UniqueIdentifier>

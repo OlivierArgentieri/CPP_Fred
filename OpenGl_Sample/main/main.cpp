@@ -23,6 +23,7 @@
 #include "gameReseau/gameObject/ball/gr_ball.hpp"
 #include "gameReseau/gameObject/objGameObject/gr_objGameObject.hpp"
 #include "gameReseau/gameObject/gameBoard/gr_gameBoard.hpp"
+#include "gameReseau/managers/ball/gr_ballManager.hpp"
 class gr_gameObject;
 using namespace glm;
 
@@ -37,27 +38,30 @@ int main( void )
 	gr_renderer grRenderer = gr_renderer();
 
 	
-	gr_objGameObject _cube = gr_objGameObject("Sphere.obj", "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1,0,0));
-	gr_ball _cube2 = gr_ball(glm::vec3(20, 0, 0), glm::vec3(0, 0, 0), glm::vec3(0, 0, 0), "aa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 1), 10);
+	//gr_objGameObject _cube = gr_objGameObject("Sphere.obj", "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1,0,0));
+	gr_ball _ball = gr_ball(vec3(10,0,0), vec3(), vec3(), "aaa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0,1,0));
+	gr_ball _cube2 = gr_ball(glm::vec3(0, 0, 0), glm::vec3(0, 0, 0), glm::vec3(0, 0, 0), "aaa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 1), 1);
 	gr_gameBoard _board = gr_gameBoard();
 		
 
-	grRenderer.AddGameObject(&_cube);
+	grRenderer.AddGameObject(&_ball);
 	grRenderer.AddGameObject(&_cube2);
 	grRenderer.AddGameObject(&_board);
 
-	/*
-	std::random_device dev;
-	std::mt19937 rng(dev());
+	gr_ballManager::getInstance()->makeSpawn(20,-50,50,1,1,-50,50);
+	auto _test = gr_ballManager::getInstance()->GetAllBall();
+
+	for (int i = 0; i < _test.size(); ++i)
+	{
+		grRenderer.AddGameObject(&_test[i]);
+
+	}
 	
-	std::uniform_real_distribution<float> dist(-12, 2);
-
-	std::cout << dist(rng) << std::endl;*/
 	//_cube2.getTransform().setPosition(glm::vec3(0, 1, 1));
-
+	//_cube2.setPosition(glm::vec3(10.0f, 0, 0));
 	do
 	{
-		_cube2.setPosition(glm::vec3(0.1f, 0, 0));
+		
 
 		grRenderer.RenderLoop(grWindow);
 	}

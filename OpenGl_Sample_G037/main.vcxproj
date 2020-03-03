@@ -400,6 +400,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\topBorder\gr_topBorderGameBoard.cpp" />
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.hpp" />
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.cpp" />
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.hpp" />
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.cpp" />
     <None Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\TransformVertexShader.vertexshader" />
     <None Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\TextureFragmentShader.fragmentshader" />
   </ItemGroup>

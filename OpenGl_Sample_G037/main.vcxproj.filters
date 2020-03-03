@@ -55,6 +55,9 @@
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.cpp">
       <Filter>gameReseau\gameObject\ball</Filter>
     </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.cpp">
+      <Filter>gameReseau\managers\ball</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\shader.hpp">
@@ -108,6 +111,9 @@
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.hpp">
       <Filter>gameReseau\gameObject\ball</Filter>
     </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.hpp">
+      <Filter>gameReseau\managers\ball</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\CMakeLists.txt" />
@@ -159,6 +165,12 @@
     </Filter>
     <Filter Include="gameReseau\gameObject\objGameObject">
       <UniqueIdentifier>{1C6B09A0-0AC5-32BF-9C20-8F7D1BF27E59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\managers">
+      <UniqueIdentifier>{853AEFE3-A648-3DB3-915D-8B437BE09F67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\managers\ball">
+      <UniqueIdentifier>{8644E92B-7197-35BD-B309-DBA4FBB7AAFA}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\renderer">
       <UniqueIdentifier>{A647B329-4163-34A9-BCDE-8541AED5A40E}</UniqueIdentifier>

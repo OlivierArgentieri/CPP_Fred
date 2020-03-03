@@ -19,6 +19,8 @@
 #include <iostream>
 #include <random>
 
+
+#include "gameReseau/gameObject/ball/gr_ball.hpp"
 #include "gameReseau/gameObject/objGameObject/gr_objGameObject.hpp"
 #include "gameReseau/gameObject/gameBoard/gr_gameBoard.hpp"
 class gr_gameObject;
@@ -36,7 +38,7 @@ int main( void )
 
 	
 	gr_objGameObject _cube = gr_objGameObject("Sphere.obj", "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1,0,0));
-	gr_objGameObject _cube2 = gr_objGameObject("Sphere.obj", "aa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 1));
+	gr_ball _cube2 = gr_ball("aa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 1));
 	gr_gameBoard _board = gr_gameBoard();
 		
 

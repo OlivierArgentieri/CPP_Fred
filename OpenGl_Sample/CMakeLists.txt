@@ -107,6 +107,11 @@ add_executable(main
 	main/gameReseau/gameObject/gameBoard/topBorder/gr_topBorderGameBoard.hpp
 	main/gameReseau/gameObject/gameBoard/topBorder/gr_topBorderGameBoard.cpp
 	
+	
+	
+	main/gameReseau/gameObject/ball/gr_ball.hpp
+	main/gameReseau/gameObject/ball/gr_ball.cpp
+	
 	main/TransformVertexShader.vertexshader
 	main/TextureFragmentShader.fragmentshader
 )
@@ -131,6 +136,7 @@ SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\bottomBorder    REGULAR_EXPRESSI
 SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\leftBorder    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/leftBorder")
 SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\rightBorder    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/rightBorder")
 SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\topBorder   REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/topBorder")
+SOURCE_GROUP(gameReseau\\gameObject\\ball REGULAR_EXPRESSION "./main/gameReseau/gameObject/ball/")
 	
 SOURCE_GROUP(gameReseau\\renderer    REGULAR_EXPRESSION "./main/gameReseau/renderer/")
 SOURCE_GROUP(gameReseau\\color    REGULAR_EXPRESSION "./main/gameReseau/color/")

@@ -15,8 +15,8 @@ private:
 public:
 	static gr_ballManager* getInstance();
 	void addBalls(gr_ball _ball);
-
-	void addBalls(gr_ball* _ball);	
+	void makeSpawn(unsigned int _nbItem);
+	void makeSpawn(unsigned int _nbItem)
 	void clear();
 	void deleteAll();
 };

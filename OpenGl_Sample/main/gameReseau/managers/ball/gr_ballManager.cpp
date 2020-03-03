@@ -23,6 +23,14 @@ void gr_ballManager::addBalls(gr_ball _ball)
 	balls.push_back(_temp);
 }
 
+auto gr_ballManager::makeSpawn(unsigned _nbItem) -> void
+{
+	for (int i = 0; i < _nbItem; ++i)
+	{
+		//todo
+	}
+}
+
 void gr_ballManager::clear()
 {
 	balls.clear();

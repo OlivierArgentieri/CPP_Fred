@@ -7,9 +7,9 @@ void gr_topBorderGameBoard::LoadVertices()
 	#define HEIGHT transform.scale.y
 	#define SHIFT transform.scale.z
 
-	#define POSX transform.position.x
-	#define POSY transform.position.y
-	#define POSZ transform.position.z
+	#define POSX /*transform.position.x*/0
+	#define POSY /*transform.position.y*/0
+	#define POSZ /*transform.position.z*/0
 
 	// interior
 	vertices.push_back(glm::vec3(-WIDTH /2 + POSX - SHIFT, HEIGHT+POSY, POSZ));

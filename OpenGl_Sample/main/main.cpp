@@ -38,9 +38,9 @@ int main( void )
 	gr_renderer grRenderer = gr_renderer();
 
 	
-	//gr_objGameObject _cube = gr_objGameObject("Sphere.obj", "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1,0,0));
-	gr_ball _ball = gr_ball(vec3(10,0,0), vec3(), vec3(), "aaa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0,1,0));
-	gr_ball _cube2 = gr_ball(glm::vec3(0, 0, 0), glm::vec3(0, 0, 0), glm::vec3(0, 0, 0), "aaa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 1));
+	gr_objGameObject _cube = gr_objGameObject("Sphere.obj", "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1,0,0));
+	gr_ball _ball = gr_ball(vec3(10,0,0), vec3(), vec3(1,1,1), "aaa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0,1,0));
+	gr_ball _cube2 = gr_ball(glm::vec3(0, 0, 0), glm::vec3(1,1,1) , glm::vec3(0, 0, 0), "aaa.DDS", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 1));
 	gr_gameBoard _board = gr_gameBoard();
 
 
@@ -49,18 +49,20 @@ int main( void )
 	grRenderer.AddGameObject(&_cube2);
 	grRenderer.AddGameObject(&_board);
 
-	gr_ballManager::getInstance()->makeSpawn(20,-50,50,1,1,-50,50);
+	gr_ballManager::getInstance()->makeSpawn(20,-10,10,1,1,-10,10);
 	auto _test = gr_ballManager::getInstance()->GetAllBall();
 
 	for (int i = 0; i < _test.size(); ++i)
 	{
-		grRenderer.AddGameObject(&_test[i]);
+		grRenderer.AddGameObject(_test[i]);
 	}
 	
 	//_cube2.getTransform().setPosition(glm::vec3(0, 1, 1));
 	//_cube2.setPosition(glm::vec3(10.0f, 0, 0));
 	do
 	{
+		_test[0]->SetPosition(vec3(0.1f, 0, 0));
+
 		grRenderer.RenderLoop(grWindow);
 	}
 	while (glfwGetKey(grWindow.GetWindow(), GLFW_KEY_ESCAPE) != GLFW_PRESS &&

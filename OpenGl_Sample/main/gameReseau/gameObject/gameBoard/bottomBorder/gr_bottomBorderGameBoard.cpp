@@ -4,14 +4,15 @@
 
 void gr_bottomBorderGameBoard::LoadVertices()
 {
-#define DEPTH transform.scale.z
-#define WIDTH transform.scale.x
-#define HEIGHT transform.scale.y
-#define SHIFT transform.scale.z
+	#define DEPTH transform.scale.z
+	#define WIDTH transform.scale.x
+	#define HEIGHT transform.scale.y
+	#define SHIFT transform.scale.z
+	
+	#define POSX /*transform.position.x*/0
+	#define POSY /*transform.position.y*/0
+	#define POSZ /*transform.position.z*/0
 
-#define POSX transform.position.x
-#define POSY transform.position.y
-#define POSZ transform.position.z
 	// interior
 	vertices.push_back(glm::vec3(WIDTH /2 + POSX + SHIFT, HEIGHT + POSY, POSZ));
 	vertices.push_back(glm::vec3(WIDTH / 2 + POSX + SHIFT, POSY, POSZ));

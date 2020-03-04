@@ -24,6 +24,8 @@ gr_gameObject::gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3
 	LoadTexture();
 	LoadShader(_vertexShaderPath, _fragmentShaderPath);
 	Color = _color;
+	SetPosition(_position);
+	gr_gameObject::SetScale(_scale);
 }
 
 gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
@@ -33,6 +35,9 @@ gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
 	LoadTexture();
 	
 	Color = _gameObject.Color;
+
+	SetPosition(_gameObject.transform.position);
+	gr_gameObject::SetScale(_gameObject.transform.scale);
 }
 
 

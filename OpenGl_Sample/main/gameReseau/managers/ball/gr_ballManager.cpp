@@ -18,10 +18,9 @@ gr_ballManager* gr_ballManager::getInstance()
 	return instance;
 }
 
-void gr_ballManager::addBalls(gr_ball _ball)
+void gr_ballManager::addBalls(gr_ball* _ball)
 {
-	gr_ball _temp = gr_ball(_ball);
-	balls.push_back(_temp);
+	balls.push_back(_ball);
 }
 
 void gr_ballManager::makeSpawn(unsigned _nbItem, float _minPositionX, float _maxPositionX, float _minPositionY, float _maxPositionY, float _minPositionZ, float _maxPositionZ)
@@ -29,18 +28,18 @@ void gr_ballManager::makeSpawn(unsigned _nbItem, float _minPositionX, float _max
 	for (int i = 0; i < _nbItem; ++i)
 	{
 		//get random position
-		gr_ball _ballToAdd = gr_ball(glm::vec3(gr_util::getRandomRange(_minPositionX, _maxPositionX), gr_util::getRandomRange(_minPositionY, _maxPositionY), gr_util::getRandomRange(_minPositionZ, _maxPositionZ)), glm::vec3(), glm::vec3(1,1,1), "aa.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(gr_util::getRandomRange(0,1), gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1)));
+		gr_ball *_ballToAdd = new gr_ball(glm::vec3(gr_util::getRandomRange(_minPositionX, _maxPositionX), gr_util::getRandomRange(_minPositionY, _maxPositionY), gr_util::getRandomRange(_minPositionZ, _maxPositionZ)), glm::vec3(), glm::vec3(1,1,1), "aa.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(gr_util::getRandomRange(0,1), gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1)));
 		balls.push_back(_ballToAdd);
 	}
 }
 
-void gr_ballManager::clear()
+void gr_ballManager::Clear()
 {
 	balls.clear();
 }
 
 
-void gr_ballManager::deleteAll()
+void gr_ballManager::DeleteAll()
 {
 	for (int i = 0; i < balls.size() ; ++i)
 	{
@@ -48,14 +47,20 @@ void gr_ballManager::deleteAll()
 	}
 }
 
-std::vector<gr_ball> gr_ballManager::GetAllBall()
+void gr_ballManager::Update()
 {
+	balls[2]->MoveRight(0, 0);
+}
+
+std::vector<gr_ball*> gr_ballManager::GetAllBall() const
+{
+	/*
 	std::vector<gr_ball> _toReturn;
 
 	for (int i = 0; i < balls.size(); ++i)
 	{
 		_toReturn.push_back(balls[i]);
 	}
-
+	*/
 	return balls;
 }

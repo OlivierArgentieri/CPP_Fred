@@ -18,6 +18,7 @@ public:
 	gr_transform(const gr_transform& _transform);
 
 	void SetPosition(glm::vec3 _position);
+	void translate(glm::vec3 _position);
 	void SetScale(glm::vec3 _scale);
 
 	glm::mat4 GetMVP() const;

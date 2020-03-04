@@ -25,11 +25,17 @@ gr_transform::gr_transform(const gr_transform& _transform) : gr_transform(_trans
 
 void gr_transform::SetPosition(glm::vec3 _position)
 {
-	
 	position = _position;
 	ModelMatrix = glm::mat4(1);
 	ModelMatrix = glm::translate(ModelMatrix, _position);
 }
+
+void gr_transform::translate(glm::vec3 _position)
+{
+	position += _position;
+	ModelMatrix = glm::translate(ModelMatrix, _position);
+}
+
 
 void gr_transform::SetScale(glm::vec3 _scale)
 {

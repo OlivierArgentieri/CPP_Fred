@@ -58,8 +58,14 @@
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.cpp">
       <Filter>gameReseau\managers\ball</Filter>
     </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\input\gr_inputManager.cpp">
+      <Filter>gameReseau\managers\input</Filter>
+    </ClCompile>
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\util\gr_util.cpp">
       <Filter>gameReseau\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\player\gr_player.cpp">
+      <Filter>gameReseau\player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -117,8 +123,14 @@
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.hpp">
       <Filter>gameReseau\managers\ball</Filter>
     </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\input\gr_inputManager.hpp">
+      <Filter>gameReseau\managers\input</Filter>
+    </ClInclude>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\util\gr_util.hpp">
       <Filter>gameReseau\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\player\gr_player.hpp">
+      <Filter>gameReseau\player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +189,12 @@
     </Filter>
     <Filter Include="gameReseau\managers\ball">
       <UniqueIdentifier>{8644E92B-7197-35BD-B309-DBA4FBB7AAFA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\managers\input">
+      <UniqueIdentifier>{43203552-BB62-3F34-8A96-2D84111B1B70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\player">
+      <UniqueIdentifier>{6F82A74B-EFEE-3B6A-96B7-7FB13BF49E64}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\renderer">
       <UniqueIdentifier>{A647B329-4163-34A9-BCDE-8541AED5A40E}</UniqueIdentifier>

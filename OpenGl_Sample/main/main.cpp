@@ -24,6 +24,8 @@
 #include "gameReseau/gameObject/objGameObject/gr_objGameObject.hpp"
 #include "gameReseau/gameObject/gameBoard/gr_gameBoard.hpp"
 #include "gameReseau/managers/ball/gr_ballManager.hpp"
+#include "gameReseau/managers/input/gr_inputManager.hpp"
+#include "gameReseau/player/gr_player.hpp"
 class gr_gameObject;
 using namespace glm;
 
@@ -56,14 +58,19 @@ int main( void )
 	{
 		grRenderer.AddGameObject(_test[i]);
 	}
+
+	gr_player _player = gr_player(_test[0]);
 	
 	//_cube2.getTransform().setPosition(glm::vec3(0, 1, 1));
 	//_cube2.setPosition(glm::vec3(10.0f, 0, 0));
 	do
 	{
-		_test[0]->SetPosition(vec3(0.1f, 0, 0));
-
+		//_test[0]->SetPosition(_test[0]->GetTransform().position + vec3(0.1f, 0, 0));
+		// update input manager
+		gr_inputManager::getInstance()->update(grWindow, 0);
+		
 		grRenderer.RenderLoop(grWindow);
+		
 	}
 	while (glfwGetKey(grWindow.GetWindow(), GLFW_KEY_ESCAPE) != GLFW_PRESS &&
 		glfwWindowShouldClose(grWindow.GetWindow()) == 0);

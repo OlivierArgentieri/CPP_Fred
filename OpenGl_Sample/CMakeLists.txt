@@ -115,8 +115,14 @@ add_executable(main
 	main/gameReseau/managers/ball/gr_ballManager.hpp
 	main/gameReseau/managers/ball/gr_ballManager.cpp
 		
+	main/gameReseau/managers/input/gr_inputManager.hpp
+	main/gameReseau/managers/input/gr_inputManager.cpp
+	
 	main/gameReseau/util/gr_util.hpp
 	main/gameReseau/util/gr_util.cpp
+	
+	main/gameReseau/player/gr_player.hpp
+	main/gameReseau/player/gr_player.cpp
 	
 	main/TransformVertexShader.vertexshader
 	main/TextureFragmentShader.fragmentshader
@@ -148,7 +154,9 @@ SOURCE_GROUP(gameReseau\\renderer    REGULAR_EXPRESSION "./main/gameReseau/rende
 SOURCE_GROUP(gameReseau\\color    REGULAR_EXPRESSION "./main/gameReseau/color/")
 SOURCE_GROUP(gameReseau\\transform    REGULAR_EXPRESSION "./main/gameReseau/transform/")
 SOURCE_GROUP(gameReseau\\managers\\ball REGULAR_EXPRESSION "./main/gameReseau/managers/ball")
+SOURCE_GROUP(gameReseau\\managers\\input REGULAR_EXPRESSION "./main/gameReseau/managers/input")
 SOURCE_GROUP(gameReseau\\util REGULAR_EXPRESSION "./main/gameReseau/util")
+SOURCE_GROUP(gameReseau\\player REGULAR_EXPRESSION "./main/gameReseau/player")
 
 
 if (NOT ${CMAKE_GENERATOR} MATCHES "Xcode" )

@@ -51,7 +51,7 @@ int main( void )
 	//grRenderer.AddGameObject(&_cube2);
 	grRenderer.AddGameObject(&_board);
 
-	gr_ballManager::getInstance()->makeSpawn(20,-10,10,1,1,-10,10);
+	gr_ballManager::getInstance()->makeSpawn(20,-10,10,0,0,-10,10);
 	auto _test = gr_ballManager::getInstance()->GetAllBall();
 
 	for (int i = 0; i < _test.size(); ++i)
@@ -59,7 +59,7 @@ int main( void )
 		grRenderer.AddGameObject(_test[i]);
 	}
 
-	gr_player _player = gr_player(_test[0]);
+//	gr_player _player = gr_player(_test[0]);
 	
 	//_cube2.getTransform().setPosition(glm::vec3(0, 1, 1));
 	//_cube2.setPosition(glm::vec3(10.0f, 0, 0));

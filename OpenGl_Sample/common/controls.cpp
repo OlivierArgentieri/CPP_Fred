@@ -33,8 +33,8 @@ float mouseSpeed = 0.005f;
 
 
 
-void computeMatricesFromInputs(GLFWwindow* _window){
-
+void computeMatricesFromInputs(GLFWwindow* _window)
+{
 	if (_window == NULL) return;
 	
 	// glfwGetTime is called only once, the first time this function is called

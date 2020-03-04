@@ -23,13 +23,18 @@ gr_transform::gr_transform(const gr_transform& _transform) : gr_transform(_trans
 	ModelMatrix = _transform.ModelMatrix;
 }
 
-void gr_transform::setPosition(glm::vec3 _position)
+void gr_transform::SetPosition(glm::vec3 _position)
 {
 	position = _position;
 	ModelMatrix = glm::translate(ModelMatrix, _position);
 }
 
-glm::mat4 gr_transform::getMVP() const
+void gr_transform::SetScale(glm::vec3 _scale)
+{
+	scale = _scale;
+}
+
+glm::mat4 gr_transform::GetMVP() const
 {
 	return  getProjectionMatrix() * getViewMatrix() * ModelMatrix;
 }

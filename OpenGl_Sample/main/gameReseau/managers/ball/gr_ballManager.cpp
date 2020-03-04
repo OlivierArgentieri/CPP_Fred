@@ -29,7 +29,7 @@ void gr_ballManager::makeSpawn(unsigned _nbItem, float _minPositionX, float _max
 	for (int i = 0; i < _nbItem; ++i)
 	{
 		//get random position
-		gr_ball _ballToAdd = gr_ball(glm::vec3(gr_util::getRandomRange(_minPositionX, _maxPositionX), gr_util::getRandomRange(_minPositionY, _maxPositionY), gr_util::getRandomRange(_minPositionZ, _maxPositionZ)), glm::vec3(), glm::vec3(), "aa.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(gr_util::getRandomRange(0,1), gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1)));
+		gr_ball _ballToAdd = gr_ball(glm::vec3(gr_util::getRandomRange(_minPositionX, _maxPositionX), gr_util::getRandomRange(_minPositionY, _maxPositionY), gr_util::getRandomRange(_minPositionZ, _maxPositionZ)), glm::vec3(), glm::vec3(1,1,1), "aa.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(gr_util::getRandomRange(0,1), gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1)));
 		balls.push_back(_ballToAdd);
 	}
 }

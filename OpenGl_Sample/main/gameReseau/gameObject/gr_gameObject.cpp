@@ -24,7 +24,6 @@ gr_gameObject::gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3
 	LoadTexture();
 	LoadShader(_vertexShaderPath, _fragmentShaderPath);
 	Color = _color;
-	InitMatrix(); // init MVP Matrix
 }
 
 gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
@@ -34,7 +33,6 @@ gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
 	LoadTexture();
 	
 	Color = _gameObject.Color;
-	InitMatrix(); // init MVP Matrix
 }
 
 
@@ -136,14 +134,26 @@ GLuint gr_gameObject::GetTextureID() const
 	return TextureID;
 }
 
-gr_transform gr_gameObject::getTransform() const
+gr_transform gr_gameObject::GetTransform() const
 {
 	return transform;
 }
 
-void gr_gameObject::setPosition(glm::vec3 _pos)
+void gr_gameObject::SetPosition(glm::vec3 _pos)
 {
-	transform.setPosition(_pos);
+	transform.SetPosition(_pos);
+}
+
+void gr_gameObject::SetScale(glm::vec3 _scale)
+{
+	// todo in transform
+	transform.SetScale(_scale);
+	for	(int i = 0; i < vertices.size() ; ++i)
+	{
+		vertices[i].x *= _scale.x;
+		vertices[i].y *= _scale.y;
+		vertices[i].z *= _scale.z;
+	}
 }
 
 void gr_gameObject::Draw(gr_window* _window)
@@ -167,7 +177,6 @@ void gr_gameObject::Draw(gr_window* _window)
 }
 
 void gr_gameObject::BindTexture() const
-// todo
 {
 	if (texturePath[0] == '\0')
 	{
@@ -194,7 +203,6 @@ void gr_gameObject::InitBuffer()
 
 	VerticesBuffer();
 	UvBuffer();
-
 }
 
 void gr_gameObject::LoadShader(const char* _vertexShaderPath, const char* _fragmentShaderPath)
@@ -216,17 +224,6 @@ void gr_gameObject::SetUseTexture(const bool _res) const
 	glUniform1i(color, _res);
 }
 
-void gr_gameObject::InitMatrix()
-{
-	/*
-	ProjectionMatrix = getProjectionMatrix();
-	ViewMatrix = getViewMatrix();
-	ModelMatrix = glm::mat4(1.0);
-	
-	MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
-	*/
-}
-
 void gr_gameObject::ComputeMatrix(GLFWwindow* _window)
 {
 	if (!_window) return;
@@ -235,7 +232,7 @@ void gr_gameObject::ComputeMatrix(GLFWwindow* _window)
 	computeMatricesFromInputs(_window); // todo 
 
 	
-	MVP = transform.getMVP();
+	MVP = transform.GetMVP();
 
 	// Send our transformation to the currently bound shader, 
 	// in the "MVP" uniform

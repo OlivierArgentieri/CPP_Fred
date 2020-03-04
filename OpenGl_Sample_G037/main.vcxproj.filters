@@ -58,6 +58,9 @@
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.cpp">
       <Filter>gameReseau\managers\ball</Filter>
     </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\util\gr_util.cpp">
+      <Filter>gameReseau\util</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\shader.hpp">
@@ -113,6 +116,9 @@
     </ClInclude>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.hpp">
       <Filter>gameReseau\managers\ball</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\util\gr_util.hpp">
+      <Filter>gameReseau\util</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +183,9 @@
     </Filter>
     <Filter Include="gameReseau\transform">
       <UniqueIdentifier>{07021E30-637E-30B8-8A8A-2D2E95F4B8C4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\util">
+      <UniqueIdentifier>{7035B18B-B591-302F-ACEC-95749353A258}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\window">
       <UniqueIdentifier>{3B116D43-B373-35E6-B9C0-20AEA329E8D3}</UniqueIdentifier>

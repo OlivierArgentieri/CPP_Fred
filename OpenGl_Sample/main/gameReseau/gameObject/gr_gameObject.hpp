@@ -69,12 +69,12 @@ public:
 	void Clean() const;
 	void SetColorShader(const gr_color _color) const;
 	void SetUseTexture(bool _res) const;
-	void InitMatrix();
 	void ComputeMatrix(GLFWwindow* _window);
 	void UseShader(GLint _shaderID);
 	GLuint GetTexture() const;
 	GLuint GetShader() const;
 	GLuint GetTextureID() const;
-	gr_transform getTransform()const;
-	void setPosition(glm::vec3 _pos);
+	gr_transform GetTransform()const;
+	void SetPosition(glm::vec3 _pos);
+	void virtual SetScale(glm::vec3 _scale);
 };

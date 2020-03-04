@@ -17,7 +17,8 @@ public:
 	gr_transform(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale);
 	gr_transform(const gr_transform& _transform);
 
-	void setPosition(glm::vec3 _position);
+	void SetPosition(glm::vec3 _position);
+	void SetScale(glm::vec3 _scale);
 
-	glm::mat4 getMVP() const;
+	glm::mat4 GetMVP() const;
 };

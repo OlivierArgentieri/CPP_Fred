@@ -30,6 +30,6 @@ public:
 	void makeSpawn(unsigned _nbItem, float _minPositionX, float _maxPositionX, float _minPositionY, float _maxPositionY, float _minPositionZ, float _maxPositionZ);
 	void clear();
 	void deleteAll();
-	void update();
+	void update(float _deltaTime);
 	std::vector<gr_ball*> getAllBall() const;
 };

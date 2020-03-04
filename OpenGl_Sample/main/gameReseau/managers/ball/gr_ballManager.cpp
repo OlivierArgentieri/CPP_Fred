@@ -11,6 +11,7 @@
 #include "main/gameReseau/util/gr_util.hpp"
 
 #define BALL_SCALE 1
+#define BALL_SPEED 5.0f
 
 gr_ballManager* gr_ballManager::instance = nullptr;
 
@@ -98,22 +99,22 @@ void gr_ballManager::deleteAll()
 	}
 }
 
-void gr_ballManager::update()
+void gr_ballManager::update(float _deltaTime)
 {
 	gr_ball* _collideBall = nullptr;
 	for (int i = 0; i < balls.size(); ++i)
 	{
-		_collideBall = testCollision(balls[i]->getTransform().position + balls[i]->getVelocity(), balls[i]);
+		_collideBall = testCollision(balls[i]->getTransform().position  + balls[i]->getVelocity() * _deltaTime * BALL_SPEED, balls[i]);
 
 
 		if (_collideBall != nullptr)
 		{
 			glm::vec3 _director = glm::normalize(_collideBall->getTransform().position - balls[i]->getTransform().position);
-			_collideBall->setVelocity((balls[i]->getVelocity() + _director) *0.20f );
+			_collideBall->setVelocity((balls[i]->getVelocity() + _director));
 		}// test collision todo
 
 
-		balls[i]->setPosition(balls[i]->getTransform().position + balls[i]->getVelocity());
+		balls[i]->setPosition(balls[i]->getTransform().position + balls[i]->getVelocity() * _deltaTime * BALL_SPEED);
 
 		_collideBall = nullptr;
 	}

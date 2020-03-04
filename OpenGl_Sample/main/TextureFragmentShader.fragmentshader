@@ -14,13 +14,11 @@ uniform vec3 color;
 
 void main(){
 	// Output color = color of the texture at the specified UV
-	//color  = vec3(1,0,0);
-
+	
 	if(isTextureLoaded)
 		finalColor.rgb = color.rgb * texture( myTextureSampler, UV ).rgb;
 	else
 		finalColor.rgb = color;
 
 	finalColor.a = 0.5f;
-	//gl_FragColor.a = alpha;
 }

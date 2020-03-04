@@ -11,7 +11,7 @@
 
 void gr_gameBoard::CreatePlane()
 {
-	plane = gr_planeGameBoard(glm::vec3(), glm::vec3(), glm::vec3(WIDTH, 0, HEIGHT), "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0,0,1));
+	plane = gr_planeGameBoard(glm::vec3(), glm::vec3(), glm::vec3(WIDTH, 0, HEIGHT), "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(65,105,225));
 }
 
 void gr_gameBoard::CreateBorders()

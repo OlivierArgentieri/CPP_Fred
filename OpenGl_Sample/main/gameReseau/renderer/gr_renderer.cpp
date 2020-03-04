@@ -8,6 +8,8 @@
 #include <vector>
 
 
+float gr_renderer::deltaTime = 0;
+
 void gr_renderer::initGLEW()
 {
 	// Initialize GLEW
@@ -73,11 +75,18 @@ void gr_renderer::pollEvent()
 
 void gr_renderer::renderLoop(gr_window _gr_window) const
 {
+	// calcul delta time
+	static double _oldTime = glfwGetTime();
+	double _currentTime = glfwGetTime();
+	deltaTime = float(_currentTime - _oldTime);
+	
 	clearScreen();
 	drawEachObject(_gr_window);
 	
 	_gr_window.swapBuffer();
 	pollEvent();
+
+	_oldTime = _currentTime;
 }
 
 

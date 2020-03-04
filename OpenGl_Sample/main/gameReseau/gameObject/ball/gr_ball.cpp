@@ -42,6 +42,6 @@ glm::vec3 gr_ball::getVelocity() const
 void gr_ball::update()
 {
 	
-		velocity *= 0.90f; // frottement
+		velocity *= 0.99; // frottement
 	
 }

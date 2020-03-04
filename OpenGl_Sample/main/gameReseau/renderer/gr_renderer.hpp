@@ -31,6 +31,8 @@ private :
 	static void close();
 
 public:
+	static float deltaTime;
+	
 	gr_renderer();
 
 	void addVertices(std::vector<glm::vec3> _vertices);

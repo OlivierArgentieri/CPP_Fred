@@ -65,10 +65,11 @@ int main( void )
 	//_cube2.setPosition(glm::vec3(10.0f, 0, 0));
 	do
 	{
+		std::cout << gr_renderer::deltaTime << "\n";
 		//_test[0]->SetPosition(_test[0]->GetTransform().position + vec3(0.1f, 0, 0));
 		// update input manager
 		gr_inputManager::getInstance()->update(grWindow, 0);
-		gr_ballManager::getInstance()->update();
+		gr_ballManager::getInstance()->update(gr_renderer::deltaTime);
 		grRenderer.renderLoop(grWindow);
 		
 	}

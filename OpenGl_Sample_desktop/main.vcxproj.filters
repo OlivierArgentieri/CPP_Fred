@@ -25,12 +25,6 @@
     <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gr_gameObject.cpp">
       <Filter>gameReseau\gameObject</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.cpp">
-      <Filter>gameReseau\color</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.cpp">
-      <Filter>gameReseau\transform</Filter>
-    </ClCompile>
     <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.cpp">
       <Filter>gameReseau\gameObject\objGameObject</Filter>
     </ClCompile>
@@ -55,11 +49,23 @@
     <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.cpp">
       <Filter>gameReseau\gameObject\ball</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.cpp">
+      <Filter>gameReseau\color</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.cpp">
+      <Filter>gameReseau\transform</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.cpp">
       <Filter>gameReseau\managers\ball</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\input\gr_inputManager.cpp">
+      <Filter>gameReseau\managers\input</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\util\gr_util.cpp">
       <Filter>gameReseau\util</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\player\gr_player.cpp">
+      <Filter>gameReseau\player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -83,12 +89,6 @@
     </ClInclude>
     <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gr_gameObject.hpp">
       <Filter>gameReseau\gameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.hpp">
-      <Filter>gameReseau\color</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.hpp">
-      <Filter>gameReseau\transform</Filter>
     </ClInclude>
     <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.hpp">
       <Filter>gameReseau\gameObject\objGameObject</Filter>
@@ -114,11 +114,23 @@
     <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.hpp">
       <Filter>gameReseau\gameObject\ball</Filter>
     </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.hpp">
+      <Filter>gameReseau\color</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.hpp">
+      <Filter>gameReseau\transform</Filter>
+    </ClInclude>
     <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.hpp">
       <Filter>gameReseau\managers\ball</Filter>
     </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\input\gr_inputManager.hpp">
+      <Filter>gameReseau\managers\input</Filter>
+    </ClInclude>
     <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\util\gr_util.hpp">
       <Filter>gameReseau\util</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Projets\PullGithub\fred2\CPP_Fred\OpenGl_Sample\main\gameReseau\player\gr_player.hpp">
+      <Filter>gameReseau\player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +189,12 @@
     </Filter>
     <Filter Include="gameReseau\managers\ball">
       <UniqueIdentifier>{DA26EBB9-31A2-3FF4-8E47-DADDDB7C5030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\managers\input">
+      <UniqueIdentifier>{1C6CB6E2-CB6A-33E5-8351-2A9B9BC51F57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\player">
+      <UniqueIdentifier>{32381261-81F1-3DB7-A7FC-8BABCDE2F812}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\renderer">
       <UniqueIdentifier>{9BD0A5C7-824E-3F4A-83B9-16EA3E67741B}</UniqueIdentifier>

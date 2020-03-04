@@ -12,7 +12,7 @@ private:
 
 	
 public:
-	__event void OnMove(glm::vec2 _axisPosition);
+	__event void onMove(glm::vec2 _axisPosition);
 	gr_inputManager();
 
 	static gr_inputManager* getInstance();

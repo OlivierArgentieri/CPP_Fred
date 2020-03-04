@@ -1,6 +1,7 @@
 #include "gr_util.hpp"
 #include <random>
 
+// hardware random 
 float gr_util::getRandomRange(float _min, float _max)
 {
 	std::random_device dev;

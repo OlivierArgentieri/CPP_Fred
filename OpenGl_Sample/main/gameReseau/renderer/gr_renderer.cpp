@@ -8,7 +8,7 @@
 #include <vector>
 
 
-void gr_renderer::InitGLEW()
+void gr_renderer::initGLEW()
 {
 	// Initialize GLEW
 	glewExperimental = true; // Needed for core profile
@@ -21,17 +21,17 @@ void gr_renderer::InitGLEW()
 
 gr_renderer::gr_renderer()
 {
-	InitGLEW();
-	glGenVertexArrays(1, &VertexArrayID);
-	glBindVertexArray(VertexArrayID);
+	initGLEW();
+	glGenVertexArrays(1, &vertexArrayID);
+	glBindVertexArray(vertexArrayID);
 }
 
-void gr_renderer::AddGameObject(gr_gameObject *_go)
+void gr_renderer::addGameObject(gr_gameObject *_go)
 {
 	gameObjects.push_back(_go);
 }
 
-void gr_renderer::AddVertices(std::vector<glm::vec3> _vertices)
+void gr_renderer::addVertices(std::vector<glm::vec3> _vertices)
 {
 	for (glm::vec3 vertex : _vertices)
 	{
@@ -39,7 +39,7 @@ void gr_renderer::AddVertices(std::vector<glm::vec3> _vertices)
 	}
 }
 
-void gr_renderer::AddUV(std::vector<glm::vec2> _uvs)
+void gr_renderer::addUV(std::vector<glm::vec2> _uvs)
 {
 	for (glm::vec2 value : _uvs)
 	{
@@ -47,18 +47,18 @@ void gr_renderer::AddUV(std::vector<glm::vec2> _uvs)
 	}
 }
 
-void gr_renderer::ClearScreen()
+void gr_renderer::clearScreen()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-void gr_renderer::ClearVerticesAndUV()
+void gr_renderer::clearVerticesAndUV()
 {
 	vertices.clear();
 	uvs.clear();
 }
 
-void gr_renderer::DrawEachObject(gr_window _gr_window) const
+void gr_renderer::drawEachObject(gr_window _gr_window) const
 {
 	for (gr_gameObject* _game_object : gameObjects)
 	{
@@ -66,31 +66,31 @@ void gr_renderer::DrawEachObject(gr_window _gr_window) const
 	}
 }
 
-void gr_renderer::PollEvent()
+void gr_renderer::pollEvent()
 {
 	glfwPollEvents();
 }
 
-void gr_renderer::RenderLoop(gr_window _gr_window) const
+void gr_renderer::renderLoop(gr_window _gr_window) const
 {
-	ClearScreen();
-	DrawEachObject(_gr_window);
+	clearScreen();
+	drawEachObject(_gr_window);
 	
-	_gr_window.SwapBuffer();
-	PollEvent();
+	_gr_window.swapBuffer();
+	pollEvent();
 }
 
 
-void gr_renderer::Clean() const
+void gr_renderer::clean() const
 {
 	for (gr_gameObject* _game_object : gameObjects)
 	{
 		_game_object->clean();
 	}
-	Close();
+	close();
 }
 
-void gr_renderer::CleanGameObject() const
+void gr_renderer::cleanGameObject() const
 {
 	for (gr_gameObject* _game_object : gameObjects)
 	{
@@ -99,7 +99,7 @@ void gr_renderer::CleanGameObject() const
 	}
 }
 
-void gr_renderer::Close()
+void gr_renderer::close()
 {
 	glfwTerminate();
 }

@@ -14,19 +14,18 @@ class gr_window
 	
 	GLFWwindow* window;
 	
-	void InitGLFW();
-	void InitWindowSettings();
-	void InitMacSettings();
-	void CreateWindow(const char* _titleWindow);
+	void initGLFW();
+	void initWindowSettings();
+	void initMacSettings();
+	void createWindow(const char* _titleWindow);
 
-	
 	
 public:
 	gr_window(float _width, float _height, const char* _title, const gr_color _color);
-	void InitWindow();
-	void SwapBuffer() const;
+	void initWindow();
+	void swapBuffer() const;
 	
-	int GetKey(int _key) const;
+	int getKey(int _key) const;
 
-	GLFWwindow* GetWindow() const;
+	GLFWwindow* getWindow() const;
 };

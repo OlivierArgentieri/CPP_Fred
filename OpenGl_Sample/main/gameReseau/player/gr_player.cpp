@@ -11,12 +11,12 @@ void gr_player::OnMove(glm::vec2 _axisValues)
 
 void gr_player::RegisterToInputManager(gr_inputManager* _inputManager)
 {
-	__hook(&gr_inputManager::OnMove, _inputManager, &gr_player::OnMove);
+	__hook(&gr_inputManager::onMove, _inputManager, &gr_player::OnMove);
 }
 
 void gr_player::UnRegisterToInputManager(gr_inputManager* _inputManager)
 {
-	__unhook(&gr_inputManager::OnMove, _inputManager, &gr_player::OnMove);
+	__unhook(&gr_inputManager::onMove, _inputManager, &gr_player::OnMove);
 }
 
 gr_player::gr_player(gr_ball* _ball)

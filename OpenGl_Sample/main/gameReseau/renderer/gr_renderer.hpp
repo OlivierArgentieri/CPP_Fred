@@ -19,35 +19,27 @@ private :
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals; // not use todo
 
-	// buffers
-	//GLuint vertexBuffer;
-	//GLuint uvBuffer;
 	
-	GLuint VertexArrayID;
+	GLuint vertexArrayID;
 	GLuint programID;
-	GLuint MatrixID;
-	//GLuint Texture;
-	//GLuint TextureID;
+	GLuint matrixID;
 
-	static void InitGLEW();
-	static void ClearScreen();
-	//void UseShader(GLint _shaderID);
-	//void ComputeMVPMatrix(GLFWwindow* _window) const;
-	//void BindTexture(gr_gameObject* _go);
-	void DrawEachObject(gr_window _gr_window) const;
-	static void PollEvent();
-	static void Close();
+	static void initGLEW();
+	static void clearScreen();
+	void drawEachObject(gr_window _gr_window) const;
+	static void pollEvent();
+	static void close();
 
 public:
 	gr_renderer();
 
-	void AddVertices(std::vector<glm::vec3> _vertices);
-	void AddUV(std::vector<glm::vec2> _uvs);
+	void addVertices(std::vector<glm::vec3> _vertices);
+	void addUV(std::vector<glm::vec2> _uvs);
 
-	void RenderLoop(gr_window _gr_window) const;
-	void Clean() const;
+	void renderLoop(gr_window _gr_window) const;
+	void clean() const;
 	//	void Clean() const;
-	void CleanGameObject() const;
-	void ClearVerticesAndUV();
-	void AddGameObject(gr_gameObject *_go);
+	void cleanGameObject() const;
+	void clearVerticesAndUV();
+	void addGameObject(gr_gameObject *_go);
 };

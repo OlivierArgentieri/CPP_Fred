@@ -57,7 +57,10 @@ add_definitions(
 
 
 # main
-add_executable(main
+add_executable(
+
+#base :
+	main
 	main/main.cpp
 	common/shader.cpp
 	common/shader.hpp
@@ -68,25 +71,20 @@ add_executable(main
 	common/objloader.cpp
 	common/objloader.hpp
 	
+#window :
 	main/gameReseau/window/gr_window.hpp
 	main/gameReseau/window/gr_window.cpp
 	
+#renderer :
 	main/gameReseau/renderer/gr_renderer.hpp
 	main/gameReseau/renderer/gr_renderer.cpp
-	
+
+#gameObject :
 	main/gameReseau/gameObject/gr_gameObject.hpp
 	main/gameReseau/gameObject/gr_gameObject.cpp
-	
-	main/gameReseau/color/gr_color.hpp
-	main/gameReseau/color/gr_color.cpp
-	
-	
-	main/gameReseau/transform/gr_transform.hpp
-	main/gameReseau/transform/gr_transform.cpp
-	
+
 	main/gameReseau/gameObject/objgameObject/gr_objGameObject.hpp
 	main/gameReseau/gameObject/objgameObject/gr_objGameObject.cpp
-	
 	
 	main/gameReseau/gameObject/gameBoard/gr_gameBoard.hpp
 	main/gameReseau/gameObject/gameBoard/gr_gameBoard.cpp
@@ -106,24 +104,35 @@ add_executable(main
 	main/gameReseau/gameObject/gameBoard/topBorder/gr_topBorderGameBoard.hpp
 	main/gameReseau/gameObject/gameBoard/topBorder/gr_topBorderGameBoard.cpp
 	
-	
-	
 	main/gameReseau/gameObject/ball/gr_ball.hpp
 	main/gameReseau/gameObject/ball/gr_ball.cpp
 	
+
+#color :
+	main/gameReseau/color/gr_color.hpp
+	main/gameReseau/color/gr_color.cpp
 	
+#transform :
+	main/gameReseau/transform/gr_transform.hpp
+	main/gameReseau/transform/gr_transform.cpp
+	
+	
+#managers :
 	main/gameReseau/managers/ball/gr_ballManager.hpp
 	main/gameReseau/managers/ball/gr_ballManager.cpp
 		
 	main/gameReseau/managers/input/gr_inputManager.hpp
 	main/gameReseau/managers/input/gr_inputManager.cpp
-	
+
+#util :
 	main/gameReseau/util/gr_util.hpp
 	main/gameReseau/util/gr_util.cpp
-	
+
+#player :
 	main/gameReseau/player/gr_player.hpp
 	main/gameReseau/player/gr_player.cpp
-	
+
+#shaders : 
 	main/TransformVertexShader.vertexshader
 	main/TextureFragmentShader.fragmentshader
 )

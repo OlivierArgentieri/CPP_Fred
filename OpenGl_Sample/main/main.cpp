@@ -36,7 +36,7 @@ int main( void )
 {
 	gr_window grWindow = gr_window(1024, 768,"Tutorial 07 - Model Loading", gr_color(0.0f, 0.0f, .1f, 0));
 
-	grWindow.InitWindow();
+	grWindow.initWindow();
 	gr_renderer grRenderer = gr_renderer();
 
 	
@@ -49,14 +49,14 @@ int main( void )
 	
 	//grRenderer.AddGameObject(&_ball);
 	//grRenderer.AddGameObject(&_cube2);
-	grRenderer.AddGameObject(&_board);
+	grRenderer.addGameObject(&_board);
 
 	gr_ballManager::getInstance()->makeSpawn(20,-10,10,0,0,-10,10);
-	auto _test = gr_ballManager::getInstance()->GetAllBall();
+	auto _test = gr_ballManager::getInstance()->getAllBall();
 
 	for (int i = 0; i < _test.size(); ++i)
 	{
-		grRenderer.AddGameObject(_test[i]);
+		grRenderer.addGameObject(_test[i]);
 	}
 
 //	gr_player _player = gr_player(_test[0]);
@@ -68,14 +68,14 @@ int main( void )
 		//_test[0]->SetPosition(_test[0]->GetTransform().position + vec3(0.1f, 0, 0));
 		// update input manager
 		gr_inputManager::getInstance()->update(grWindow, 0);
-		gr_ballManager::getInstance()->Update();
-		grRenderer.RenderLoop(grWindow);
+		gr_ballManager::getInstance()->update();
+		grRenderer.renderLoop(grWindow);
 		
 	}
-	while (glfwGetKey(grWindow.GetWindow(), GLFW_KEY_ESCAPE) != GLFW_PRESS &&
-		glfwWindowShouldClose(grWindow.GetWindow()) == 0);
+	while (glfwGetKey(grWindow.getWindow(), GLFW_KEY_ESCAPE) != GLFW_PRESS &&
+		glfwWindowShouldClose(grWindow.getWindow()) == 0);
 
-	grRenderer.Clean();
+	grRenderer.clean();
 	
 	return 0;
 }

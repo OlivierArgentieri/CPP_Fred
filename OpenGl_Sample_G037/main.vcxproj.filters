@@ -25,12 +25,6 @@
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gr_gameObject.cpp">
       <Filter>gameReseau\gameObject</Filter>
     </ClCompile>
-    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.cpp">
-      <Filter>gameReseau\color</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.cpp">
-      <Filter>gameReseau\transform</Filter>
-    </ClCompile>
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.cpp">
       <Filter>gameReseau\gameObject\objGameObject</Filter>
     </ClCompile>
@@ -54,6 +48,12 @@
     </ClCompile>
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.cpp">
       <Filter>gameReseau\gameObject\ball</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.cpp">
+      <Filter>gameReseau\color</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.cpp">
+      <Filter>gameReseau\transform</Filter>
     </ClCompile>
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.cpp">
       <Filter>gameReseau\managers\ball</Filter>
@@ -90,12 +90,6 @@
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gr_gameObject.hpp">
       <Filter>gameReseau\gameObject</Filter>
     </ClInclude>
-    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.hpp">
-      <Filter>gameReseau\color</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.hpp">
-      <Filter>gameReseau\transform</Filter>
-    </ClInclude>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.hpp">
       <Filter>gameReseau\gameObject\objGameObject</Filter>
     </ClInclude>
@@ -119,6 +113,12 @@
     </ClInclude>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.hpp">
       <Filter>gameReseau\gameObject\ball</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.hpp">
+      <Filter>gameReseau\color</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.hpp">
+      <Filter>gameReseau\transform</Filter>
     </ClInclude>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.hpp">
       <Filter>gameReseau\managers\ball</Filter>

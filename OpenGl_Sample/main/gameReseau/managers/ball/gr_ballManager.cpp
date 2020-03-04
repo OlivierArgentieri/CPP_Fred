@@ -15,18 +15,18 @@
 gr_ballManager* gr_ballManager::instance = nullptr;
 
 
-void gr_ballManager::OnMoveMainBall(glm::vec2 _axisValues)
+void gr_ballManager::onMoveMainBall(glm::vec2 _axisValues)
 {
 	if (!mainBall || _axisValues == glm::vec2()) return;
 
 
-	if (!TestCollision(mainBall->getTransform().position + glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1), mainBall))
+	if (!testCollision(mainBall->getTransform().position + glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1), mainBall))
 		mainBall->addVelocity(glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1));
 
 
 }
 
-::gr_ball* gr_ballManager::TestCollision(glm::vec3 _position, gr_ball* _this)
+::gr_ball* gr_ballManager::testCollision(glm::vec3 _position, gr_ball* _this)
 {
 	for (int i = 0; i < balls.size(); ++i)
 	{
@@ -37,14 +37,14 @@ void gr_ballManager::OnMoveMainBall(glm::vec2 _axisValues)
 	return nullptr; // ok
 }
 
-void gr_ballManager::RegisterToInputManager(gr_inputManager* _inputManager)
+void gr_ballManager::registerToInputManager(gr_inputManager* _inputManager)
 {
-	__hook(&gr_inputManager::OnMove, _inputManager, &gr_ballManager::OnMoveMainBall);
+	__hook(&gr_inputManager::onMove, _inputManager, &gr_ballManager::onMoveMainBall);
 }
 
-void gr_ballManager::UnRegisterToInputManager(gr_inputManager* _inputManager)
+void gr_ballManager::unRegisterToInputManager(gr_inputManager* _inputManager)
 {
-	__unhook(&gr_inputManager::OnMove, _inputManager, &gr_ballManager::OnMoveMainBall);
+	__unhook(&gr_inputManager::onMove, _inputManager, &gr_ballManager::onMoveMainBall);
 }
 
 gr_ballManager::~gr_ballManager()
@@ -76,21 +76,21 @@ void gr_ballManager::makeSpawn(unsigned _nbItem, float _minPositionX, float _max
 		do
 		{
 			_ballToAdd->setPosition(glm::vec3(gr_util::getRandomRange(_minPositionX, _maxPositionX), gr_util::getRandomRange(_minPositionY, _maxPositionY), gr_util::getRandomRange(_minPositionZ, _maxPositionZ)));
-		} while (TestCollision(_ballToAdd->getTransform().position) != nullptr);
+		} while (testCollision(_ballToAdd->getTransform().position) != nullptr);
 		balls.push_back(_ballToAdd);
 	}
 
 	// register main ball to input
-	RegisterToInputManager(gr_inputManager::getInstance());
+	registerToInputManager(gr_inputManager::getInstance());
 }
 
-void gr_ballManager::Clear()
+void gr_ballManager::clear()
 {
 	balls.clear();
 }
 
 
-void gr_ballManager::DeleteAll()
+void gr_ballManager::deleteAll()
 {
 	for (int i = 0; i < balls.size(); ++i)
 	{
@@ -98,12 +98,12 @@ void gr_ballManager::DeleteAll()
 	}
 }
 
-void gr_ballManager::Update()
+void gr_ballManager::update()
 {
 	gr_ball* _collideBall = nullptr;
 	for (int i = 0; i < balls.size(); ++i)
 	{
-		_collideBall = TestCollision(balls[i]->getTransform().position + balls[i]->getVelocity(), balls[i]);
+		_collideBall = testCollision(balls[i]->getTransform().position + balls[i]->getVelocity(), balls[i]);
 
 
 		if (_collideBall != nullptr)
@@ -119,7 +119,7 @@ void gr_ballManager::Update()
 	}
 }
 
-std::vector<gr_ball*> gr_ballManager::GetAllBall() const
+std::vector<gr_ball*> gr_ballManager::getAllBall() const
 {
 	/*
 	std::vector<gr_ball> _toReturn;

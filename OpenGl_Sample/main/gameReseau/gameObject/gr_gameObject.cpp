@@ -146,13 +146,13 @@ gr_transform gr_gameObject::getTransform() const
 
 void gr_gameObject::setPosition(glm::vec3 _pos)
 {
-	transform.SetPosition(_pos);
+	transform.setPosition(_pos);
 }
 
 void gr_gameObject::setScale(glm::vec3 _scale)
 {
 	// todo in transform
-	transform.SetScale(_scale);
+	transform.setScale(_scale);
 	for	(int i = 0; i < vertices.size() ; ++i)
 	{
 		vertices[i].x *= _scale.x/2;
@@ -175,7 +175,7 @@ void gr_gameObject::draw(gr_window* _window)
 	setUseTexture(texture != 0);
 	setColorShader(color);
 
-	computeMatrix(_window->GetWindow());
+	computeMatrix(_window->getWindow());
 	initBuffer();
 
 	// behaviour method go
@@ -247,7 +247,7 @@ void gr_gameObject::computeMatrix(GLFWwindow* _window)
 	computeMatricesFromInputs(_window); // todo 
 
 	
-	mvp = transform.GetMVP();
+	mvp = transform.getMVP();
 
 	// Send our transformation to the currently bound shader, 
 	// in the "MVP" uniform

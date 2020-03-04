@@ -380,10 +380,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\renderer\gr_renderer.cpp" />
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gr_gameObject.hpp" />
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gr_gameObject.cpp" />
-    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.hpp" />
-    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.cpp" />
-    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.hpp" />
-    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.cpp" />
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.hpp" />
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\objGameObject\gr_objGameObject.cpp" />
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\gr_gameBoard.hpp" />
@@ -400,6 +396,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\gameBoard\topBorder\gr_topBorderGameBoard.cpp" />
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.hpp" />
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\gameObject\ball\gr_ball.cpp" />
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.hpp" />
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\color\gr_color.cpp" />
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.hpp" />
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\transform\gr_transform.cpp" />
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.hpp" />
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\ball\gr_ballManager.cpp" />
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\managers\input\gr_inputManager.hpp" />

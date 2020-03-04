@@ -25,24 +25,24 @@ void gr_inputManager::update(gr_window _window, float _deltaTime)
 
 
 	// Strafe up
-	if (glfwGetKey(_window.GetWindow(), GLFW_KEY_W) == GLFW_PRESS) {
+	if (glfwGetKey(_window.getWindow(), GLFW_KEY_W) == GLFW_PRESS) {
 		_axis += glm::vec2(0, -1);
 	}
 	
 	// Strafe down
-	if (glfwGetKey(_window.GetWindow(), GLFW_KEY_S) == GLFW_PRESS) {
+	if (glfwGetKey(_window.getWindow(), GLFW_KEY_S) == GLFW_PRESS) {
 		_axis += glm::vec2(0, 1);
 	}
 	
 	// Strafe right
-	if (glfwGetKey(_window.GetWindow(), GLFW_KEY_D) == GLFW_PRESS) {
+	if (glfwGetKey(_window.getWindow(), GLFW_KEY_D) == GLFW_PRESS) {
 		_axis += glm::vec2(1,0);
 	}
 
 	// Strafe left
-	if (glfwGetKey(_window.GetWindow(), GLFW_KEY_A) == GLFW_PRESS) {
+	if (glfwGetKey(_window.getWindow(), GLFW_KEY_A) == GLFW_PRESS) {
 		_axis += glm::vec2(-1, 0);
 	}
 
-	__raise OnMove(_axis);
+	__raise onMove(_axis);
 }

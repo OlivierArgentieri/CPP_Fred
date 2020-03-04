@@ -1,7 +1,7 @@
 #include "gr_window.hpp"
 #include <main/gameReseau/color/gr_color.hpp>
 
-void gr_window::InitGLFW()
+void gr_window::initGLFW()
 {
 	// Initialise GLFW
 	if (!glfwInit())
@@ -12,7 +12,7 @@ void gr_window::InitGLFW()
 }
 
 
-void gr_window::InitWindowSettings()
+void gr_window::initWindowSettings()
 {
 	glfwWindowHint(GLFW_SAMPLES, 4);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -20,15 +20,15 @@ void gr_window::InitWindowSettings()
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 }
 
-void gr_window::InitMacSettings()
+void gr_window::initMacSettings()
 {
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
 }
 
 
-void gr_window::CreateWindow(const char* _titleWindow)
+void gr_window::createWindow(const char* _titleWindow)
 {
-	InitGLFW();
+	initGLFW();
 	window = glfwCreateWindow(width, height, _titleWindow, NULL, NULL);
 	if (window == NULL) {
 		fprintf(stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible. Try the 2.1 version of the tutorials.\n");
@@ -41,15 +41,15 @@ gr_window::gr_window(float _width, float _height, const char* _title, const gr_c
 {
 	width = _width;
 	height = _height;
-	CreateWindow(_title);
+	createWindow(_title);
 	backgroundColor = gr_color(_color);
 }
 
-void gr_window::InitWindow()
+void gr_window::initWindow()
 {
-	InitWindowSettings();
+	initWindowSettings();
 
-	InitMacSettings();
+	initMacSettings();
 	glfwMakeContextCurrent(window);
 
 
@@ -74,17 +74,17 @@ void gr_window::InitWindow()
 
 }
 
-void gr_window::SwapBuffer() const
+void gr_window::swapBuffer() const
 {
 	glfwSwapBuffers(window);
 }
 
-int gr_window::GetKey(int _key) const
+int gr_window::getKey(int _key) const
 {
 	return glfwGetKey(window, _key);
 }
 
-GLFWwindow* gr_window::GetWindow() const
+GLFWwindow* gr_window::getWindow() const
 {
 	return window;
 }

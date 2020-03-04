@@ -15,7 +15,7 @@ private:
 	void OnMoveMainBall(glm::vec2 _axisValues);
 
 	std::vector<gr_ball*> balls;
-	bool TestCollision(glm::vec3 _position, gr_ball* _this = nullptr);
+	::gr_ball* TestCollision(glm::vec3 _position, gr_ball* _this = nullptr);
 
 	// event register/unregister
 	void RegisterToInputManager(gr_inputManager* _inputManager);

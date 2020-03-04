@@ -77,4 +77,7 @@ public:
 	gr_transform GetTransform()const;
 	void SetPosition(glm::vec3 _pos);
 	void virtual SetScale(glm::vec3 _scale);
+
+
+	void virtual update();
 };

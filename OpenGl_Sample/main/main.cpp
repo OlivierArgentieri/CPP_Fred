@@ -68,7 +68,7 @@ int main( void )
 		//_test[0]->SetPosition(_test[0]->GetTransform().position + vec3(0.1f, 0, 0));
 		// update input manager
 		gr_inputManager::getInstance()->update(grWindow, 0);
-		
+		gr_ballManager::getInstance()->Update();
 		grRenderer.RenderLoop(grWindow);
 		
 	}

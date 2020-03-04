@@ -2,12 +2,10 @@
 #include "main/gameReseau/gameObject/ball/gr_ball.hpp"
 #include "gr_ballManager.hpp"
 
+#include <iostream>
 
 
-#include "main/gameReseau/managers/input/gr_inputManager.hpp"
-#include "main/gameReseau/managers/input/gr_inputManager.hpp"
-#include "main/gameReseau/managers/input/gr_inputManager.hpp"
-#include "main/gameReseau/managers/input/gr_inputManager.hpp"
+
 #include "main/gameReseau/managers/input/gr_inputManager.hpp"
 
 #include "main/gameReseau/util/gr_util.hpp"
@@ -23,20 +21,20 @@ void gr_ballManager::OnMoveMainBall(glm::vec2 _axisValues)
 
 	
 	if(!TestCollision(mainBall->GetTransform().position + glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1), mainBall))
-		mainBall->SetPosition(mainBall->GetTransform().position + glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1));
+		mainBall->addVelocity(glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1));
 
 	
 }
 
-bool gr_ballManager::TestCollision(glm::vec3 _position, gr_ball* _this)
+::gr_ball* gr_ballManager::TestCollision(glm::vec3 _position, gr_ball* _this)
 {
 	for (int i = 0; i < balls.size(); ++i)
 	{
 		if (balls[i] != _this && (glm::distance(_position, balls[i]->GetTransform().position)) < balls[i]->GetTransform().scale.x)
-			return true;
+			return balls[i];
 	}
 
-	return false; // ok
+	return nullptr; // ok
 }
 
 void gr_ballManager::RegisterToInputManager(gr_inputManager* _inputManager)
@@ -79,7 +77,7 @@ void gr_ballManager::makeSpawn(unsigned _nbItem, float _minPositionX, float _max
 		{
 			_ballToAdd->SetPosition(glm::vec3(gr_util::getRandomRange(_minPositionX, _maxPositionX), gr_util::getRandomRange(_minPositionY, _maxPositionY), gr_util::getRandomRange(_minPositionZ, _maxPositionZ)));
 		}
-		while (TestCollision(_ballToAdd->GetTransform().position));
+		while (TestCollision(_ballToAdd->GetTransform().position) != nullptr);
 		balls.push_back(_ballToAdd);
 	}
 
@@ -103,7 +101,18 @@ void gr_ballManager::DeleteAll()
 
 void gr_ballManager::Update()
 {
-	balls[2]->MoveRight(0, 0);
+	gr_ball* _collideBall = nullptr;
+	for (int i = 0; i < balls.size(); ++i)
+	{
+		_collideBall = TestCollision(balls[i]->GetTransform().position + balls[i]->getVelocity()), balls[i];
+
+		
+		if (_collideBall != nullptr)// test collision
+			_collideBall->addVelocity(balls[i]->getVelocity());
+
+		balls[i]->SetPosition(balls[i]->GetTransform().position + balls[i]->getVelocity());
+		_collideBall = nullptr;
+	}
 }
 
 std::vector<gr_ball*> gr_ballManager::GetAllBall() const

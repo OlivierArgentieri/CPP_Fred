@@ -161,6 +161,11 @@ void gr_gameObject::SetScale(glm::vec3 _scale)
 	}
 }
 
+void gr_gameObject::update()
+{
+	
+}
+
 void gr_gameObject::Draw(gr_window* _window)
 {
 	if (!_window) return;
@@ -173,11 +178,16 @@ void gr_gameObject::Draw(gr_window* _window)
 	ComputeMatrix(_window->GetWindow());
 	InitBuffer();
 
+	// behaviour method go
+	update();
+	
+	// todo to draw methods
 	// Draw the triangle !
 	glDrawArrays(GL_TRIANGLES, 0, vertices.size());
 
 	glDisableVertexAttribArray(0);
 	glDisableVertexAttribArray(1);
+	
 	CleanBuffer();
 }
 

@@ -24,3 +24,24 @@ gr_ball::gr_ball(const gr_ball& _ball) : gr_objGameObject(_ball)
 	gr_gameObject::SetScale(_ball.transform.scale);
 }
 
+void gr_ball::addVelocity(glm::vec3 _velocity)
+{
+	velocity += _velocity;
+}
+
+glm::vec3 gr_ball::getVelocity() const
+{
+	return velocity;
+}
+
+void gr_ball::update()
+{
+	if(velocity != glm::vec3())
+	{
+	//	SetPosition(transform.position + velocity); // todo
+
+		// decrement velocity
+		velocity *= 0.80f; // frottement
+	}
+}
+

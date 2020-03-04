@@ -5,6 +5,17 @@
 gr_ballManager* gr_ballManager::instance = nullptr;
 
 
+bool gr_ballManager::TestCollision(gr_ball *_ball)
+{
+	for (int i = 0; i < balls.size(); ++i)
+	{
+		if ((glm::distance(_ball->GetTransform().position, balls[i]->GetTransform().position)) < _ball->GetTransform().scale.x)
+			return true;
+	}
+
+	return false;
+}
+
 gr_ballManager::~gr_ballManager()
 {
 	delete instance;
@@ -27,8 +38,14 @@ void gr_ballManager::makeSpawn(unsigned _nbItem, float _minPositionX, float _max
 {
 	for (int i = 0; i < _nbItem; ++i)
 	{
+		gr_ball *_ballToAdd = new gr_ball(glm::vec3(gr_util::getRandomRange(_minPositionX, _maxPositionX), gr_util::getRandomRange(_minPositionY, _maxPositionY), gr_util::getRandomRange(_minPositionZ, _maxPositionZ)), glm::vec3(), glm::vec3(1, 1, 1), "aa.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1)));
+
+		do
+		{
+			_ballToAdd->SetPosition(glm::vec3(gr_util::getRandomRange(_minPositionX, _maxPositionX), gr_util::getRandomRange(_minPositionY, _maxPositionY), gr_util::getRandomRange(_minPositionZ, _maxPositionZ)));
+		}
+		while (TestCollision(_ballToAdd));
 		//get random position
-		gr_ball *_ballToAdd = new gr_ball(glm::vec3(gr_util::getRandomRange(_minPositionX, _maxPositionX), gr_util::getRandomRange(_minPositionY, _maxPositionY), gr_util::getRandomRange(_minPositionZ, _maxPositionZ)), glm::vec3(), glm::vec3(1,1,1), "aa.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(gr_util::getRandomRange(0,1), gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1)));
 		balls.push_back(_ballToAdd);
 	}
 }

@@ -45,8 +45,8 @@ int main( void )
 
 
 	
-	grRenderer.AddGameObject(&_ball);
-	grRenderer.AddGameObject(&_cube2);
+	//grRenderer.AddGameObject(&_ball);
+	//grRenderer.AddGameObject(&_cube2);
 	grRenderer.AddGameObject(&_board);
 
 	gr_ballManager::getInstance()->makeSpawn(20,-10,10,1,1,-10,10);

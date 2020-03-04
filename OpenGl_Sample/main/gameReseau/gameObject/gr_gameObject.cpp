@@ -155,9 +155,9 @@ void gr_gameObject::SetScale(glm::vec3 _scale)
 	transform.SetScale(_scale);
 	for	(int i = 0; i < vertices.size() ; ++i)
 	{
-		vertices[i].x *= _scale.x;
-		vertices[i].y *= _scale.y;
-		vertices[i].z *= _scale.z;
+		vertices[i].x *= _scale.x/2;
+		vertices[i].y *= _scale.y/2;
+		vertices[i].z *= _scale.z/2;
 	}
 }
 

@@ -7,10 +7,10 @@
 #include "main/gameReseau/renderer/gr_renderer.hpp"
 
 
-void gr_gameObject::LoadTexture()
+void gr_gameObject::loadTexture()
 {
 	if (texturePath[0] == '\0') return;
-	Texture = loadDDS(texturePath); // .dds!!!
+	texture = loadDDS(texturePath); // .dds!!!
 }
 
 gr_gameObject::gr_gameObject()
@@ -21,23 +21,23 @@ gr_gameObject::gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3
 {
 	transform = gr_transform(_position, _rotation, _scale);
 	texturePath = _texturePath;
-	LoadTexture();
-	LoadShader(_vertexShaderPath, _fragmentShaderPath);
-	Color = _color;
-	SetPosition(_position);
-	gr_gameObject::SetScale(_scale);
+	loadTexture();
+	loadShader(_vertexShaderPath, _fragmentShaderPath);
+	color = _color;
+	setPosition(_position);
+	gr_gameObject::setScale(_scale);
 }
 
 gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
 {
 	transform = gr_transform(_gameObject.transform);
 	texturePath = _gameObject.texturePath;
-	LoadTexture();
+	loadTexture();
 	
-	Color = _gameObject.Color;
+	color = _gameObject.color;
 
-	SetPosition(_gameObject.transform.position);
-	gr_gameObject::SetScale(_gameObject.transform.scale);
+	setPosition(_gameObject.transform.position);
+	gr_gameObject::setScale(_gameObject.transform.scale);
 }
 
 
@@ -56,12 +56,12 @@ std::vector<glm::vec3> gr_gameObject::getNormals() const
 	return normals;
 }
 
-void gr_gameObject::MoveRight(float _speed, float _deltaTime)
+void gr_gameObject::moveRight(float _speed, float _deltaTime)
 {
 	/*
-	ModelMatrix = glm::translate(ModelMatrix, glm::vec3(10, 0, 0));
+	modelMatrix = glm::translate(modelMatrix, glm::vec3(10, 0, 0));
 	
-	MVP = getProjectionMatrix() * getViewMatrix()* ModelMatrix;
+	MVP = getProjectionMatrix() * getViewMatrix()* modelMatrix;
 	*/
 	/*
 	for (glm::vec3 &vertex : vertices)
@@ -71,7 +71,7 @@ void gr_gameObject::MoveRight(float _speed, float _deltaTime)
 }
 
 
-void gr_gameObject::LoadVBO()
+void gr_gameObject::loadVBO()
 {
 	// Load it into a VBO
 	glGenBuffers(1, &vertexBuffer);
@@ -79,7 +79,7 @@ void gr_gameObject::LoadVBO()
 	glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(glm::vec3), &vertices[0], GL_STATIC_DRAW);
 }
 
-void gr_gameObject::LoadUVBuffer()
+void gr_gameObject::loadUVBuffer()
 {
 	// Load UV
 	glGenBuffers(1, &uvBuffer);
@@ -87,7 +87,7 @@ void gr_gameObject::LoadUVBuffer()
 	glBufferData(GL_ARRAY_BUFFER, uvs.size() * sizeof(glm::vec2), &uvs[0], GL_STATIC_DRAW);
 }
 
-void gr_gameObject::VerticesBuffer() const
+void gr_gameObject::verticesBuffer() const
 {
 	// 1rst attribute buffer : vertices
 	glEnableVertexAttribArray(0);
@@ -102,7 +102,7 @@ void gr_gameObject::VerticesBuffer() const
 	);
 }
 
-void gr_gameObject::UvBuffer() const
+void gr_gameObject::uvsBuffer() const
 {
 	// 2nd attribute buffer : UVs
 	glEnableVertexAttribArray(1);
@@ -117,39 +117,39 @@ void gr_gameObject::UvBuffer() const
 	);
 }
 
-void gr_gameObject::CleanBuffer() const
+void gr_gameObject::cleanBuffer() const
 {
 	glDeleteBuffers(1, &vertexBuffer);
 	glDeleteBuffers(1, &uvBuffer);
 	//glDeleteTextures(1, &Texture);
 }
 
-GLuint gr_gameObject::GetTexture() const
+GLuint gr_gameObject::getTexture() const
 {
-	return Texture;
+	return texture;
 }
 
-GLuint gr_gameObject::GetShader() const
+GLuint gr_gameObject::getShader() const
 {
 	return programID;
 }
 
-GLuint gr_gameObject::GetTextureID() const
+GLuint gr_gameObject::getTextureID() const
 {
-	return TextureID;
+	return textureID;
 }
 
-gr_transform gr_gameObject::GetTransform() const
+gr_transform gr_gameObject::getTransform() const
 {
 	return transform;
 }
 
-void gr_gameObject::SetPosition(glm::vec3 _pos)
+void gr_gameObject::setPosition(glm::vec3 _pos)
 {
 	transform.SetPosition(_pos);
 }
 
-void gr_gameObject::SetScale(glm::vec3 _scale)
+void gr_gameObject::setScale(glm::vec3 _scale)
 {
 	// todo in transform
 	transform.SetScale(_scale);
@@ -166,17 +166,17 @@ void gr_gameObject::update()
 	
 }
 
-void gr_gameObject::Draw(gr_window* _window)
+void gr_gameObject::draw(gr_window* _window)
 {
 	if (!_window) return;
 
-	UseShader(programID);
-	BindTexture();
-	SetUseTexture(Texture != 0);
-	SetColorShader(Color);
+	useShader(programID);
+	bindTexture();
+	setUseTexture(texture != 0);
+	setColorShader(color);
 
-	ComputeMatrix(_window->GetWindow());
-	InitBuffer();
+	computeMatrix(_window->GetWindow());
+	initBuffer();
 
 	// behaviour method go
 	update();
@@ -188,10 +188,10 @@ void gr_gameObject::Draw(gr_window* _window)
 	glDisableVertexAttribArray(0);
 	glDisableVertexAttribArray(1);
 	
-	CleanBuffer();
+	cleanBuffer();
 }
 
-void gr_gameObject::BindTexture() const
+void gr_gameObject::bindTexture() const
 {
 	if (texturePath[0] == '\0')
 	{
@@ -204,42 +204,42 @@ void gr_gameObject::BindTexture() const
 	
 	// Bind our texture in Texture Unit 0
 	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, Texture);
+	glBindTexture(GL_TEXTURE_2D, texture);
 
 	
 	// Set our "myTextureSampler" sampler to use Texture Unit 0
-	glUniform1i(TextureID, 0);
+	glUniform1i(textureID, 0);
 }
 
-void gr_gameObject::InitBuffer()
+void gr_gameObject::initBuffer()
 {
-	LoadVBO();
-	LoadUVBuffer();
+	loadVBO();
+	loadUVBuffer();
 
-	VerticesBuffer();
-	UvBuffer();
+	verticesBuffer();
+	uvsBuffer();
 }
 
-void gr_gameObject::LoadShader(const char* _vertexShaderPath, const char* _fragmentShaderPath)
+void gr_gameObject::loadShader(const char* _vertexShaderPath, const char* _fragmentShaderPath)
 {
 	if (_vertexShaderPath[0] == '\0' || _fragmentShaderPath[0] == '\0') return;
 	programID = LoadShaders(_vertexShaderPath, _fragmentShaderPath);
 }
 
-void gr_gameObject::SetColorShader(const gr_color _color) const
+void gr_gameObject::setColorShader(const gr_color _color) const
 {
 	GLint color = glGetUniformLocation(programID, "color");
 	float editedColor[3] = {_color.r, _color.g, _color.b};
 	glUniform3fv(color, 1, editedColor);;
 }
 
-void gr_gameObject::SetUseTexture(const bool _res) const
+void gr_gameObject::setUseTexture(const bool _res) const
 {
 	GLboolean color = glGetUniformLocation(programID, "isTextureLoaded");
 	glUniform1i(color, _res);
 }
 
-void gr_gameObject::ComputeMatrix(GLFWwindow* _window)
+void gr_gameObject::computeMatrix(GLFWwindow* _window)
 {
 	if (!_window) return;
 
@@ -247,24 +247,24 @@ void gr_gameObject::ComputeMatrix(GLFWwindow* _window)
 	computeMatricesFromInputs(_window); // todo 
 
 	
-	MVP = transform.GetMVP();
+	mvp = transform.GetMVP();
 
 	// Send our transformation to the currently bound shader, 
 	// in the "MVP" uniform
-	glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
+	glUniformMatrix4fv(matrixID, 1, GL_FALSE, &mvp[0][0]);
 }
 
-void gr_gameObject::UseShader(GLint _shaderID)
+void gr_gameObject::useShader(GLint _shaderID)
 {
 	// Use our shader
 	glUseProgram(_shaderID); // todo in game object
-	MatrixID = glGetUniformLocation(_shaderID, "MVP");
+	matrixID = glGetUniformLocation(_shaderID, "MVP");
 }
 
 
-void gr_gameObject::Clean() const
+void gr_gameObject::clean() const
 {
-	glDeleteTextures(1, &Texture);
+	glDeleteTextures(1, &texture);
 	glDeleteProgram(programID);
-	glDeleteVertexArrays(1, &VertexArrayID);
+	glDeleteVertexArrays(1, &vertexArrayID);
 }

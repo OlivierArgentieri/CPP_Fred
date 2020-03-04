@@ -21,6 +21,6 @@ private:
 public:
 	gr_gameBoard();
 	gr_gameBoard(const gr_gameBoard& _gameBoard);
-	void Draw(gr_window* _windows) override;
-	void UseShader(GLint _shaderID);
+	void draw(gr_window* _windows) override;
+	void useShader(GLint _shaderID);
 };

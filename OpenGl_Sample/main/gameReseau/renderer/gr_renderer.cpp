@@ -62,7 +62,7 @@ void gr_renderer::DrawEachObject(gr_window _gr_window) const
 {
 	for (gr_gameObject* _game_object : gameObjects)
 	{
-		_game_object->Draw(&_gr_window);
+		_game_object->draw(&_gr_window);
 	}
 }
 
@@ -85,7 +85,7 @@ void gr_renderer::Clean() const
 {
 	for (gr_gameObject* _game_object : gameObjects)
 	{
-		_game_object->Clean();
+		_game_object->clean();
 	}
 	Close();
 }
@@ -95,7 +95,7 @@ void gr_renderer::CleanGameObject() const
 	for (gr_gameObject* _game_object : gameObjects)
 	{
 		if (!_game_object) continue;
-		_game_object->Clean();
+		_game_object->clean();
 	}
 }
 

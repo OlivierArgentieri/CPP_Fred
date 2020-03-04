@@ -16,7 +16,7 @@ void gr_gameBoard::CreatePlane()
 
 void gr_gameBoard::CreateBorders()
 {
-	leftBorder = gr_leftBorderGameBoard(glm::vec3(-50,0,0), glm::vec3(), glm::vec3(10, WALL_HEIGHT, 100), "", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0, 1, 0));
+	leftBorder = gr_leftBorderGameBoard(glm::vec3(-50,0,0), glm::vec3(), glm::vec3(10, WALL_HEIGHT, 100), "uvChecker.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0, 1, 0));
 	rightBorder = gr_rightBorderGameBoard(glm::vec3(50,0,0), glm::vec3(), glm::vec3(10, WALL_HEIGHT, 100),"","TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 1, 0));
 	bottomBorder = gr_bottomBorderGameBoard(glm::vec3(0,0,50), glm::vec3(), glm::vec3(100, WALL_HEIGHT, 10), "","TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(0.5f, 0.3f, 0));
 	topBorder = gr_topBorderGameBoard(glm::vec3(0,0,-50), glm::vec3(), glm::vec3(100, WALL_HEIGHT, 10),"" , "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(1, 0.5, 0));
@@ -33,21 +33,21 @@ gr_gameBoard::gr_gameBoard(const gr_gameBoard& _gameBoard) : gr_gameObject(_game
 {
 }
 
-void gr_gameBoard::Draw(gr_window* _window)
+void gr_gameBoard::draw(gr_window* _window)
 {
 	if (!_window) return;
-	plane.Draw(_window);
+	plane.draw(_window);
 	
-	leftBorder.Draw(_window);
+	leftBorder.draw(_window);
 	
-	rightBorder.Draw(_window);
-	bottomBorder.Draw(_window);
-	topBorder.Draw(_window);
+	rightBorder.draw(_window);
+	bottomBorder.draw(_window);
+	topBorder.draw(_window);
 }
 
-void gr_gameBoard::UseShader(GLint _shaderID)
+void gr_gameBoard::useShader(GLint _shaderID)
 {
 	// Use our shader
 	glUseProgram(_shaderID); // todo in game object
-	MatrixID = glGetUniformLocation(_shaderID, "MVP");
+	matrixID = glGetUniformLocation(_shaderID, "MVP");
 }

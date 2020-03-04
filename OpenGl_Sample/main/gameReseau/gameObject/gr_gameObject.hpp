@@ -11,10 +11,10 @@ class gr_gameObject
 {
 
 private :
-	glm::mat4 ProjectionMatrix;
-	glm::mat4 ViewMatrix;
-	glm::mat4 ModelMatrix;
-	glm::mat4 MVP;
+	glm::mat4 projectionMatrix;
+	glm::mat4 viewMatrix;
+	glm::mat4 modelMatrix;
+	glm::mat4 mvp;
 	
 protected:
 	const char*  texturePath;
@@ -33,25 +33,25 @@ protected:
 	GLuint uvBuffer;
 
 	
-	GLuint VertexArrayID;
-	GLuint MatrixID;
+	GLuint vertexArrayID;
+	GLuint matrixID;
 
 	
-	GLuint TextureID;
-	GLuint Texture = 0;
-	gr_color Color;
+	GLuint textureID;
+	GLuint texture = 0;
+	gr_color color;
 
 	gr_transform transform;
 	
-	void LoadTexture();
+	void loadTexture();
 
-	void LoadVBO();
-	void LoadUVBuffer();
-	void VerticesBuffer() const;
-	void UvBuffer() const;
-	void InitBuffer();
-	void LoadShader(const char* _vertexShaderPath, const char* _fragmentShaderPath);
-	void CleanBuffer() const;
+	void loadVBO();
+	void loadUVBuffer();
+	void verticesBuffer() const;
+	void uvsBuffer() const;
+	void initBuffer();
+	void loadShader(const char* _vertexShaderPath, const char* _fragmentShaderPath);
+	void cleanBuffer() const;
 
 public:
 	gr_gameObject();
@@ -63,20 +63,20 @@ public:
 	std::vector<glm::vec3> getNormals() const;
 
 	
-	void MoveRight(float _speed, float _deltaTime);
-	virtual void Draw(gr_window* _windows);
-	void BindTexture() const;
-	void Clean() const;
-	void SetColorShader(const gr_color _color) const;
-	void SetUseTexture(bool _res) const;
-	void ComputeMatrix(GLFWwindow* _window);
-	void UseShader(GLint _shaderID);
-	GLuint GetTexture() const;
-	GLuint GetShader() const;
-	GLuint GetTextureID() const;
-	gr_transform GetTransform()const;
-	void SetPosition(glm::vec3 _pos);
-	void virtual SetScale(glm::vec3 _scale);
+	void moveRight(float _speed, float _deltaTime);
+	virtual void draw(gr_window* _windows);
+	void bindTexture() const;
+	void clean() const;
+	void setColorShader(const gr_color _color) const;
+	void setUseTexture(bool _res) const;
+	void computeMatrix(GLFWwindow* _window);
+	void useShader(GLint _shaderID);
+	GLuint getTexture() const;
+	GLuint getShader() const;
+	GLuint getTextureID() const;
+	gr_transform getTransform()const;
+	void setPosition(glm::vec3 _pos);
+	void virtual setScale(glm::vec3 _scale);
 
 
 	void virtual update();

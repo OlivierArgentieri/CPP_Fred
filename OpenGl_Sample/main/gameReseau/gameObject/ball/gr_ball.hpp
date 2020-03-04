@@ -11,7 +11,8 @@ public:
 	gr_ball(const gr_ball& _ball);
 
 	void addVelocity(glm::vec3 _velocity);
+	void setVelocity(glm::vec3 _newVelocity);
 	glm::vec3 getVelocity() const;
-
+	
 	void update() override;
 };

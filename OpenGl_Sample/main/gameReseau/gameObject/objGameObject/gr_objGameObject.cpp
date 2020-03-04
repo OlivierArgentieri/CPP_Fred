@@ -17,7 +17,7 @@ gr_objGameObject::gr_objGameObject(const char* _pathToObj, glm::vec3 _position, 
 }
 
 gr_objGameObject::gr_objGameObject(const gr_objGameObject& _obj) : gr_gameObject(
-	_obj.transform.position, _obj.transform.rotation, _obj.transform.scale, _obj.texturePath, _obj.vertexShaderPath, _obj.fragmentShaderPath, _obj.Color)
+	_obj.transform.position, _obj.transform.rotation, _obj.transform.scale, _obj.texturePath, _obj.vertexShaderPath, _obj.fragmentShaderPath, _obj.color)
 {
 	bool _test = loadOBJ(_obj.pathOBJ, gr_gameObject::vertices, gr_gameObject::uvs, gr_gameObject::normals);
 	pathOBJ = _obj.pathOBJ;

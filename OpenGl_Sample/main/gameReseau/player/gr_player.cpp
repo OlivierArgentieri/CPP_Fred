@@ -6,7 +6,7 @@ void gr_player::OnMove(glm::vec2 _axisValues)
 	if (!ball) return;
 
 	if(_axisValues != glm::vec2())
-		ball->SetPosition(ball->GetTransform().position + glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1));
+		ball->setPosition(ball->getTransform().position + glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1));
 }
 
 void gr_player::RegisterToInputManager(gr_inputManager* _inputManager)

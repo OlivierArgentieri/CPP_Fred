@@ -31,8 +31,6 @@ private :
 	static void close();
 
 public:
-	static float deltaTime;
-	
 	gr_renderer();
 
 	void addVertices(std::vector<glm::vec3> _vertices);
@@ -40,7 +38,6 @@ public:
 
 	void renderLoop(gr_window _gr_window) const;
 	void clean() const;
-	//	void Clean() const;
 	void cleanGameObject() const;
 	void clearVerticesAndUV();
 	void addGameObject(gr_gameObject *_go);

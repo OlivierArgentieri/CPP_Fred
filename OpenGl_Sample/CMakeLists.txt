@@ -39,6 +39,7 @@ include_directories(
 	external/glew-1.13.0/include/
 	external/assimp-3.0.1270/include/
 	.
+	./
 )
 
 set(ALL_LIBS
@@ -132,10 +133,15 @@ add_executable(
 	main/gameReseau/player/gr_player.hpp
 	main/gameReseau/player/gr_player.cpp
 
+#time:
+	main/gameReseau/time/gr_time.hpp
+	main/gameReseau/time/gr_time.cpp
+
 #shaders : 
 	main/TransformVertexShader.vertexshader
 	main/TextureFragmentShader.fragmentshader
 )
+
 target_link_libraries(main
 	${ALL_LIBS}
 )
@@ -166,6 +172,7 @@ SOURCE_GROUP(gameReseau\\managers\\ball REGULAR_EXPRESSION "./main/gameReseau/ma
 SOURCE_GROUP(gameReseau\\managers\\input REGULAR_EXPRESSION "./main/gameReseau/managers/input")
 SOURCE_GROUP(gameReseau\\util REGULAR_EXPRESSION "./main/gameReseau/util")
 SOURCE_GROUP(gameReseau\\player REGULAR_EXPRESSION "./main/gameReseau/player")
+SOURCE_GROUP(gameReseau\\time REGULAR_EXPRESSION "./main/gameReseau/time")
 
 
 if (NOT ${CMAKE_GENERATOR} MATCHES "Xcode" )

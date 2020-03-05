@@ -7,8 +7,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <vector>
 
+#include "main/gameReseau/time/gr_time.hpp"
 
-float gr_renderer::deltaTime = 0;
 
 void gr_renderer::initGLEW()
 {
@@ -75,18 +75,15 @@ void gr_renderer::pollEvent()
 
 void gr_renderer::renderLoop(gr_window _gr_window) const
 {
-	// calcul delta time
-	static double _oldTime = glfwGetTime();
-	double _currentTime = glfwGetTime();
-	deltaTime = float(_currentTime - _oldTime);
-	
+	// delta time
+	gr_time::beginFrame();
 	clearScreen();
 	drawEachObject(_gr_window);
 	
 	_gr_window.swapBuffer();
 	pollEvent();
 
-	_oldTime = _currentTime;
+	gr_time::endFrame();
 }
 
 

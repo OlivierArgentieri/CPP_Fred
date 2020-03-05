@@ -16,5 +16,5 @@ public:
 
 	static gr_inputManager* getInstance();
 
-	void update(gr_window _window, float _deltaTime);
+	void update(gr_window _window);
 };

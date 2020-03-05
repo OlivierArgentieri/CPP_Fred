@@ -26,6 +26,8 @@
 #include "gameReseau/managers/ball/gr_ballManager.hpp"
 #include "gameReseau/managers/input/gr_inputManager.hpp"
 #include "gameReseau/player/gr_player.hpp"
+#include "gameReseau/time/gr_time.hpp"
+
 class gr_gameObject;
 using namespace glm;
 
@@ -46,9 +48,6 @@ int main( void )
 	gr_gameBoard _board = gr_gameBoard();
 
 
-	
-	//grRenderer.AddGameObject(&_ball);
-	//grRenderer.AddGameObject(&_cube2);
 	grRenderer.addGameObject(&_board);
 
 	gr_ballManager::getInstance()->makeSpawn(20,-10,10,0,0,-10,10);
@@ -58,18 +57,10 @@ int main( void )
 	{
 		grRenderer.addGameObject(_test[i]);
 	}
-
-//	gr_player _player = gr_player(_test[0]);
-	
-	//_cube2.getTransform().setPosition(glm::vec3(0, 1, 1));
-	//_cube2.setPosition(glm::vec3(10.0f, 0, 0));
 	do
 	{
-		std::cout << gr_renderer::deltaTime << "\n";
-		//_test[0]->SetPosition(_test[0]->GetTransform().position + vec3(0.1f, 0, 0));
-		// update input manager
-		gr_inputManager::getInstance()->update(grWindow, 0);
-		gr_ballManager::getInstance()->update(gr_renderer::deltaTime);
+		gr_inputManager::getInstance()->update(grWindow);
+		gr_ballManager::getInstance()->update(gr_time::getDeltaTime());
 		grRenderer.renderLoop(grWindow);
 		
 	}

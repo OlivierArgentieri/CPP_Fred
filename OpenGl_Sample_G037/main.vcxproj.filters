@@ -67,6 +67,9 @@
     <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\player\gr_player.cpp">
       <Filter>gameReseau\player</Filter>
     </ClCompile>
+    <ClCompile Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\time\gr_time.cpp">
+      <Filter>gameReseau\time</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\common\shader.hpp">
@@ -131,6 +134,9 @@
     </ClInclude>
     <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\player\gr_player.hpp">
       <Filter>gameReseau\player</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\ArgentieriOlivier\PullGithub\CPP_Fred\OpenGl_Sample\main\gameReseau\time\gr_time.hpp">
+      <Filter>gameReseau\time</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +204,9 @@
     </Filter>
     <Filter Include="gameReseau\renderer">
       <UniqueIdentifier>{A647B329-4163-34A9-BCDE-8541AED5A40E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameReseau\time">
+      <UniqueIdentifier>{33EB5DDA-D328-3378-94E6-839E76E5EBEF}</UniqueIdentifier>
     </Filter>
     <Filter Include="gameReseau\transform">
       <UniqueIdentifier>{07021E30-637E-30B8-8A8A-2D2E95F4B8C4}</UniqueIdentifier>

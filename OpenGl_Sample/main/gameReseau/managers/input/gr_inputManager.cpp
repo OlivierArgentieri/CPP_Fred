@@ -19,7 +19,7 @@ gr_inputManager* gr_inputManager::getInstance()
 	return instance;
 }
 
-void gr_inputManager::update(gr_window _window, float _deltaTime)
+void gr_inputManager::update(gr_window _window)
 {
 	glm::vec2 _axis = glm::vec2();
 

@@ -16,9 +16,10 @@ private:
 	std::vector<gr_ball*> balls;
 	::gr_ball* testCollision(glm::vec3 _position, gr_ball* _this = nullptr);
 
-	// event register/unregister
+	// event methods
 	void registerToInputManager(gr_inputManager* _inputManager);
 	void unRegisterToInputManager(gr_inputManager* _inputManager);
+	
 	~gr_ballManager();
 
 	gr_ball* mainBall;

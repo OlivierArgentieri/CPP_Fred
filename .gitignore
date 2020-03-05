@@ -17,3 +17,7 @@ Thumbs.db
 OpenGL-tutorial_v*
 **.mtl
 .DS_Store
+
+OpenGL_SampleEdit/**
+OpenGL_Sample_G037/**
+OpenGL_Sample_desktop/**

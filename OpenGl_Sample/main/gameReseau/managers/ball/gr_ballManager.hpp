@@ -6,7 +6,6 @@
 
 class gr_ball;
 
-[event_receiver(native)]
 class gr_ballManager
 {
 private:

@@ -110,7 +110,7 @@ void gr_ballManager::update(float _deltaTime)
 		if (_collideBall != nullptr)
 		{
 			glm::vec3 _director = glm::normalize(_collideBall->getTransform().position - balls[i]->getTransform().position);
-			_collideBall->setVelocity((balls[i]->getVelocity() + _director));
+			_collideBall->setVelocity((balls[i]->getVelocity() + _director * _deltaTime * BALL_SPEED));
 		}// test collision todo
 
 

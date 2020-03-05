@@ -3,7 +3,6 @@
 
 #include "main/gameReseau/window/gr_window.hpp"
 
-[event_source(native)]
 class gr_inputManager
 {
 private:

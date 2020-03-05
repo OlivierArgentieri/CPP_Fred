@@ -45,7 +45,7 @@ gr_window::gr_window(float _width, float _height, const char* _title, const gr_c
 	backgroundColor = gr_color(_color);
 }
 
-void gr_window::initWindow()
+void gr_window::initWindow() const
 {
 	initWindowSettings();
 

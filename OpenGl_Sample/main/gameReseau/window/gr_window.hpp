@@ -13,16 +13,16 @@ class gr_window
 	gr_color backgroundColor;
 	
 	GLFWwindow* window;
-	
-	void initGLFW();
-	void initWindowSettings();
-	void initMacSettings();
+
+	static void initGLFW();
+	static void initWindowSettings();
+	static void initMacSettings();
 	void createWindow(const char* _titleWindow);
 
 	
 public:
 	gr_window(float _width, float _height, const char* _title, const gr_color _color);
-	void initWindow();
+	void initWindow() const;
 	void swapBuffer() const;
 	
 	int getKey(int _key) const;

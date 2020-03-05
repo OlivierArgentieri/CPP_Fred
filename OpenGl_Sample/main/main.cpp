@@ -53,10 +53,14 @@ int main( void )
 	gr_ballManager::getInstance()->makeSpawn(20,-10,10,0,0,-10,10);
 	auto _test = gr_ballManager::getInstance()->getAllBall();
 
+	// init sphere list 
 	for (int i = 0; i < _test.size(); ++i)
 	{
 		grRenderer.addGameObject(_test[i]);
 	}
+
+
+	//game Loop
 	do
 	{
 		gr_inputManager::getInstance()->update(grWindow);
@@ -67,6 +71,7 @@ int main( void )
 	while (glfwGetKey(grWindow.getWindow(), GLFW_KEY_ESCAPE) != GLFW_PRESS &&
 		glfwWindowShouldClose(grWindow.getWindow()) == 0);
 
+	gr_ballManager::getInstance()->clean();
 	grRenderer.clean();
 	
 	return 0;

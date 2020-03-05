@@ -10,11 +10,14 @@ class gr_ballManager
 {
 private:
 	static gr_ballManager* instance;
+
+	gr_ball* mainBall;
+
 	
 	void onMoveMainBall(glm::vec2 _axisValues);
 
 	std::vector<gr_ball*> balls;
-	::gr_ball* testCollision(glm::vec3 _position, gr_ball* _this = nullptr);
+	gr_ball* testCollision(glm::vec3 _position, gr_ball* _this = nullptr);
 
 	// event methods
 	void registerToInputManager(gr_inputManager* _inputManager);
@@ -22,14 +25,17 @@ private:
 	
 	~gr_ballManager();
 
-	gr_ball* mainBall;
+
+	void clear();
+	void deleteAll();
+	
 public:
 	
 	static gr_ballManager* getInstance();
 	void addBalls(gr_ball* _ball);
 	void makeSpawn(unsigned _nbItem, float _minPositionX, float _maxPositionX, float _minPositionY, float _maxPositionY, float _minPositionZ, float _maxPositionZ);
-	void clear();
-	void deleteAll();
+	
 	void update(float _deltaTime);
+	void clean();
 	std::vector<gr_ball*> getAllBall() const;
 };

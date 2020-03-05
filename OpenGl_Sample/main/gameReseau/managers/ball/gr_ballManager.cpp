@@ -95,7 +95,7 @@ void gr_ballManager::deleteAll()
 {
 	for (int i = 0; i < balls.size(); ++i)
 	{
-		delete &balls[i];
+		delete balls[i];
 	}
 }
 
@@ -118,6 +118,12 @@ void gr_ballManager::update(float _deltaTime)
 
 		_collideBall = nullptr;
 	}
+}
+
+void gr_ballManager::clean()
+{
+	deleteAll();
+	clear();
 }
 
 std::vector<gr_ball*> gr_ballManager::getAllBall() const

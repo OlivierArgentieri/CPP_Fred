@@ -8,9 +8,7 @@
 
 gr_inputManager* gr_inputManager::instance = nullptr;
 
-gr_inputManager::gr_inputManager()
-{
-}
+gr_inputManager::gr_inputManager() = default;
 
 gr_inputManager* gr_inputManager::getInstance()
 {

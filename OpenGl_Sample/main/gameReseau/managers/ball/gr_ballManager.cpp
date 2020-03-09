@@ -77,7 +77,7 @@ void gr_ballManager::addBalls(gr_ball* _ball)
 
 void gr_ballManager::makeSpawn(unsigned _nbItem, float _minPositionX, float _maxPositionX, float _minPositionY, float _maxPositionY, float _minPositionZ, float _maxPositionZ, std::vector<gr_gameObject> _obstacles = std::vector<gr_gameObject>())
 {
-	mainBall = new gr_ball(glm::vec3(0, 0, 0), glm::vec3(), glm::vec3(BALL_SCALE, BALL_SCALE, BALL_SCALE), gr_bounds(glm::vec3(1,1,1), glm::vec3()),  "aa.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1)));
+	mainBall = new gr_ball(glm::vec3(0, 0, 0), glm::vec3(), glm::vec3(BALL_SCALE, BALL_SCALE, BALL_SCALE), gr_bounds(glm::vec3(1,1,1), glm::vec3()),  "aa.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1)), _obstacles);
 	balls.push_back(mainBall);
 	for (int i = 0; i < _nbItem - 1; ++i)
 	{

@@ -2,6 +2,8 @@
 #include "main/gameReseau/gameObject/ball/gr_ball.hpp"
 #include "gr_ballManager.hpp"
 
+
+#include <algorithm>
 #include <iostream>
 
 
@@ -73,13 +75,13 @@ void gr_ballManager::addBalls(gr_ball* _ball)
 	balls.push_back(_ball);
 }
 
-void gr_ballManager::makeSpawn(unsigned _nbItem, float _minPositionX, float _maxPositionX, float _minPositionY, float _maxPositionY, float _minPositionZ, float _maxPositionZ)
+void gr_ballManager::makeSpawn(unsigned _nbItem, float _minPositionX, float _maxPositionX, float _minPositionY, float _maxPositionY, float _minPositionZ, float _maxPositionZ, std::vector<gr_gameObject> _obstacles = std::vector<gr_gameObject>())
 {
-	mainBall = new gr_ball(glm::vec3(0, 0, 0), glm::vec3(), glm::vec3(BALL_SCALE, BALL_SCALE, BALL_SCALE), gr_bounds(),  "aa.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1)));
+	mainBall = new gr_ball(glm::vec3(0, 0, 0), glm::vec3(), glm::vec3(BALL_SCALE, BALL_SCALE, BALL_SCALE), gr_bounds(glm::vec3(1,1,1), glm::vec3()),  "aa.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1)));
 	balls.push_back(mainBall);
 	for (int i = 0; i < _nbItem - 1; ++i)
 	{
-		gr_ball *_ballToAdd = new gr_ball(glm::vec3(gr_util::getRandomRange(_minPositionX, _maxPositionX), gr_util::getRandomRange(_minPositionY, _maxPositionY), gr_util::getRandomRange(_minPositionZ, _maxPositionZ)), glm::vec3(), glm::vec3(BALL_SCALE, BALL_SCALE, BALL_SCALE), gr_bounds(), "aa.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1)));
+		gr_ball *_ballToAdd = new gr_ball(glm::vec3(gr_util::getRandomRange(_minPositionX, _maxPositionX), gr_util::getRandomRange(_minPositionY, _maxPositionY), gr_util::getRandomRange(_minPositionZ, _maxPositionZ)), glm::vec3(), glm::vec3(BALL_SCALE, BALL_SCALE, BALL_SCALE), gr_bounds(), "aa.dds", "TransformVertexShader.vertexshader", "TextureFragmentShader.fragmentshader", gr_color(gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1), gr_util::getRandomRange(0, 1)), _obstacles);
 
 		do
 		{
@@ -106,25 +108,48 @@ void gr_ballManager::deleteAll()
 	}
 }
 
+// update method of gamObject (behaviour for gamePlay)
 void gr_ballManager::update(float _deltaTime)
+{
+	collisionToEachOther(_deltaTime);
+	//CubeSphereCollision(balls[0]->getObstacles()[0], *balls[0]); todo [WIP] cube sphere collisions 
+}
+
+// - start collision
+void gr_ballManager::collisionToEachOther(float _deltaTime)
 {
 	gr_ball* _collideBall = nullptr;
 	for (int i = 0; i < balls.size(); ++i)
 	{
-		_collideBall = testCollisionBallBall(balls[i]->getTransform().position  + balls[i]->getVelocity() * _deltaTime * BALL_SPEED, balls[i]);
+		_collideBall = testCollisionBallBall(balls[i]->getTransform().position + balls[i]->getVelocity() * _deltaTime * BALL_SPEED, balls[i]);
 
 
 		if (_collideBall != nullptr)
 		{
 			glm::vec3 _director = glm::normalize(_collideBall->getTransform().position - balls[i]->getTransform().position);
 			_collideBall->setVelocity((balls[i]->getVelocity() + _director * _deltaTime * BALL_SPEED));
-		}// test collision todo
+		}// test collision todo refactor
 
 
 		balls[i]->setPosition(balls[i]->getTransform().position + balls[i]->getVelocity() * _deltaTime * BALL_SPEED);
 
 		_collideBall = nullptr;
 	}
+}
+
+void gr_ballManager:: CubeSphereCollision(gr_gameObject _cube, gr_ball _ball)
+{
+	// get the vector D
+	glm::vec3 _d = _cube.getTransform().position - _ball.getTransform().position;
+	
+	// clamp D
+	float _x = gr_util::clamp(_d.x, -_cube.getTransform().scale.x / 2, _cube.getTransform().scale.x / 2);
+	float _y = gr_util::clamp(_d.y, -_cube.getTransform().scale.y / 2, _cube.getTransform().scale.y / 2);
+	float _z = gr_util::clamp(_d.z, -_cube.getTransform().scale.z / 2, _cube.getTransform().scale.z / 2);
+	glm::vec3 _clampedVector = glm::vec3(_x, _y, _z);
+
+	glm::vec3 _closest = _cube.getTransform().position + _clampedVector;
+	
 }
 
 void gr_ballManager::clean()
@@ -135,13 +160,5 @@ void gr_ballManager::clean()
 
 std::vector<gr_ball*> gr_ballManager::getAllBall() const
 {
-	/*
-	std::vector<gr_ball> _toReturn;
-
-	for (int i = 0; i < balls.size(); ++i)
-	{
-		_toReturn.push_back(balls[i]);
-	}
-	*/
 	return balls;
 }

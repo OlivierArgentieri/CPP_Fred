@@ -20,6 +20,9 @@ private:
 	//collisions
 	gr_ball* testCollisionBallBall(glm::vec3 _position, gr_ball* _this = nullptr);
 	gr_ball* testCollisionBallPlane(glm::vec3 _position, gr_ball* _this = nullptr);
+	void collisionToEachOther(float _deltaTime);
+	void CubeSphereCollision(gr_gameObject _cube, gr_ball _ball);
+
 
 	// event methods
 	void registerToInputManager(gr_inputManager* _inputManager);
@@ -35,7 +38,7 @@ public:
 	
 	static gr_ballManager* getInstance();
 	void addBalls(gr_ball* _ball);
-	void makeSpawn(unsigned _nbItem, float _minPositionX, float _maxPositionX, float _minPositionY, float _maxPositionY, float _minPositionZ, float _maxPositionZ);
+	void makeSpawn(unsigned _nbItem, float _minPositionX, float _maxPositionX, float _minPositionY, float _maxPositionY, float _minPositionZ, float _maxPositionZ, std::vector<gr_gameObject> _obstacles);
 	
 	void update(float _deltaTime);
 	void clean();

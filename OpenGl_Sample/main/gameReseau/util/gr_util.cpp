@@ -11,3 +11,8 @@ float gr_util::getRandomRange(float _min, float _max)
 
 	return dist(rng);
 }
+
+float gr_util::clamp(float _value, float _min, float _max)
+{
+	return std::max(_min, std::min(_max, _value));
+}

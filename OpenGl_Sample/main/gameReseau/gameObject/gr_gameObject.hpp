@@ -6,6 +6,7 @@
 #include "main/gameReseau/color/gr_color.hpp"
 #include "main/gameReseau/transform/gr_transform.hpp"
 #include "main/gameReseau/window/gr_window.hpp"
+#include "main/gameReseau/gameObject/bounds/gr_bounds.hpp"
 
 class gr_gameObject
 {
@@ -40,6 +41,7 @@ protected:
 	gr_color color;
 
 	gr_transform transform;
+	gr_bounds bounds;
 	
 	void loadTexture();
 
@@ -53,7 +55,7 @@ protected:
 
 public:
 	gr_gameObject();
-	gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath = "", const char* _vertexShaderPath="", const char* _fragmentShaderPath="", gr_color _color = gr_color());
+	gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, gr_bounds _bounds, const char* _texturePath = "", const char* _vertexShaderPath="", const char* _fragmentShaderPath="", gr_color _color = gr_color());
 	gr_gameObject(const gr_gameObject& _gameObject);
 	
 	std::vector<glm::vec3> getVertices() const ;

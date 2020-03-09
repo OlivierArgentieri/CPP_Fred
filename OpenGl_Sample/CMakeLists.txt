@@ -108,6 +108,10 @@ add_executable(
 	main/gameReseau/gameObject/ball/gr_ball.hpp
 	main/gameReseau/gameObject/ball/gr_ball.cpp
 	
+	#bounds
+	main/gameReseau/gameObject/bounds/gr_bounds.cpp
+	main/gameReseau/gameObject/bounds/gr_bounds.hpp
+	
 
 #color :
 	main/gameReseau/color/gr_color.hpp
@@ -140,6 +144,7 @@ add_executable(
 #shaders : 
 	main/TransformVertexShader.vertexshader
 	main/TextureFragmentShader.fragmentshader
+
 )
 
 target_link_libraries(main
@@ -153,26 +158,27 @@ create_target_launcher(main WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/main/
 SOURCE_GROUP(common  REGULAR_EXPRESSION ".*/common/.*" )
 SOURCE_GROUP(shaders REGULAR_EXPRESSION ".*/.*shader$" )
 
-SOURCE_GROUP(gameReseau\\window    REGULAR_EXPRESSION "./main/gameReseau/window/")
+SOURCE_GROUP(gameReseau\\window REGULAR_EXPRESSION "./main/gameReseau/window/")
 
-SOURCE_GROUP(gameReseau\\gameObject    REGULAR_EXPRESSION "./main/gameReseau/gameObject/")
-SOURCE_GROUP(gameReseau\\gameObject\\objGameObject    REGULAR_EXPRESSION "./main/gameReseau/gameObject/objGameObject")
-SOURCE_GROUP(gameReseau\\gameObject\\gameBoard    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard")
-SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\plane    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/plane")
-SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\bottomBorder    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/bottomBorder")
-SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\leftBorder    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/leftBorder")
-SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\rightBorder    REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/rightBorder")
-SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\topBorder   REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/topBorder")
+SOURCE_GROUP(gameReseau\\gameObject REGULAR_EXPRESSION "./main/gameReseau/gameObject/")
+SOURCE_GROUP(gameReseau\\gameObject\\objGameObject REGULAR_EXPRESSION "./main/gameReseau/gameObject/objGameObject")
+SOURCE_GROUP(gameReseau\\gameObject\\gameBoard REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard")
+SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\plane REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/plane")
+SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\bottomBorder REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/bottomBorder")
+SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\leftBorder REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/leftBorder")
+SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\rightBorder REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/rightBorder")
+SOURCE_GROUP(gameReseau\\gameObject\\gameBoard\\topBorder REGULAR_EXPRESSION "./main/gameReseau/gameObject/gameBoard/topBorder")
 SOURCE_GROUP(gameReseau\\gameObject\\ball REGULAR_EXPRESSION "./main/gameReseau/gameObject/ball/")
 	
-SOURCE_GROUP(gameReseau\\renderer    REGULAR_EXPRESSION "./main/gameReseau/renderer/")
-SOURCE_GROUP(gameReseau\\color    REGULAR_EXPRESSION "./main/gameReseau/color/")
-SOURCE_GROUP(gameReseau\\transform    REGULAR_EXPRESSION "./main/gameReseau/transform/")
+SOURCE_GROUP(gameReseau\\renderer REGULAR_EXPRESSION "./main/gameReseau/renderer/")
+SOURCE_GROUP(gameReseau\\color REGULAR_EXPRESSION "./main/gameReseau/color/")
+SOURCE_GROUP(gameReseau\\transform REGULAR_EXPRESSION "./main/gameReseau/transform/")
 SOURCE_GROUP(gameReseau\\managers\\ball REGULAR_EXPRESSION "./main/gameReseau/managers/ball")
 SOURCE_GROUP(gameReseau\\managers\\input REGULAR_EXPRESSION "./main/gameReseau/managers/input")
 SOURCE_GROUP(gameReseau\\util REGULAR_EXPRESSION "./main/gameReseau/util")
 SOURCE_GROUP(gameReseau\\player REGULAR_EXPRESSION "./main/gameReseau/player")
 SOURCE_GROUP(gameReseau\\time REGULAR_EXPRESSION "./main/gameReseau/time")
+SOURCE_GROUP(gameReseau\\gameObject\\bounds REGULAR_EXPRESSION "./main/gameReseau/gameObject/bounds")
 
 
 if (NOT ${CMAKE_GENERATOR} MATCHES "Xcode" )

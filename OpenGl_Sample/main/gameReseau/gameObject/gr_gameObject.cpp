@@ -17,8 +17,7 @@ gr_gameObject::gr_gameObject()
 {
 }
 
-gr_gameObject::gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, const char* _texturePath,
-                             const char* _vertexShaderPath, const char* _fragmentShaderPath, gr_color _color)
+gr_gameObject::gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, gr_bounds _bounds, const char* _texturePath, const char* _vertexShaderPath, const char* _fragmentShaderPath, gr_color _color)
 {
 	transform = gr_transform(_position, _rotation, _scale);
 	texturePath = _texturePath;
@@ -27,6 +26,7 @@ gr_gameObject::gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3
 	color = _color;
 	setPosition(_position);
 	gr_gameObject::setScale(_scale);
+	bounds = _bounds;
 }
 
 gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
@@ -39,6 +39,7 @@ gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
 
 	setPosition(_gameObject.transform.position);
 	gr_gameObject::setScale(_gameObject.transform.scale);
+	bounds = _gameObject.bounds;
 }
 
 

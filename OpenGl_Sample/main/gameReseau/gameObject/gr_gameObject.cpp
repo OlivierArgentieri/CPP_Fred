@@ -261,7 +261,7 @@ void gr_gameObject::useShader(GLint _shaderID)
 
 void gr_gameObject::clean() const
 {
-	glDeleteTextures(1, &texture);
+	
 	glDeleteProgram(programID);
 	glDeleteVertexArrays(1, &vertexArrayID);
 }

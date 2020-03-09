@@ -22,5 +22,4 @@ public:
 	gr_gameBoard();
 	gr_gameBoard(const gr_gameBoard& _gameBoard);
 	void draw(gr_window* _windows) override;
-	void useShader(GLint _shaderID);
 };

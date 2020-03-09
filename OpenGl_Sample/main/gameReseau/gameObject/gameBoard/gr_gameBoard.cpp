@@ -37,17 +37,10 @@ void gr_gameBoard::draw(gr_window* _window)
 {
 	if (!_window) return;
 	plane.draw(_window);
-	
+
 	leftBorder.draw(_window);
-	
+
 	rightBorder.draw(_window);
 	bottomBorder.draw(_window);
 	topBorder.draw(_window);
-}
-
-void gr_gameBoard::useShader(GLint _shaderID)
-{
-	// Use our shader
-	glUseProgram(_shaderID); // todo in game object
-	matrixID = glGetUniformLocation(_shaderID, "MVP");
 }

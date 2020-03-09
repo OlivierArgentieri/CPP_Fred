@@ -32,11 +32,9 @@ protected:
 	GLuint vertexBuffer;
 	GLuint uvBuffer;
 
-	
 	GLuint vertexArrayID;
 	GLuint matrixID;
 
-	
 	GLuint textureID;
 	GLuint texture = 0;
 	gr_color color;
@@ -77,7 +75,6 @@ public:
 	gr_transform getTransform()const;
 	void setPosition(glm::vec3 _pos);
 	void virtual setScale(glm::vec3 _scale);
-
 
 	void virtual update();
 };

@@ -21,13 +21,14 @@ void gr_ballManager::onMoveMainBall(glm::vec2 _axisValues)
 	if (!mainBall || _axisValues == glm::vec2()) return;
 
 
-	if (!testCollision(mainBall->getTransform().position + glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1), mainBall))
+	if (!testCollisionBallBall(mainBall->getTransform().position + glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1), mainBall))
 		mainBall->addVelocity(glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1));
 
 
 }
 
-::gr_ball* gr_ballManager::testCollision(glm::vec3 _position, gr_ball* _this)
+/// return ball on collide or null
+::gr_ball* gr_ballManager::testCollisionBallBall(glm::vec3 _position, gr_ball* _this)
 {
 	for (int i = 0; i < balls.size(); ++i)
 	{
@@ -36,6 +37,12 @@ void gr_ballManager::onMoveMainBall(glm::vec2 _axisValues)
 	}
 
 	return nullptr; // ok
+}
+
+/// return plane on collide or null
+gr_ball* gr_ballManager::testCollisionBallPlane(glm::vec3 _position, gr_ball* _this)
+{
+	return nullptr;
 }
 
 void gr_ballManager::registerToInputManager(gr_inputManager* _inputManager)
@@ -77,7 +84,7 @@ void gr_ballManager::makeSpawn(unsigned _nbItem, float _minPositionX, float _max
 		do
 		{
 			_ballToAdd->setPosition(glm::vec3(gr_util::getRandomRange(_minPositionX, _maxPositionX), gr_util::getRandomRange(_minPositionY, _maxPositionY), gr_util::getRandomRange(_minPositionZ, _maxPositionZ)));
-		} while (testCollision(_ballToAdd->getTransform().position) != nullptr);
+		} while (testCollisionBallBall(_ballToAdd->getTransform().position) != nullptr);
 		balls.push_back(_ballToAdd);
 	}
 
@@ -104,7 +111,7 @@ void gr_ballManager::update(float _deltaTime)
 	gr_ball* _collideBall = nullptr;
 	for (int i = 0; i < balls.size(); ++i)
 	{
-		_collideBall = testCollision(balls[i]->getTransform().position  + balls[i]->getVelocity() * _deltaTime * BALL_SPEED, balls[i]);
+		_collideBall = testCollisionBallBall(balls[i]->getTransform().position  + balls[i]->getVelocity() * _deltaTime * BALL_SPEED, balls[i]);
 
 
 		if (_collideBall != nullptr)

@@ -13,11 +13,13 @@ private:
 
 	gr_ball* mainBall;
 
-	
 	void onMoveMainBall(glm::vec2 _axisValues);
 
 	std::vector<gr_ball*> balls;
-	gr_ball* testCollision(glm::vec3 _position, gr_ball* _this = nullptr);
+
+	//collisions
+	gr_ball* testCollisionBallBall(glm::vec3 _position, gr_ball* _this = nullptr);
+	gr_ball* testCollisionBallPlane(glm::vec3 _position, gr_ball* _this = nullptr);
 
 	// event methods
 	void registerToInputManager(gr_inputManager* _inputManager);

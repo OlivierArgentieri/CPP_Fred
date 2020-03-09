@@ -66,10 +66,8 @@ int main( void )
 		gr_inputManager::getInstance()->update(grWindow);
 		gr_ballManager::getInstance()->update(gr_time::getDeltaTime());
 		grRenderer.renderLoop(grWindow);
-		
 	}
-	while (glfwGetKey(grWindow.getWindow(), GLFW_KEY_ESCAPE) != GLFW_PRESS &&
-		glfwWindowShouldClose(grWindow.getWindow()) == 0);
+	while (glfwGetKey(grWindow.getWindow(), GLFW_KEY_ESCAPE) != GLFW_PRESS && glfwWindowShouldClose(grWindow.getWindow()) == 0);
 
 	gr_ballManager::getInstance()->clean();
 	grRenderer.clean();

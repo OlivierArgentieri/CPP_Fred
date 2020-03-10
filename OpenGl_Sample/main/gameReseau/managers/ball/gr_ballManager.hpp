@@ -38,7 +38,7 @@ public:
 	
 	static gr_ballManager* getInstance();
 	void addBalls(gr_ball* _ball);
-	void makeSpawn(unsigned _nbItem, float _minPositionX, float _maxPositionX, float _minPositionY, float _maxPositionY, float _minPositionZ, float _maxPositionZ, std::vector<gr_gameObject> _obstacles);
+	void makeSpawn(unsigned _nbItem, float _minPositionX, float _maxPositionX, float _minPositionY, float _maxPositionY, float _minPositionZ, float _maxPositionZ, std::vector<gr_gameObject*> _obstacles);
 	
 	void update(float _deltaTime);
 	void clean();

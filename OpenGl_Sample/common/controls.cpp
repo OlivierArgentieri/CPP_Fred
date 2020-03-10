@@ -55,7 +55,7 @@ void computeMatricesFromInputs(GLFWwindow* _window)
 	horizontalAngle += mouseSpeed * float(1024/2 - xpos);
 	verticalAngle   += mouseSpeed * float(768/2 - ypos);
 
-	position = vec3(0, 140, 0);
+	//position = vec3(0, 140, 0);
 
 	//
 	horizontalAngle = 3.14;

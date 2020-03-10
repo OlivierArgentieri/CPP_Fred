@@ -9,11 +9,11 @@
 class gr_gameBoard : public gr_gameObject
 {
 private:
-	gr_planeGameBoard plane;
-	gr_leftBorderGameBoard leftBorder;
-	gr_rightBorderGameBoard rightBorder;
-	gr_bottomBorderGameBoard bottomBorder;
-	gr_topBorderGameBoard topBorder;
+	gr_planeGameBoard *plane;
+	gr_leftBorderGameBoard *leftBorder;
+	gr_rightBorderGameBoard *rightBorder;
+	gr_bottomBorderGameBoard *bottomBorder;
+	gr_topBorderGameBoard *topBorder;
 
 	void CreatePlane();
 	void CreateBorders();
@@ -23,5 +23,5 @@ public:
 	gr_gameBoard(const gr_gameBoard& _gameBoard);
 	void draw(gr_window* _windows) override;
 
-	std::vector<gr_gameObject> getElementComposed();
+	std::vector<gr_gameObject*> getElementComposed();
 };

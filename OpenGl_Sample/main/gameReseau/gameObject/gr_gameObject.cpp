@@ -24,7 +24,7 @@ gr_gameObject::gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3
 	loadTexture();
 	loadShader(_vertexShaderPath, _fragmentShaderPath);
 	color = _color;
-	setPosition(_position);
+	transform.setPosition(_position);
 	gr_gameObject::setScale(_scale);
 	bounds = _bounds;
 }
@@ -37,9 +37,13 @@ gr_gameObject::gr_gameObject(const gr_gameObject& _gameObject)
 
 	color = _gameObject.color;
 
-	setPosition(_gameObject.transform.position);
+	transform.setPosition(_gameObject.transform.position);
 	gr_gameObject::setScale(_gameObject.transform.scale);
 	bounds = _gameObject.bounds;
+}
+gr_gameObject::~gr_gameObject()
+{
+	glDeleteTextures(1, &texture);
 }
 
 
@@ -149,6 +153,12 @@ gr_transform gr_gameObject::getTransform() const
 void gr_gameObject::setPosition(glm::vec3 _pos)
 {
 	transform.setPosition(_pos);
+	/*for (int i = 0; i < vertices.size(); ++i)
+	{
+		vertices[i].x += _pos.x / 2;
+		vertices[i].y += _pos.y / 2;
+		vertices[i].z += _pos.z / 2;
+	}*/
 }
 
 void gr_gameObject::setScale(glm::vec3 _scale)

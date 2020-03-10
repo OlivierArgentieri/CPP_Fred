@@ -49,4 +49,4 @@ std::vector<gr_gameObject*> gr_ball::getObstacles() const
 void gr_ball::update()
 {
 	velocity *= 0.99; // frottement	
-}
+}   

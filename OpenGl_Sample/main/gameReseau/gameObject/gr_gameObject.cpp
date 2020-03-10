@@ -165,11 +165,13 @@ void gr_gameObject::setScale(glm::vec3 _scale)
 {
 	// todo in transform
 	transform.setScale(_scale);
+	
+/**/
 	for (int i = 0; i < vertices.size(); ++i)
 	{
-		vertices[i].x *= _scale.x / 2;
-		vertices[i].y *= _scale.y / 2;
-		vertices[i].z *= _scale.z / 2;
+		vertices[i].x *= _scale.x;
+		vertices[i].y *= _scale.y;
+		vertices[i].z *= _scale.z;
 	}
 }
 

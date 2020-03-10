@@ -25,6 +25,7 @@ void gr_transform::setPosition(glm::vec3 _position)
 {
 	position = _position;
 	modelMatrix = glm::mat4(1);
+	//modelMatrix = glm::scale(glm::translate(modelMatrix, _position), scale);
 	modelMatrix = glm::translate(modelMatrix, _position);
 }
 

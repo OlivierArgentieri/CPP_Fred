@@ -35,6 +35,7 @@ void gr_rightBorderGameBoard::LoadVertices()
 	// top
 	vertices.push_back(glm::vec3(POSX - WIDTH / 2, HEIGHT + POSY, DEPTH / 2 - POSZ - SHIFT));
 	vertices.push_back(glm::vec3(POSX - WIDTH / 2, HEIGHT + POSY, DEPTH / 2 + POSZ)); // **
+	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, DEPTH / 2 - POSZ - SHIFT));// **
 
 	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, DEPTH / 2 - POSZ - SHIFT));// **
 	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, -DEPTH / 2 + POSZ));

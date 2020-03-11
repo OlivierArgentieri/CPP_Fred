@@ -28,4 +28,5 @@ public:
 	int getKey(int _key) const;
 
 	GLFWwindow* getWindow() const;
+	void clear();
 };

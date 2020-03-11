@@ -74,10 +74,18 @@ void gr_rightBorderGameBoard::LoadUVs()
 
 }
 
+void gr_rightBorderGameBoard::LoadNormals()
+{
+	normals.push_back(glm::vec3(1, 0, 0));
+	normals.push_back(glm::vec3(-1, 0, 0));
+	normals.push_back(glm::vec3(0, 0, 1));
+}
+
 gr_rightBorderGameBoard::gr_rightBorderGameBoard() : gr_gameObject()
 {
 	LoadVertices();
 	LoadUVs();
+	LoadNormals();
 }
 
 gr_rightBorderGameBoard::gr_rightBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, gr_bounds _bounds, const char* _texturePath, const char* _vertexShaderPath, const char* _fragmentShaderPath, gr_color _color) : gr_gameObject(
@@ -85,10 +93,14 @@ gr_rightBorderGameBoard::gr_rightBorderGameBoard(glm::vec3 _position, glm::vec3 
 {
 	LoadVertices();
 	LoadUVs();
+	LoadNormals();
+
 }
 
 gr_rightBorderGameBoard::gr_rightBorderGameBoard(const gr_rightBorderGameBoard& _rightBorder) : gr_gameObject(_rightBorder)
 {
 	LoadVertices();
 	LoadUVs();
+	LoadNormals();
+
 }

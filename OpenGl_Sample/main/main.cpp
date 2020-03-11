@@ -50,7 +50,7 @@ int main( void )
 	grRenderer.addGameObject(&_board);
 
 	
-	gr_ballManager::getInstance()->makeSpawn(1,-10,10,0,0,-10,10, _board.getElementComposed());
+	gr_ballManager::getInstance()->makeSpawn(10,-10,10,0,0,-10,10, _board.getElementComposed());
 	auto _test = gr_ballManager::getInstance()->getAllBall();
 
 	// init sphere list 
@@ -71,6 +71,6 @@ int main( void )
 
 	gr_ballManager::getInstance()->clean();
 	grRenderer.clean();
-	
+	grWindow.clear();
 	return 0;
 }

@@ -89,3 +89,8 @@ GLFWwindow* gr_window::getWindow() const
 {
 	return window;
 }
+
+void gr_window::clear()
+{
+	glfwDestroyWindow(window);
+}

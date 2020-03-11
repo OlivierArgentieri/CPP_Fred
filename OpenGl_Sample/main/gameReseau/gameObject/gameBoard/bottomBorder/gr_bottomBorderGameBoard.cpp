@@ -43,7 +43,6 @@ void gr_bottomBorderGameBoard::LoadVertices()
 	vertices.push_back(glm::vec3(WIDTH / 2 + POSX + SHIFT, HEIGHT + POSY, POSZ - DEPTH / 2));
 	vertices.push_back(glm::vec3(-WIDTH / 2 + POSX, HEIGHT + POSY, POSZ - DEPTH / 2));
 	//end top
-
 }
 
 void gr_bottomBorderGameBoard::LoadUVs()
@@ -76,10 +75,18 @@ void gr_bottomBorderGameBoard::LoadUVs()
 	uvs.push_back(glm::vec2(0, 0));
 }
 
+void gr_bottomBorderGameBoard::LoadNormals()
+{
+	normals.push_back(glm::vec3(0, 0, 1));
+	normals.push_back(glm::vec3(0, 0, -1));
+	normals.push_back(glm::vec3(1, 0, 0));
+}
+
 gr_bottomBorderGameBoard::gr_bottomBorderGameBoard()
 {
 	LoadVertices();
 	LoadUVs();
+	LoadNormals();
 }
 
 gr_bottomBorderGameBoard::gr_bottomBorderGameBoard(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, gr_bounds _bounds, const char* _texturePath, const char* _vertexShaderPath, const char* _fragmentShaderPath, gr_color _color) : gr_gameObject(
@@ -87,10 +94,14 @@ gr_bottomBorderGameBoard::gr_bottomBorderGameBoard(glm::vec3 _position, glm::vec
 {
 	LoadVertices();
 	LoadUVs();
+	LoadNormals();
+
 }
 
 gr_bottomBorderGameBoard::gr_bottomBorderGameBoard(const gr_bottomBorderGameBoard& _bottomBorder) : gr_gameObject(_bottomBorder)
 {
 	LoadVertices();
 	LoadUVs();
+	LoadNormals();
+
 }

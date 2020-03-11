@@ -9,6 +9,7 @@
 
 
 #include "main/gameReseau/managers/input/gr_inputManager.hpp"
+#include "main/gameReseau/time/gr_time.hpp"
 
 #include "main/gameReseau/util/gr_util.hpp"
 
@@ -24,7 +25,7 @@ void gr_ballManager::onMoveMainBall(glm::vec2 _axisValues)
 
 
 	if (!testCollisionBallBall(mainBall->getTransform().position + glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1), mainBall))
-		mainBall->addVelocity(glm::vec3(_axisValues.x*0.1, 0, _axisValues.y*0.1));
+		mainBall->addVelocity(glm::vec3(_axisValues.x, 0, _axisValues.y));
 
 
 }
@@ -34,7 +35,7 @@ void gr_ballManager::onMoveMainBall(glm::vec2 _axisValues)
 {
 	for (int i = 0; i < balls.size(); ++i)
 	{
-		if (balls[i] != _this && (glm::distance(_position, balls[i]->getTransform().position)) < balls[i]->getTransform().scale.x)
+		if (balls[i] != _this && (glm::distance(_position, balls[i]->getTransform().position) < balls[i]->getTransform().scale.x*2))
 			return balls[i];
 	}
 
@@ -112,7 +113,30 @@ void gr_ballManager::deleteAll()
 void gr_ballManager::update(float _deltaTime)
 {
 	collisionToEachOther(_deltaTime);
-	CubeSphereCollision(*balls[0]->getObstacles()[0], balls[0]);// todo [WIP] cube sphere collisions 
+
+	for (int i = 0; i < balls.size(); ++i)
+	{
+		
+		for (int j = 0; j < balls[i]->getObstacles().size(); ++j)
+		{
+			if(CubeSphereCollision(*balls[i]->getObstacles()[j], balls[i]))
+			{
+				std::cout << "collide" << "\n";
+				glm::vec3 _director = glm::normalize(balls[i]->getObstacles()[j]->getTransform().position - balls[i]->getTransform().position);
+
+				//balls[i]->getObstacles()[j]->getNormals();
+				//balls[i]->setVelocity(-balls[i]->getVelocity());
+				balls[i]->setVelocity(glm::reflect(balls[i]->getVelocity(), balls[i]->getObstacles()[j]->getNormals()[0]));
+			}
+		}
+	}
+
+	for (int i = 0; i < balls.size(); ++i)
+	{
+		// move
+		balls[i]->setPosition(balls[i]->getTransform().position + balls[i]->getVelocity() *  _deltaTime * BALL_SPEED);
+	}
+
 }
 
 // - start collision
@@ -127,66 +151,28 @@ void gr_ballManager::collisionToEachOther(float _deltaTime)
 		if (_collideBall != nullptr)
 		{
 			glm::vec3 _director = glm::normalize(_collideBall->getTransform().position - balls[i]->getTransform().position);
-			_collideBall->setVelocity((balls[i]->getVelocity() + _director * _deltaTime * BALL_SPEED));
+			_collideBall->setVelocity((balls[i]->getVelocity() + _director));
 		}// test collision todo refactor
 
 
-		balls[i]->setPosition(balls[i]->getTransform().position + balls[i]->getVelocity() *  _deltaTime * BALL_SPEED);
-
+		
 		_collideBall = nullptr;
 	}
 }
 
-void gr_ballManager:: CubeSphereCollision(gr_gameObject _cube, gr_ball *_ball)
+bool gr_ballManager::CubeSphereCollision(gr_gameObject _cube, gr_ball* _ball)
 {
-	// get the vector D
-	glm::vec3 _center = glm::vec3(_ball->getTransform().position);
-	
-	//					
-//	glm::vec3 _d = _cube.getTransform().position - _ball.getTransform().position;
-	
-	// clamp D
-
-	/*
-
-
-	glm::vec3 _osef(_cube.getTransform().scale.x / 2, _cube.getTransform().scale.y / 2, _cube.getTransform().scale.z / 2);
-	glm::vec3 _clampedVector = glm::clamp(_d, -_osef, _osef);
-
-/*	
-	float _x = gr_util::clamp(_d.x, -_cube.getTransform().scale.x / 2, _cube.getTransform().scale.x / 2);
-	float _y = gr_util::clamp(_d.y, -_cube.getTransform().scale.y / 2, _cube.getTransform().scale.y / 2);
-	float _z = gr_util::clamp(_d.z, -_cube.getTransform().scale.z / 2, _cube.getTransform().scale.z / 2);
-
-	glm::vec3 _clampedVector = glm::vec3(_x, _y, _z);
-*/
-	/*
-	if(glm::length(_cube.getTransform().position - _ball.getTransform().position) < _length)
-	{
-		auto test = _cube.getTransform().position - _ball.getTransform().position;
-	}
-	
-	glm::vec3 _closest = _cube.getTransform().position + _clampedVector;
-	_d = _closest - _center;
-
-	auto _test = glm::length(_d);
-
-	*/
-	//std::cout << _clampedVector.x << " " << _clampedVector.y << " " << _clampedVector.z << "\n";
-
 	glm::vec3 _d = _ball->getTransform().position - _cube.getTransform().position;
 	
 	float _x = gr_util::clamp(_d.x, -_cube.getTransform().scale.x / 2, _cube.getTransform().scale.x / 2);
 	float _y = gr_util::clamp(_d.y, -_cube.getTransform().scale.y / 2, _cube.getTransform().scale.y / 2);
 	float _z = gr_util::clamp(_d.z, -_cube.getTransform().scale.z / 2, _cube.getTransform().scale.z / 2);
+	
 	glm::vec3 _clampedVector = glm::vec3(_x, _y, _z);
 	glm::vec3 _closest = _cube.getTransform().position + _clampedVector;
 	_d = _closest - _ball->getTransform().position;
 
-	auto _test = glm::length(_d);
-	//std::cout << _clampedVector.x << " " << _clampedVector.y << " " << _clampedVector.z << "\n";
-	std::cout << _test << "\n";
-
+	return glm::length(_d) <= _ball->getTransform().scale.x;
 }
 
 void gr_ballManager::clean()

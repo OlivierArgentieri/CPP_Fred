@@ -5,7 +5,7 @@ void gr_leftBorderGameBoard::LoadVertices()
 	#define DEPTH transform.scale.z
 	#define WIDTH transform.scale.x
 	#define HEIGHT transform.scale.y
-	#define SHIFT transform.scale.x
+	#define SHIFT /*transform.scale.x/2*/0
 	
 	#define POSX /*transform.position.x*/0
 	#define POSY /*transform.position.y*/0

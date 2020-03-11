@@ -89,10 +89,7 @@ void gr_renderer::renderLoop(gr_window _gr_window) const
 
 void gr_renderer::clean() const
 {
-	for (gr_gameObject* _game_object : gameObjects)
-	{
-		_game_object->clean();
-	}
+	cleanGameObject();
 	close();
 }
 

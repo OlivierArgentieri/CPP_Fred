@@ -58,8 +58,8 @@ void computeMatricesFromInputs(GLFWwindow* _window)
 	//position = vec3(0, 140, 0);
 
 	//
-	horizontalAngle = 3.14;
-	verticalAngle = -1.58;
+	//horizontalAngle = 3.14;
+	//verticalAngle = -1.58;
 	// -1.5
 	//
 	// 

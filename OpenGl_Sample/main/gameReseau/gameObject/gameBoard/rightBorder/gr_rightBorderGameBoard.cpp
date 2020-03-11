@@ -23,16 +23,16 @@ void gr_rightBorderGameBoard::LoadVertices()
 	// end interior
 
 	// back
-	vertices.push_back(glm::vec3(POSX + WIDTH /2, HEIGHT + POSY, DEPTH / 2 + POSZ));
-	vertices.push_back(glm::vec3(POSX + WIDTH /2, POSY, DEPTH / 2 + POSZ));
-	vertices.push_back(glm::vec3(POSX + WIDTH /2, POSY, -DEPTH / 2 + POSZ - SHIFT)); // -SHIFT = shift for hole angle
+	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, DEPTH / 2 + POSZ));
+	vertices.push_back(glm::vec3(POSX + WIDTH / 2, POSY, DEPTH / 2 + POSZ));
+	vertices.push_back(glm::vec3(POSX + WIDTH / 2, POSY, -DEPTH / 2 + POSZ - SHIFT)); // -SHIFT = shift for hole angle
 
-	vertices.push_back(glm::vec3(POSX + WIDTH/ 2, POSY, -DEPTH / 2 + POSZ - SHIFT)); // -SHIFT = shift for hole angle
-	vertices.push_back(glm::vec3(POSX + WIDTH/ 2, HEIGHT + POSY, -DEPTH / 2 + POSZ - SHIFT)); // -SHIFT = shift for hole angle
-	vertices.push_back(glm::vec3(POSX + WIDTH/ 2, HEIGHT + POSY, DEPTH / 2 + POSZ));
+	vertices.push_back(glm::vec3(POSX + WIDTH / 2, POSY, -DEPTH / 2 + POSZ - SHIFT)); // -SHIFT = shift for hole angle
+	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, -DEPTH / 2 + POSZ - SHIFT)); // -SHIFT = shift for hole angle
+	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, DEPTH / 2 + POSZ));
 	// end back
 
-		// top
+	// top
 	vertices.push_back(glm::vec3(POSX - WIDTH / 2, HEIGHT + POSY, -DEPTH / 2 + POSZ - SHIFT)); // **
 	vertices.push_back(glm::vec3(POSX - WIDTH / 2, HEIGHT + POSY, DEPTH / 2 + POSZ)); 
 	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, DEPTH / 2 + POSZ));

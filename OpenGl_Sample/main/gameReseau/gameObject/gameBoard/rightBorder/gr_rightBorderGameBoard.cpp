@@ -32,14 +32,15 @@ void gr_rightBorderGameBoard::LoadVertices()
 	vertices.push_back(glm::vec3(POSX + WIDTH/ 2, HEIGHT + POSY, DEPTH / 2 + POSZ));
 	// end back
 
-	// top
-	vertices.push_back(glm::vec3(POSX - WIDTH / 2, HEIGHT + POSY, DEPTH / 2 - POSZ - SHIFT));
-	vertices.push_back(glm::vec3(POSX - WIDTH / 2, HEIGHT + POSY, DEPTH / 2 + POSZ)); // **
-	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, DEPTH / 2 - POSZ - SHIFT));// **
+		// top
+	vertices.push_back(glm::vec3(POSX - WIDTH / 2, HEIGHT + POSY, -DEPTH / 2 + POSZ - SHIFT)); // **
+	vertices.push_back(glm::vec3(POSX - WIDTH / 2, HEIGHT + POSY, DEPTH / 2 + POSZ)); 
+	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, DEPTH / 2 + POSZ));
 
-	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, DEPTH / 2 - POSZ - SHIFT));// **
-	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, -DEPTH / 2 + POSZ));
-	vertices.push_back(glm::vec3(POSX - WIDTH / 2, HEIGHT + POSY, -DEPTH / 2 - POSZ - SHIFT));
+	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, DEPTH / 2 + POSZ));
+	vertices.push_back(glm::vec3(POSX + WIDTH / 2, HEIGHT + POSY, -DEPTH / 2 + POSZ - SHIFT));// **
+	vertices.push_back(glm::vec3(POSX - WIDTH / 2, HEIGHT + POSY, -DEPTH / 2 + POSZ - SHIFT));// **
+	// end top
 }
 
 void gr_rightBorderGameBoard::LoadUVs()

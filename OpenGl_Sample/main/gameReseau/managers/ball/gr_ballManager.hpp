@@ -21,7 +21,9 @@ private:
 	gr_ball* testCollisionBallBall(glm::vec3 _position, gr_ball* _this = nullptr);
 	gr_ball* testCollisionBallPlane(glm::vec3 _position, gr_ball* _this = nullptr);
 	void collisionToEachOther(float _deltaTime);
-	bool CubeSphereCollision(gr_gameObject _cube, gr_ball* _ball);
+	void move(float _deltaTime);
+	void collisionSpheresWall();
+	bool cubeSphereCollision(gr_gameObject _cube, gr_ball* _ball) const;
 
 
 	// event methods

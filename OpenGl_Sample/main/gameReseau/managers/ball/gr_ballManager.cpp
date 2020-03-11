@@ -113,30 +113,8 @@ void gr_ballManager::deleteAll()
 void gr_ballManager::update(float _deltaTime)
 {
 	collisionToEachOther(_deltaTime);
-
-	for (int i = 0; i < balls.size(); ++i)
-	{
-		
-		for (int j = 0; j < balls[i]->getObstacles().size(); ++j)
-		{
-			if(CubeSphereCollision(*balls[i]->getObstacles()[j], balls[i]))
-			{
-				std::cout << "collide" << "\n";
-				glm::vec3 _director = glm::normalize(balls[i]->getObstacles()[j]->getTransform().position - balls[i]->getTransform().position);
-
-				//balls[i]->getObstacles()[j]->getNormals();
-				//balls[i]->setVelocity(-balls[i]->getVelocity());
-				balls[i]->setVelocity(glm::reflect(balls[i]->getVelocity(), balls[i]->getObstacles()[j]->getNormals()[0]));
-			}
-		}
-	}
-
-	for (int i = 0; i < balls.size(); ++i)
-	{
-		// move
-		balls[i]->setPosition(balls[i]->getTransform().position + balls[i]->getVelocity() *  _deltaTime * BALL_SPEED);
-	}
-
+	collisionSpheresWall();
+	move(_deltaTime);
 }
 
 // - start collision
@@ -147,20 +125,45 @@ void gr_ballManager::collisionToEachOther(float _deltaTime)
 	{
 		_collideBall = testCollisionBallBall(balls[i]->getTransform().position + balls[i]->getVelocity() * _deltaTime * BALL_SPEED, balls[i]);
 
-
 		if (_collideBall != nullptr)
 		{
 			glm::vec3 _director = glm::normalize(_collideBall->getTransform().position - balls[i]->getTransform().position);
 			_collideBall->setVelocity((balls[i]->getVelocity() + _director));
 		}// test collision todo refactor
 
-
-		
 		_collideBall = nullptr;
 	}
 }
 
-bool gr_ballManager::CubeSphereCollision(gr_gameObject _cube, gr_ball* _ball)
+void gr_ballManager::move(float _deltaTime)
+{
+	for (int i = 0; i < balls.size(); ++i)
+	{
+		// move
+		balls[i]->setPosition(balls[i]->getTransform().position + balls[i]->getVelocity() *  _deltaTime * BALL_SPEED);
+	}
+}
+
+void gr_ballManager::collisionSpheresWall()
+{
+	for (int i = 0; i < balls.size(); ++i)
+	{
+
+		for (int j = 0; j < balls[i]->getObstacles().size(); ++j)
+		{
+			if (cubeSphereCollision(*balls[i]->getObstacles()[j], balls[i]))
+			{
+				std::cout << "collide" << "\n";
+				glm::vec3 _director = glm::normalize(balls[i]->getObstacles()[j]->getTransform().position - balls[i]->getTransform().position);
+
+
+				balls[i]->setVelocity(glm::reflect(balls[i]->getVelocity(), balls[i]->getObstacles()[j]->getNormals()[0]));
+			}
+		}
+	}
+}
+
+bool gr_ballManager::cubeSphereCollision(gr_gameObject _cube, gr_ball* _ball) const
 {
 	glm::vec3 _d = _ball->getTransform().position - _cube.getTransform().position;
 	

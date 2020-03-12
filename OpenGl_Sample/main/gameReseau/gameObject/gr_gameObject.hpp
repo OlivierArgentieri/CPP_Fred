@@ -18,6 +18,7 @@ private :
 	glm::mat4 mvp;
 	
 protected:
+	
 	const char*  texturePath;
 	const char*  vertexShaderPath;
 	const char*  fragmentShaderPath;
@@ -53,6 +54,7 @@ protected:
 	void loadShader(const char* _vertexShaderPath, const char* _fragmentShaderPath);
 	void cleanBuffer() const;
 
+	
 public:
 	gr_gameObject();
 	gr_gameObject(glm::vec3 _position, glm::vec3 _rotation, glm::vec3 _scale, gr_bounds _bounds, const char* _texturePath = "", const char* _vertexShaderPath="", const char* _fragmentShaderPath="", gr_color _color = gr_color());

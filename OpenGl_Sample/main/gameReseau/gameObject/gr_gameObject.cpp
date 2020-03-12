@@ -166,7 +166,6 @@ void gr_gameObject::setScale(glm::vec3 _scale)
 	// todo in transform
 	transform.setScale(_scale);
 	
-/**/
 	for (int i = 0; i < vertices.size(); ++i)
 	{
 		vertices[i].x *= _scale.x;
